@@ -1,0 +1,144 @@
+  /* ---------- A-C5 · Coronary arteries and their territories ---------- */
+  add('coronary', {
+    title: 'Coronary arteries: branch → territory', src: 'Anatomy p.27–31, 64',
+    hint: 'Click a box, or pick a question and press Next step.',
+    idle: 'Both coronaries leave the aortic sinuses. Follow a branch to the wall it feeds; an occluded branch starves that wall.',
+    def: { name: 'coronary', W: 960, H: 568, label: 'Coronary artery map',
+      N: [
+        { id: 'ao', k: 'q', x: 10, y: 248, w: 160, h: 62, t: ['Aorta'], s: ['sinuses of Valsalva'] },
+        { id: 'rca', k: 'q', x: 210, y: 112, w: 180, h: 58, t: ['Right coronary a.'] },
+        { id: 'lca', k: 'q', x: 210, y: 400, w: 180, h: 58, t: ['Left coronary a.'], s: ['short trunk'] },
+        { id: 'san', k: 'st', x: 450, y: 8, w: 300, h: 50, t: ['SA nodal branch'], s: ['SA node · right atrium'] },
+        { id: 'con', k: 'st', x: 450, y: 66, w: 300, h: 50, t: ['Conal branch'], s: ['pulmonary conus'] },
+        { id: 'rm', k: 'st', x: 450, y: 124, w: 300, h: 50, t: ['Right marginal'], s: ['RV · inferior border'] },
+        { id: 'avn', k: 'st', x: 450, y: 182, w: 300, h: 50, t: ['AV nodal branch'], s: ['AV node · His bundle'] },
+        { id: 'pda', k: 'st', x: 450, y: 240, w: 300, h: 56, t: ['Posterior interventricular'], s: ['posterior ⅓ septum · inferior wall'] },
+        { id: 'lad', k: 'q', x: 450, y: 346, w: 200, h: 58, t: ['Anterior descending'], s: ['(LAD)'] },
+        { id: 'lcx', k: 'q', x: 450, y: 470, w: 200, h: 58, t: ['Circumflex'] },
+        { id: 'dia', k: 'leaf', x: 700, y: 318, w: 250, h: 50, t: ['Diagonal'], s: ['anterior wall'] },
+        { id: 'sep', k: 'leaf', x: 700, y: 378, w: 250, h: 50, t: ['Septal'], s: ['anterior ⅔ septum'] },
+        { id: 'lm', k: 'leaf', x: 700, y: 448, w: 250, h: 50, t: ['Left marginal'], s: ['lateral + posterior LV'] },
+        { id: 'pdl', k: 'note', x: 700, y: 508, w: 250, h: 50, t: ['PDA in 10–15%'], s: ['left-dominant heart'] }
+      ],
+      E: [
+        { f: 'ao', to: 'rca', dir: 'h' }, { f: 'ao', to: 'lca', dir: 'h' },
+        { f: 'rca', to: 'san', dir: 'h', mx: 420 }, { f: 'rca', to: 'con', dir: 'h', mx: 420 }, { f: 'rca', to: 'rm', dir: 'h', mx: 420 },
+        { f: 'rca', to: 'avn', dir: 'h', mx: 420 }, { f: 'rca', to: 'pda', dir: 'h', mx: 420 },
+        { f: 'lca', to: 'lad', dir: 'h', mx: 420 }, { f: 'lca', to: 'lcx', dir: 'h', mx: 420 },
+        { f: 'lad', to: 'dia', dir: 'h' }, { f: 'lad', to: 'sep', dir: 'h' },
+        { f: 'lcx', to: 'lm', dir: 'h' }, { f: 'lcx', to: 'pdl', dir: 'h', dash: true }
+      ] },
+    txt: {
+      ao: { h: 'Aorta: the aortic sinuses', b: ['Both coronary arteries open from the sinuses of Valsalva, just above the aortic cusps.'] },
+      rca: { h: 'Right coronary artery', b: ['Runs in the right coronary sulcus between RA and RV.', 'Feeds the right heart, both nodes in most people, and (right-dominant) the PDA.'] },
+      lca: { h: 'Left coronary artery', b: ['A short trunk (1–2 cm) between the pulmonary trunk and left auricle.', 'Splits into the LAD and the circumflex (sometimes a third, median branch).'] },
+      san: { h: 'SA nodal branch', b: ['Usually the first branch of the RCA → SA node and right atrium.'] },
+      con: { h: 'Conal branch', b: ['Early RCA branch to the pulmonary conus (outflow of the RV). Not a branch of the LCA.'] },
+      rm: { h: 'Right marginal branch', b: ['Runs along the inferior (acute) border → right ventricle.', 'Inferior border infarct (AC78) → this branch.'] },
+      avn: { h: 'AV nodal branch', b: ['From the RCA at the crux → AV node and His bundle.', 'RCA occlusion → AV block is common.'] },
+      pda: { h: 'Posterior interventricular (descending) artery', b: ['In the posterior sulcus with the middle cardiac vein.', 'Feeds the inferior wall and the posterior ⅓ of the septum.', 'Its origin defines dominance: RCA in most hearts.'] },
+      lad: { h: 'Anterior descending artery (LAD)', b: ['Down the anterior interventricular sulcus with the great cardiac vein.', 'Front of both ventricles and the anterior ⅔ of the septum.'] },
+      lcx: { h: 'Circumflex artery', b: ['Runs left in the coronary sulcus under the left auricle, round to the back.', 'Wraps the lateral and posterior border of the LV.'] },
+      dia: { h: 'Diagonal branches', b: ['From the LAD to the anterior (anterolateral) wall of the LV.'] },
+      sep: { h: 'Septal branches', b: ['From the LAD into the anterior ⅔ of the interventricular septum (and the bundle branches).'] },
+      lm: { h: 'Left marginal (obtuse marginal)', b: ['From the circumflex → lateral and posterior wall of the LV.', 'Lateral wall ischemia → circumflex (AC79, AC81).'] },
+      pdl: { h: 'Left dominance', b: ['In 10–15% the circumflex, not the RCA, gives the PDA.'] }
+    },
+    R: {
+      lat: { b: 'Lateral wall ischemia', src: 'A12 · AC79 · AC81', dx: ['Left coronary', 'circumflex', 'left marginal', 'lateral LV wall'], s: [['ao', 'lca', 'Start at the aortic sinus.'], ['lca', 'lcx', 'Left coronary trunk divides.'], ['lcx', 'lm', 'The <b>circumflex</b> curls round the lateral border.'], ['lm', '', 'Its left marginal branch feeds the <b>lateral wall</b> → occlusion here = lateral ischemia.']] },
+      avn: { b: 'AV node supply', src: 'A13 · AC78 · AC80', dx: ['Right coronary', 'AV nodal branch', 'AV node'], s: [['ao', 'rca', 'Start at the aortic sinus.'], ['rca', 'avn', 'Right coronary artery runs to the crux at the back.'], ['avn', '', 'AV nodal branch → <b>AV node</b> (RCA in most people).']] },
+      san: { b: 'SA node supply', src: 'A14 · AC77', dx: ['Right coronary', 'SA nodal branch', 'SA node'], s: [['ao', 'rca', 'Start at the aortic sinus.'], ['rca', 'san', 'First branch of the RCA.'], ['san', '', 'SA nodal branch → <b>SA node</b>.']] },
+      inf: { b: 'Inferior border infarct', src: 'A16 · AC78', dx: ['Right coronary', 'right marginal', 'RV / inferior border'], s: [['ao', 'rca', 'Start at the aortic sinus.'], ['rca', 'rm', 'RCA runs along the acute border.'], ['rm', '', 'Right marginal → <b>inferior border</b> (RV).']] },
+      ant: { b: 'Anterior wall + septum', src: 'A-C5', dx: ['Left coronary', 'LAD', 'septal', 'anterior ⅔ septum'], s: [['ao', 'lca', 'Start at the aortic sinus.'], ['lca', 'lad', 'LAD runs down the anterior sulcus.'], ['lad', 'sep', 'Septal branches dive into the septum.'], ['sep', '', 'Anterior ⅔ of the septum.']] }
+    }
+  });
+
+  /* ---------- A-C6 · Cardiac veins ---------- */
+  add('cveins', {
+    title: 'Cardiac veins: where each one drains', src: 'Anatomy p.34–35',
+    hint: 'Click a box, or pick a vein and press Next step.',
+    idle: 'Most veins gather in the coronary sinus, which empties into the right atrium. Two sets skip it.',
+    def: { name: 'cveins', W: 960, H: 470, label: 'Cardiac vein drainage map',
+      N: [
+        { id: 'gcv', k: 'st', x: 10, y: 10, w: 290, h: 58, t: ['Great cardiac vein'], s: ['with the LAD · anterior sulcus'] },
+        { id: 'mcv', k: 'st', x: 10, y: 82, w: 290, h: 58, t: ['Middle cardiac vein'], s: ['with the PDA · posterior sulcus'] },
+        { id: 'scv', k: 'st', x: 10, y: 154, w: 290, h: 58, t: ['Small cardiac vein'], s: ['with RCA + right marginal'] },
+        { id: 'obl', k: 'st', x: 10, y: 226, w: 290, h: 58, t: ['Oblique vein of LA'], s: ['back of the left atrium'] },
+        { id: 'cs', k: 'q', x: 380, y: 110, w: 230, h: 66, t: ['Coronary sinus'], s: ['posterior coronary sulcus'] },
+        { id: 'acv', k: 'st', x: 10, y: 316, w: 290, h: 58, t: ['Anterior cardiac veins'], s: ['front of the RV'] },
+        { id: 'lcv', k: 'st', x: 10, y: 398, w: 290, h: 58, t: ['Least cardiac veins'], s: ['inside the wall'] },
+        { id: 'ra', k: 'leaf', x: 690, y: 200, w: 260, h: 66, t: ['Right atrium'], s: ['sinus opens beside the IVC'] },
+        { id: 'ch', k: 'leaf', x: 690, y: 398, w: 260, h: 58, t: ['Each chamber directly'] }
+      ],
+      E: [
+        { f: 'gcv', to: 'cs', dir: 'h', mx: 340 }, { f: 'mcv', to: 'cs', dir: 'h', mx: 340 }, { f: 'scv', to: 'cs', dir: 'h', mx: 340 }, { f: 'obl', to: 'cs', dir: 'h', mx: 340 },
+        { f: 'cs', to: 'ra', dir: 'h' }, { f: 'acv', to: 'ra', dir: 'h' }, { f: 'lcv', to: 'ch', dir: 'h' }
+      ] },
+    txt: {
+      gcv: { h: 'Great cardiac vein', b: ['Climbs the anterior interventricular sulcus beside the LAD (AC81).', 'Turns left in the coronary sulcus and becomes the coronary sinus.'] },
+      mcv: { h: 'Middle cardiac vein', b: ['In the posterior interventricular sulcus beside the PDA (AC80).'] },
+      scv: { h: 'Small cardiac vein', b: ['In the right coronary sulcus with the RCA and right marginal artery (AC78).'] },
+      obl: { h: 'Oblique vein of the left atrium', b: ['Small vein on the back of the LA → coronary sinus.'] },
+      cs: { h: 'Coronary sinus', b: ['About 2.5 cm, in the posterior coronary sulcus between LA and LV.', 'Opens into the RA (Thebesian valve), next to the IVC; its opening is one side of Koch’s triangle.'] },
+      acv: { h: 'Anterior cardiac veins', b: ['Drain the front of the RV straight into the right atrium, skipping the sinus.'] },
+      lcv: { h: 'Least cardiac veins', b: ['Tiny veins in the wall that open into whichever chamber they sit in.'] },
+      ra: { h: 'Right atrium', b: ['Receives the coronary sinus and the anterior cardiac veins.'] },
+      ch: { h: 'Every chamber', b: ['Least cardiac (Thebesian) veins empty directly here.'] }
+    },
+    R: {
+      ant: { b: 'Anterior sulcus vein', src: 'A21 · AC81', dx: ['Great cardiac v.', 'coronary sinus', 'right atrium'], s: [['gcv', 'cs', 'The vein beside the LAD is the <b>great cardiac vein</b>.'], ['cs', 'ra', 'It becomes the coronary sinus.'], ['ra', '', 'Empties into the right atrium.']] },
+      post: { b: 'Posterior sulcus vein', src: 'A22 · AC80', dx: ['Middle cardiac v.', 'coronary sinus', 'right atrium'], s: [['mcv', 'cs', 'Beside the PDA: <b>middle cardiac vein</b>.'], ['cs', 'ra', 'Joins the coronary sinus.'], ['ra', '', 'Right atrium.']] },
+      right: { b: 'Vein with the RCA', src: 'A23 · AC78', dx: ['Small cardiac v.', 'coronary sinus', 'right atrium'], s: [['scv', 'cs', 'Beside the RCA in the right coronary sulcus: <b>small cardiac vein</b>.'], ['cs', 'ra', 'Joins the coronary sinus.'], ['ra', '', 'Right atrium.']] },
+      skip: { b: 'Skips the sinus', src: 'A-C6', dx: ['Anterior cardiac veins', 'right atrium'], s: [['acv', 'ra', 'The <b>anterior cardiac veins</b> on the RV'], ['ra', '', 'open straight into the right atrium.']] }
+    }
+  });
+
+  /* ---------- A-C9 · Fetal circulation ---------- */
+  add('fetal', {
+    title: 'Fetal circulation: follow the blood', src: 'Anatomy p.57–58',
+    hint: 'Click a box, or pick a route and press Next step.',
+    idle: 'Three shunts let fetal blood bypass the liver and the lungs. Each closes at birth and leaves a remnant (the grey line in its box).',
+    def: { name: 'fetal', W: 960, H: 700, label: 'Fetal circulation map',
+      N: [
+        { id: 'pl', k: 'q', x: 10, y: 20, w: 150, h: 64, t: ['Placenta'], s: ['O₂-rich blood'] },
+        { id: 'uv', k: 'st', x: 195, y: 20, w: 175, h: 64, t: ['Umbilical vein'], s: ['→ lig. teres hepatis'] },
+        { id: 'dv', k: 'st', x: 405, y: 20, w: 175, h: 64, t: ['Ductus venosus'], s: ['skips the liver', '→ lig. venosum'] },
+        { id: 'ivc', k: 'st', x: 615, y: 20, w: 140, h: 64, t: ['IVC'] },
+        { id: 'ra', k: 'q', x: 790, y: 20, w: 160, h: 64, t: ['Right atrium'] },
+        { id: 'fo', k: 'st', x: 790, y: 170, w: 160, h: 70, t: ['Foramen ovale'], s: ['→ fossa ovalis'] },
+        { id: 'rv', k: 'st', x: 560, y: 170, w: 170, h: 64, t: ['Right ventricle'] },
+        { id: 'la', k: 'st', x: 790, y: 320, w: 160, h: 64, t: ['Left atrium'] },
+        { id: 'pt', k: 'st', x: 560, y: 320, w: 170, h: 64, t: ['Pulmonary trunk'], s: ['lungs get little'] },
+        { id: 'lv', k: 'st', x: 790, y: 470, w: 160, h: 64, t: ['Left ventricle'] },
+        { id: 'da', k: 'st', x: 560, y: 462, w: 170, h: 80, t: ['Ductus', 'arteriosus'], s: ['→ lig. arteriosum'] },
+        { id: 'ao', k: 'q', x: 560, y: 616, w: 170, h: 64, t: ['Aorta'] },
+        { id: 'ua', k: 'st', x: 300, y: 616, w: 190, h: 64, t: ['Umbilical arteries'], s: ['→ medial umbilical ligs'] }
+      ],
+      E: [
+        { f: 'pl', to: 'uv' }, { f: 'uv', to: 'dv' }, { f: 'dv', to: 'ivc' }, { f: 'ivc', to: 'ra' },
+        { f: 'ra', to: 'fo', dir: 'v' }, { f: 'fo', to: 'la', dir: 'v' }, { f: 'la', to: 'lv', dir: 'v' },
+        { f: 'ra', to: 'rv', dir: 'v' }, { f: 'rv', to: 'pt', dir: 'v' }, { f: 'pt', to: 'da', dir: 'v' }, { f: 'da', to: 'ao', dir: 'v' },
+        { f: 'lv', to: 'ao', dir: 'v' }, { f: 'ao', to: 'ua', dir: 'h' }, { f: 'ua', to: 'pl', dir: 'v', x1: 395, x2: 85 }
+      ] },
+    txt: {
+      pl: { h: 'Placenta', b: ['Where fetal blood picks up O₂ and drops CO₂.'] },
+      uv: { h: 'Umbilical vein', b: ['Carries the best-oxygenated blood toward the liver.', 'After birth → <b>ligamentum teres hepatis</b> (AC78, AC80).'] },
+      dv: { h: 'Ductus venosus', b: ['Shunt 1: bypasses the liver straight to the IVC.', 'After birth → ligamentum venosum.'] },
+      ivc: { h: 'Inferior vena cava', b: ['Brings the placental blood into the right atrium.'] },
+      ra: { h: 'Right atrium', b: ['IVC stream is aimed at the foramen ovale; SVC stream goes down to the RV.'] },
+      fo: { h: 'Foramen ovale', b: ['Shunt 2: RA → LA, so O₂-rich blood reaches the LV and the head first.', 'At birth LA pressure rises → the flap closes → fossa ovalis.', 'If it stays open → atrial septal defect.'] },
+      rv: { h: 'Right ventricle', b: ['Pumps into the pulmonary trunk.'] },
+      la: { h: 'Left atrium', b: ['Gets the foramen ovale stream.'] },
+      pt: { h: 'Pulmonary trunk', b: ['Fetal lungs are collapsed and resistance is high, so most blood goes on through the ductus.'] },
+      lv: { h: 'Left ventricle', b: ['Sends the best blood to the ascending aorta → head and arms.'] },
+      da: { h: 'Ductus arteriosus', b: ['Shunt 3: pulmonary trunk → aorta, bypassing the lungs.', 'After birth O₂ ↑ and PGE₂ ↓ → it closes → <b>ligamentum arteriosum</b> (AC77, AC79, AC81).', 'Stays open → PDA (aorta → pulmonary artery shunt).'] },
+      ao: { h: 'Aorta', b: ['Descending aorta → body and the umbilical arteries.'] },
+      ua: { h: 'Umbilical arteries', b: ['From the internal iliac arteries back to the placenta.', 'After birth → medial umbilical ligaments.'] }
+    },
+    R: {
+      fo: { b: 'Best O₂ to the brain', src: 'A-C9', dx: ['Umbilical v.', 'ductus venosus', 'IVC', 'RA', 'foramen ovale', 'LA', 'LV', 'aorta'], s: [['pl', 'uv', 'O₂-rich blood leaves the placenta.'], ['uv', 'dv', 'Umbilical vein heads for the liver.'], ['dv', 'ivc', '<b>Ductus venosus</b> skips the liver.'], ['ivc', 'ra', 'IVC → right atrium.'], ['ra', 'fo', 'The stream is aimed at the foramen ovale.'], ['fo', 'la', '<b>Foramen ovale</b> → left atrium.'], ['la', 'lv', 'Left atrium → left ventricle.'], ['lv', 'ao', 'Left ventricle → aorta.'], ['ao', '', 'Ascending aorta → the head gets the best blood.']] },
+      da: { b: 'Skip the lungs', src: 'A33 · AC77 · AC79 · AC81', dx: ['RA', 'RV', 'pulmonary trunk', 'ductus arteriosus', 'aorta'], s: [['ra', 'rv', 'SVC blood falls through to the RV.'], ['rv', 'pt', 'RV → pulmonary trunk.'], ['pt', 'da', 'Lungs are high-resistance, so blood turns into the <b>ductus arteriosus</b>.'], ['da', 'ao', 'Into the aorta below the arch. After birth: ligamentum arteriosum.'], ['ao', '', 'Descending aorta.']] },
+      uv: { b: 'Umbilical vein remnant', src: 'A34 · AC78 · AC80', dx: ['Umbilical vein', 'ligamentum teres hepatis'], s: [['pl', 'uv', 'From the placenta.'], ['uv', '', 'After birth the umbilical vein becomes the <b>ligamentum teres hepatis</b>.']] },
+      back: { b: 'Back to the placenta', src: 'A-C9', dx: ['Aorta', 'umbilical arteries', 'placenta'], s: [['ao', 'ua', 'Descending aorta → internal iliac arteries.'], ['ua', 'pl', 'Umbilical arteries return blood to the placenta.'], ['pl', '', 'Remnant: medial umbilical ligaments.']] }
+    }
+  });

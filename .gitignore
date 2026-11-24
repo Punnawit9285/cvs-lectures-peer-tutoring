@@ -1,0 +1,9 @@
+# Course source PDFs: never committed
+src-pdf/
+# Local build intermediates
+dist/fonts/
+dist/pimg/
+dist/print.html
+tools/__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,39 @@
+<div id="app">
+<header class="bar">
+  <div class="brand">
+    <svg viewBox="0 0 38 22" aria-hidden="true"><path d="M19,20 C10,14 5,10 5,6 C5,3 7.5,1.5 10,1.5 C13,1.5 15,3.5 19,7 C23,3.5 25,1.5 28,1.5 C30.5,1.5 33,3 33,6 C33,10 28,14 19,20 Z" fill="none" stroke="var(--art)" stroke-width="1.8" stroke-linejoin="round"/><path d="M8,10 H14 L16,6 L19,14 L21,9 H30" fill="none" stroke="var(--ven)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div><b>CVS I Peer Support 82</b><small>Cardiovascular system I &#183; 14 handouts</small></div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+  <div class="ctrls">
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" id="vPresent" aria-pressed="true">Present</button>
+      <button type="button" id="vBrowse" aria-pressed="false">Browse</button>
+    </div>
+    <label class="chk" for="coreOnly"><input type="checkbox" id="coreOnly"> Core only</label>
+    <button type="button" class="icon" id="themeBtn" aria-label="Switch between light and dark"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8,1.5 A6.5,6.5 0 0 1 8,14.5 Z" fill="currentColor"/></svg></button>
+    <button type="button" class="icon" id="fsBtn" aria-label="Full screen"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5,5.5 V1.5 H5.5 M10.5,1.5 H14.5 V5.5 M14.5,10.5 V14.5 H10.5 M5.5,14.5 H1.5 V10.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+<main>
+  <section id="present" aria-label="Present mode">
+    <div class="stage" id="stage"></div>
+    <div class="pager">
+      <button type="button" class="btn" id="prev">&#8592; Prev</button>
+      <div class="pos" id="pos" aria-live="polite"></div>
+      <button type="button" class="btn primary" id="reveal">Reveal</button>
+      <button type="button" class="btn" id="next">Next &#8594;</button>
+      <div class="prog"><i id="progBar"></i></div>
+      <div class="keys">&#8592; &#8594; move &#183; Space reveal / next blank &#183; Enter all blanks &#183; A&#8211;F choose &#183; T / F true-false &#183; R reset &#183; L Thai &#183; B browse</div>
+    </div>
+  </section>
+  <section id="browse" aria-label="Browse mode" hidden>
+    <div class="btools">
+      <input type="search" id="q" placeholder="Search: surfactant, Haldane, Winter, M-C3, E7&#8230;" aria-label="Search questions and concepts">
+      <label class="chk" for="showAll"><input type="checkbox" id="showAll"> Show all answers</label>
+      <span class="bcount" id="bcount"></span>
+    </div>
+    <div id="blist"></div>
+  </section>
+</main>
+</div>

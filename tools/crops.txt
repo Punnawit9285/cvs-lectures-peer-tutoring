@@ -1,0 +1,117 @@
+# name              pdf     page  x0    y0    x1    y1   [w=render width px] [m=mask x0,y0,x1,y1]
+# Section A: Pericardium, heart & great vessels (anat.pdf)
+anat-pericardium    anat    4     0.00  0.16  1.00  0.85
+anat-sinuses        anat    8     0.48  0.02  0.99  0.98  w=2200
+anat-borders        anat    11    0.51  0.02  1.00  0.71  w=2200
+anat-auscult        anat    40    0.13  0.56  0.90  0.99  w=2000
+anat-ra             anat    21    0.51  0.00  0.96  0.44  w=2400
+anat-koch           anat    22    0.53  0.23  0.96  0.91  w=2200
+anat-moderator      anat    23    0.48  0.52  0.96  1.00  w=2000
+anat-la             anat    24    0.53  0.00  0.98  0.44  w=2400
+anat-aortic         anat    26    0.49  0.57  1.00  1.00  w=2200
+anat-coronary       anat    64    0.01  0.08  0.99  0.81  w=2000
+anat-dominance      anat    31    0.00  0.12  1.00  0.86  w=1800
+anat-veins          anat    35    0.20  0.34  0.87  1.00  w=2000
+anat-conduction     anat    36    0.00  0.40  1.00  0.98  w=1800
+anat-condsupply     anat    65    0.07  0.07  0.94  0.89  w=1800
+anat-archnetter     anat    50    0.00  0.53  0.59  0.94  w=2200
+anat-ligart         anat    52    0.53  0.04  0.97  0.82  w=2000
+anat-fetal          anat    57    0.02  0.08  0.92  0.92  w=1800
+# AC81 spot test (ac81s.pdf), stations 1-8
+ac81s-st1           ac81s   2     0.50  0.22  0.99  0.87  w=2000
+ac81s-st2           ac81s   3     0.43  0.22  0.98  0.79  w=2000
+ac81s-st3           ac81s   4     0.52  0.16  0.98  0.79  w=2000
+ac81s-st4           ac81s   5     0.50  0.17  0.98  0.80  w=2000
+ac81s-st5           ac81s   6     0.55  0.08  0.88  0.90  w=2200
+ac81s-st6           ac81s   7     0.41  0.30  0.94  0.83  w=2000
+ac81s-st7           ac81s   8     0.50  0.14  0.94  0.86  w=2000
+ac81s-st8           ac81s   9     0.56  0.17  0.93  0.82  w=2000
+# AC80 spot test (ac80s.pdf)
+ac80s-st1           ac80s   2     0.55  0.24  1.00  0.77  w=2000
+ac80s-st2           ac80s   3     0.52  0.10  0.93  0.90  w=2000
+ac80s-st3           ac80s   4     0.55  0.12  0.92  0.86  w=2000
+ac80s-st4           ac80s   5     0.52  0.14  1.00  0.73  w=2000
+ac80s-st5           ac80s   6     0.54  0.05  0.98  0.96  w=2000
+ac80s-st6b          ac80s   7     0.62  0.54  0.97  0.98  w=2000
+# Section H: Histology of CVS (histo.pdf)
+histo-endocardium   histo   10    0.00  0.38  1.00  0.99  w=1800
+histo-skeleton      histo   14    0.30  0.32  1.00  1.00  w=2000
+histo-epicardium    histo   18    0.48  0.25  1.00  1.00  w=2200
+histo-elastic       histo   25    0.00  0.30  0.33  1.00  w=3000
+histo-muscular      histo   29    0.00  0.20  0.33  1.00  w=2000
+histo-arteriole     histo   33    0.00  0.55  1.00  1.00  w=1800
+histo-micro         histo   36    0.00  0.25  1.00  1.00  w=1800
+histo-captypes      histo   39    0.00  0.55  1.00  1.00  w=1800
+histo-valve         histo   54    0.52  0.00  1.00  0.75  w=2000
+histo-largevein     histo   57    0.00  0.15  1.00  0.55  w=1800
+histo-lymph         histo   66    0.00  0.00  1.00  0.75  w=1800
+# Sections E and C: Physical & electrical properties / cardiac cycle (elec.pdf)
+elec-fastap         elec    23    0.00  0.08  1.00  1.00
+elec-slowap         elec    31    0.15  0.08  1.00  0.98
+elec-refractory     elec    42    0.05  0.12  0.95  0.98
+elec-rmpk           elec    45    0.05  0.45  1.00  0.98
+elec-eccoupling     elec    57    0.00  0.08  0.60  1.00  w=2400
+elec-digoxin        elec    64    0.00  0.12  1.00  1.00
+elec-preloadsites   elec    69    0.00  0.10  1.00  1.00
+elec-starling       elec    68    0.42  0.38  1.00  1.00  w=2400
+elec-phases         elec    74    0.00  0.00  1.00  1.00
+elec-wiggers        elec    83    0.00  0.00  1.00  0.90
+elec-split          elec    85    0.00  0.15  1.00  1.00
+elec-pvloop         elec    90    0.00  0.12  1.00  1.00
+pvc-a               elec    94    0.00  0.12  0.82  1.00
+pvc-p               elec    95    0.00  0.12  0.82  1.00
+pvc-i               elec    96    0.00  0.12  0.82  1.00
++ elec-pvchange pvc-p pvc-a pvc-i
+ac81-pvloop         ac81    12    0.53  0.72  0.93  0.90  w=2400
+ac80-pvloop         ac80    8     0.20  0.12  0.80  0.38  w=2400
+elec-turbulence     elec    86    0.00  0.12  1.00  1.00
+# Section D: Circulatory dynamics 1 (cd1.pdf)
+cd1-segments        cd1     7     0.00  0.05  1.00  1.00
+cd1-pressure        cd1     13    0.00  0.12  1.00  0.75
+cd1-summary         cd1     21    0.15  0.00  0.75  1.00  w=2200
+cd1-velocity        cd1     16    0.00  0.15  1.00  1.00
+cd1-distensibility  cd1     24    0.00  0.10  1.00  0.95
+# Section V: Circulatory dynamics 2 (cd2.pdf)
+cd2-wave            cd2     5     0.00  0.05  1.00  1.00
+cd2-ppfactors       cd2     7     0.00  0.08  1.00  0.90
+cd2-stiffness       cd2     12    0.50  0.40  1.00  1.00  w=2400
+cd2-pulses          cd2     16    0.25  0.00  1.00  1.00
+cd2-musclepump      cd2     30    0.00  0.00  1.00  0.95
+cd2-jvp             cd2     37    0.50  0.05  1.00  0.90  w=2400
+# Section M: Microcirculation (micro.pdf)
+micro-components    micro   3     0.00  0.08  1.00  0.85
+micro-types         micro   8     0.00  0.00  1.00  1.00
+micro-pathways      micro   12    0.00  0.05  1.00  1.00
+micro-pv            micro   19    0.00  0.00  1.00  1.00
+micro-starling      micro   24    0.00  0.00  1.00  1.00
+micro-lymph         micro   28    0.60  0.05  1.00  1.00  w=2400
+# Section R: Regulation (reg.pdf)
+reg-symp            reg     20    0.00  0.35  1.00  1.00
+reg-para            reg     22    0.00  0.35  1.00  1.00
++ reg-ans reg-symp reg-para
+reg-baro            reg     10    0.00  0.10  1.00  1.00
+reg-chemo           reg     25    0.00  0.25  1.00  1.00
+reg-timeline        reg     32    0.08  0.15  1.00  1.00
+reg-raas            reg     42    0.00  0.00  1.00  1.00
+reg-autoreg         reg     51    0.00  0.45  1.00  1.00
+reg-endoth          reg     54    0.00  0.35  1.00  1.00
+# Section O: Regional circulation (regional.pdf)
+regional-zones      regional 7    0.33  0.10  1.00  0.90
+regional-coronary   regional 10   0.00  0.00  1.00  1.00
+regional-skin       regional 20   0.00  0.15  1.00  0.65
+regional-summary    regional 37   0.00  0.00  1.00  1.00  w=2000
+# Section X: CVS changes in exercise (exercise.pdf)
+ex-hrsv             exercise 15   0.00  0.15  0.68  1.00  w=2000
+ex-svmech           exercise 17   0.00  0.15  1.00  1.00
+ex-bp               exercise 26   0.00  0.12  1.00  0.95
+ex-redistribution   exercise 31   0.00  0.00  0.62  1.00  w=2000
+# Section K: Basic ECG (ecg.pdf)
+ecg-waveform        ecg     15    0.00  0.08  1.00  1.00
+ecg-lead1           ecg     19    0.00  0.08  1.00  1.00
+ecg-lead2           ecg     20    0.00  0.08  1.00  1.00
++ ecg-limbleads ecg-lead1 ecg-lead2
+ecg-precordial      ecg     21    0.25  0.45  1.00  1.00  w=2400
+ecg-hexaxial        ecg     39    0.00  0.35  1.00  1.00
+ecg-reversal        ecg     46    0.00  0.08  1.00  1.00
+ac81-ecg13          ac81    23    0.10  0.11  0.90  0.41  w=2400
+ac80-ecg            ac80    9     0.10  0.35  0.85  0.68  w=2400
