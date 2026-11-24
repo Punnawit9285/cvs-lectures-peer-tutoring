@@ -17,41 +17,49 @@ window.THAI_SEC.A = {
 
 Object.assign(window.THAI_CONCEPT, {
   "A-C1": [
-    "ถุงหุ้มหัวใจมี 2 ชั้น: <b>fibrous</b> (นอก เหนียว) + <b>serous</b> (parietal บุถุง, visceral = <b>epicardium</b>) → ช่องระหว่าง serous 2 ชั้น = pericardial cavity",
-    "<b>Transverse sinus</b> อยู่หลัง pulmonary trunk + ascending aorta · <b>oblique sinus</b> ล้อมด้วย pulmonary veins + IVC"
+    "ถุงหุ้มหัวใจ = <b>fibrous</b> ชั้นนอกที่เหนียว + <b>serous</b> 2 ชั้น (ชั้นบุถุง กับชั้นที่แนบผิวหัวใจ) → ช่องระหว่างสองชั้นคือ pericardial cavity ที่มีน้ำเล็กน้อย",
+    "<b>Transverse sinus</b> อยู่หลังหลอดเลือดแดงใหญ่ 2 เส้นที่ออกจากหัวใจ · <b>oblique sinus</b> ถูกล้อมด้วยหลอดเลือดดำที่เข้า LA กับ IVC",
+    "ของเหลวหรือเลือดสะสมใน cavity เร็ว → หัวใจขยายรับเลือดไม่ได้ → CO ตก (ภาวะฉุกเฉิน)"
   ],
   "A-C2": [
-    "ขอบขวา = <b>RA</b> · ขอบซ้าย = <b>LV</b> · ขอบล่าง = <b>RV</b> · apex = ปลาย LV ที่ <b>left 5th ICS MCL</b>",
-    "<b>LA อยู่หลังสุด</b> ชิด esophagus → LA โต (AF) กด esophagus → กลืนลำบาก"
+    "ขอบขวาเป็นห้องบน · ขอบซ้ายและ apex เป็นห้องล่าง · ด้านหน้าส่วนใหญ่เป็น <b>RV</b> · apex อยู่แนว midclavicular line ซ้าย",
+    "ห้องที่อยู่หลังสุดวางชิด esophagus → ห้องนี้โต (AF, mitral stenosis) จะกด esophagus → กลืนลำบาก",
+    "จุดฟังเสียงลิ้นไม่ตรงกับตำแหน่งลิ้นจริง: pulmonary ที่ left 2nd ICS · mitral ที่ apex"
   ],
   "A-C3": [
-    "RA: <b>crista terminalis</b> แบ่งส่วนเรียบ (sinus venarum) กับส่วนขรุขระ (pectinate) · <b>Koch triangle</b> → AV node อยู่ที่ยอด",
-    "RV: <b>trabeculae carneae</b> + papillary muscles · <b>moderator band</b> (มี right bundle branch) มีแค่ใน RV"
+    "RA มี 2 ส่วน: ส่วนผนังเรียบ (sinus venarum จาก sinus venosus) กับส่วนผนังขรุขระ (atrium proper) โดยมีสันกล้ามเนื้อเป็นเส้นแบ่ง",
+    "<b>Koch triangle</b> (tendon of Todaro + septal leaflet + coronary sinus) ใช้หาตำแหน่ง conduction node ที่ยอดสามเหลี่ยม",
+    "RV: inflow ผนังขรุขระ · outflow (infundibulum) เรียบ · มีแถบกล้ามเนื้อจาก septum ไป anterior papillary m. ที่นำ right bundle branch → พบเฉพาะใน RV"
   ],
   "A-C4": [
-    "<b>Left atrial appendage</b> = ที่ลิ่มเลือดชอบเกิดใน AF",
-    "<b>Mitral</b> มี 2 cusps · aortic valve มี 3 cusps · coronary arteries เปิดจาก <b>sinus of Valsalva</b>"
+    "LA รับ pulmonary veins 4 เส้น · ส่วนที่ยื่นออกเป็นติ่ง (auricle) เป็นจุดที่เลือดค้างใน AF → ลิ่มเลือด",
+    "LV ผนังหนาที่สุด · ลิ้น AV ด้านซ้ายมี 2 cusps · aortic valve มี 3 semilunar cusps (nodule + lunula)",
+    "เหนือ cusp ของ aortic valve มีกระเปาะโป่ง → เป็นจุดที่หลอดเลือดเลี้ยงกล้ามเนื้อหัวใจแตกออก"
   ],
   "A-C5": [
-    "<b>RCA</b> → SA nodal, conal, right marginal, AV nodal, PDA · <b>LCA</b> → LAD (diagonal, septal) + circumflex (left marginal)",
-    "Dominance ตัดสินจากว่าใครให้ <b>PDA</b> → ส่วนใหญ่เป็น right dominant",
-    "Lateral wall ขาดเลือด → <b>circumflex</b> · SA/AV node → <b>RCA</b>"
+    "<b>LAD</b> เลี้ยงด้านหน้าของ ventricle ทั้งสองและ septum ส่วนใหญ่ · <b>circumflex</b> อ้อมไปเลี้ยงผนังด้านข้างและด้านหลังของ LV",
+    "Dominance ดูว่าเส้นไหนให้แขนงที่วิ่งในร่องด้านหลังระหว่าง ventricle → คนส่วนใหญ่ (88%) เป็น right dominant",
+    "Pacemaker ทั้งสองจุดมักได้เลือดจากหลอดเลือดฝั่งขวา → เส้นนี้อุดตันจึงกระทบระบบนำไฟฟ้า"
   ],
   "A-C6": [
-    "Vein วิ่งคู่ artery: great–LAD · middle–PDA · small–RCA → รวมเป็น <b>coronary sinus</b> → RA",
-    "<b>Anterior cardiac veins</b> และ least cardiac veins ไม่ผ่าน coronary sinus"
+    "หลักจำ: vein วิ่งคู่ artery ในร่องเดียวกัน → เห็น vein ในร่องไหนให้ตอบ artery ของร่องนั้น (great คู่ร่องหน้า · middle คู่ร่องหลัง)",
+    "Vein ส่วนใหญ่ไหลรวมเข้า sinus ใหญ่ในร่องด้านหลังของหัวใจ → เปิดเข้า RA",
+    "ข้อยกเว้น: vein ด้านหน้าของ RV และ least cardiac veins ไม่ผ่าน sinus นี้ แต่เปิดเข้าห้องหัวใจโดยตรง"
   ],
   "A-C7": [
-    "SA node (ระหว่าง crista terminalis กับ SVC) → AV node → His (ผ่าน fibrous ring) → bundle branches → right branch ใน moderator band",
-    "Vagus → HR ↓ · sympathetic → HR ↑ · pain → T1–T4 → ปวดร้าวมาอกและแขนซ้ายด้านใน"
+    "ทางไฟฟ้า: SA node (ใน RA ใกล้ปากทาง SVC) → atria → AV node (Koch) → bundle of His → ทะลุผนังกั้น atria–ventricles → bundle branches",
+    "SA และ AV node ได้เลือดจาก RCA เป็นส่วนใหญ่ · bundle branches ได้เลือดจากแขนงของ LAD",
+    "Parasympathetic → HR ↓ · sympathetic → HR ↑ · ใยรับความปวดวิ่งตามเส้น sympathetic → ปวดร้าวมาอกและแขนซ้ายด้านใน"
   ],
   "A-C8": [
-    "IJV + subclavian v. → brachiocephalic v. → <b>SVC</b> · arch: brachiocephalic trunk → L CCA → L subclavian",
-    "<b>Left recurrent laryngeal n.</b> อ้อมใต้ arch ข้าง ligamentum arteriosum → arch โป่งพองหรือ LA โต → เสียงแหบ"
+    "หลอดเลือดดำจากคอและแขนรวมเป็น brachiocephalic v. ซ้ายและขวา → รวมกันเข้าหลอดเลือดดำใหญ่ส่วนบน → RA",
+    "แขนงของ arch เรียงจากขวาไปซ้าย 3 แขนง: แขนงแรกแตกเป็น R common carotid + R subclavian → L common carotid → L subclavian",
+    "Arch โป่งพองหรือ LA โตมาก → ดึงเส้นประสาทที่อ้อมใต้ arch ข้าง ligamentum arteriosum → เสียงแหบ"
   ],
   "A-C9": [
-    "3 shunts: <b>ductus venosus</b> (ข้ามตับ) · <b>foramen ovale</b> (RA → LA) · <b>ductus arteriosus</b> (PT → aorta ข้ามปอด)",
-    "Remnants: umbilical v. → lig. teres hepatis · ductus venosus → lig. venosum · foramen ovale → fossa ovalis · ductus arteriosus → lig. arteriosum"
+    "3 shunts: <b>ductus venosus</b> (ข้ามตับ) · <b>foramen ovale</b> (RA → LA) · <b>ductus arteriosus</b> (pulmonary trunk → aorta ข้ามปอด)",
+    "แรกเกิด O₂ ↑ + prostaglandin ↓ → ductus ปิด · ความดัน LA สูงกว่า RA → flap ปิดรู foramen",
+    "ทุก shunt เหลือเป็นโครงสร้างตกค้าง (ligament หรือแอ่ง) → จำคู่ก่อน–หลังคลอดจากตาราง"
   ]
 });
 
@@ -106,28 +114,29 @@ window.THAI_SEC.H = {
 
 Object.assign(window.THAI_CONCEPT, {
   "H-C1": [
-    "Endocardium (endothelium) → <b>subendocardial layer (Purkinje)</b> → myocardium (contractile, myoendocrine ทำ ANP, nodal) → epicardium (<b>mesothelium</b>)",
-    "<b>Cardiac skeleton</b> = dense CT (collagen + elastic) → ยึดลิ้น + เป็นฉนวนไฟฟ้าระหว่าง atria กับ ventricles"
+    "ผนังหัวใจ 3 ชั้น: <b>endocardium</b> (endothelium + ชั้นใต้ที่มีใยนำไฟฟ้า) → <b>myocardium</b> (เซลล์บีบตัว, เซลล์สร้าง ANP, nodal) → <b>epicardium</b> (เซลล์แบนบุผิว + ไขมัน + coronary vessels)",
+    "<b>Cardiac skeleton</b> = dense CT → เป็นฐานยึดลิ้นหัวใจ และแยก atria ออกจาก ventricles · ลิ้นและ chordae เป็น dense fibrous CT ส่วน papillary m. เป็นกล้ามเนื้อหัวใจ"
   ],
   "H-C2": [
-    "<b>Elastic artery</b> media เต็มไปด้วย fenestrated elastic lamellae (VVG ติดดำ) · <b>muscular artery</b> media เป็น SMC 6–40 ชั้น IEL/EEL ชัด",
-    "SMC ใน media เป็นคนสร้าง ECM (ไม่มี fibroblast ใน media)"
+    "<b>Elastic artery</b> (aorta, pulmonary) → media มีแผ่น elastin ซ้อนกันหลายชั้น (VVG ติดดำ) → ยืดรับแรงดันแล้วดีดกลับ",
+    "<b>Muscular artery</b> (femoral, axillary) → คุมการกระจายเลือดไปแต่ละอวัยวะ · ใน media ไม่มี fibroblast · adventitia มี vasa vasorum + nervi vasorum"
   ],
   "H-C3": [
-    "<b>Arteriole</b> = resistance vessel (SMC 1–2 ชั้น) → ยาลดความดันออกฤทธิ์ที่นี่มากสุด",
-    "<b>AV anastomosis</b> → thermoregulation · <b>portal system</b>: ตับ, anterior pituitary (venous) · ไต (arterial)"
+    "<b>Arteriole</b>: SMC วงกลม 1–2 ชั้น ไม่มี EEL ไม่มี vasa vasorum → ความดันตกมากที่สุด → ยาขยายหลอดเลือดลดความดันออกฤทธิ์ที่นี่เป็นหลัก",
+    "ทางลัดจาก arteriole ไป venule ที่ปลายนิ้ว จมูก ริมฝีปาก → เลี่ยง capillary ผิว → ใช้คุมอุณหภูมิ",
+    "<b>Portal system</b> = capillary bed 2 ชุดต่อกัน: แบบ venous เช่นที่ตับ · แบบ arterial ที่ไต"
   ],
   "H-C4": [
-    "Continuous (muscle, lung, CNS) · fenestrated (endocrine, gut, kidney) · sinusoidal (liver, spleen, bone marrow; BM ไม่ครบ)",
-    "<b>Pericyte</b> หุ้ม capillary + postcapillary venule และใช้ BM ร่วมกับ endothelium · capillary ไม่มี smooth muscle"
+    "3 ชนิด: <b>continuous</b> (tight junction, vesicles มาก) · <b>fenestrated</b> (มีรู ± diaphragm) · <b>sinusoidal</b> (ช่องกว้าง) → ดูผนังแล้วเดาอวัยวะ",
+    "มีเซลล์หุ้มรอบ capillary ที่ใช้ BM ร่วมกับ endothelium → ช่วยพยุงและคุม flow"
   ],
   "H-C5": [
-    "Vein: media บาง adventitia หนา · <b>large vein</b> adventitia หนาสุด + longitudinal SMC",
-    "<b>Valve</b> = รอยพับของ intima บุด้วย endothelium ทั้ง 2 ด้าน · dural sinus/coronary sinus ไม่มี SMC"
+    "หลักแยกในสไลด์: artery → media หนา · vein → adventitia หนา",
+    "Venule → vein ขนาดกลาง → vein ใหญ่ (venae cavae): media บาง adventitia หนากว่า · coronary sinus ไม่มี SMC เลย"
   ],
   "H-C6": [
-    "Lymphatic capillary: <b>blind-ended</b>, endothelium ชั้นเดียว ไม่มี BM, SMC, pericyte, valve · มี anchoring filaments",
-    "ดูในสไลด์: ขอบไม่เรียบ ผนังบางมาก น้ำเหลืองสีชมพูจาง ไม่มี RBC"
+    "Lymphatic capillary ผนังบางรั่ว ไม่มี BM, SMC, pericyte → น้ำและโปรตีนเข้าได้ง่าย",
+    "ดูในสไลด์: ขอบไม่เรียบ ผนังบางมาก น้ำเหลืองสีชมพูจาง · collecting vessel → ท่อใหญ่ → มุมรวม left IJV กับ subclavian v."
   ]
 });
 
@@ -179,24 +188,28 @@ window.THAI_SEC.E = {
 
 Object.assign(window.THAI_CONCEPT, {
   "E-C1": [
-    "Phase 4 K⁺ ออกผ่าน I<sub>K1</sub> (−90) → phase 0 fast Na⁺ เข้า → phase 1 I<sub>to</sub> → <b>phase 2 L-type Ca²⁺ เข้า = K⁺ ออก</b> → phase 3 K⁺ ออก",
-    "ศัพท์: chrono = rate · <b>dromo = conduction</b> · bathmo = excitability · ino = แรงบีบ · lusi = คลายตัว"
+    "เซลล์ 3 กลุ่ม: pacemaker (SA, AV) · conducting (His, branches, Purkinje) · contractile (atria, ventricles)",
+    "Fast AP: −90 mV → upstroke เร็ว → notch → ช่วงราบยาว → กลับสู่ขั้วเดิม (ดูตารางว่าแต่ละ phase ใช้ ion channel ไหน)",
+    "ศัพท์: chrono = rate · bathmo = excitability · ino = แรงบีบ · lusi = คลายตัว"
   ],
   "E-C2": [
-    "Pacemaker: phase 4 <b>funny current (Na⁺)</b> ไต่ขึ้นช้า ๆ → phase 0 Ca²⁺ ที่ −40 mV → phase 3 K⁺",
-    "β1 → I<sub>f</sub> ↑ → phase 4 ชันขึ้น → HR ↑ · SA node ยิงเร็วสุด จึงคุมจังหวะ"
+    "Pacemaker ไม่มี RMP คงที่: phase 4 ไต่ขึ้นช้า ๆ จาก −55 mV จนถึง threshold → upstroke ช้าเพราะ fast Na⁺ channel ถูก inactivate ที่ RMP นี้",
+    "Intrinsic rate: SA 70–80 > AV 40–60 > Purkinje 20–40 → ตัวที่ยิงก่อนจะ reset ตัวอื่น",
+    "β1 → cAMP ↑ → HR ↑ · vagus → phase 4 ลาดลง → HR ↓"
   ],
   "E-C3": [
-    "Purkinje เร็วสุด (2–4 m/s) · <b>AV node ช้าสุด</b> (0.01–0.05) → ให้ ventricle มีเวลาเติมเลือด",
-    "ARP ยาวเกือบเท่าการบีบตัว → หัวใจไม่เกิด tetanus"
+    "ความเร็วนำไฟฟ้าขึ้นกับความชันของ upstroke: เซลล์ที่ใช้ Na⁺ นำเร็ว · เซลล์ที่ใช้ Ca²⁺ นำช้า",
+    "การหน่วงระหว่าง atria กับ ventricles ทำให้ atria บีบเลือดลง ventricle ครบก่อน ventricle บีบ",
+    "ARP กินเวลาเกือบตลอดการบีบตัว → หัวใจบีบค้างต่อเนื่องแบบกล้ามเนื้อลายไม่ได้"
   ],
   "E-C4": [
-    "RMP ขึ้นกับ <b>extracellular K⁺</b> · hyperK → RMP less negative, excitability ↑, conduction ↓ · hypoK → hyperpolarized",
-    "HypoCa → plateau ยาว (QT ยาว), contractility ↓, excitability ↑ · hyperCa → กลับกัน"
+    "ขณะพัก K⁺ channel เปิดเป็นหลัก → RMP ≈ E<sub>K</sub> → ระดับ K⁺ ในเลือดเปลี่ยน RMP ทันที",
+    "HyperK รุนแรง → RMP ใกล้ threshold → Na⁺ channel reset ไม่ได้ → หัวใจหยุดเต้น · hypoK → RMP ลบมากขึ้น",
+    "Ca²⁺ คุมความยาว phase 2 และ threshold: hypoCa → excitability ↑ · hyperCa → excitability ↓"
   ],
   "E-C5": [
-    "Ca²⁺ เข้า (L-type) → <b>RyR</b> ปล่อย Ca²⁺ จาก SR (CICR) → บีบ · SERCA2 เก็บ Ca²⁺ กลับ → คลาย",
-    "<b>Digoxin</b> ยับยั้ง Na⁺/K⁺-ATPase → Na⁺ ในเซลล์ ↑ → NCX ขับ Ca²⁺ ออกน้อยลง → Ca²⁺ ↑ → บีบแรงขึ้น"
+    "AP → Ca²⁺ เข้าทาง L-type (T-tubule) → กระตุ้น SR ให้ปล่อย Ca²⁺ ก้อนใหญ่ → บีบตัว · คลายตัวเมื่อ Ca²⁺ ถูกเก็บกลับ SR และขับออกนอกเซลล์",
+    "Contractility = แรงบีบที่ความยาวเดิม · เพิ่มด้วย sympathetic/β1, catecholamine, HR เร็ว, thyroxine · ลดด้วย vagus, β-blocker, CCB, hyperK, acidosis, hypoxia"
   ],
   "E-C6": [
     "Preload = EDV/EDP (ดีสุดคือ LVEDP > LAP > PCWP > CVP) · afterload = แรงต้านตอนบีบ",
@@ -246,16 +259,17 @@ window.THAI_SEC.C = {
 
 Object.assign(window.THAI_CONCEPT, {
   "C-C1": [
-    "Systole: <b>isovolumic contraction</b> → ejection · diastole: isovolumic relaxation → rapid filling → diastasis → atrial systole",
-    "HR เร็ว → <b>diastole สั้นลงมากกว่า systole</b> → เวลาเติมเลือดลดลง"
+    "7 phases เรียงตามเวลา: ช่วงที่ลิ้นทุกอันปิด → ejection เร็ว → ejection ช้า → ช่วงลิ้นปิดอีกครั้ง → rapid filling → diastasis → atrial systole",
+    "S1 = AV valves ปิด (ต้น systole) · HR เร็ว → ช่วงเติมเลือดสั้นลงมาก (0.66 → 0.13 s)"
   ],
   "C-C2": [
-    "S1 = mitral + tricuspid ปิด · S2 = aortic + pulmonary ปิด (+ dicrotic notch บนกราฟ aorta)",
-    "หายใจเข้า → venous return ขวา ↑ → P2 มาช้า → S2 split · ASD → split กว้างตลอด"
+    "S1 เกิดเมื่อความดัน ventricle แซงความดันห้องบน → ลิ้น AV ปิด · S2 เกิดเมื่อความดัน ventricle ต่ำกว่าหลอดเลือดแดงใหญ่ → ลิ้น semilunar ปิด",
+    "หายใจเข้า → venous return ฝั่งขวา ↑ → RV บีบนานขึ้น → S2 แยก (split) · ASD → split กว้างทั้งหายใจเข้าและออก"
   ],
   "C-C3": [
-    "Semilunar: ตีบ → <b>systolic ejection</b> · รั่ว → <b>diastolic blowing</b> · AV: ตีบ → <b>diastolic rumble</b> · รั่ว → <b>pansystolic</b>",
-    "ตำแหน่ง: aortic R2 · pulmonary L2 · mitral apex · tricuspid L5"
+    "ใช้ 2 คำถาม: เสียงเกิดช่วงไหน (systole หรือ diastole) + ดังสุดที่ไหน → ระบุลิ้นและรอยโรคได้",
+    "ลิ้นตีบ → เลือดไหลผ่านช่วงที่ลิ้นควรเปิด · ลิ้นรั่ว → เลือดไหลย้อนช่วงที่ลิ้นควรปิด",
+    "จุดฟัง: pulmonary left 2nd ICS · tricuspid left 5th ICS"
   ],
   "C-C4": [
     "PV loop ทวนเข็ม: mitral ปิด → aortic เปิด → aortic ปิด → mitral เปิด · ความกว้าง = SV",
@@ -298,15 +312,16 @@ Object.assign(window.THAI_CONCEPT, {
     "ความดันลดลงเรื่อย ๆ จาก aorta → ต่ำสุดที่ large vein ใกล้ RA"
   ],
   "D-C2": [
-    "Q = ΔP/R · R = 8ηL/πr⁴ → <b>รัศมีมีผลมากสุด</b> (ลดครึ่ง → R × 16)",
-    "อวัยวะต่อกันแบบ parallel → คุมเลือดเข้าแต่ละอวัยวะได้อิสระ"
+    "Q = ΔP ÷ R และ R = 8ηL ÷ πr⁴ → ตัวแปรที่ยกกำลัง 4 มีผลต่อ resistance มากที่สุด",
+    "Hematocrit และความยาวหลอดเลือดเพิ่ม R ได้ แต่น้อยกว่าการเปลี่ยนขนาดหลอดเลือด · หลอดเลือดที่ต่อแบบอนุกรม → R รวมกัน"
   ],
   "D-C3": [
-    "Velocity = flow/พื้นที่รวม → <b>capillary ช้าสุด</b> เพราะพื้นที่รวมมากสุด",
-    "N<sub>R</sub> = 2rρv/η > 3000 → turbulent → murmur/bruit · Hct ต่ำ → η ต่ำ → turbulent ง่าย"
+    "Flow = ความเร็ว × พื้นที่หน้าตัดรวม → flow เท่ากันทุกช่วง แต่พื้นที่รวมต่างกัน → ส่วนที่พื้นที่รวมมากที่สุดมีเวลาแลกเปลี่ยนสาร",
+    "Reynolds number สูง (ความเร็วสูง รัศมีใหญ่ ความหนาแน่นสูง เลือดจาง) → turbulent flow → ได้ยินเสียงผิดปกติ ส่วน laminar flow เงียบ"
   ],
   "D-C4": [
-    "Compliance = ΔV/ΔP · vein compliant กว่า artery <b>24 เท่า</b> → เป็น capacitance vessel/แหล่งเก็บเลือด"
+    "Compliance = ΔV ÷ ΔP → vein ยืดได้มากกว่าและจุมากกว่า artery หลายเท่า → เก็บเลือดปริมาณมากที่ความดันต่ำ",
+    "Sympathetic ทำให้ vein หด → ดันเลือดที่เก็บไว้กลับเข้าหัวใจ"
   ]
 });
 
@@ -338,20 +353,21 @@ window.THAI_SEC.V = {
 
 Object.assign(window.THAI_CONCEPT, {
   "V-C1": [
-    "PP = SBP − DBP · <b>MAP = DBP + PP/3</b> = CO × TPR · PP ขึ้นกับ SV และ compliance",
-    "Korotkoff ครั้งแรก = <b>systolic</b> · เสียงหาย = diastolic"
+    "PP = SBP − DBP · MAP = DBP + PP ÷ 3 · PP ขึ้นกับปริมาณเลือดที่บีบออกแต่ละครั้งและความยืดหยุ่นของ aorta",
+    "ค่าปกติ ≤ 120/80 · pulmonary artery ≈ 25/10"
   ],
   "V-C2": [
     "Arterial stiffness → SBP ↑ DBP ↓ → <b>PP กว้าง</b> และคลื่นชีพจรวิ่งเร็วขึ้น",
     "Collapsing = AR/PDA · plateau = AS · paradoxus = tamponade"
   ],
   "V-C3": [
-    "Venous return ↑: thoracic pump (หายใจเข้า), muscle pump + valve, venoconstriction, volume ↑",
-    "CVP ↓ ทันทีเมื่อ <b>venodilation</b> (เลือดไปค้างใน vein)"
+    "Venous pressure ↑ จาก gravity, เสื้อผ้ารัดหรือนั่งนาน, ความดันในช่องท้อง, ความดัน RA สูง",
+    "Venous return ↑ จากการหายใจเข้า, การบีบของกล้ามเนื้อน่อง + ลิ้นใน vein, venoconstriction · CVP ↓ เมื่อเสียเลือด"
   ],
   "V-C4": [
-    "<b>a</b> atrial contraction · <b>c</b> tricuspid โป่งกลับ · <b>x</b> atrium คลาย · <b>v</b> atrium เติม · <b>y</b> atrium เทลง RV",
-    "AF → ไม่มี a wave · TR → v wave สูง"
+    "JVP สะท้อนความดัน RA: คลื่นบวก 3 ตัว (a, c, v) และร่องลง 2 ตัว (x, y)",
+    "c = tricuspid โป่งกลับเข้า RA ตอน RV บีบ · y = RA เทเลือดลง RV",
+    "AF → ไม่มีการบีบของ atrium ที่เป็นระเบียบ · TR → RV รั่วกลับเข้า RA ช่วง systole"
   ]
 });
 
@@ -387,16 +403,18 @@ window.THAI_SEC.M = {
 
 Object.assign(window.THAI_CONCEPT, {
   "M-C1": [
-    "Continuous (muscle, skin, lung, brain) · fenestrated (gut, endocrine, choroid plexus, glomerulus) · discontinuous (liver, spleen, marrow)",
-    "รั่วน้อยสุด = <b>brain</b> (BBB) · รั่วมากสุด = <b>liver sinusoid</b> · sphincter ปิด → filtration ↓"
+    "Arteriole + sphincter หน้า capillary คุมปริมาณเลือดเข้า bed (sympathetic) → sphincter ปิด → Pc ↓ → filtration ↓",
+    "Continuous (กล้ามเนื้อ ผิวหนัง ปอด) รั่วน้อย · fenestrated (gut, choroid plexus, glomerulus) · discontinuous (ม้าม ไขกระดูก) รั่วมากสุด โปรตีนผ่านได้"
   ],
   "M-C2": [
-    "Gas/lipophilic → <b>ผ่านเซลล์ (transcellular diffusion)</b> · น้ำ/สารละลายน้ำ → ผ่าน cleft/fenestra · protein → vesicle",
-    "Fick: gradient ↑ พื้นที่ ↑ → diffusion ↑ · ผนังหนา → ↓"
+    "ก๊าซและสารละลายในไขมัน (O₂, CO₂, NO, ยาสลบ) ผ่านเนื้อเซลล์ได้ทั้งเซลล์ · น้ำ กลูโคส ไอออน ผ่านช่องระหว่างเซลล์และ fenestra",
+    "Protein ใช้การขนส่งข้ามเซลล์ · ผ่านรู: โมเลกุลใหญ่ขึ้น → ซึมผ่านได้น้อยลง (น้ำ > NaCl > glucose > โปรตีน)",
+    "Fick: diffusion ↑ ตามพื้นที่ผิว · ↓ เมื่อผนังหนา"
   ],
   "M-C3": [
-    "<b>NFP = (Pc − Pi) − (πc − πi)</b> → ปลาย arteriole +9 filtration · ปลาย venule −8 absorption",
-    "90% ดูดกลับ · 10% ไปทาง lymph · venous pressure ↑ ทำให้ Pc ↑ มาก"
+    "NFP = (Pc − Pi) − (πc − πi) → ที่ปลาย arteriole แรงดันออกชนะ (+9) · ที่ปลาย venule แรงดูดกลับชนะ (−8)",
+    "ของเหลวที่กรองออกส่วนใหญ่ (~90%) ถูกดูดกลับที่ปลาย venule",
+    "Venous pressure ↑ ทำให้ Pc ↑ มากกว่าการเพิ่ม arterial pressure"
   ],
   "M-C4": [
     "Edema 4 กลไก: <b>Pc ↑</b> (HF) · <b>πc ↓</b> (albumin ต่ำ) · <b>permeability ↑</b> (อักเสบ, ผึ้งต่อย) · <b>lymph อุดตัน</b> (mastectomy → πi ↑)",
@@ -438,24 +456,29 @@ window.THAI_SEC.R = {
 
 Object.assign(window.THAI_CONCEPT, {
   "R-C1": [
-    "Sympathetic → I<sub>f</sub> ↑, I<sub>Ca</sub> ↑ → HR, conduction, contractility ↑ · vagus → I<sub>K-ACh</sub> ↑ → HR ↓",
-    "Vagus ขวา → SA node · ซ้าย → AV node · intrinsic: Frank–Starling และ Anrep"
+    "Medulla: NTS รับข้อมูล → cardio-inhibitory (dorsal motor n. ของ X), cardio-accelerator, vasomotor centre",
+    "Sympathetic → I<sub>f</sub> ↑ I<sub>Ca</sub> ↑ → HR, การนำไฟฟ้า, แรงบีบ ↑ · vagus → K⁺ ออกมากขึ้น, I<sub>Ca</sub> ↓, I<sub>f</sub> ↓ → hyperpolarize → HR ↓",
+    "Vagus ขวา → pacemaker หลัก · ซ้าย → AV node · กลไกในตัวหัวใจ: heterometric และ homeometric (Anrep)"
   ],
   "R-C2": [
-    "Carotid sinus (CN IX) + aortic arch (CN X) → NTS → BP ↑: vagus ↑ sympathetic ↓ · BP ↓: กลับกัน",
-    "เร็วที่สุด แต่ reset ได้ถ้าความดันเปลี่ยนนานหลายวัน"
+    "Stretch receptor ที่ carotid sinus และ aortic arch → medulla → BP ↑: vagus ↑ sympathetic ↓ → HR, แรงบีบ, TPR ↓",
+    "BP ตก (เสียเลือด ท้องเสีย ลุกยืน) → กลับด้าน → HR ↑ และหลอดเลือดหด",
+    "ตอบสนองเร็วที่สุด (วินาที) แต่ปรับจุดตั้งใหม่ได้ถ้าความดันเปลี่ยนนานหลายวัน"
   ],
   "R-C3": [
-    "Chemoreceptor (O₂ ↓ CO₂ ↑ H⁺ ↑) → vasoconstriction + หายใจ ↑ · <b>CNS ischemic</b> → BP สูงมาก",
-    "Cushing triad: BP สูง PP กว้าง + bradycardia + หายใจผิดจังหวะ"
+    "Chemoreceptor (carotid/aortic bodies) รับรู้ O₂ ↓ CO₂ ↑ H⁺ ↑ → กระตุ้น sympathetic และการหายใจ",
+    "เลือดไปสมองลด → CO₂ คั่งที่ vasomotor centre → sympathetic สูงมาก → BP ↑↑ · ICP สูง → triad: BP สูง PP กว้าง + HR ช้า + หายใจผิดจังหวะ",
+    "Bainbridge: atrium ถูกยืด → HR เปลี่ยน · respiratory sinus arrhythmia: HR เปลี่ยนตามการหายใจ"
   ],
   "R-C4": [
-    "RAAS: renin → Ang I → <b>ACE</b> → Ang II → หลอดเลือดหด + aldosterone + ADH + กระหายน้ำ",
-    "ระยะยาว: ไตขับเกลือ/น้ำตามความดัน (pressure natriuresis) · CKD → GFR ↓ → BP สูง"
+    "วินาที: baroreceptor, chemoreceptor, CNS ischemic · นาที–ชั่วโมง: RAAS vasoconstriction, capillary fluid shift · วัน: ไตคุมปริมาตร (pressure natriuresis)",
+    "Renin (JG cells) → Ang I → (เอนไซม์ที่ปอด) → Ang II → หลอดเลือดหด + hormone เก็บเกลือ + ADH + กระหายน้ำ",
+    "ADH: V1 → หลอดเลือดหด · อีก receptor หนึ่ง → ดูดน้ำกลับ · ไตเสื่อม → เก็บเกลือ → BP ↑"
   ],
   "R-C5": [
-    "<b>Autoregulation</b> (myogenic) · <b>metabolic</b> (CO₂, H⁺, K⁺, lactate, adenosine) · <b>endothelium</b> (NO, PGI₂ vs endothelin)",
-    "Histamine ขยาย (บาดเจ็บ) · serotonin หด · อุดตันนาน → collateral"
+    "ความดันเปลี่ยนแต่ flow คงที่ (myogenic: ยืด → หด) · metabolism ↑ → CO₂, H⁺, K⁺, lactate ↑ → arteriole ขยาย (active hyperemia)",
+    "Shear stress → endothelium หลั่งสารขยาย (+ prostacyclin) และสารหด · reactive hyperemia หลังเลือดถูกกั้น",
+    "ขาดเลือดเรื้อรังหลายสัปดาห์ → angiogenesis สร้างทางเลี่ยง"
   ]
 });
 
@@ -610,8 +633,9 @@ window.THAI_SEC.K = {
 
 Object.assign(window.THAI_CONCEPT, {
   "K-C1": [
-    "P = atrial depol · QRS = ventricular depol · ST = plateau (อยู่ใน ARP) · T = repolarization",
-    "PR 120–200 ms (< 120 WPW, > 200 first-degree block) · QT สั้นลงเมื่อ HR เร็ว"
+    "QRS = ventricular depolarization (fast Na⁺) · ST = plateau phase 2 · T = ventricular repolarization phase 3",
+    "PR สั้นเกิน → WPW pattern · > 200 ms = first-degree AV block · QRS < 110 ms · QTc 330–440 ms",
+    "หลัง P → atrial contraction · RR → ใช้คำนวณ rate"
   ],
   "K-C2": [
     "I = RA→LA · II = RA→LL · <b>III = LA→LL</b> · มุม: I 0°, II 60°, III 120°, aVF 90°, aVL −30°, aVR −150°",
@@ -622,15 +646,17 @@ Object.assign(window.THAI_CONCEPT, {
     "Sinus: P บวกใน II ลบใน aVR ทุก P ตามด้วย QRS อัตรา 60–100"
   ],
   "K-C4": [
-    "Normal −30° ถึง +90° · I+ aVF+ normal · I− aVF+ <b>RAD</b> · I− aVF− extreme · I+ aVF− ดู II",
-    "Lead ขนานกับ axis → R สูงสุด · ตั้งฉาก → biphasic · มุม > 90° → ลบมากกว่าบวก"
+    "อ่าน axis ใน frontal plane ด้วย Lead I + aVF ก่อน: บวกทั้งคู่ = normal · I บวก aVF ลบ ต้องดูอีก lead",
+    "R สูงสุดใน lead ที่แนวเดียวกับ axis · biphasic ใน lead ที่ตั้งฉาก · มุม < 90° → บวกเป็นหลัก"
   ],
   "K-C5": [
-    "Q ปกติแคบ (< 40 ms) · Q กว้างลึก = infarction เก่า",
-    "ST ปกติ isoelectric (≤ 1 mm) · ยกมาก → MI · inferior (II, III, aVF) → RCA"
+    "Q ปกติแคบ (< 40 ms) เล็ก พบใน aVR และ V4–V6 · กล้ามเนื้อตายไม่สร้างแรงไฟฟ้าบวก → Q ผิดปกติ (> 40 ms)",
+    "ST ปกติอยู่บน isoelectric line · ST ยกหรือกดชัด → ต้องคิดถึงหัวใจขาดเลือด",
+    "ตำแหน่ง ST ยกบอกผนังและหลอดเลือด: V1–V2 septal · I, aVL lateral (LCx) · II, III, aVF → RCA"
   ],
   "K-C6": [
-    "Lead ที่ไม่เปลี่ยน = augmented lead ของแขน/ขาที่<b>ไม่ได้</b>ถูกสลับ: RA↔LA → aVF · RA↔LL → aVL · LA↔LL → aVR"
+    "Augmented lead แต่ละตัวมองจากแขนหรือขาข้างหนึ่งเทียบค่าเฉลี่ยของอีก 2 ข้าง → ถ้าสลับ 2 ข้างที่มันไม่ได้มอง lead นั้นไม่เปลี่ยน",
+    "สลับแขน (RA ↔ LA) → II สลับกับ III และ lead ของแขนสองข้างสลับกัน"
   ]
 });
 
@@ -672,24 +698,27 @@ window.THAI_SEC.O = {
 
 Object.assign(window.THAI_CONCEPT, {
   "O-C1": [
-    "Pulmonary: ความดันต่ำ (25/10) resistance ต่ำ flow = CO ทั้งหมด · <b>hypoxia → หด</b> · ไวต่อ gravity",
-    "Bronchial a. (จาก aorta) เลี้ยงหลอดลมถึง terminal bronchiole"
+    "Pulmonary: ความดันต่ำ (25/10, mean ~15) resistance ต่ำ แต่รับ CO ทั้งหมด",
+    "O₂ ในถุงลมต่ำ → arteriole ปอดหด → ส่งเลือดไปถุงลมที่ระบายอากาศดี (ตรงข้ามกับ systemic)",
+    "ความดันต่ำ → ในท่ายืนเลือดไปฐานปอดมากกว่ายอดปอด · bronchial a. (จาก aorta) เลี้ยงหลอดลม"
   ],
   "O-C2": [
-    "LV coronary flow <b>ต่ำสุด early systole</b> · <b>สูงสุด early diastole</b>",
-    "คุมด้วย <b>metabolism</b> (adenosine, NO, H⁺) เป็นหลัก · β-blocker ลดงาน → flow ↓"
+    "60–80 mL/min/100 g · ขึ้นกับ aortic pressure",
+    "Systole: ผนัง LV บีบหลอดเลือดตัวเอง → flow ช่วงต้น systole น้อย · ช่วงที่กล้ามเนื้อคลายและ aortic pressure ยังสูง → flow มากสุด",
+    "งาน ↑ → ใช้ O₂ ↑ → สารขยายหลอดเลือด (NO, H⁺) · sympathetic หดโดยตรงแต่ผลรวมขยาย · β1 blocker → งาน ↓ → flow ↓"
   ],
   "O-C3": [
-    "CBF ~700 mL/min · autoregulation 60–160 mmHg · <b>CO₂ สำคัญสุด</b> (สูง → ขยาย, ต่ำ → หด)",
-    "เส้นประสาทมีผลน้อย · ICP สูง → Cushing"
+    "CBF ~700 mL/min คงที่ด้วย autoregulation · PaCO₂ เป็นตัวคุมที่สำคัญสุด: hyperventilation → PaCO₂ ↓ → หด → ICP ↓",
+    "ปัจจัยเฉพาะที่: CO₂ ก่อน แล้ว O₂, H⁺ ใน CSF, K⁺ · สมองส่วนที่ทำงานได้เลือดเพิ่ม · เส้นประสาทมีผลน้อย"
   ],
   "O-C4": [
-    "ผิวหนัง: <b>sympathetic</b> คุมเป็นหลัก (อุณหภูมิ) · หนาว → arteriole + AV shunt หด",
-    "กล้ามเนื้อ: พัก → sympathetic · ออกกำลัง → metabolite ขยายได้ 15–20 เท่า"
+    "ผิวหนังคุมด้วยระบบประสาทจาก hypothalamus เพื่ออุณหภูมิ ไม่ใช่ metabolism · หนาว → arteriole และทางลัดหด → เก็บความร้อน",
+    "หนาวนาน (0–15 °C) → หลอดเลือดกลับขยายเป็นพัก ๆ ปกป้องนิ้ว · กล้ามเนื้อ: ขณะพักคุมด้วยเส้นประสาท ออกกำลัง flow ↑ 15–20 เท่า"
   ],
   "O-C5": [
-    "ตับ 25% CO (¾ จาก portal vein) · ลำไส้ functional hyperemia หลังกิน",
-    "ไต 20–25% CO เพื่อกรอง · <b>autoregulation ดีสุด</b> (myogenic + TGF) · shock → sympathetic ลด RBF"
+    "ลำไส้: sympathetic เป็นหลัก คุมความดันได้น้อย · หลังกินอาหาร flow ↑ (adenosine)",
+    "ตับ: 25% ของ CO ส่วนใหญ่ (¾) มาจากหลอดเลือดดำความดันต่ำ (~10 mmHg)",
+    "ไต: 20–25% ของ CO เพื่อกรอง ไม่ใช่เพื่อ metabolism · คุม flow ให้คงที่ได้ดีที่ 75–170 mmHg (myogenic + macula densa) · shock → sympathetic ชนะ"
   ]
 });
 
@@ -740,12 +769,12 @@ Object.assign(window.THAI_CONCEPT, {
     "ยึดกติกาด้านซ้าย-ขวาของภาพรังสี และใช้เส้นแบ่งกลาง sternum–spine ช่วยชี้ตำแหน่งหลอดเลือดหลัก"
   ],
   "I-C5": [
-    "จำจุดเด่นและข้อจำกัดของเครื่องมือ 3 ชนิด (อัลตราซาวด์, CT, MRI) รวมถึงระนาบภาพที่ใช้คำนวณปริมาตรหัวใจ",
-    "จับคู่โจทย์คลินิก (ข้างเตียง, หลอดเลือดหัวใจ 3 มิติ, แผลเป็นกล้ามเนื้อหัวใจ) กับเครื่องมือที่เหมาะสมที่สุด"
+    "จำจุดเด่นและข้อจำกัดของเครื่องมือ 3 ชนิด (คลื่นเสียง เอกซเรย์คอมพิวเตอร์ คลื่นแม่เหล็ก) รวมถึงระนาบภาพที่ใช้คำนวณปริมาตรหัวใจ",
+    "จับคู่โจทย์คลินิก (ตรวจทันทีที่เตียงผู้ป่วย, กายวิภาคหลอดเลือดหัวใจ 3 มิติ, ประเมินเนื้อเยื่อกล้ามเนื้อหัวใจ) กับเครื่องมือที่เหมาะสมที่สุด"
   ],
   "I-C6": [
-    "เข้าใจหลักการใส่สายสวนหลอดเลือดที่ทำได้ทั้งวินิจฉัยและรักษาในคราวเดียว รวมถึงหลักการลบภาพพื้นหลังของ DSA",
-    "ไล่แขนงหลักของหลอดเลือดหัวใจซ้าย-ขวา และแขนงหลักทั้ง 3 ของส่วนโค้งเอออร์ตา"
+    "เข้าใจหลักการใส่สายสวนหลอดเลือดที่ทำได้ทั้งวินิจฉัยและรักษาในคราวเดียว รวมถึงหลักการลบภาพพื้นหลังด้วยคอมพิวเตอร์",
+    "ไล่แขนงหลักของหลอดเลือดหัวใจซ้าย–ขวา และแขนงหลักทั้ง 3 ของส่วนโค้งเอออร์ตา"
   ]
 });
 
@@ -803,19 +832,23 @@ Object.assign(window.THAI_CONCEPT, {
     "Static/heavy lifting → TPR ↑ → BP สูงมาก → หลีกเลี่ยงในคนความดันสูง"
   ],
   "X-C2": [
-    "<b>VO₂ = CO × a–v O₂ diff</b> → ออกกำลังเพิ่มทั้งสองตัว → O₂ uptake ↑",
-    "VO₂max = gold standard ของ fitness และทำนายอัตราตาย"
+    "VO₂ = CO × a–v O₂ difference → ออกกำลังเพิ่มทั้ง CO และการดึง O₂ ของเนื้อเยื่อ",
+    "VO₂max ใช้วัดความฟิตของหัวใจและปอดได้ดีที่สุด และค่าต่ำทำนายผลเสียระยะยาวได้ดีกว่าน้ำหนักหรือความดัน"
   ],
   "X-C3": [
-    "HR ↑ เชิงเส้น (vagal ↓ ก่อน แล้ว sympathetic ↑) · SV ↑ ช่วงแรกแล้ว plateau",
-    "หัวใจปลูกถ่าย: HR ขึ้นช้าด้วย catecholamine ในเลือด · CO ↑ ด้วย Frank–Starling"
+    "HR ขึ้นเป็นเส้นตรงตามความหนัก · SV ขึ้นช่วงแรกแล้วคงที่ราว 50% VO₂max",
+    "SV ↑ ผ่าน preload (muscle + respiratory pump, venoconstriction), contractility และ afterload ↓",
+    "หัวใจปลูกถ่ายไม่มีเส้นประสาท → HR พักสูง และขึ้นช้าขณะออกกำลัง"
   ],
   "X-C4": [
-    "MAP ↑ จาก CO (TPR ลด) · เลือดไปกล้ามเนื้อ ผิวหนัง หัวใจ ↑ · <b>splanchnic ไต ↓</b> · สมองคงที่",
-    "หยุดออกกำลังทันทีแล้วยืนนิ่ง → venous return ↓ → เป็นลม"
+    "MAP = CO × TPR → ออกกำลังแบบ dynamic: TPR ↓ แต่ MAP ยัง ↑",
+    "Sympathetic หดหลอดเลือดในช่องท้องและไต → ย้ายเลือดไปกล้ามเนื้อ · ผิวหนัง ↑ ระบายความร้อน · coronary ↑",
+    "หยุดออกกำลังทันทีแล้วยืนนิ่ง → muscle pump หาย → เป็นลม"
   ],
   "X-C5": [
-    "ฝึกนาน: HR พัก ↓, SV ↑, VO₂max ↑, capillary + mitochondria ↑ · athlete’s heart = eccentric hypertrophy"
+    "ฝึกนาน: HR พักลดลง · SV ↑ ทั้งตอนพักและออกกำลัง · BP ขณะพักและขณะออกกำลังลดลง",
+    "Athlete’s heart: โพรง LV ใหญ่ขึ้น สัดส่วนผนังต่อรัศมีคงเดิม (ต่างจาก hypertension ที่ผนังหนาโพรงเล็ก = concentric)",
+    "CO สูงสุดเพิ่มจาก SV สูงสุด (HRmax แทบไม่เปลี่ยน) · capillary, mitochondria, a–v O₂ difference ↑"
   ]
 });
 

@@ -3,7 +3,7 @@ window.TUTOR_SCRIPT.sec.B = {
   part: 'Video 5', time: '16&#8211;20 min',
   open: 'Build cardiac biochemistry in three linked layers: how the cell handles calcium to beat and relax, how catecholamines and digoxin push that calcium machinery, and how the heart switches fuels and buffers ATP.',
   u: [
-  '<b>Structure &amp; syncytium</b>: branched striated cells, central nucleus, ~80% mitochondria, dyads; intercalated disc has desmosomes, fascia adherens, and connexin-43 gap junctions making a functional (not structural) syncytium.',
+  '<b>Structure &amp; syncytium</b>: branched striated cells, 1–2 central nuclei, mitochondria-rich (20–40% of cell volume), dyads; intercalated disc has desmosomes, fascia adherens, and connexin-43 gap junctions making a functional (not structural) syncytium.',
   '<b>CICR &amp; relaxation</b>: phase 2 DHPR2 lets in ~10% trigger Ca²⁺ → opens RyR2 for ~90% SR Ca²⁺; Ca²⁺ binds TnC; relaxation uses ~80–90% SERCA, ~10–20% NCX, minor PMCA.',
   '<b>β₁–cAMP–PKA</b>: phosphorylates DHPR2 &amp; RyR2 (+inotropy) and PLB &amp; TnI (+lusitropy); α₁–Gq hits IP₃R (not PKA); M₂–Gi lowers cAMP.',
   '<b>Cardiac glycosides</b>: digoxin and toxic plants (Foxglove, Lily of the Valley, Oleander, Cerbera) inhibit Na⁺/K⁺-ATPase → ↑[Na⁺]ᵢ → ↓NCX → ↑SR Ca²⁺ (+inotropy) plus central vagal −chronotropy.',

@@ -1,6 +1,6 @@
 /* ---------- B · Biochemistry of CVS ---------- */
 S_('B-C1', [
-  '- Branched striated fibres · single central nucleus · abundant {{mitochondria}} (~80% mass) for aerobic ATP',
+  '- Branched striated fibres · 1–2 central nuclei · {{mitochondria}} = 20–40% of cell volume (aerobic ATP)',
   '- T-tubule + 1 SR cisterna = {{dyad}} (vs triad in skeletal fibres)',
   '## Intercalated disc',
   '| Bridge | Mechanical or electrical role |',
@@ -50,7 +50,7 @@ S_('B-C5', [
   '| Prolonged starvation | {{ketone bodies}} |',
   '| Strenuous exercise | {{lactate}} (61%) |',
   '> {{Randle}} effect: ↑lipid/KB → ↑{{[Acetyl-CoA]/[CoA]}}, ↑NADH/NAD⁺, ↑ATP/ADP, ↑citrate → inhibits PDH, PFK-1/2 &amp; citrate synthase',
-  '> Myocardial {{LD-1}} (H₄) has low Km → converts exercise acid → pyruvate for TCA',
+  '> Myocardial {{LD-1}} (H₄) has a low Km for the acid made by working muscle → turns it into pyruvate for the TCA cycle',
   '! In ischemia (no O₂), anaerobic glycolysis accumulates lactic acid'
 ]);
 

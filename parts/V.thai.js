@@ -12,20 +12,21 @@ window.THAI_SEC.V = {
 
 Object.assign(window.THAI_CONCEPT, {
   "V-C1": [
-    "PP = SBP − DBP · <b>MAP = DBP + PP/3</b> = CO × TPR · PP ขึ้นกับ SV และ compliance",
-    "Korotkoff ครั้งแรก = <b>systolic</b> · เสียงหาย = diastolic"
+    "PP = SBP − DBP · MAP = DBP + PP ÷ 3 · PP ขึ้นกับปริมาณเลือดที่บีบออกแต่ละครั้งและความยืดหยุ่นของ aorta",
+    "ค่าปกติ ≤ 120/80 · pulmonary artery ≈ 25/10"
   ],
   "V-C2": [
     "Arterial stiffness → SBP ↑ DBP ↓ → <b>PP กว้าง</b> และคลื่นชีพจรวิ่งเร็วขึ้น",
     "Collapsing = AR/PDA · plateau = AS · paradoxus = tamponade"
   ],
   "V-C3": [
-    "Venous return ↑: thoracic pump (หายใจเข้า), muscle pump + valve, venoconstriction, volume ↑",
-    "CVP ↓ ทันทีเมื่อ <b>venodilation</b> (เลือดไปค้างใน vein)"
+    "Venous pressure ↑ จาก gravity, เสื้อผ้ารัดหรือนั่งนาน, ความดันในช่องท้อง, ความดัน RA สูง",
+    "Venous return ↑ จากการหายใจเข้า, การบีบของกล้ามเนื้อน่อง + ลิ้นใน vein, venoconstriction · CVP ↓ เมื่อเสียเลือด"
   ],
   "V-C4": [
-    "<b>a</b> atrial contraction · <b>c</b> tricuspid โป่งกลับ · <b>x</b> atrium คลาย · <b>v</b> atrium เติม · <b>y</b> atrium เทลง RV",
-    "AF → ไม่มี a wave · TR → v wave สูง"
+    "JVP สะท้อนความดัน RA: คลื่นบวก 3 ตัว (a, c, v) และร่องลง 2 ตัว (x, y)",
+    "c = tricuspid โป่งกลับเข้า RA ตอน RV บีบ · y = RA เทเลือดลง RV",
+    "AF → ไม่มีการบีบของ atrium ที่เป็นระเบียบ · TR → RV รั่วกลับเข้า RA ช่วง systole"
   ]
 });
 

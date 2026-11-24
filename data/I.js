@@ -66,8 +66,8 @@ CVS.add({
       title: 'Cardiac valve projections &amp; pulmonary vascular patterns',
       src: 'Imaging of CVS p.21–31',
       html: CVS.fig('i-valves', 'Anatomic projection of the four heart valves on PA and lateral views.', 'imaging', 22) +
-            CVS.fig('i-pah', 'Central arterial dilation with peripheral vessel tapering.', 'imaging', 26) +
-            CVS.fig('i-pvh', 'Prominent upper-lobe pulmonary veins.', 'imaging', 27)
+            CVS.ans(CVS.fig('i-pah', 'Pulmonary arterial hypertension film, labelled.', 'imaging', 26) +
+              CVS.fig('i-pvh', 'Pulmonary venous hypertension film, labelled.', 'imaging', 27), 'PAH and PVH films (show the answers)')
     },
     {
       t: 'q', id: 'I4', core: true, keep: true, src: 'AC80',
@@ -88,9 +88,9 @@ CVS.add({
       t: 'c', id: 'I-C4',
       title: 'Axial cross-sectional thoracic anatomy (T3–T9)',
       src: 'Imaging of CVS p.33–43',
-      html: CVS.fig('i-ct-t3', 'Axial post-contrast MDCT at the five-vessel level.', 'imaging', 36) +
+      html: CVS.ans(CVS.fig('i-ct-t3', 'Axial post-contrast MDCT at the five-vessel level.', 'imaging', 36) +
             CVS.fig('i-ct-t5', 'Axial post-contrast MDCT at the main pulmonary artery level.', 'imaging', 39) +
-            CVS.fig('i-ct-t8', 'Axial post-contrast MDCT at the low cardiac levels.', 'imaging', 43)
+            CVS.fig('i-ct-t8', 'Axial post-contrast MDCT at the low cardiac levels.', 'imaging', 43), 'Labelled CT levels (show the answers)')
     },
     {
       t: 'q', id: 'I5', core: true, keep: true, src: 'AC81',
@@ -165,7 +165,7 @@ CVS.add({
       title: 'Angiography, digital subtraction (DSA) &amp; coronary/aortic trees',
       src: 'Imaging of CVS p.61–77',
       html: CVS.fig('i-dsa', 'Pre-subtraction angiogram versus subtracted vascular image.', 'imaging', 65) +
-            CVS.fig('i-coronary', 'Left and right coronary arterial trees on fluoroscopy.', 'imaging', 68) +
+            CVS.ans(CVS.fig('i-coronary', 'Left and right coronary arterial trees on fluoroscopy.', 'imaging', 68), 'Labelled coronary angiograms (show the answers)') +
             CVS.fig('i-aortogram', 'Thoracic aortogram displaying the great-vessel branches.', 'imaging', 69)
     }
   ]

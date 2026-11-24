@@ -1,4 +1,5 @@
-"""Build student.pdf for the dedicated EKG deck on Windows (headless Chrome + PyMuPDF)."""
+"""Build student.pdf for the dedicated EKG deck (headless Chrome + PyMuPDF; Windows, macOS or Linux).
+Two passes for page numbers, a fit check for tables, real web fonts embedded, then the ?v= hash stamped into the READMEs."""
 import os, sys, re, json, time, shutil, hashlib, subprocess, urllib.request
 from pathlib import Path
 import pymupdf
@@ -12,6 +13,9 @@ IMG_DIR = EKG / "img"
 
 CHROME_CANDIDATES = [
     os.environ.get("CHROME", ""),
+    shutil.which("google-chrome") or "", shutil.which("google-chrome-stable") or "", shutil.which("chromium") or "", shutil.which("chromium-browser") or "",
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    os.path.expanduser("~/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
     r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
     r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
@@ -23,6 +27,10 @@ if not CHROME:
 def ensure_fonts():
     css_file = FONTS_DIR / "fonts.css"
     if css_file.exists() and css_file.stat().st_size > 100:
+        return
+    shared = EKG.parent / "dist" / "fonts"   # local copies made by the main deck's tools/fonts.sh
+    if (shared / "fonts.css").exists():
+        shutil.copytree(shared, FONTS_DIR, dirs_exist_ok=True)
         return
     FONTS_DIR.mkdir(parents=True, exist_ok=True)
     url = "https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
@@ -138,16 +146,16 @@ def main():
     doc.close()
     print(f"Embedded fonts ({len(fonts)}): {sorted(fonts)}")
     for want in ["BaiJamjuree", "IBMPlexSans", "IBMPlexSansThai", "IBMPlexMono"]:
-        if not any(want in f for f in fonts):
+        if not any(re.search(r"(^|\+)" + want + r"(-|$)", f) for f in fonts):
             raise SystemExit(f"Required font {want} not embedded in student.pdf!")
 
     # Stamp SHA1 version hash into README.md
     sha8 = hashlib.sha1(student_pdf.read_bytes()).hexdigest()[:8]
-    readme = EKG / "README.md"
-    if readme.exists():
-        txt = readme.read_text(encoding="utf-8")
-        txt = re.sub(r"(ekg/student\.pdf)(\?v=[0-9a-f]+)?", rf"\1?v={sha8}", txt)
-        readme.write_text(txt, encoding="utf-8")
+    for readme in (EKG / "README.md", EKG.parent / "README.md"):
+        if readme.exists():
+            txt = readme.read_text(encoding="utf-8")
+            txt = re.sub(r"(ekg/student\.pdf)(\?v=[0-9a-f]+)?", rf"\1?v={sha8}", txt)
+            readme.write_text(txt, encoding="utf-8")
     print(f"SUCCESS: student.pdf ({n_pages} pages, {student_pdf.stat().st_size:,} bytes, v={sha8})")
     shutil.rmtree(tmp)
 

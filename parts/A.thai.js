@@ -12,41 +12,49 @@ window.THAI_SEC.A = {
 
 Object.assign(window.THAI_CONCEPT, {
   "A-C1": [
-    "ถุงหุ้มหัวใจมี 2 ชั้น: <b>fibrous</b> (นอก เหนียว) + <b>serous</b> (parietal บุถุง, visceral = <b>epicardium</b>) → ช่องระหว่าง serous 2 ชั้น = pericardial cavity",
-    "<b>Transverse sinus</b> อยู่หลัง pulmonary trunk + ascending aorta · <b>oblique sinus</b> ล้อมด้วย pulmonary veins + IVC"
+    "ถุงหุ้มหัวใจ = <b>fibrous</b> ชั้นนอกที่เหนียว + <b>serous</b> 2 ชั้น (ชั้นบุถุง กับชั้นที่แนบผิวหัวใจ) → ช่องระหว่างสองชั้นคือ pericardial cavity ที่มีน้ำเล็กน้อย",
+    "<b>Transverse sinus</b> อยู่หลังหลอดเลือดแดงใหญ่ 2 เส้นที่ออกจากหัวใจ · <b>oblique sinus</b> ถูกล้อมด้วยหลอดเลือดดำที่เข้า LA กับ IVC",
+    "ของเหลวหรือเลือดสะสมใน cavity เร็ว → หัวใจขยายรับเลือดไม่ได้ → CO ตก (ภาวะฉุกเฉิน)"
   ],
   "A-C2": [
-    "ขอบขวา = <b>RA</b> · ขอบซ้าย = <b>LV</b> · ขอบล่าง = <b>RV</b> · apex = ปลาย LV ที่ <b>left 5th ICS MCL</b>",
-    "<b>LA อยู่หลังสุด</b> ชิด esophagus → LA โต (AF) กด esophagus → กลืนลำบาก"
+    "ขอบขวาเป็นห้องบน · ขอบซ้ายและ apex เป็นห้องล่าง · ด้านหน้าส่วนใหญ่เป็น <b>RV</b> · apex อยู่แนว midclavicular line ซ้าย",
+    "ห้องที่อยู่หลังสุดวางชิด esophagus → ห้องนี้โต (AF, mitral stenosis) จะกด esophagus → กลืนลำบาก",
+    "จุดฟังเสียงลิ้นไม่ตรงกับตำแหน่งลิ้นจริง: pulmonary ที่ left 2nd ICS · mitral ที่ apex"
   ],
   "A-C3": [
-    "RA: <b>crista terminalis</b> แบ่งส่วนเรียบ (sinus venarum) กับส่วนขรุขระ (pectinate) · <b>Koch triangle</b> → AV node อยู่ที่ยอด",
-    "RV: <b>trabeculae carneae</b> + papillary muscles · <b>moderator band</b> (มี right bundle branch) มีแค่ใน RV"
+    "RA มี 2 ส่วน: ส่วนผนังเรียบ (sinus venarum จาก sinus venosus) กับส่วนผนังขรุขระ (atrium proper) โดยมีสันกล้ามเนื้อเป็นเส้นแบ่ง",
+    "<b>Koch triangle</b> (tendon of Todaro + septal leaflet + coronary sinus) ใช้หาตำแหน่ง conduction node ที่ยอดสามเหลี่ยม",
+    "RV: inflow ผนังขรุขระ · outflow (infundibulum) เรียบ · มีแถบกล้ามเนื้อจาก septum ไป anterior papillary m. ที่นำ right bundle branch → พบเฉพาะใน RV"
   ],
   "A-C4": [
-    "<b>Left atrial appendage</b> = ที่ลิ่มเลือดชอบเกิดใน AF",
-    "<b>Mitral</b> มี 2 cusps · aortic valve มี 3 cusps · coronary arteries เปิดจาก <b>sinus of Valsalva</b>"
+    "LA รับ pulmonary veins 4 เส้น · ส่วนที่ยื่นออกเป็นติ่ง (auricle) เป็นจุดที่เลือดค้างใน AF → ลิ่มเลือด",
+    "LV ผนังหนาที่สุด · ลิ้น AV ด้านซ้ายมี 2 cusps · aortic valve มี 3 semilunar cusps (nodule + lunula)",
+    "เหนือ cusp ของ aortic valve มีกระเปาะโป่ง → เป็นจุดที่หลอดเลือดเลี้ยงกล้ามเนื้อหัวใจแตกออก"
   ],
   "A-C5": [
-    "<b>RCA</b> → SA nodal, conal, right marginal, AV nodal, PDA · <b>LCA</b> → LAD (diagonal, septal) + circumflex (left marginal)",
-    "Dominance ตัดสินจากว่าใครให้ <b>PDA</b> → ส่วนใหญ่เป็น right dominant",
-    "Lateral wall ขาดเลือด → <b>circumflex</b> · SA/AV node → <b>RCA</b>"
+    "<b>LAD</b> เลี้ยงด้านหน้าของ ventricle ทั้งสองและ septum ส่วนใหญ่ · <b>circumflex</b> อ้อมไปเลี้ยงผนังด้านข้างและด้านหลังของ LV",
+    "Dominance ดูว่าเส้นไหนให้แขนงที่วิ่งในร่องด้านหลังระหว่าง ventricle → คนส่วนใหญ่ (88%) เป็น right dominant",
+    "Pacemaker ทั้งสองจุดมักได้เลือดจากหลอดเลือดฝั่งขวา → เส้นนี้อุดตันจึงกระทบระบบนำไฟฟ้า"
   ],
   "A-C6": [
-    "Vein วิ่งคู่ artery: great–LAD · middle–PDA · small–RCA → รวมเป็น <b>coronary sinus</b> → RA",
-    "<b>Anterior cardiac veins</b> และ least cardiac veins ไม่ผ่าน coronary sinus"
+    "หลักจำ: vein วิ่งคู่ artery ในร่องเดียวกัน → เห็น vein ในร่องไหนให้ตอบ artery ของร่องนั้น (great คู่ร่องหน้า · middle คู่ร่องหลัง)",
+    "Vein ส่วนใหญ่ไหลรวมเข้า sinus ใหญ่ในร่องด้านหลังของหัวใจ → เปิดเข้า RA",
+    "ข้อยกเว้น: vein ด้านหน้าของ RV และ least cardiac veins ไม่ผ่าน sinus นี้ แต่เปิดเข้าห้องหัวใจโดยตรง"
   ],
   "A-C7": [
-    "SA node (ระหว่าง crista terminalis กับ SVC) → AV node → His (ผ่าน fibrous ring) → bundle branches → right branch ใน moderator band",
-    "Vagus → HR ↓ · sympathetic → HR ↑ · pain → T1–T4 → ปวดร้าวมาอกและแขนซ้ายด้านใน"
+    "ทางไฟฟ้า: SA node (ใน RA ใกล้ปากทาง SVC) → atria → AV node (Koch) → bundle of His → ทะลุผนังกั้น atria–ventricles → bundle branches",
+    "SA และ AV node ได้เลือดจาก RCA เป็นส่วนใหญ่ · bundle branches ได้เลือดจากแขนงของ LAD",
+    "Parasympathetic → HR ↓ · sympathetic → HR ↑ · ใยรับความปวดวิ่งตามเส้น sympathetic → ปวดร้าวมาอกและแขนซ้ายด้านใน"
   ],
   "A-C8": [
-    "IJV + subclavian v. → brachiocephalic v. → <b>SVC</b> · arch: brachiocephalic trunk → L CCA → L subclavian",
-    "<b>Left recurrent laryngeal n.</b> อ้อมใต้ arch ข้าง ligamentum arteriosum → arch โป่งพองหรือ LA โต → เสียงแหบ"
+    "หลอดเลือดดำจากคอและแขนรวมเป็น brachiocephalic v. ซ้ายและขวา → รวมกันเข้าหลอดเลือดดำใหญ่ส่วนบน → RA",
+    "แขนงของ arch เรียงจากขวาไปซ้าย 3 แขนง: แขนงแรกแตกเป็น R common carotid + R subclavian → L common carotid → L subclavian",
+    "Arch โป่งพองหรือ LA โตมาก → ดึงเส้นประสาทที่อ้อมใต้ arch ข้าง ligamentum arteriosum → เสียงแหบ"
   ],
   "A-C9": [
-    "3 shunts: <b>ductus venosus</b> (ข้ามตับ) · <b>foramen ovale</b> (RA → LA) · <b>ductus arteriosus</b> (PT → aorta ข้ามปอด)",
-    "Remnants: umbilical v. → lig. teres hepatis · ductus venosus → lig. venosum · foramen ovale → fossa ovalis · ductus arteriosus → lig. arteriosum"
+    "3 shunts: <b>ductus venosus</b> (ข้ามตับ) · <b>foramen ovale</b> (RA → LA) · <b>ductus arteriosus</b> (pulmonary trunk → aorta ข้ามปอด)",
+    "แรกเกิด O₂ ↑ + prostaglandin ↓ → ductus ปิด · ความดัน LA สูงกว่า RA → flap ปิดรู foramen",
+    "ทุก shunt เหลือเป็นโครงสร้างตกค้าง (ligament หรือแอ่ง) → จำคู่ก่อน–หลังคลอดจากตาราง"
   ]
 });
 

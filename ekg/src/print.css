@@ -80,7 +80,7 @@ table.toc td:first-child { white-space: normal; }
 .part { break-before: page; padding-top: 20mm; }
 .aksec, .xsec { margin-top: 10px; }
 .part + .aksec, .part + .xsec { margin-top: 18px; }
-.akhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; border-bottom: 2px solid var(--ok); padding-bottom: 4px; margin-bottom: 8px; break-after: avoid; }
+.akhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; border-bottom: 2px solid var(--ok); padding-bottom: 4px; margin-bottom: 8px; break-after: avoid; break-inside: avoid; }
 .akhead .id { font: 600 .9em var(--f-mono); color: var(--ok); }
 .akhead b { font: 600 1.35em var(--f-display); }
 .acols, .xcols { columns: 2; column-gap: 7mm; column-rule: 1px solid var(--rule); }

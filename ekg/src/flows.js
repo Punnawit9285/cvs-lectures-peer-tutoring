@@ -66,11 +66,11 @@
     ]
   };
   var AXIS_CASES = [
-    { k: 't69q11', b: 't-RAT 2569 Q11 (+60°)', src: 't-RAT 2569 Q11 (aVL biphasic, II tall)', v: { i: 4, avf: 7, ii: 10 } },
-    { k: 't68q12', b: 't-RAT 2568 Q12 (LAD)', src: 't-RAT 2568 Q12 (I +, II −, aVF −)', v: { i: 6, avf: -8, ii: -5 } },
-    { k: 'ac80q1', b: 'AC80 Q1 (RAD)', src: 'AC80 Q1 / i-RAT Q19 (I −, aVF +)', v: { i: -5, avf: 6, ii: 1 } },
-    { k: 'phys', b: 'Border (−15°)', src: 'Physiologic left axis (I +, aVF −, II +)', v: { i: 8, avf: -2, ii: 3 } },
-    { k: 'ext', b: 'Extreme (−120°)', src: 'Extreme axis deviation (I −, aVF −)', v: { i: -5, avf: -7, ii: -10 } }
+    { k: 't69q11', x: 'Normal axis (0° to +90°)', b: 't-RAT 2569 Q11 (+60°)', src: 't-RAT 2569 Q11 (aVL biphasic, II tall)', v: { i: 4, avf: 7, ii: 10 } },
+    { k: 't68q12', x: 'Left axis deviation', b: 't-RAT 2568 Q12 (LAD)', src: 't-RAT 2568 Q12 (I +, II −, aVF −)', v: { i: 6, avf: -8, ii: -5 } },
+    { k: 'ac80q1', x: 'Right axis deviation', b: 'AC80 Q1 (RAD)', src: 'AC80 Q1 / i-RAT Q19 (I −, aVF +)', v: { i: -5, avf: 6, ii: 1 } },
+    { k: 'phys', x: 'Normal axis (0° to −30°)', b: 'Border (−15°)', src: 'Physiologic left axis (I +, aVF −, II +)', v: { i: 8, avf: -2, ii: 3 } },
+    { k: 'ext', x: 'Extreme axis deviation', b: 'Extreme (−120°)', src: 'Extreme axis deviation (I −, aVF −)', v: { i: -5, avf: -7, ii: -10 } }
   ];
   var AXIS_FIELDS = [['i', 'Lead I net QRS (mm, + or −)'], ['avf', 'Lead aVF net QRS (mm, + or −)'], ['ii', 'Lead II net QRS (if I +, aVF −)']];
   var AXIS_TXT = {
@@ -146,13 +146,13 @@
     ]
   };
   var RATE_CASES = [
-    { k: 'ac75', b: 'AC75 (25 mm/s, 15 mm)', src: 'AC75 Q5 / i-RAT Q15', v: { speed: 25, rr: 15 } },
-    { k: 'ac76', b: 'AC76 / AC80 (12.5 mm/s)', src: 'AC76 Q7 / AC80 Q3 (RR 15 mm)', v: { speed: 12.5, rr: 15 } },
-    { k: 't69q13', b: 't-RAT 2569 Q13 (15 mm/s)', src: 't-RAT 2569 Q13 (RR 20 mm)', v: { speed: 15, rr: 20 } },
-    { k: 't68q13', b: 't-RAT 2568 Q13 (30 mm/s)', src: 't-RAT 2568 Q13 (RR 25 mm)', v: { speed: 30, rr: 25 } },
-    { k: 'ir14', b: 'i-RAT Q14 (50 mm/s, 18 mm)', src: 'i-RAT Q14 (50 mm/s, RR 18 mm)', v: { speed: 50, rr: 18 } },
-    { k: 'ac81q2', b: 'AC81 Q2 (50 mm/s, 15 mm)', src: 'AC81 Q2 / t-RAT 2569 Q12', v: { speed: 50, rr: 15 } },
-    { k: 't68q14', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 (22 QRS in 10 s)', v: { speed: 25, count: 22 } }
+    { k: 'ac75', x: '(100 bpm)', b: 'AC75 (25 mm/s, 15 mm)', src: 'AC75 Q5 / i-RAT Q15', v: { speed: 25, rr: 15 } },
+    { k: 'ac76', x: '(50 bpm)', b: 'AC76 / AC80 (12.5 mm/s)', src: 'AC76 Q7 / AC80 Q3 (RR 15 mm)', v: { speed: 12.5, rr: 15 } },
+    { k: 't69q13', x: '(45 bpm)', b: 't-RAT 2569 Q13 (15 mm/s)', src: 't-RAT 2569 Q13 (RR 20 mm)', v: { speed: 15, rr: 20 } },
+    { k: 't68q13', x: '(72 bpm)', b: 't-RAT 2568 Q13 (30 mm/s)', src: 't-RAT 2568 Q13 (RR 25 mm)', v: { speed: 30, rr: 25 } },
+    { k: 'ir14', x: '(167 bpm)', b: 'i-RAT Q14 (50 mm/s, 18 mm)', src: 'i-RAT Q14 (50 mm/s, RR 18 mm)', v: { speed: 50, rr: 18 } },
+    { k: 'ac81q2', x: '(200 bpm)', b: 'AC81 Q2 (50 mm/s, 15 mm)', src: 'AC81 Q2 / t-RAT 2569 Q12', v: { speed: 50, rr: 15 } },
+    { k: 't68q14', x: '(~132 bpm)', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 (22 QRS in 10 s)', v: { speed: 25, count: 22 } }
   ];
   var RATE_FIELDS = [['speed', 'Paper speed (mm/s, e.g. 25, 50)'], ['rr', 'RR small boxes (if regular)'], ['count', '10 s QRS count (if irregular)']];
   var RATE_TXT = {
@@ -196,7 +196,7 @@
   /* ================= 3. SINUS RHYTHM & CONDUCTION BLOCKS (Peer - EKG p.1-2, AC75-81) ================= */
   var RHY = { name: 'rhythm', W: 900, H: 460, label: 'Checking normal sinus rhythm versus atrial fibrillation, junctional escape, and AV blocks',
     N: [
-      { id: 'q1', k: 'q', x: 24, y: 10, w: 380, h: 60, t: ['① Distinct P waves present?'], s: ['not a wavy fibrillating baseline'] },
+      { id: 'q1', k: 'q', x: 24, y: 10, w: 380, h: 60, t: ['① No P waves + irregularly irregular RR?'], s: ['wavy fibrillating baseline'] },
       { id: 'q2', k: 'q', x: 24, y: 108, w: 380, h: 60, t: ['② Sinus P (+ in II, − in aVR)?'], s: ['monomorphic within each lead'] },
       { id: 'q3', k: 'q', x: 24, y: 206, w: 380, h: 60, t: ['③ Every P → QRS in 1 : 1 ratio?'], s: ['no dropped beats or dissociation'] },
       { id: 'q4', k: 'q', x: 24, y: 304, w: 380, h: 60, t: ['④ PR 120–200 ms & HR 60–100?'], s: ['normal AV delay & sinus rate'] },
@@ -207,8 +207,8 @@
       { id: 'avb1', k: 'leaf', x: 490, y: 304, w: 386, h: 60, t: ['1st-degree AVB / Sinus brady or tachy'], s: ['PR > 200 ms (1° AVB) · or HR < 60 / > 100'] }
     ],
     E: [
-      { f: 'q1', to: 'af', p: [[404, 40], [490, 40]], l: [447, 32, 'no'] },
-      { f: 'q1', to: 'q2', p: [[214, 70], [214, 108]], l: [236, 94, 'yes'] },
+      { f: 'q1', to: 'af', p: [[404, 40], [490, 40]], l: [447, 32, 'yes'] },
+      { f: 'q1', to: 'q2', p: [[214, 70], [214, 108]], l: [236, 94, 'no'] },
       { f: 'q2', to: 'junc', p: [[404, 138], [490, 138]], l: [447, 130, 'no'] },
       { f: 'q2', to: 'q3', p: [[214, 168], [214, 206]], l: [236, 192, 'yes'] },
       { f: 'q3', to: 'avb23', p: [[404, 236], [490, 236]], l: [447, 228, 'no'] },
@@ -218,14 +218,14 @@
     ]
   };
   var RHY_CASES = [
-    { k: 'ac81', b: 'AC81 Q4 (NSR)', src: 'AC81 Q4 (13 QRS in 10 s, +P II, PR 4–5 boxes)', v: { stop: 0, why: 'P waves upright in II and inverted in aVR, 1:1 P–QRS, PR ~160–200 ms, HR ~75–78 bpm → <b>Normal sinus rhythm</b>.' } },
-    { k: 'afib', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 / AC77 Q7', v: { stop: 1, dx: 'Atrial fibrillation (AF)', why: 'No P waves, wavy baseline, irregularly irregular RR intervals, narrow QRS → <b>Atrial fibrillation</b> (rate ≈ 22 × 6 = 132 bpm).' } },
-    { k: 'junc', b: 'AC75 Q17 (SA failure)', src: 'AC75 Q17 (50 bpm, narrow QRS, abnormal P)', v: { stop: 2, dx: 'AV junctional escape (AV node pacemaker)', why: 'SA node fails → next fastest pacemaker is the <b>AV node</b> (~40–60 bpm) conducting down His–Purkinje → regular <b>narrow QRS</b>.' } },
-    { k: 'avb3', b: 'AC75 Q8 (3rd° AV block)', src: 'AC75 Q8 (Atria 70, Vent 40, no P–QRS link)', v: { stop: 3, dx: '3rd-degree (complete) AV block', why: 'Atrial rate 70 bpm and ventricular rate 40 bpm with <b>complete AV dissociation</b> → <b>3rd-degree AV block</b>.' } },
-    { k: 'avb1', b: 'PR 240 ms (1st° AVB)', src: 'AC77 / AC78 (PR interval 240 ms)', v: { stop: 4, dx: '1st-degree AV block', why: 'Every sinus P conducts 1:1 to a QRS, but PR = 240 ms (> 200 ms) → <b>1st-degree AV block</b>.' } }
+    { k: 'ac81', x: 'Normal sinus rhythm', b: 'AC81 Q4 (NSR)', src: 'AC81 Q4 (13 QRS in 10 s, +P II, PR 4–5 boxes)', v: { stop: 0, why: 'P waves upright in II and inverted in aVR, 1:1 P–QRS, PR ~160–200 ms, HR ~75–78 bpm → <b>Normal sinus rhythm</b>.' } },
+    { k: 'afib', x: 'Atrial fibrillation', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 / AC77 Q7', v: { stop: 1, dx: 'Atrial fibrillation (AF)', why: 'No P waves, wavy baseline, irregularly irregular RR intervals, narrow QRS → <b>Atrial fibrillation</b> (rate ≈ 22 × 6 = 132 bpm).' } },
+    { k: 'junc', x: 'AV junctional escape', b: 'AC75 Q17 (SA failure)', src: 'AC75 Q17 (50 bpm, narrow QRS, abnormal P)', v: { stop: 2, dx: 'AV junctional escape (AV node pacemaker)', why: 'SA node fails → next fastest pacemaker is the <b>AV node</b> (~40–60 bpm) conducting down His–Purkinje → regular <b>narrow QRS</b>.' } },
+    { k: 'avb3', x: '3rd-degree', b: 'AC75 Q8 (3rd° AV block)', src: 'AC75 Q8 (Atria 70, Vent 40, no P–QRS link)', v: { stop: 3, dx: '3rd-degree (complete) AV block', why: 'Atrial rate 70 bpm and ventricular rate 40 bpm with <b>complete AV dissociation</b> → <b>3rd-degree AV block</b>.' } },
+    { k: 'avb1', x: '1st-degree AV block', b: 'PR 240 ms (1st° AVB)', src: 'AC77 / AC78 (PR interval 240 ms)', v: { stop: 4, dx: '1st-degree AV block', why: 'Every sinus P conducts 1:1 to a QRS, but PR = 240 ms (> 200 ms) → <b>1st-degree AV block</b>.' } }
   ];
   var RHY_TXT = {
-    q1: { h: 'Look for P waves', b: ['Absent P waves + irregularly irregular RR + narrow QRS = atrial fibrillation.'], th: 'ไม่มี P wave + RR ไม่สม่ำเสมอ + QRS แคบ = AF' },
+    q1: { h: 'Fibrillating atria?', b: ['No P waves + irregularly irregular RR (narrow QRS) = atrial fibrillation.', 'A regular rhythm without clear P waves is not AF: keep going (a junctional escape hides or inverts the P).'], th: 'ไม่มี P wave + RR ไม่สม่ำเสมอ = AF · ถ้า RR สม่ำเสมอแต่ไม่เห็น P ยังไม่ใช่ AF ให้ไล่ข้อต่อไป' },
     q2: { h: 'Confirm sinus origin', b: ['SA node sits upper-right → atrial wave runs down-left: P upright in II, inverted in aVR, same shape within one lead.'], th: 'P ปกติต้องบวกใน II และลบใน aVR (ไม่ต้องบวกทุก lead!)' },
     q3: { h: 'Check 1:1 AV conduction', b: ['Dropped QRS after some P waves = 2nd-degree AV block.', 'No link between P and QRS (atria faster than ventricles) = 3rd-degree AV block.'] },
     q4: { h: 'Check PR and rate', b: ['PR 120–200 ms (3–5 small boxes); > 200 ms = 1st-degree AV block; < 120 ms = pre-excitation.', 'Sinus rate 60–100 bpm.'] },
@@ -243,11 +243,11 @@
       var q = RHY_Q[i];
       if (v.stop === i + 1) {
         var lf = RHY_LEAF[v.stop];
-        P.push({ n: q, e: lf, val: 'no', why: RHY_TXT[q].h + ' — criterion fails here.' });
+        P.push({ n: q, e: lf, val: i === 0 ? 'yes' : 'no', why: RHY_TXT[q].h + (i === 0 ? ' — yes: no P waves and an irregularly irregular rhythm.' : ' — criterion fails here.') });
         P.push({ n: lf, why: v.why });
         return { steps: P, dx: v.dx || RHY_TXT[lf].h };
       }
-      P.push({ n: q, e: i < 3 ? RHY_Q[i + 1] : 'nsr', val: 'yes', why: RHY_TXT[q].h + ' — passed.' });
+      P.push({ n: q, e: i < 3 ? RHY_Q[i + 1] : 'nsr', val: i === 0 ? 'no' : 'yes', why: RHY_TXT[q].h + ' — passed.' });
     }
     P.push({ n: 'nsr', why: v.why });
     return { steps: P, dx: 'Normal sinus rhythm' };
@@ -257,7 +257,7 @@
   var DEFS = {
     axis: { def: AXIS, cases: AXIS_CASES, fields: AXIS_FIELDS, path: axisPath, txt: AXIS_TXT, title: 'QRS axis: quadrant check', hint: 'Click any box to see why. Load an exam case or enter net QRS values, then press Next step.', idle: 'Lead I (0°) → aVF (+90°) → and Lead II (+60°) whenever Lead I is positive and aVF is negative.' },
     rate: { def: RATE, cases: RATE_CASES, fields: RATE_FIELDS, path: ratePath, txt: RATE_TXT, title: 'Heart rate & paper-speed calculator', hint: 'Click any box to see the rule. Load an exam tracing or type your own values, then press Next step.', idle: 'Regular? Check paper speed (25 mm/s vs other) → 1500 ÷ boxes × (speed ÷ 25). Irregular? Count QRS in 10 s × 6.' },
-    rhythm: { def: RHY, cases: RHY_CASES, fields: [], path: rhyPath, txt: RHY_TXT, title: 'Sinus rhythm vs AV blocks & AFib', hint: 'Click any box to inspect the criterion. Load a case, then press Next step.', idle: 'Walk down the 4 checks: P waves present → sinus polarity (+II, −aVR) → 1:1 P–QRS → PR 120–200 ms & HR 60–100.' }
+    rhythm: { def: RHY, cases: RHY_CASES, fields: [], path: rhyPath, txt: RHY_TXT, title: 'Sinus rhythm vs AV blocks & AFib', hint: 'Click any box to inspect the criterion. Load a case, then press Next step.', idle: 'Walk down the 4 checks: fibrillating atria? → sinus polarity (+II, −aVR) → 1:1 P–QRS → PR 120–200 ms & HR 60–100.' }
   };
   function state(name) {
     return ST[name] || (ST[name] = { name: name, caseK: null, v: null, res: null, step: 0, sel: null, form: false });

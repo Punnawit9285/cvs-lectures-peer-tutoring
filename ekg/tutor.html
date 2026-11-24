@@ -99,7 +99,7 @@ button, input { font: inherit; color: inherit; }
 .cols2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .cols3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .figpair { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); align-items: center; }
-@media (max-width: 760px) { .two, .cols2, .cols3, .figpair { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .two, .cols2, .cols3, .figpair { grid-template-columns: minmax(0, 1fr); } }
 .mini { background: var(--sheet2); border-radius: 10px; padding: 12px 14px; min-width: 0; }
 .mini h4 { margin: 0 0 6px; font: 600 1em var(--f-display); letter-spacing: .01em; }
 .mini.art h4 { color: var(--art); }
@@ -160,7 +160,7 @@ button, input { font: inherit; color: inherit; }
 
 /* ---------- real figures cropped from the course material ---------- */
 .stack { display: grid; gap: 12px; align-content: start; min-width: 0; }
-.scan { margin: 0; min-width: 0; display: grid; gap: 6px; align-content: start; }
+.scan { margin: 0; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; align-content: start; }
 .paperimg { background: var(--scanbg); border: 1px solid var(--rule); border-radius: 10px; padding: 8px; isolation: isolate; }
 .scan img { display: block; width: auto; max-width: 100%; height: auto; max-height: min(440px, 62vh); margin: 0 auto; mix-blend-mode: multiply; cursor: zoom-in; border-radius: 4px; }
 .scan.tall img { max-height: min(480px, 66vh); }
@@ -169,6 +169,7 @@ button, input { font: inherit; color: inherit; }
 .scan figcaption .src { font-family: var(--f-mono); font-size: .88em; white-space: nowrap; opacity: .9; }
 .scan figcaption .src::before { content: "\00B7  "; }
 .scan figcaption.srconly .src::before { content: none; }
+@media (max-width: 600px) { .scan figcaption .src, .chip { white-space: normal; } }
 .scanrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; align-items: start; min-width: 0; }
 .qfig .scan { max-width: 760px; }
 .qfig .scan.tall { max-width: 560px; }
@@ -730,7 +731,7 @@ CVS.add({
   items: [
     { t: 'c', id: 'W-C1', title: 'Waves, segments and intervals', src: 'Peer notes p.1–2 · t-RAT 2569 · t-RAT 2568',
       html: CVS.fig('peer-wave', 'Tutor sketch: P, Q, R, S and T waves with PR interval, QT interval and ST segment marked.', 'ekg', 1) },
-    { t: 'q', id: 'W1', src: 't-RAT 2568', core: true,
+    { t: 'q', id: 'W1', wide: true, src: 't-RAT 2568', core: true,
       q: 'A 12-lead ECG from a 40-year-old woman is shown below. Identify the ECG components labeled A and B, respectively.',
       fig: CVS.fig('t68-labels', 't-RAT 2568 Q8: arrows A (lead II) and B (lead V2).', 'ekg', 38),
       o: ['P wave, T wave', 'PR interval, TP segment', 'Q wave, ST segment', 'P wave, ST segment'],
@@ -786,12 +787,7 @@ CVS.add({
       q: 'What is abnormal EKG?',
       o: ['PR interval 160 msec', 'QRS 100 msec', 'ST segment elevated 4 mm', 'RR interval 800 msec', 'QRS axis 30 องศา <span class="muted">(30 degrees)</span>'],
       a: 2,
-      ex: 'Normal ST deviation is within ±1 mm; 4 mm ST elevation is clearly abnormal (acute myocardial injury). RR 800 ms = 75 bpm, PR 160 ms, QRS 100 ms, and axis +30° are all normal.' },
-    { t: 'q', id: 'W11', src: 'AC79',
-      q: 'Which of the following considered as an abnormal ECG finding',
-      o: ['RR interval 800 msec', 'PR interval 160 msec', 'ST segment elevation 4 mm', 'QRS interval 100 msec', 'QRS axis 30'],
-      a: 2,
-      ex: 'Same item as W10 in a different option order: ST elevation 4 mm is the only abnormal finding.' },
+      ex: 'Normal ST deviation is within ±1 mm; 4 mm ST elevation is clearly abnormal (acute myocardial injury). RR 800 ms = 75 bpm, PR 160 ms, QRS 100 ms, and axis +30° are all normal. (The AC75–79 compilation lists this AC79 item twice, as Q17 and Q24.)' },
 
     { t: 'c', id: 'W-C4', title: 'The ECG on the cardiac cycle', src: 't-RAT 2569 · t-RAT 2568 · AC75–77', html: '' },
     { t: 'q', id: 'W12', src: 'AC75, AC77', core: true,
@@ -928,7 +924,7 @@ CVS.add({
       o: ['50 bpm', '75 bpm', '100 bpm', '150 bpm', '200 bpm'],
       a: 2,
       ex: '15 mm = 15 small boxes (3 big boxes). At 25 mm/s: HR = 1500 ÷ 15 = 100 bpm.' },
-    { t: 'q', id: 'R2', src: 'i-RAT 266-66',
+    { t: 'q', id: 'R2', wide: true, src: 'i-RAT 266-66',
       q: 'In this EKG, which runs at a speed of 25 mm/s, what is the heart rate?',
       fig: CVS.fig('ir-rate100', 'i-RAT Q15: 12-lead at 25 mm/s.', 'ekg', 47),
       o: ['50 bpm', '100 bpm', '150 bpm', '200 bpm'],
@@ -952,19 +948,19 @@ CVS.add({
       o: ['100', '50', '200', '25', '150'],
       a: 1,
       ex: 'Official AC80 key: B (50 bpm). Using 1500 ÷ 15 = 100 forgets to scale by 12.5 / 25.' },
-    { t: 'q', id: 'R6', src: 'i-RAT 266-66', core: true,
+    { t: 'q', id: 'R6', wide: true, src: 'i-RAT 266-66', core: true,
       q: 'In this EKG, which runs at a speed of 50 mm/s, what is the heart rate?',
       fig: CVS.fig('ir-rate168', 'i-RAT Q14: 12-lead at 50 mm/s.', 'ekg', 47),
       o: ['21 bpm', '42 bpm', '84 bpm', '168 bpm'],
       a: 3,
       ex: 'RR ≈ 18 small boxes. At 25 mm/s that would be ~83 bpm (the trap), but at 50 mm/s the paper runs twice as fast: 3000 ÷ 18 ≈ 167–168 bpm.' },
-    { t: 'q', id: 'R7', src: 't-RAT 2569',
+    { t: 'q', id: 'R7', wide: true, src: 't-RAT 2569',
       q: 'In this ECG, which runs at a speed of 50 mm/s, what is the heart rate?',
       fig: CVS.fig('t69-rate50', 't-RAT 2569 Q12: 12-lead at 50 mm/s.', 'ekg', 8),
       o: ['50 bpm', '100 bpm', '150 bpm', '200 bpm'],
       a: 3,
       ex: 'RR ≈ 15 small boxes. 1500 ÷ 15 = 100 at standard speed; doubled for 50 mm/s = 200 bpm.' },
-    { t: 'q', id: 'R8', src: 'AC81', core: true,
+    { t: 'q', id: 'R8', wide: true, src: 'AC81', core: true,
       q: 'From the given EKG, find the heart rate. (Paper speed 50 mm/s)',
       fig: CVS.fig('ac81-rate', 'AC81 Q2: rhythm strip at 50 mm/s.', 'ac81', 22),
       o: ['50 bpm', '80 bpm', '100 bpm', '150 bpm', '200 bpm'],
@@ -976,15 +972,16 @@ CVS.add({
       a: 3,
       ex: 'AC75–79 key: D (200 bpm). A standard 250 mm strip covers only 5 s at 50 mm/s → 18 × 12 = 216 bpm (nearest option 200 bpm).',
       flag: 'Recalled stem. If "18" actually meant 18 small boxes per RR (like i-RAT Q14), 3000 ÷ 18 ≈ 167 bpm; AC75–79 key highlights D (200 bpm).' },
-    { t: 'q', id: 'R10', src: 't-RAT 2568', core: true,
+    { t: 'q', id: 'R10', wide: true, src: 't-RAT 2568', core: true,
       q: 'A 35-year-old man presents to the Emergency Department with progressive dyspnea. A 12-lead ECG is obtained, revealing the findings shown. The paper speed is 30 mm/sec. What is the heart rate?',
-      fig: CVS.fig('t68-dyspnea', 't-RAT 2568 Q12–13: 12-lead, paper speed 30 mm/s.', 'ekg', 40),
+      fig: CVS.fig('t68-dyspnea', 't-RAT 2568 Q12–13: 12-lead. The stem gives 30 mm/s; the printed footer reads 25 mm/s.', 'ekg', 40),
       o: ['35 – 40 bpm', '60 – 65 bpm', '70 – 75 bpm', '100 – 105 bpm'],
       a: 2,
-      ex: 'RR ≈ 25 small boxes (5 big boxes). At 25 mm/s that would be 60 bpm; scaled for 30 mm/s: 60 × (30 ÷ 25) = 72 bpm (70–75 bpm).' },
+      ex: 'RR ≈ 25 small boxes (5 big boxes). At 25 mm/s that would be 60 bpm; scaled for 30 mm/s: 60 × (30 ÷ 25) = 72 bpm (70–75 bpm).',
+      flag: 'The tracing’s footer prints 25.0 mm/s, but the t-RAT stem states 30 mm/s. Answer with the speed in the stem; at 25 mm/s the same RR would give 60 bpm (option B).' },
 
     { t: 'c', id: 'R-C3', title: 'Irregular rhythm: count, don’t divide', src: 't-RAT 2568 Q14 (tutor notes)', html: '' },
-    { t: 'q', id: 'R11', src: 't-RAT 2568', core: true,
+    { t: 'q', id: 'R11', wide: true, src: 't-RAT 2568', core: true,
       q: 'This ECG is recorded at a speed of 25 mm/sec. What is the estimated ventricular rate based on this tracing?',
       fig: CVS.fig('t68-af', 't-RAT 2568 Q14: 25 mm/s; bottom row is a 10-second rhythm strip.', 'ekg', 42),
       o: ['66 bpm', '99 bpm', '132 bpm', '162 bpm'],
@@ -1000,7 +997,7 @@ CVS.add({
   blurb: 'Axis zones, the Lead I + aVF (+ Lead II) quadrant check, vector projection, two 12-lead reading methods, and combined rate-axis items.',
   items: [
     { t: 'c', id: 'A-C1', title: 'Axis zones and the quadrant check', src: 'Peer notes p.1–2 · i-RAT · t-RAT · AC75–79',
-      html: CVS.fig('peer-axis-wheel', 'Hexaxial axis wheel: normal (green), left (purple), right (blue) and extreme (red) zones.', 'ekg', 1) },
+      html: CVS.fig('peer-axis-wheel', 'Hexaxial axis wheel: normal (green), left (purple), right (blue) and extreme (red) zones. aVR sits at −150° (the drawing omits the minus sign).', 'ekg', 1) },
     { t: 'q', id: 'A1', src: 'AC75',
       q: 'QRS axis เป็นยังไง ให้ Lead 1 - biphasic, Lead aVF positive, Lead 3 – positive?<br><span class="muted">What is the QRS axis when Lead I is biphasic, aVF positive and Lead III positive?</span>',
       o: ['Unidentified', 'Right deviation', 'Left deviation', 'Normal axis', 'Extreme …'],
@@ -1079,63 +1076,63 @@ CVS.add({
       o: ['Normal axis', 'Left axis deviation', 'Right axis deviation', 'Extreme axis deviation'],
       a: 0,
       ex: 'Both Lead I and aVF are positive (plus II, III, aVL positive) → axis sits around +30° to +60°, firmly normal.' },
-    { t: 'q', id: 'A15', src: 't-RAT 2569', core: true,
+    { t: 'q', id: 'A15', wide: true, src: 't-RAT 2569', core: true,
       q: 'According to this ECG, what is the calculated QRS axis?',
       fig: CVS.fig('t69-axis60', 't-RAT 2569 Q11: 12-lead ECG (clean embedded tracing).', 'ekg', 8),
       o: ['0 degrees', '30 degrees', '60 degrees', '90 degrees'],
       a: 2,
       ex: 'aVL (−30°) is equiphasic → axis is +60° or −120°. Lead II (+60°) is tall and upright → QRS axis = +60°.' },
-    { t: 'q', id: 'A16', src: 'AC78',
+    { t: 'q', id: 'A16', wide: true, src: 'AC78',
       q: 'Please interpret the axis of this ECG',
       fig: CVS.fig('ac78-axis', 'AC78 Q23: 12-lead ECG.', 'ac75', 20),
       o: ['Normal axis', 'Right axis deviation', 'Left axis deviation', 'Extreme axis deviation'],
       a: 0,
       ex: 'AC75–79 key: A (Normal axis). Leads I, II, III and aVF are positive while aVR is negative and aVL is small/biphasic (~+60°).' },
-    { t: 'q', id: 'A17', src: 'AC76',
+    { t: 'q', id: 'A17', wide: true, src: 'AC76',
       q: 'From the EKG below, what is the most likely axis deviation?',
       fig: CVS.fig('ac76-axis', 'AC76 Q9: 12-lead at 25 mm/s.', 'ac75', 18),
       o: ['Normal axis', 'Right axis deviation', 'Left axis deviation', 'Extreme axis deviation'],
       a: 1,
       ex: 'AC75–79 key: B (Right axis deviation). Lead I is net negative (deeper S than r) while aVF and Lead III are positive and aVL is negative.' },
-    { t: 'q', id: 'A18', src: 't-RAT 2568',
+    { t: 'q', id: 'A18', wide: true, src: 't-RAT 2568',
       q: 'A 50-year-old man presents to his primary care physician for a routine medical check-up. His ECG, recorded at a paper speed of 25 mm/s, is shown below. What is the QRS axis?',
       fig: CVS.fig('t68-axisnormal', 't-RAT 2568 Q11: 12-lead at 25 mm/s.', 'ekg', 39),
       o: ['Normal axis', 'Right axis deviation', 'Left axis deviation', 'Extreme axis deviation'],
       a: 0,
       ex: 'Leads I, II, III and aVF are all positive → axis lies between 0° and +90° (normal axis).' },
-    { t: 'q', id: 'A19', src: 't-RAT 2568', core: true,
+    { t: 'q', id: 'A19', wide: true, src: 't-RAT 2568', core: true,
       q: 'A 35-year-old man presents to the Emergency Department with progressive dyspnea. A 12-lead ECG is obtained, revealing the findings shown. What is the QRS axis?',
-      fig: CVS.fig('t68-dyspnea', 't-RAT 2568 Q12–13: 12-lead, paper speed 30 mm/s.', 'ekg', 40),
+      fig: CVS.fig('t68-dyspnea', 't-RAT 2568 Q12–13: 12-lead. The stem gives 30 mm/s; the printed footer reads 25 mm/s.', 'ekg', 40),
       o: ['-30 to 90 degrees', '-30 to -90 degrees', '90 to 180 degrees', '-90 to 180 degrees'],
       a: 1,
       ex: 'Lead I and aVL are upright, whereas Leads II, III and aVF are deeply negative → left axis deviation (−30° to −90°).' },
-    { t: 'q', id: 'A20', src: 'i-RAT 266-66', core: true,
+    { t: 'q', id: 'A20', wide: true, src: 'i-RAT 266-66', core: true,
       q: 'According to this EKG, what is the calculated QRS axis?',
       fig: CVS.fig('ir-axis-lad', 'i-RAT Q16: 12-lead ECG.', 'ekg', 48),
       o: ['(-90) – (-120) degrees', '(-30) – (-90) degrees', '(30) – (90) degrees', '(90) – (120) degrees'],
       a: 1,
       ex: 'Lead I and aVL are positive; Leads II, III and aVF are negative → −30° to −90° (left axis deviation).' },
-    { t: 'q', id: 'A21', src: 'i-RAT 266-66',
+    { t: 'q', id: 'A21', wide: true, src: 'i-RAT 266-66',
       q: 'According to this EKG, what is the interpretation of the QRS axis?',
       fig: CVS.fig('ir-axis-normal', 'i-RAT Q17: 12-lead ECG.', 'ekg', 49),
       o: ['Normal axis', 'Left axis deviation', 'Right axis deviation', 'Extreme axis deviation'],
       a: 0,
-      ex: 'Leads I, II, III, aVL and aVF are positive and only aVR is negative → normal axis (~+30° to +60°).' },
+      ex: 'Leads I, II, III and aVF are positive, aVL is small and nearly biphasic, and only aVR is clearly negative → normal axis (around +60°).' },
 
     { t: 'c', id: 'A-C4', title: 'Rate, axis and QRS width in one item', src: 'i-RAT 266-66 key · t-RAT 2569', html: '' },
-    { t: 'q', id: 'A22', src: 'i-RAT 266-66', core: true,
+    { t: 'q', id: 'A22', wide: true, src: 'i-RAT 266-66', core: true,
       q: 'In this EKG, which runs at a speed of 25 mm/s, which of the following is true?',
       fig: CVS.fig('ir-tachy-lad', 'i-RAT Q18: 12-lead at 25 mm/s.', 'ekg', 49),
       o: ['Normal heart rate with left axis deviation', 'Tachycardia with left axis deviation', 'Normal heart rate with right axis deviation', 'Tachycardia with right axis deviation'],
       a: 1,
-      ex: 'RR ≈ 11 small boxes → 1500 ÷ 11 ≈ 136 bpm (tachycardia). Lead I and aVL positive with II, III and aVF negative → left axis deviation.' },
-    { t: 'q', id: 'A23', src: 'i-RAT 266-66',
+      ex: 'The image is small, so count complexes rather than boxes: about 19 QRS in the 10-second lead II strip → 19 × 6 ≈ 115 bpm (RR a little over 2 big boxes, ~12 small boxes → ~125 bpm). Either way > 100 bpm = tachycardia. Lead I and aVL positive with II, III and aVF negative → left axis deviation.' },
+    { t: 'q', id: 'A23', wide: true, src: 'i-RAT 266-66',
       q: 'According to this ECG, which of the following is true?',
       fig: CVS.fig('ir-rad-wide', 'i-RAT Q19: 12-lead at 25 mm/s.', 'ekg', 50),
       o: ['Left axis deviation with wide QRS complex', 'Right axis deviation with wide QRS complex', 'Left axis deviation with normal QRS complex', 'Right axis deviation with normal QRS complex'],
       a: 1,
       ex: 'Lead I and aVL are negative while II, III and aVF are positive (RAD), and the QRS spans ~3 small boxes or more (wide QRS).' },
-    { t: 'q', id: 'A24', src: 't-RAT 2569', core: true,
+    { t: 'q', id: 'A24', wide: true, src: 't-RAT 2569', core: true,
       q: 'A 32-year-old man presents to his primary physician for a routine medical check-up. His ECG, which runs at a speed of 15 mm/s, is shown below. What are his heart rate and QRS axis?',
       fig: CVS.fig('t69-brady', 't-RAT 2569 Q13: 12-lead, paper speed 15 mm/s (clean embedded tracing).', 'ekg', 9),
       o: ['Normal heart rate and normal axis', 'Bradycardia and right axis deviation', 'Bradycardia and left axis deviation', 'Tachycardia and superior axis deviation'],
@@ -1201,9 +1198,9 @@ CVS.add({
       o: ['A heart rate of 60-100 bpm', 'Primary pacemaker at the sinoatrial node', 'P wave precedes every QRS complex', 'Uniform P wave morphology in every lead'],
       a: 3,
       ex: 'P waves naturally differ in shape and polarity between different leads (e.g. upright in II, inverted in aVR); they only need to be monomorphic within the same lead.' },
-    { t: 'q', id: 'E10', src: 'AC81', core: true,
+    { t: 'q', id: 'E10', wide: true, src: 'AC81', core: true,
       q: 'From the EKG, which of the following is correct? (Paper speed 25 mm/s)<br><span class="muted">(ภาพในข้อสอบมี 13 QRS complexes · the exam image had 13 QRS complexes)</span>',
-      fig: CVS.fig('ac81-ecg', 'AC81 Q4: 12-lead ECG at 25 mm/s (clean embedded tracing).', 'ekg', 3),
+      fig: CVS.fig('ac81-ecg', 'AC81 Q4: 12-lead ECG at 25 mm/s.', 'ac81', 23),
       o: ['Bradycardia', 'Sinus rhythm', 'Prolonged PR interval', 'Abnormal ST segment elevation', 'Normal QRS axis'],
       a: 1,
       ex: 'PS82 / AC81 key: B (Sinus rhythm). P is upright in II and inverted in aVR with 1:1 conduction and HR ~75–78 bpm (13 QRS in 10 s), normal PR (4–5 small boxes), flat ST, and RAD (Lead I negative).' },
@@ -1223,24 +1220,24 @@ CVS.add({
     { t: 'q', id: 'E13', src: 'AC77',
       q: 'What is an EKG finding during atrial defibrillation?',
       o: ['Regular rhythm', 'Pulse deficit', 'Tall P wave', 'Narrow QRS complexes', 'Slow ventricular rate'],
-      a: 3,
-      ex: 'In atrial fibrillation, impulses still reach the ventricles through the normal His–Purkinje system, so QRS complexes remain narrow. Rhythm is irregularly irregular without P waves.',
-      flag: 'Recall says "atrial defibrillation" (means atrial fibrillation). Note conflict: AC75–79 Key_Revised highlights B (Pulse deficit), but pulse deficit is a bedside physical-exam sign (apical > radial pulse), whereas Narrow QRS complexes (D) is the actual EKG tracing finding.' },
+      a: 1,
+      ex: 'AC75–79 key: B (Pulse deficit). In atrial fibrillation the beats come fast and irregular; short filling periods leave some beats too weak to reach the wrist, so the apical (heart) rate exceeds the radial pulse rate. On the tracing itself AF shows no P waves, an irregularly irregular RR and narrow QRS complexes.',
+      flag: 'Recall says "atrial defibrillation" (means atrial fibrillation). The stem asks for an "EKG finding", yet the AC75–79 key highlights B, a bedside sign. D (narrow QRS complexes) is what the tracing shows, so D is defensible if the stem really asks about the EKG alone.' },
 
     { t: 'c', id: 'E-C4', title: 'Systematic 12-lead reading & table checks', src: 'AC80 key · AC81 (PS82 key) · t-RAT 2569 Q14', html: '' },
-    { t: 'q', id: 'E14', src: 'AC80', core: true,
+    { t: 'q', id: 'E14', wide: true, src: 'AC80', core: true,
       q: 'Interpret this ECG (รูปจากอินเทอร์เน็ตที่ใกล้เคียง)<br><span class="muted">(Representative stand-in ECG used in the AC80 recall.)</span>',
       fig: CVS.fig('ac80-ecg', 'AC80 Q1: 12-lead ECG at 25 mm/s.', 'ac80', 9),
       o: ['Tachycardia', 'ST elevation', 'Right axis deviation', 'Prolonged PR interval', 'Non-sinus rhythm'],
       a: 2,
       ex: 'Official AC80 key: C (Right axis deviation). Lead I is net negative and aVF is positive → RAD. HR is ~75–80 bpm (not tachycardia), ST is flat, PR is 3–5 boxes, and P is upright in II / negative in aVR (sinus).' },
-    { t: 'q', id: 'E15', src: 't-RAT 2569', core: true,
+    { t: 'q', id: 'E15', wide: true, src: 't-RAT 2569', core: true,
       q: 'A 2nd-year medical student is working on an ECG assignment and has interpreted the tracing as shown in the table. Which of the following interpreted parameters is INCORRECT?',
       fig: CVS.fig('t69-table', 't-RAT 2569 Q14: 12-lead at 25 mm/s and the student’s interpretation table (clean embedded image).', 'ekg', 10),
       o: ['Rate and QRS axis', 'Rhythm and P wave', 'QRS axis and QRS complex', 'PR interval and ST segment'],
       a: 2,
       ex: 'Leads I, II, III and aVF are all upright → normal axis (not LAD), and QRS is < 3 small boxes → narrow (not wide). Rate 75 bpm, sinus rhythm, PR 160 ms, and isoelectric ST are all correct.' },
-    { t: 'open', id: 'E16', src: 'Peer notes · PS82 key', core: false,
+    { t: 'open', id: 'E16', src: 'Peer notes', core: false,
       q: 'Given a 12-lead ECG at 25 mm/s, list the systematic order to check every parameter and state the normal cut-off for each.',
       ans: '1. Standardization: 25 mm/s, 10 mm/mV. 2. Rate: 60–100 bpm (1500 ÷ small boxes if regular; QRS in 10 s × 6 if irregular). 3. Rhythm: sinus (+P in II, −P in aVR, monomorphic per lead, 1:1 P→QRS). 4. QRS axis: −30° to +90° (Lead I + aVF, then Lead II). 5. Intervals: PR 120–200 ms, QRS ≤ 100–110 ms, QTc 330–440 ms (♀ ≤ 450 ms). 6. Segments & waves: ST isoelectric within ±1 mm, Q < 40 ms, T concordant (upright II, V3–V6; inverted aVR).' }
   ]
@@ -1309,7 +1306,7 @@ S_('C-C1', [
 ]);
 S_('C-C2', [
   '| Event | Main current | ECG |',
-  '| Atrial depolarization | atrial phase 0 | {{P wave}} |',
+  '| Atrial depolarization | phase 0 inward current | {{P wave}} |',
   '| Ventricular depolarization | {{fast Na<sup>+</sup>}} in | QRS complex |',
   '| Ventricular repolarization | {{K<sup>+</sup> efflux}} | T wave |',
   '| Atrial repolarization | K<sup>+</sup> out | {{hidden}} under the QRS |',
@@ -1487,15 +1484,16 @@ S_('E-C3', [
   '| 3rd-degree AV block | P and QRS {{dissociated}} (e.g. atria 70, vent 40) |',
   '| SA node failure | {{AV node}} escape (~40–60 bpm, QRS ≤ 110 ms) |',
   '| Atrial fibrillation | no P, irregularly irregular, {{narrow QRS}} |',
-  '! Pulse deficit in AFib is a bedside exam sign, not an ECG wave',
+  '! AC77 keys pulse deficit (apical rate > radial pulse) as the AF finding: a bedside sign, not a wave on the tracing',
   '---',
   '@flow:rhythm'
 ]);
 S_('E-C4', [
-  '> Reading order (PS82 trick): Segment → Wave (+/−) → Interval → {{Heart rate}} → {{QRS axis}}',
+  '> Read every 12-lead in one order: standardization → rate → rhythm → {{QRS axis}} → intervals → ST/T',
+  '- Ruling out MCQ options fast (PS82 trick): easiest first: segment → wave (+/−) → interval → {{heart rate}} → axis',
   '- Normal: HR 60–100 · sinus P (+II, −aVR) · PR {{120–200 ms}} · QRS ≤ 110 ms',
   '- ST on {{isoelectric}} line (±1 mm) · axis {{−30° to +90°}}',
-  '! “Which interpretation is wrong?” → verify every row; usually {{two}} rows fail'
+  '! “Which interpretation is wrong?” → verify every row against the tracing (t-RAT 2569 Q14: {{two}} rows fail)'
 ]);
 
 /* Shared Thai layers loaded by student.html, tutor.html and print.js. */
@@ -1547,104 +1545,121 @@ window.THAI_SEC = {
     traps: [
       'Sinus rhythm ไม่จำเป็นต้องมี P เป็นบวกทุก lead (aVR เป็นลบ) และไม่ต้องหน้าตาเหมือนกันข้าม lead — แค่ monomorphic ภายใน lead เดียวกัน',
       'V1–V2 อยู่ 4th ICS · ส่วน V4–V6 อยู่แนวระดับ 5th ICS (MCL → AAL → MAL)',
-      'AFib มี narrow QRS บน EKG · ส่วน pulse deficit เป็นอาการตรวจร่างกาย (คลำชีพจร) ไม่ใช่สิ่งที่เห็นบนกราฟ EKG'
+      'AFib: เฉลย AC77 คือ pulse deficit (ชีพจรที่ข้อมือน้อยกว่าที่ฟังได้ที่ apex) แม้โจทย์ถาม “EKG finding” · บนกราฟเห็นไม่มี P, RR ไม่สม่ำเสมอ, QRS แคบ'
     ]
   }
 };
 
 window.THAI_CONCEPT = {
   'C-C1': [
-    'EKG วัดความต่างศักย์ (potential difference) บนผิวหนัง ไม่ใช่ membrane potential ในเซลล์เดียว',
-    'ผิวนอกเซลล์ที่ depolarize เป็น (−) ส่วนเซลล์พักเป็น (+) → คลื่น depol วิ่งเข้าหาขั้ว (+) ได้คลื่นบวก',
-    'Repolarization ให้เครื่องหมายตรงข้ามกับ depolarization เมื่อวิ่งในทิศเดียวกัน'
+    "EKG วัดความต่างระหว่างขั้วบนผิวหนังที่เกิดจาก dipole เคลื่อนที่ ไม่ใช่ membrane potential ในเซลล์เดียว",
+    "ผิวนอกเซลล์ที่พักเป็นบวก ส่วนเซลล์ที่ถูกกระตุ้นกลับขั้ว → ทิศของคลื่นขึ้นกับว่า depolarization วิ่งเข้าหาหรือหนีขั้ว (+)",
+    "Repolarization ให้เครื่องหมายตรงข้ามกับ depolarization เมื่อวิ่งในทิศเดียวกัน"
   ],
   'C-C2': [
     'P = atrial depol · QRS = ventricular depol (fast Na⁺ influx) · T = ventricular repol (K⁺ efflux)',
     'Atrial repolarization ถูก QRS ที่ใหญ่กว่าบดบัง · SA/AV node เล็กเกินกว่าจะเห็นเป็นคลื่นบน EKG'
   ],
   'C-C3': [
-    'Depolarization วิ่ง endocardium → epicardium · แต่ endocardium มี AP ยาวกว่า จึง repolarize ทีหลัง',
-    'Repolarization จึงวิ่งย้อน epicardium → endocardium → กลับทิศ × กลับเครื่องหมาย = T wave ทิศเดียวกับ QRS (concordant)'
+    "ลำดับกระตุ้น: Purkinje อยู่ชั้นใน → ผนังชั้นในถูกกระตุ้นก่อน แต่ action potential ของชั้นในอยู่นานกว่าชั้นนอก",
+    "ผลคือ repolarization วิ่งย้อนทิศกับ depolarization → กลับทิศ × กลับเครื่องหมาย → T ชี้ทางเดียวกับ QRS",
+    "T ที่ชี้ตรงข้ามกับ QRS → นึกถึงโรคของกล้ามเนื้อหัวใจ"
   ],
   'C-C4': [
-    'Phase 0 = QRS · Phase 2 (plateau) = ST segment · Phase 3 = T wave · Phase 4 (rest) = TP segment',
-    'Atrial phase 3 ซ่อนใน QRS · Absolute refractory period ครอบคลุม QRS → ST → ยอด T'
+    "แต่ละ phase ของ ventricular AP มีช่วงคู่กันบน EKG: phase 0 = QRS (Na⁺ เข้า) · plateau ที่ Ca²⁺ เข้าสมดุล K⁺ ออกให้เส้นราบ · phase 3 (K⁺ ออก) ให้คลื่น · phase 4 คือช่วงพักระหว่าง beat",
+    "Atrial repolarization เกิดพร้อม ventricular depolarization จึงไม่เห็นแยกเป็นคลื่น",
+    "ช่วงที่กระตุ้นซ้ำไม่ได้เลยกินตั้งแต่ QRS ไปจนราวยอดของคลื่น repolarization"
   ],
   'W-C1': [
-    'Wave = คลื่น · Segment = เส้นราบระหว่างคลื่น (PR, ST, TP) · Interval = คลื่น + เส้นราบ (PR, QT)',
-    'PR segment แทน AV nodal delay · ใช้ TP segment เป็นเส้น baseline (isoelectric line)'
+    "Wave = คลื่นที่เบี่ยงออกจากเส้นฐาน · interval = wave + segment",
+    "PR interval = จุดเริ่ม P ถึงจุดเริ่ม QRS (atria + ช่วงหน่วง) · QT = จุดเริ่ม QRS ถึงจุดจบของคลื่น repolarization",
+    "ประเมินเส้นฐานในช่วงที่ทั้งหัวใจพักพร้อมกัน"
   ],
   'W-C2': [
-    'PR ปกติ 120–200 ms (3–5 ช่องเล็ก): <120 = pre-excitation · >200 = 1st-degree AV block',
-    'QRS ≤ 100–110 ms · QTc 330–440 ms (หญิง ≤ 450 ms) · HR เพิ่ม → QT สั้นลง'
+    "ค่าปกติที่ต้องจำ: PR, QRS, QTc (หญิงสูงกว่าชายเล็กน้อย) · 1 ช่องเล็ก = 40 ms",
+    "PR ยาวเกิน 200 ms = 1st-degree AV block · PR สั้นเกินแปลว่ามีทางลัดข้าม AV node",
+    "QT ขึ้นกับ HR จึงแก้เป็น QTc = QT ÷ √RR · ความผิดปกติที่ AV node เปลี่ยนช่วงเวลาตั้งแต่ P ถึง QRS"
   ],
   'W-C3': [
-    'ปกติ: P บวกใน II / ลบใน aVR · T บวกใน II, V3–V6 / ลบใน aVR · ST เบี่ยงไม่เกิน ±1 mm · Q แคบ < 40 ms',
-    'แปลง RR เป็น HR ก่อนตัดสินเสมอ: HR = 60,000 ÷ RR (ms) → RR 800 ms = 75 bpm (ปกติ), 500 ms = 120 bpm'
+    "P และ T ปกติตั้งขึ้นใน lead II · aVR มองย้อนทิศหัวใจ คลื่นปกติจึงกลับหัวใน lead นี้",
+    "ST elevation 4 mm หรือ depression 2 mm ผิดปกติ · Q กว้างและลึก → old MI",
+    "แปลง RR เป็น HR ก่อนตัดสินเสมอ: HR = 60,000 ÷ RR (ms) · RR 800 ms = 75 bpm · 500 ms = 120 bpm"
   ],
   'W-C4': [
-    'ไฟฟ้าเกิดก่อนกลไกเสมอ: P → atrial contraction · QRS → S1, isovolumic contraction → aortic valve เปิด',
-    'หลังจบ T wave → S2 → isovolumic relaxation · ต้น TP → mitral เปิด → rapid filling (เลือดผ่าน mitral มากสุด)'
+    "คลื่นไฟฟ้ามาก่อนเหตุการณ์กลไกเสมอ (excitation–contraction coupling)",
+    "QRS → S1 + isovolumic contraction · ST–T อยู่ในช่วง ejection · ปลาย T → S2",
+    "เลือดผ่าน mitral valve มากสุดช่วงต้น diastole หลัง T wave ไม่ใช่ช่วง P wave"
   ],
   'W-C5': [
-    'Sympathetic เพิ่ม หรือให้ atropine (บล็อก vagus) → HR เพิ่ม → RR สั้นลง, PR สั้นลง, QT สั้นลง, แต่ QRS width ไม่เปลี่ยน',
-    'ดูผลยาที่ SA node ให้ดู RR interval · ST elevation คือกล้ามเนื้อบาดเจ็บ ไม่ใช่ผล ANS'
+    "Sympathetic หรือ atropine (บล็อก vagus) → SA และ AV node เร็วขึ้น → HR ↑, PR สั้นลง",
+    "His–Purkinje แทบไม่รับผลจากระบบประสาทอัตโนมัติ → ความกว้าง QRS คงเดิม",
+    "Vagus (ACh บน M₂) → SA, AV ช้าลง → RR และ PR ยาวขึ้น อาจเกิด block · ยาที่ออกฤทธิ์ที่ SA node ให้ดู RR"
   ],
   'L-C1': [
-    'Bipolar: Lead I (LA+, RA−, 0°) · Lead II (LL+, RA−, +60°) · Lead III (LL+, LA−, +120°) · สมการ II = I + III',
-    'RL เป็นสายดิน (ground) · นาฬิกาข้อมือซ้าย (+) แตะนิ้วขวา (−) = Lead I'
+    "Bipolar lead วัดความต่างระหว่างแขนขา 2 ข้าง: ขั้วบวกอยู่ทางซ้ายหรือล่างเสมอ · มุม 0°, +60°, +120°",
+    "ขาขวาไม่ได้เป็นขั้วของ lead ใด · สามเหลี่ยม Einthoven ให้ความสัมพันธ์ระหว่าง 3 lead",
+    "Smartwatch: ขั้วบวกที่ข้อมือซ้าย + ขั้วลบที่นิ้วมือขวา → จำลอง bipolar lead แนวนอน"
   ],
   'L-C2': [
-    'Augmented: aVL (−30°) · aVF (+90°) · aVR (−150°) รวมกับ I, II, III เป็นวง hexaxial ทุก 30°',
-    'คู่ตั้งฉาก 90°: I–aVF · II–aVL · III–aVR'
+    "Augmented lead: ขั้วบวกที่แขนหรือขาข้างหนึ่ง เทียบกับค่าเฉลี่ยของอีก 2 ข้าง (aVR แขนขวา · aVL แขนซ้าย · aVF เท้าซ้าย)",
+    "ซ้อน 3 bipolar กับ 3 augmented ในระนาบ frontal → แบ่งวงกลมห่างกันทุก 30°",
+    "ทุก bipolar มี augmented ที่ตั้งฉากคู่กัน เช่น I ตั้งฉากกับ aVF"
   ],
   'L-C3': [
-    'สลับคู่ไหน → Augmented lead ของแขน/ขาที่ “ไม่ถูกสลับ” จะยังคงปกติ (RA↔LA เหลือ aVF · RA↔LL เหลือ aVL · LA↔LL เหลือ aVR)',
-    'สลับ RA↔LA ทำให้ Lead I กลับหัว (−I) · สลับ LL↔RL แทบไม่เปลี่ยนเพราะ RL คือ ground'
+    "สลับสายแขนขาคู่ไหน → augmented lead ของรยางค์ที่ไม่ได้ถูกสลับยังเหมือนเดิม เพราะขั้วบวกและค่าเฉลี่ยของอีก 2 ข้างไม่เปลี่ยน",
+    "สลับแขนซ้าย–ขวาพบบ่อยที่สุด: II สลับกับ III และ augmented lead ของแขนสองข้างสลับกัน",
+    "ขาขวาเป็นสายอ้างอิงที่มีศักย์ใกล้ขาซ้าย"
   ],
   'R-C1': [
-    'มาตรฐาน 25 mm/s, 10 mm/mV → 1 ช่องเล็ก = 0.04 s, 1 ช่องใหญ่ = 0.2 s',
-    'Regular rhythm ที่ 25 mm/s: HR = 1500 ÷ ช่องเล็ก = 300 ÷ ช่องใหญ่ (ปกติ 60–100 bpm)'
+    "กระดาษมาตรฐาน 25 mm/s และ 10 mm/mV (ดูจากสี่เหลี่ยม calibration) · 1 ช่องใหญ่ = 5 ช่องเล็ก = 0.2 s",
+    "Rhythm สม่ำเสมอ: นับช่องระหว่าง R กับ R แล้วหารจำนวน mm ที่กระดาษวิ่งใน 1 นาที (25 × 60)",
+    "ช่องใหญ่ยิ่งมาก HR ยิ่งต่ำ: 2 ช่องใหญ่ = 150 · 4 = 75 · 5 = 60 bpm"
   ],
   'R-C2': [
-    'ความเร็วไม่ใช่ 25 mm/s → ใช้สูตรเดียวจบ: HR = (1500 ÷ ช่องเล็ก) × (speed ÷ 25) = (60 × speed) ÷ ช่องเล็ก',
-    '50 mm/s = 3000 ÷ ช่องเล็ก · 30 mm/s = 1800 ÷ ช่องเล็ก · 12.5 mm/s = 750 ÷ ช่องเล็ก'
+    "สูตร 1500 ใช้ได้เฉพาะ 25 mm/s · ความเร็วอื่นใช้สูตรเดียวจบ: HR = (60 × speed) ÷ ช่องเล็ก",
+    "กระดาษวิ่งช้า (12.5 mm/s) คลื่นถูกบีบ ดูเหมือนเต้นเร็ว · กระดาษวิ่งเร็วยืดระยะ RR ออก"
   ],
   'R-C3': [
-    'RR ไม่สม่ำเสมอ (เช่น AFib) ห้ามหารช่องเดียว → นับจำนวน QRS ใน rhythm strip 10 วิ (250 mm) × 6',
-    'AFib: ไม่มี P wave, baseline หยัก, RR irregularly irregular, QRS แคบ — รายงานเป็น ventricular rate'
+    "RR แต่ละช่วงไม่เท่ากัน → หาร RR ช่องเดียวได้อัตราต่างกันทุก beat จึงใช้ไม่ได้",
+    "AFib: ไม่มี P wave, baseline หยัก, QRS แคบ · atrium สั่นเร็วเกินกว่าจะนับได้"
   ],
   'A-C1': [
-    'Normal axis: −30° ถึง +90° · LAD: −30° ถึง −90° · RAD: +90° ถึง +180° · Extreme: −90° ถึง ±180°',
-    'Quadrant: I+, aVF+ = Normal · I−, aVF+ = RAD · I−, aVF− = Extreme · I+, aVF− ต้องเช็ก Lead II (− = LAD)'
+    "แบ่งแกนเป็น 4 โซน: normal, left, right และ extreme (northwest −90° ถึง ±180°)",
+    "Quadrant check: Lead I บอกซ้าย/ขวา · aVF บอกบน/ล่าง → I+ aVF+ = normal · I− aVF− = extreme",
+    "I+ กับ aVF− ยังสรุปว่าเบี่ยงซ้ายไม่ได้ทันที เพราะช่วง 0° ถึง −30° ยังปกติ → ต้องดูอีก lead"
   ],
   'A-C2': [
-    'มุมระหว่าง axis กับ lead: 0° = บวกสูงสุด · <90° = บวกมากกว่าลบ · 90° = biphasic · >90° = ลบมากกว่าบวก · 180° = ลบลึกสุด',
-    'Lead ที่ biphasic สำหรับ +30° = III · −30° = II · +60° = aVL'
+    "แต่ละ lead เห็นเงาของเวกเตอร์ QRS บนแกนของตัวเอง (∝ cos θ): มุม 0° บวกสูงสุด · 180° ลบลึกสุด",
+    "มุมแหลมกับมุมป้านให้คลื่นที่เด่นคนละฝั่ง · มุม 90° ให้ R ≈ S",
+    "Lead ที่ R ≈ S สำหรับแกน +30° คือ III · แกน −30° คือ II"
   ],
   'A-C3': [
-    'วิธีลัด: หา limb lead ที่ biphasic สุด → หมุน ±90° → ดู lead คู่ตั้งฉากว่าบวกหรือลบ',
-    'วิธีตรง: จับคู่ lead บวกที่ห่างกันมากสุด → axis อยู่ตรงจุดกึ่งกลาง (±15°) แล้วเช็กซ้ำกับ quadrant'
+    "วิธีลัด: หา lead ใน frontal plane ที่ R ≈ S มากที่สุด → แกนตั้งฉากกับ lead นั้น → ดู lead คู่ตั้งฉากว่าบวกหรือลบเพื่อเลือกฝั่ง",
+    "วิธีตรง: จดเครื่องหมาย + / − ของทุก lead ใน frontal plane แล้วหาคู่ lead บวกที่ห่างกันที่สุด",
+    "ตรวจซ้ำกับ Lead I และ aVF เสมอ กันหลงทิศ 180°"
   ],
   'A-C4': [
-    'โจทย์รวมหลายค่าให้ไล่ทีละขั้น: 1) เช็ก paper speed + HR · 2) เช็ก axis (I, aVF, II) · 3) เช็ก QRS width (< 3 ช่องเล็ก)',
-    'จับคู่เงื่อนไขให้ครบก่อนตัดช้อยส์ เช่น tachycardia + LAD หรือ bradycardia + LAD'
+    "ข้อสอบที่ถามหลายค่าในกราฟเดียว ให้แยกคิดทีละขั้น: rate → axis → ความกว้าง QRS",
+    "Rate: ดูการตั้งค่ากระดาษในโจทย์ก่อนใช้สูตร 1500 · axis: Lead I + aVF ก่อนแล้วค่อยดูเพิ่ม",
+    "จับคู่ทั้งสามค่าให้ครบก่อนเลือกตัวเลือก"
   ],
   'E-C1': [
-    '10 electrodes → 12 leads: 6 limb leads (frontal plane) + 6 precordial leads (horizontal plane)',
-    'V1 = 4th ICS ขวา · V2 = 4th ICS ซ้าย · V3 = กึ่งกลาง V2–V4 · V4 = 5th ICS MCL · V5 = 5th ICS AAL · V6 = 5th ICS MAL'
+    "10 electrodes → 12 leads: limb leads ดูหัวใจในระนาบ frontal · chest leads ดูอีกระนาบหนึ่ง",
+    "V1–V2 อยู่ 4th ICS ชิดขอบ sternum คนละข้าง · V3 อยู่กึ่งกลาง V2 กับ V4 · V4–V6 อยู่แนว 5th ICS เรียงจากหน้าอกไปรักแร้"
   ],
   'E-C2': [
-    '5 เกณฑ์ Normal Sinus Rhythm: HR 60–100 · กำเนิดจาก SA node · P นำหน้า QRS 1:1 · P รูปทรงเดียวใน lead เดียวกัน · P บวกใน II / ลบใน aVR',
-    'ห้ามสับสน: P ไม่ต้องบวกทุก lead และไม่ต้องรูปทรงเหมือนกันข้าม lead'
+    "Normal sinus rhythm ต้องผ่านครบ 5 ข้อ: rate, จุดกำเนิด, ทุก P ตามด้วย QRS, รูปทรง P ใน lead เดียวกัน, ทิศของ P ใน lead II และ lead ที่มองจากไหล่ขวา",
+    "กับดัก: P ไม่ต้องบวกทุก lead และไม่ต้องหน้าตาเหมือนกันข้าม lead"
   ],
   'E-C3': [
-    '1° AVB: PR > 200 ms นำผ่านทุกตัว · 2° AVB: บาง P ไม่มี QRS ตาม · 3° AVB: P กับ QRS แยกกันเต้น (เช่น atria 70, vent 40)',
-    'SA node ล้มเหลว → AV node คุมแทน (~40–60 bpm, QRS แคบ) · AFib → ไม่มี P, irregular, QRS แคบ'
+    "1° AVB: PR ยาวแต่ทุก P ยังนำไป QRS · 2° AVB: บาง beat หลุด · 3° AVB: atria กับ ventricles เต้นอิสระจากกัน (เช่น atria 70, ventricles 40)",
+    "SA node ล้มเหลว → pacemaker สำรองตัวถัดไป (~40–60 bpm) ยังนำไฟฟ้าผ่าน His–Purkinje",
+    "AFib: ไม่มี P, RR ไม่สม่ำเสมอ · เฉลย AC77 ใช้ pulse deficit เป็นลักษณะของ AF"
   ],
   'E-C4': [
-    'ทริก PS82 ตัดช้อยส์เร็ว: Segment (ST) → Wave (+/−) → Interval (PR, QRS) → คำนวณ HR → QRS axis',
-    'โจทย์ตาราง “ข้อใดแปลผลผิด” ให้เช็กทีละแถวเทียบกับกราฟ มักมี 2 แถวที่ผิดคู่กัน'
+    "อ่านทุก 12-lead ตามลำดับเดิมเสมอ: standardization → rate → rhythm → axis → intervals → ST/T",
+    "ทริก PS82 สำหรับตัดตัวเลือก: เริ่มจากสิ่งที่ดูง่ายสุด (ST, ทิศของคลื่น, intervals) แล้วค่อยคำนวณ",
+    "โจทย์ตาราง “ข้อใดแปลผลผิด” ให้เช็กทีละแถวเทียบกับกราฟจริง"
   ]
 };
 
@@ -1721,10 +1736,6 @@ window.THAI_Q = {
     'ST segment ปกติต้องเบี่ยงไม่เกิน ±1 mm → ST elevation 4 mm ผิดปกติชัดเจน (acute myocardial injury)',
     'PR 160 ms, QRS 100 ms, RR 800 ms (= 75 bpm) และ axis 30° ล้วนปกติ'
   ],
-  W11: [
-    'โจทย์เดียวกับ W10 แค่สลับลำดับตัวเลือก: ST segment elevation 4 mm เป็นข้อเดียวที่ผิดปกติ',
-    'จำ RR 800 ms = 60,000 / 800 = 75 bpm จะตัดช้อยส์ได้เร็วมาก'
-  ],
   W12: [
     'P wave คือ atrial depolarization → สิ่งที่เกิดตามมาทันทีคือ atrial contraction (atrial systole)',
     'Ventricular / isovolumic contraction เกิดหลัง QRS · isovolumic relaxation เกิดหลัง T wave'
@@ -1759,7 +1770,7 @@ window.THAI_Q = {
   ],
   L2: [
     'โจทย์ถาม positive และ negative ตามลำดับ → Lead II คือ Left leg (+) และ Right arm (−)',
-    'ระวังตัวเลือก 2 ที่สลับลำดับเป็น Right arm ก่อน Left leg'
+    'ระวังตัวเลือก B ที่สลับลำดับเป็น Right arm ก่อน Left leg'
   ],
   L3: [
     'Lead III วัดความต่างศักย์ระหว่างแขนซ้าย (LA −) กับขาซ้าย (LL +) ชี้มุม +120°',
@@ -1855,11 +1866,11 @@ window.THAI_Q = {
   ],
   A4: [
     'Pulmonary hypertension ทำให้ RV โต → Right axis deviation → Lead I negative และ Lead aVF positive',
-    'ตัวเลือก 3 (I −, aVF −) คือ extreme axis deviation'
+    'ตัวเลือก C (I −, aVF −) คือ extreme axis deviation'
   ],
   A5: [
     'Left axis deviation (−30° ถึง −90°) ชี้ขึ้นซ้าย → Lead I (และ aVL) บวก ส่วน Lead II, III, aVF ลบ',
-    'ตัวเลือก 1 (I +, II +) คือ normal axis · ตัวเลือก 3 (I −, aVF −) คือ extreme axis'
+    'ตัวเลือก A (I +, II +) คือ normal axis · ตัวเลือก C (I −, aVF −) คือ extreme axis'
   ],
   A6: [
     'Lead ที่ biphasic จะตั้งฉาก (±90°) กับแกนหัวใจ: +30° + 90° = +120° ซึ่งคือ Lead III'
@@ -1911,10 +1922,10 @@ window.THAI_Q = {
     'Lead I และ aVL เป็นบวก ส่วน II, III, aVF เป็นลบ → แกนชี้ขึ้นซ้ายอยู่ในช่วง −30° ถึง −90° (LAD)'
   ],
   A21: [
-    'Lead I, II, III, aVL, aVF เป็นบวกทั้งหมด มีเพียง aVR ที่เป็นลบ → แกนประมาณ +30° ถึง +60° (Normal axis)'
+    'Lead I, II, III, aVF เป็นบวก · aVL เล็กเกือบ biphasic · aVR ลบ → แกนประมาณ +60° (Normal axis)'
   ],
   A22: [
-    'RR ≈ 11 ช่องเล็ก ที่ 25 mm/s → 1500 ÷ 11 ≈ 136 bpm (Tachycardia)',
+    'ภาพเล็ก ให้นับ QRS ในแถบ lead II ล่างสุด (10 วินาที) ได้ราว 19 ตัว → 19 × 6 ≈ 115 bpm → เกิน 100 = Tachycardia',
     'Lead I+, aVL+ แต่ II−, III−, aVF− → Left axis deviation → ตอบ Tachycardia with left axis deviation'
   ],
   A23: [
@@ -1969,8 +1980,8 @@ window.THAI_Q = {
     'QRS แคบยืนยันว่าสัญญาณยังวิ่งลงผ่านระบบ His–Purkinje ปกติ (กำเนิดเหนือ ventricle)'
   ],
   E13: [
-    'ใน Atrial fibrillation สัญญาณยังลงผ่าน AV node และ His–Purkinje ตามปกติ → QRS complex จึงยังคงแคบ (Narrow QRS)',
-    'Pulse deficit เป็นอาการจากการตรวจร่างกาย (ฟัง apex มากกว่าคลำ radial) ไม่ใช่สิ่งที่เห็นบน EKG · จังหวะ AFib ไม่สม่ำเสมอ ไม่มี P และมักเร็ว'
+    'เฉลย AC75–79 คือ B (Pulse deficit): AF เต้นเร็วไม่สม่ำเสมอ บาง beat เติมเลือดไม่พอ → คลำชีพจรที่ข้อมือได้น้อยกว่าที่ฟังได้ที่ apex',
+    'บนกราฟ EKG ของ AF: ไม่มี P, RR ไม่สม่ำเสมอ, QRS แคบ (ข้อ D) → ถ้าโจทย์ถามเฉพาะกราฟจริง ๆ ข้อ D ก็มีเหตุผล'
   ],
   E14: [
     'เฉลย AC80 คือ C (Right axis deviation): Lead I เป็นลบ (S ลึก) และ aVF เป็นบวก → RAD ชัดเจน',
@@ -1988,40 +1999,40 @@ window.THAI_Q = {
 /* Thai explanations for every concept card (collapsible in student deck, open in tutor deck, back of PDF). */
 window.THAI_EXPLAIN = {
   'C-C1': [
-    '<b>ความต่างศักย์บนผิวหนัง</b> EKG ไม่ได้จิ้มเข็มเข้าในเซลล์ แต่วัดความต่างศักย์ระหว่างขั้วบวกกับขั้วอ้างอิงบนผิวหนังเมื่อมีขอบเขต dipole เคลื่อนที่',
-    '<b>ประจุผิวนอก</b> เซลล์พัก (polarized) ผิวนอกเป็น (+) → เซลล์ที่ถูกกระตุ้น (depolarized) ผิวนอกพลิกเป็น (−) → ขั้วฝั่ง depolarized จึงลบกว่าขั้วฝั่งพัก',
-    '<b>ทิศทางคลื่น</b> Depolarization วิ่งเข้าหาขั้ว (+) → คลื่นขึ้น · วิ่งหนี → คลื่นลง · ตั้งฉาก 90° → biphasic (ขึ้นลงเท่ากัน)',
-    '<b>ภาพสะท้อน</b> Repolarization มีทิศทางเดียวกันแต่เครื่องหมายตรงข้ามเสมอ และเมื่อทุกเซลล์พักหมดหรือ depolarize หมดแล้ว เส้นจะราบ (isoelectric)'
+    "<b>ผิวหนังเห็นอะไร</b> EKG วัดความต่างศักย์ระหว่างขั้วบนผิวหนังขณะมีขอบ dipole เคลื่อนที่ ไม่ใช่ศักย์ในเซลล์เดียว",
+    "<b>ประจุผิวนอก</b> เซลล์พักผิวนอก (+) → เซลล์ที่ depolarize ผิวนอก (−) → ฝั่ง depolarized ลบกว่าฝั่งพัก",
+    "<b>ทิศคลื่น</b> Depolarization เข้าหาขั้ว (+) → คลื่นขึ้น · หนี → คลื่นลง · ตั้งฉาก → biphasic",
+    "<b>ภาพสะท้อน</b> Repolarization ทิศเดียวกันให้เครื่องหมายตรงข้าม · พักหมดหรือ depolarize หมด → เส้นราบ"
   ],
   'C-C2': [
-    '<b>P และ QRS</b> Atrial phase 0 → P wave เล็ก · Ventricular phase 0 (fast Na⁺ influx) → QRS complex ใหญ่เพราะกล้ามเนื้อ ventricle หนากว่ามาก',
-    '<b>T wave</b> Ventricular phase 3 (K⁺ efflux) → T wave · ถ้าบล็อก fast Na⁺ ที่ ventricle ตัวที่หาย/ผิดปกติคือ QRS',
-    '<b>คลื่นที่ซ่อนอยู่</b> Atrial repolarization เกิดพร้อม ventricular depolarization จึงถูก QRS บดบังสนิท ไม่เห็นคลื่นแยก',
-    '<b>โหนดไม่เห็นคลื่น</b> SA node และ AV node มีมวลเซลล์เล็กมาก กระแสไม่พอสร้างคลื่นบนผิวหนัง แต่เวลาหน่วงใน AV node แสดงออกเป็น PR segment'
+    "<b>P และ QRS</b> Atrial phase 0 → P เล็ก · ventricular phase 0 (fast Na⁺) → QRS ใหญ่เพราะ ventricle หนากว่า",
+    "<b>T wave</b> Ventricular phase 3 (K⁺ efflux) → T · บล็อก fast Na⁺ ที่ ventricle → QRS ผิดปกติ",
+    "<b>คลื่นที่ซ่อน</b> Atrial repolarization เกิดพร้อม ventricular depolarization → QRS บังมิด",
+    "<b>Node ไม่มีคลื่น</b> SA/AV node มวลน้อยเกินสร้างคลื่น · AV delay เห็นเป็น PR segment"
   ],
   'C-C3': [
-    '<b>ลำดับการกระตุ้น</b> กระแสผ่าน Purkinje เข้าชั้นในก่อน → depolarization วิ่งจาก endocardium → epicardium',
-    '<b>ความยาว AP ต่างกัน</b> เซลล์ endocardium มี action potential ยาวกว่า epicardium → epicardium ที่กระตุ้นทีหลังจึงกลับพักเสร็จก่อน',
-    '<b>ลำดับการคลาย</b> Repolarization จึงวิ่งย้อนทางจาก epicardium → endocardium (ตรงข้ามกับ depolarization)',
-    '<b>Concordant T wave</b> กลับทิศ × กลับเครื่องหมาย = บวกเจอหักล้างเป็นบวก → T wave ชี้ทิศเดียวกับ QRS (บวกใน II, V3–V6 และลบใน aVR)'
+    "<b>ลำดับกระตุ้น</b> Purkinje อยู่ชั้นใน → depolarization วิ่ง endocardium → epicardium",
+    "<b>AP ยาวไม่เท่ากัน</b> Endocardium มี AP ยาวกว่า → epicardium กลับพักเสร็จก่อน",
+    "<b>ลำดับการคลาย</b> Repolarization วิ่ง epicardium → endocardium (สวนทาง depolarization)",
+    "<b>Concordant T</b> กลับทิศ × กลับเครื่องหมาย → T ชี้ทางเดียวกับ QRS (บวกใน II, V3–V6 · ลบใน aVR)"
   ],
   'C-C4': [
-    '<b>เทียบเฟสของ Ventricle</b> Phase 0 (Na⁺ เข้า) = QRS → Phase 2 plateau (Ca²⁺ เข้า ≈ K⁺ ออก, ทุกเซลล์ depolarize เหมือนกัน) = ST segment ราบ',
-    '<b>คลายตัวและพัก</b> Phase 3 (K⁺ ออก) = T wave → Phase 4 (resting membrane potential) = TP segment',
-    '<b>Atrial Phase 3</b> เกิดเร็วกว่า ventricle จึงตกลงตรงช่วง QRS complex พอดี',
-    '<b>Refractory period</b> Absolute refractory period คลุม QRS → ST segment → ราวกลาง/ยอด T · ครึ่งหลังของ T เป็น relative refractory period'
+    "<b>เทียบเฟส ventricle</b> Phase 0 (Na⁺ เข้า) = QRS → phase 2 plateau (Ca²⁺ เข้า ≈ K⁺ ออก) = ST ราบ",
+    "<b>คลายและพัก</b> Phase 3 (K⁺ ออก) = T wave → phase 4 (RMP) = TP segment",
+    "<b>Atrial phase 3</b> เกิดตรงกับช่วง QRS จึงมองไม่เห็น",
+    "<b>Refractory</b> ARP: QRS → ST → ราวยอด T · ครึ่งหลังของ T = relative refractory"
   ],
   'W-C1': [
-    '<b>นิยามพื้นฐาน</b> Wave คือส่วนที่เบี่ยงจากเส้นราบ · Segment คือเส้นราบระหว่างคลื่น (PR, ST, TP) · Interval คือคลื่นรวมกับเส้นราบ (PR, QT)',
-    '<b>PR segment vs PR interval</b> PR segment (ปลาย P ถึงต้น QRS) = AV nodal delay ล้วนๆ · PR interval (ต้น P ถึงต้น QRS) = atrial depol + AV delay',
-    '<b>QT interval</b> วัดตั้งแต่ต้น QRS ถึงปลาย T wave ครอบคลุมทั้ง ventricular depolarization และ repolarization',
-    '<b>เส้นอ้างอิง</b> ใช้ TP segment เป็น isoelectric baseline เพราะเป็นช่วงที่ทั้ง atrium และ ventricle พักพร้อมกัน'
+    "<b>นิยาม</b> Wave = ส่วนที่เบี่ยงจากเส้นราบ · segment = เส้นราบระหว่างคลื่น · interval = คลื่น + เส้นราบ",
+    "<b>PR segment vs interval</b> Segment (ปลาย P → ต้น QRS) = AV nodal delay · interval (ต้น P → ต้น QRS) = atrial depol + AV delay",
+    "<b>QT</b> ต้น QRS → ปลาย T = ventricular depolarization + repolarization",
+    "<b>เส้นฐาน</b> ใช้ TP segment เพราะ atria และ ventricles พักพร้อมกัน"
   ],
   'W-C2': [
-    '<b>PR interval</b> ปกติ 120–200 ms (3–5 ช่องเล็ก) → สั้นกว่า 120 ms = pre-excitation (ข้าม AV node) · ยาวกว่า 200 ms = 1st-degree AV block',
-    '<b>QRS duration</b> ปกติ ≤ 100–110 ms (ไม่ถึง 3 ช่องเล็ก) → กว้างขึ้นเมื่อการนำไฟฟ้าใน ventricle ช้าลง',
-    '<b>QT และ QTc</b> QT แปรผันตรงกับ RR (HR เร็ว → QT สั้นลง) จึงแก้ด้วยสูตร Bazett QTc = QT / √RR (ปกติ 330–440 ms, หญิง ≤ 450 ms)',
-    '<b>จำเชื่อมโรค</b> ถ้าโจทย์บอกว่า AV node นำไฟฟ้าเสีย → ตัวที่เปลี่ยนทันทีคือ PR interval'
+    "<b>PR</b> 120–200 ms (3–5 ช่องเล็ก) · < 120 = pre-excitation · > 200 = 1st-degree AV block",
+    "<b>QRS</b> ≤ 100–110 ms (ไม่ถึง 3 ช่องเล็ก) · กว้างขึ้นเมื่อ ventricle นำไฟฟ้าช้า",
+    "<b>QT และ QTc</b> HR เร็ว → QT สั้น → แก้ด้วย Bazett QTc = QT ÷ √RR (ปกติ 330–440, หญิง ≤ 450 ms)",
+    "<b>เชื่อมโรค</b> AV node นำไฟฟ้าเสีย → PR interval เปลี่ยน"
   ],
   'W-C3': [
     '<b>ทิศ P และ T</b> ปกติ P บวกใน II และลบใน aVR · T บวกใน II, V3–V6 และลบใน aVR (aVR มองย้อนทิศหัวใจเสมอ)',
@@ -2030,16 +2041,16 @@ window.THAI_EXPLAIN = {
     '<b>แปลง RR เป็นอัตรา</b> RR ปกติ 600–1000 ms (= 60–100 bpm) → RR 800 ms = 75 bpm (ปกติ) · RR 500 ms = 120 bpm (tachycardia)'
   ],
   'W-C4': [
-    '<b>ไฟฟ้ามาก่อนกลไก</b> ทุกคลื่นไฟฟ้ากระตุ้นให้เกิดการบีบตัวตามหลังเล็กน้อยเสมอ: P wave → atrial contraction (atrial kick)',
-    '<b>ช่วง Systole</b> QRS → ลิ้น AV ปิด (S1) → isovolumic contraction → ลิ้น aortic เปิดทันทีหลัง QRS → ST และ T อยู่ในช่วง ejection',
-    '<b>เริ่ม Diastole</b> ปลาย T wave → ลิ้น aortic ปิด (S2) → isovolumic relaxation (ทุกลิ้นปิด)',
-    '<b>Rapid filling</b> ต้น TP segment ลิ้น mitral เปิด → เลือดไหลผ่าน mitral valve เร็วและมากที่สุด (ไม่ใช่ตอน P wave)'
+    "<b>ไฟฟ้ามาก่อน</b> ทุกคลื่นนำหน้าการบีบเล็กน้อย: P → atrial contraction (atrial kick)",
+    "<b>Systole</b> QRS → AV valves ปิด (S1) → isovolumic contraction → aortic valve เปิดหลัง QRS → ST–T = ejection",
+    "<b>เริ่ม diastole</b> ปลาย T → aortic valve ปิด (S2) → isovolumic relaxation",
+    "<b>Rapid filling</b> ต้น TP mitral เปิด → เลือดผ่าน mitral มากสุด (ไม่ใช่ช่วง P)"
   ],
   'W-C5': [
-    '<b>Sympathetic / Atropine</b> เพิ่มความชัน pacemaker ที่ SA node และเร่ง AV node → HR เพิ่ม → RR สั้นลง, PR สั้นลง, QT สั้นลงตาม RR',
-    '<b>QRS ไม่เปลี่ยน</b> ระบบ His–Purkinje แทบไม่ได้รับผลจาก vagus → การให้ atropine จึงไม่เปลี่ยนความกว้าง QRS',
-    '<b>Vagus (ACh บน M₂)</b> ชะลอ SA node และ AV node → RR ยาวขึ้นและ PR ยาวขึ้น (อาจเกิด AV block)',
-    '<b>จุดหลอก</b> ดูผลยาที่ SA node ให้ดู RR interval · ส่วน ST elevation เกิดจาก myocardial injury ไม่ใช่ผลของ ANS'
+    "<b>Sympathetic / atropine</b> SA ชันขึ้น + AV เร็วขึ้น → RR, PR, QT สั้นลง",
+    "<b>QRS คงเดิม</b> His–Purkinje แทบไม่รับผล vagus → atropine ไม่เปลี่ยนความกว้าง QRS",
+    "<b>Vagus (ACh บน M₂)</b> SA และ AV ช้าลง → RR, PR ยาวขึ้น (อาจ AV block)",
+    "<b>จุดหลอก</b> ผลยาที่ SA node ดูที่ RR · ST elevation = myocardial injury ไม่ใช่ผล ANS"
   ],
   'L-C1': [
     '<b>Bipolar limb leads</b> วัดความต่างศักย์ระหว่างแขนขา 2 ข้าง: Lead I (RA− → LA+, 0°), Lead II (RA− → LL+, +60°), Lead III (LA− → LL+, +120°)',
@@ -2066,22 +2077,20 @@ window.THAI_EXPLAIN = {
     '<b>เลขคุ้นตา</b> 1–2–3–4–5 ช่องใหญ่ = 300–150–100–75–60 bpm · อัตราพักปกติคือ 60–100 bpm'
   ],
   'R-C2': [
-    '<b>ทำไมต้องแก้ความเร็ว</b> สูตร 1500 ÷ ช่องเล็ก ใช้ได้เฉพาะ 25 mm/s → ถ้าความเร็วเปลี่ยนเป็น v mm/s ต้องคูณด้วย (v ÷ 25)',
-    '<b>สูตรเดียวจบ</b> HR = (60 × speed) ÷ RR (ช่องเล็ก): 12.5 mm/s = 750/ช่อง · 30 mm/s = 1800/ช่อง · 50 mm/s = 3000/ช่อง',
-    '<b>กับดักสายตา</b> กระดาษวิ่งเร็ว (50 mm/s) ยืดระยะ RR ออก 2 เท่าทำให้ดูเหมือนเต้นช้า · กระดาษช้า (12.5 mm/s) บีบให้ดูเหมือนเร็ว',
-    '<b>ลองกด Flowchart</b> เลือกเคสจากข้อสอบจริงด้านบน (12.5, 15, 30, 50 mm/s) หรือลองกรอกเลขเองทีละขั้นได้ทันที'
+    "<b>ทำไมต้องแก้ความเร็ว</b> สูตร 1500 ÷ ช่องเล็ก ใช้ได้เฉพาะ 25 mm/s → ความเร็ว v ต้องคูณ (v ÷ 25)",
+    "<b>สูตรเดียวจบ</b> HR = (60 × speed) ÷ ช่องเล็ก: 12.5 → 750 · 30 → 1800 · 50 → 3000",
+    "<b>กับดักสายตา</b> 50 mm/s ยืด RR 2 เท่า ดูเหมือนช้า · 12.5 mm/s บีบ ดูเหมือนเร็ว"
   ],
   'R-C3': [
-    '<b>ปัญหาของจังหวะไม่สม่ำเสมอ</b> ถ้าแต่ละช่วง RR กว้างไม่เท่ากัน การเอา 1500 หารช่องเดียวจะได้อัตราไม่ซ้ำกันในแต่ละ beat',
-    '<b>วิธีนับ 10 วินาที</b> แถบ rhythm strip ล่างสุดของ 12-lead ยาว 250 mm = 10 วินาที (ที่ 25 mm/s) → นับจำนวน QRS ทั้งแถบแล้วคูณ 6',
-    '<b>Atrial fibrillation</b> ลักษณะเด่นคือไม่มี P wave, เส้น baseline หยัก (fibrillation waves), RR irregularly irregular และ QRS แคบ',
-    '<b>รายงานค่าไหน</b> ใน AFib นับเฉพาะ QRS เพื่อรายงาน ventricular rate (atrium สั่นรัวกว่า 300 ครั้ง/นาทีจนนับไม่ได้)'
+    "<b>ปัญหา</b> RR ไม่เท่ากัน → หาร RR ช่องเดียวได้อัตราต่างกันทุก beat",
+    "<b>นับ 10 วินาที</b> rhythm strip ล่างสุด 250 mm = 10 s ที่ 25 mm/s → นับ QRS แล้วคูณ 6",
+    "<b>Atrial fibrillation</b> ไม่มี P, baseline หยัก, RR irregularly irregular, QRS แคบ",
+    "<b>รายงานค่า</b> นับ QRS เพื่อรายงาน ventricular rate (atrium สั่น > 300 ครั้ง/นาที นับไม่ได้)"
   ],
   'A-C1': [
-    '<b>4 ช่วงองศา</b> Normal −30° ถึง +90° · LAD −30° ถึง −90° · RAD +90° ถึง +180° · Extreme −90° ถึง ±180°',
-    '<b>Quadrant check</b> ดู Lead I (0°) แบ่งซ้าย/ขวา และ aVF (+90°) แบ่งล่าง/บน → I+/aVF+ ปกติ · I−/aVF+ = RAD · I−/aVF− = Extreme',
-    '<b>กับดัก I+ / aVF−</b> ควอดแรนต์ซ้ายบนครอบคลุม 0° ถึง −90° ซึ่ง 0° ถึง −30° ยังปกติ → ต้องดู Lead II (+60°): II บวก = ปกติ, II ลบ = LAD แท้',
-    '<b>ลองกด Flowchart</b> เลือกเคสข้อสอบหรือใส่ค่า net QRS (R − S) ของ Lead I, aVF, II เพื่อเดินตามแผนผังทีละขั้น'
+    "<b>4 โซน</b> Normal −30° ถึง +90° · LAD −30° ถึง −90° · RAD +90° ถึง +180° · Extreme −90° ถึง ±180°",
+    "<b>Quadrant check</b> Lead I แบ่งซ้าย/ขวา · aVF แบ่งบน/ล่าง → I+/aVF+ ปกติ · I−/aVF+ = RAD · I−/aVF− = extreme",
+    "<b>กับดัก I+ / aVF−</b> 0° ถึง −30° ยังปกติ → ดู Lead II: บวก = ปกติ · ลบ = LAD"
   ],
   'A-C2': [
     '<b>หลักการแตกเวกเตอร์</b> แต่ละ lead แสดงขนาดเงาของเวกเตอร์ QRS ที่ฉายลงบนแกนของ lead นั้น (∝ cos θ)',
@@ -2090,22 +2099,21 @@ window.THAI_EXPLAIN = {
     '<b>จุดหลอก AC81</b> “Highest amplitude” คิดตามขนาดไม่สนเครื่องหมาย (แกน −60° ตรงข้าม III 180° จึงใหญ่สุดเชิงขนาด ส่วน tallest R คือ aVL)'
   ],
   'A-C3': [
-    '<b>วิธีลัด 3 ขั้น</b> 1) ดูเฉพาะ 6 limb leads หาตัวที่ biphasic ที่สุด → 2) แกนจะตั้งฉาก ±90° จาก lead นั้น → 3) เช็ก lead คู่ตั้งฉากว่าบวกหรือลบเพื่อเลือกฝั่ง',
-    '<b>ตัวอย่าง t-RAT Q11</b> aVL (−30°) biphasic → เหลือ +60° หรือ −120° → Lead II (+60°) สูงบวกชัดเจน → ตอบ +60°',
-    '<b>วิธีตรง (farthest pair)</b> จดเครื่องหมาย + / − ของ 6 limb leads → หาคู่บวกที่อยู่ห่างกันที่สุด → แกนอยู่ตรงกึ่งกลาง (±15°)',
-    '<b>ตรวจซ้ำเสมอ</b> เอาองศาที่ได้ไปเทียบกับ Lead I และ aVF ว่าอยู่ควอดแรนต์เดียวกันเพื่อกันหลงทิศ 180°'
+    "<b>วิธีลัด 3 ขั้น</b> หา limb lead ที่ biphasic สุด → แกนห่าง ±90° → ดู lead คู่ตั้งฉากว่าบวกหรือลบ",
+    "<b>ตัวอย่าง t-RAT Q11</b> aVL biphasic → +60° หรือ −120° → Lead II บวกสูง → +60°",
+    "<b>วิธีตรง</b> จด + / − ของ 6 limb leads → แกนอยู่กึ่งกลางคู่ lead บวกที่ห่างกันที่สุด (±15°)",
+    "<b>ตรวจซ้ำ</b> เทียบกับ Lead I และ aVF กันหลงทิศ 180°"
   ],
   'A-C4': [
-    '<b>แยกคิด 3 อย่างทีละขั้น</b> ข้อสอบที่ถามรวมหลายพารามิเตอร์อย่าดูพร้อมกัน ให้ไล่ 1) Rate → 2) Axis → 3) QRS width',
-    '<b>ขั้นที่ 1 Rate</b> อ่าน paper speed ก่อนทุกครั้ง (ระวัง 15, 30, 50 mm/s) แล้วค่อยใช้สูตร (1500 ÷ ช่องเล็ก) × (speed ÷ 25)',
-    '<b>ขั้นที่ 2 Axis</b> เช็ก Lead I และ aVF ก่อน (และ Lead II ถ้า I+/aVF−) แยก Normal / LAD / RAD ได้ภายใน 5 วินาที',
-    '<b>ขั้นที่ 3 QRS width</b> ปกติแคบกว่า 3 ช่องเล็ก (≤ 100–110 ms) → ถ้ากว้างตั้งแต่ 3 ช่องเล็กขึ้นไปคือ wide QRS'
+    "<b>แยกคิดทีละขั้น</b> ข้อที่ถามหลายค่า ให้ไล่ rate → axis → QRS width",
+    "<b>Rate</b> อ่าน paper speed ก่อนเสมอ (15, 30, 50 mm/s) แล้วใช้ (1500 ÷ ช่องเล็ก) × (speed ÷ 25)",
+    "<b>Axis</b> Lead I + aVF ก่อน (และ Lead II ถ้า I+/aVF−)",
+    "<b>QRS width</b> แคบ < 3 ช่องเล็ก (≤ 100–110 ms) · ตั้งแต่ 3 ช่องขึ้นไป = wide"
   ],
   'E-C1': [
-    '<b>10 สาย → 12 ลีด</b> สายแขนขา 4 เส้น (รวม RL สายดิน) สร้าง 6 frontal leads · สายหน้าอก 6 เส้นสร้าง 6 horizontal precordial leads (V1–V6)',
-    '<b>ตำแหน่ง V1–V3</b> V1 ที่ 4th ICS ขอบ sternum ขวา · V2 ที่ 4th ICS ขอบ sternum ซ้าย · V3 กึ่งกลางระหว่าง V2 กับ V4',
-    '<b>ตำแหน่ง V4–V6</b> อยู่ในระดับ 5th ICS ทั้งหมด ไล่จากซ้ายไปรักแร้: V4 midclavicular → V5 anterior axillary → V6 midaxillary',
-    '<b>เหตุผลที่คลื่นแรง</b> Precordial leads วางชิดผนังอกใกล้หัวใจที่สุด จึงรับสัญญาณแนวนอนหน้า-หลังและซ้าย-ขวาได้ชัดเจน'
+    "<b>10 สาย → 12 ลีด</b> สายแขนขา 4 เส้น (RL = ground) ให้ 6 frontal leads · สายหน้าอก 6 เส้นให้ V1–V6 (horizontal)",
+    "<b>V1–V3</b> V1 4th ICS ขอบ sternum ขวา · V2 4th ICS ขอบ sternum ซ้าย · V3 กึ่งกลาง V2–V4",
+    "<b>V4–V6</b> ระดับ 5th ICS ทั้งหมด: V4 midclavicular → V5 anterior axillary → V6 midaxillary"
   ],
   'E-C2': [
     '<b>5 เกณฑ์ครบถ้วน</b> 1) Rate 60–100 bpm · 2) เริ่มจาก SA node · 3) ทุก P ตามด้วย QRS 1:1 · 4) P รูปทรงเดียวใน lead เดียวกัน · 5) P บวกใน II และลบใน aVR',
@@ -2113,10 +2121,9 @@ window.THAI_EXPLAIN = {
     '<b>จุดหลอกยอดฮิต</b> “Positive P in all leads” ผิดเพราะ aVR ต้องลบ · “Uniform P in every lead” ผิดเพราะต่าง lead รูปคลื่นต่างกันได้'
   ],
   'E-C3': [
-    '<b>AV block 3 ระดับ</b> 1° = PR > 200 ms แต่นำผ่านทุกตัว · 2° = บาง P หลุดไม่มี QRS · 3° = P และ QRS แยกกันเต้นสนิท (atria 70, ventricle 40)',
-    '<b>SA node ล้มเหลว</b> AV node ซึ่งเป็น pacemaker สำรองลำดับถัดไปจะรับช่วงเต้นแทนที่ ~40–60 bpm โดยยังใช้ His–Purkinje จึงได้ narrow QRS',
-    '<b>Atrial fibrillation</b> ไม่มี P wave, RR irregularly irregular, แต่ QRS ยังแคบเพราะการนำไฟฟ้าลง ventricle ยังปกติ',
-    '<b>ลองกด Flowchart</b> ทดลองไล่ 4 คำถามด้านบนกับเคส AC81 Q4, AC75 Q8/Q17 และ AFib เพื่อฝึกแยกจังหวะ'
+    "<b>AV block</b> 1° = PR > 200 ms นำผ่านทุกตัว · 2° = บาง P ไม่มี QRS · 3° = P กับ QRS แยกกันเต้น (atria 70, ventricle 40)",
+    "<b>SA node ล้มเหลว</b> AV node (pacemaker สำรอง) รับช่วงที่ ~40–60 bpm ผ่าน His–Purkinje → narrow QRS",
+    "<b>Atrial fibrillation</b> ไม่มี P, RR irregularly irregular, QRS แคบ · เฉลย AC77 ใช้ pulse deficit"
   ],
   'E-C4': [
     '<b>ลำดับตัดช้อยส์ไว (ทริก PS82)</b> เริ่มจากสิ่งที่เห็นเร็วสุด: Segment (ST ยก/กดไหม) → Wave (P/T +/−) → Interval (PR, QRS) → คำนวณ HR → ดู QRS axis',
@@ -2146,7 +2153,7 @@ window.TUTOR_NOTES = {
   'C-C2': {
     b: [
       'อธิบายเรื่องมวลกล้ามเนื้อ: ผนัง atrium บางแค่ ~2 mm ส่วน LV หนา ~10–12 mm ดังนั้นแรงไฟฟ้า (dipole moment) ของ QRS จึงกลบ atrial repolarization (Ta wave) มิด',
-      'ถ้าคนไข้มี PR depression ใน acute pericarditis นั่นคือส่วนหนึ่งของ Ta wave ที่โผล่ให้เห็นในคลินิก (เล่าเสริมสั้นๆ ให้เห็นภาพ)'
+      'เล่าเสริม: ใน acute pericarditis อาจเห็น PR depression ซึ่งสะท้อนการบาดเจ็บของผนัง atrium (atrial current of injury) ช่วงที่ atrium กำลัง repolarize'
     ],
     d: [
       '  SA/AV nodes  -> too small (no wave; AV delay = PR segment)',
@@ -2168,7 +2175,7 @@ window.TUTOR_NOTES = {
   'C-C4': {
     b: [
       'เชื่อมโยงกับกลไก arrhythmia: ถ้ามีกระตุ้นแทรกช่วง relative refractory (ขาลงของ T wave, “R-on-T phenomenon”) อาจกระตุ้นเกิด VT/VF ได้',
-      'ยาหรือเกลือแร่ที่ยืด phase 2 เช่น hypocalcemia จะยืด ST segment และ QT interval (ออกบ่อยในพาร์ท cardiac AP ของ AC82 ด้วย)'
+      'ยาหรือเกลือแร่ที่ยืด phase 2 เช่น hypocalcemia จะยืด ST segment และ QT interval'
     ],
     d: [
       '  Ventricular AP:  0 (up)   2 (plateau)   3 (down)   4 (rest)',
@@ -2278,7 +2285,7 @@ window.TUTOR_NOTES = {
   'R-C2': {
     b: [
       'ทริกจาก PS82: ท่องสูตรเดียว HR = (60 × speed) ÷ RR_small_boxes — แทนค่าได้ทุกความเร็ว (12.5, 15, 25, 30, 50) ไม่ต้องกลัวคูณสลับหาร',
-      'เน้นตรวจสอบความเร็วกระดาษทุกครั้งที่โจทย์ให้เลขความเร็วมาใน stem (90% ของโจทย์ที่บอกความเร็วในข้อสอบ MDCU คือความเร็วที่ไม่ใช่ 25!)'
+      'อ่านความเร็วกระดาษจาก stem (และ footer) ทุกครั้งก่อนคำนวณ — ข้อสอบ AC และ TBL ใช้ 12.5, 15, 30, 50 mm/s เป็นกับดัก · ถ้า stem กับ footer ไม่ตรงกัน ให้ใช้ค่าใน stem'
     ],
     d: [
       '  HR = (60 * speed_mm_per_s) / RR_small_boxes',
@@ -2485,7 +2492,7 @@ window.TUTOR_SCRIPT = {
         'R4': '12.5 mm/s is half standard speed, so 1500 ÷ 15 = 100 gets halved to 50 bpm.',
         'R6': 'Classic trap on i-RAT Q14: 18 small boxes gives ~83 at 25 mm/s, but at 50 mm/s you must double it to 168 bpm.',
         'R8': 'AC81 Q2 at 50 mm/s: 15 small boxes → 50 × 60 ÷ 15 = 200 bpm.',
-        'R10': 'Watch the 30 mm/s speed here: 25 small boxes would be 60 bpm at standard speed, scaled by 30/25 gives 72 bpm.',
+        'R10': 'The stem says 30 mm/s even though the footer prints 25: use the stem. 25 small boxes would be 60 bpm at standard speed, scaled by 30/25 gives 72 bpm.',
         'R-C3': 'When RR intervals jump around in atrial fibrillation, dividing one RR fails — count QRS complexes across the 10-second strip and multiply by 6.',
         'R11': 'This bottom strip is irregularly irregular with no P waves — count about 22 QRS complexes times 6 to get 132 bpm.'
       }
@@ -2514,7 +2521,7 @@ window.TUTOR_SCRIPT = {
         'A19': 'Lead I and aVL are up, while II, III and aVF are deeply down — clear left axis deviation, −30° to −90°.',
         'A20': 'Same pattern on i-RAT Q16: I and aVL positive, II/III/aVF negative → −30° to −90°.',
         'A-C4': 'For multi-parameter items, don’t rush: check paper speed for rate, check I/aVF/II for axis, and check whether QRS is under 3 small boxes.',
-        'A22': 'RR is ~11 small boxes (136 bpm, tachycardia) and I+/II−/aVF− (LAD) → tachycardia with left axis deviation.',
+        'A22': 'Count the complexes in the 10-second strip: about 19, so roughly 115 bpm, which is tachycardia; I and aVL up with II, III and aVF down gives left axis deviation.',
         'A24': 'Watch the 15 mm/s speed trap! 20 small boxes × 15/25 gives 45 bpm bradycardia, combined with I+/II−/aVF− left axis deviation.'
       }
     },
@@ -2527,19 +2534,19 @@ window.TUTOR_SCRIPT = {
         'Normal sinus rhythm requires 60–100 bpm, SA origin, 1:1 P→QRS, monomorphic P within each lead, and +P in II / −P in aVR.',
         'Distinguish AV blocks cleanly: 1st° (PR >200 ms, all conducted), 2nd° (dropped QRS), 3rd° (complete AV dissociation).',
         'When the SA node fails, the AV node escapes at ~40–60 bpm with a narrow QRS; AFib has no P waves, irregular RR, and narrow QRS.',
-        'Read full 12-lead ECGs systematically (ST/waves → intervals → rate → axis) to eliminate wrong choices quickly.'
+        'Read every 12-lead in the same order (standardization → rate → rhythm → axis → intervals → ST/T); in an MCQ, rule out the easy options first (ST, wave polarity, intervals, then rate and axis).'
       ],
       say: {
         'E-C1': 'Remember the landmark split: V1 and V2 are in the 4th intercostal space, while V4, V5 and V6 march laterally across the 5th space.',
         'E3': 'V4 is the anchor of the 5th intercostal space: midclavicular line.',
         'E5': 'Move one step lateral from V4 at the same 5th ICS level: V5 is on the anterior axillary line.',
         'E-C2': 'Check all five sinus criteria — and watch out for the two classic traps: P is NOT positive in all leads, and NOT identical across different leads.',
-        'E7': 'Only option 3 holds up: QRS complexes preceded by P waves. P is inverted in aVR, and normal rate starts at 60, not 50.',
+        'E7': 'Only option C holds up: QRS complexes preceded by P waves. P is inverted in aVR, and normal rate starts at 60, not 50.',
         'E9': 'P waves look different in different leads, so uniform P morphology in every lead is NOT required.',
         'E10': 'On AC81 Q4, check every choice: 13 QRS in 10 s is ~78 bpm, PR and ST are normal, Lead I is negative (RAD), and sinus P waves drive every QRS → sinus rhythm.',
         'E-C3': 'Walk through our rhythm flowchart to separate sinus rhythm, atrial fibrillation, junctional escape, and all three degrees of AV block.',
         'E11': 'Atria at 70 bpm and ventricles at 40 bpm with no P–QRS association is textbook 3rd-degree (complete) AV block.',
-        'E-C4': 'Put everything together on real 12-lead items by checking segment, waves, intervals, rate, and axis in a fixed order.',
+        'E-C4': 'Read every 12-lead in the same order: standardization, rate, rhythm, axis, intervals, then ST and T. In an MCQ, knock out the easy options first.',
         'E14': 'On AC80 Q1, Lead I is negative and aVF is positive → right axis deviation, while rate, PR, ST, and sinus P waves are all normal.',
         'E15': 'Check every row of the student’s table on t-RAT Q14: the tracing actually has a normal axis and narrow QRS, so those two rows are wrong.'
       }
@@ -2615,11 +2622,11 @@ window.TUTOR_SCRIPT = {
     ]
   };
   var AXIS_CASES = [
-    { k: 't69q11', b: 't-RAT 2569 Q11 (+60°)', src: 't-RAT 2569 Q11 (aVL biphasic, II tall)', v: { i: 4, avf: 7, ii: 10 } },
-    { k: 't68q12', b: 't-RAT 2568 Q12 (LAD)', src: 't-RAT 2568 Q12 (I +, II −, aVF −)', v: { i: 6, avf: -8, ii: -5 } },
-    { k: 'ac80q1', b: 'AC80 Q1 (RAD)', src: 'AC80 Q1 / i-RAT Q19 (I −, aVF +)', v: { i: -5, avf: 6, ii: 1 } },
-    { k: 'phys', b: 'Border (−15°)', src: 'Physiologic left axis (I +, aVF −, II +)', v: { i: 8, avf: -2, ii: 3 } },
-    { k: 'ext', b: 'Extreme (−120°)', src: 'Extreme axis deviation (I −, aVF −)', v: { i: -5, avf: -7, ii: -10 } }
+    { k: 't69q11', x: 'Normal axis (0° to +90°)', b: 't-RAT 2569 Q11 (+60°)', src: 't-RAT 2569 Q11 (aVL biphasic, II tall)', v: { i: 4, avf: 7, ii: 10 } },
+    { k: 't68q12', x: 'Left axis deviation', b: 't-RAT 2568 Q12 (LAD)', src: 't-RAT 2568 Q12 (I +, II −, aVF −)', v: { i: 6, avf: -8, ii: -5 } },
+    { k: 'ac80q1', x: 'Right axis deviation', b: 'AC80 Q1 (RAD)', src: 'AC80 Q1 / i-RAT Q19 (I −, aVF +)', v: { i: -5, avf: 6, ii: 1 } },
+    { k: 'phys', x: 'Normal axis (0° to −30°)', b: 'Border (−15°)', src: 'Physiologic left axis (I +, aVF −, II +)', v: { i: 8, avf: -2, ii: 3 } },
+    { k: 'ext', x: 'Extreme axis deviation', b: 'Extreme (−120°)', src: 'Extreme axis deviation (I −, aVF −)', v: { i: -5, avf: -7, ii: -10 } }
   ];
   var AXIS_FIELDS = [['i', 'Lead I net QRS (mm, + or −)'], ['avf', 'Lead aVF net QRS (mm, + or −)'], ['ii', 'Lead II net QRS (if I +, aVF −)']];
   var AXIS_TXT = {
@@ -2695,13 +2702,13 @@ window.TUTOR_SCRIPT = {
     ]
   };
   var RATE_CASES = [
-    { k: 'ac75', b: 'AC75 (25 mm/s, 15 mm)', src: 'AC75 Q5 / i-RAT Q15', v: { speed: 25, rr: 15 } },
-    { k: 'ac76', b: 'AC76 / AC80 (12.5 mm/s)', src: 'AC76 Q7 / AC80 Q3 (RR 15 mm)', v: { speed: 12.5, rr: 15 } },
-    { k: 't69q13', b: 't-RAT 2569 Q13 (15 mm/s)', src: 't-RAT 2569 Q13 (RR 20 mm)', v: { speed: 15, rr: 20 } },
-    { k: 't68q13', b: 't-RAT 2568 Q13 (30 mm/s)', src: 't-RAT 2568 Q13 (RR 25 mm)', v: { speed: 30, rr: 25 } },
-    { k: 'ir14', b: 'i-RAT Q14 (50 mm/s, 18 mm)', src: 'i-RAT Q14 (50 mm/s, RR 18 mm)', v: { speed: 50, rr: 18 } },
-    { k: 'ac81q2', b: 'AC81 Q2 (50 mm/s, 15 mm)', src: 'AC81 Q2 / t-RAT 2569 Q12', v: { speed: 50, rr: 15 } },
-    { k: 't68q14', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 (22 QRS in 10 s)', v: { speed: 25, count: 22 } }
+    { k: 'ac75', x: '(100 bpm)', b: 'AC75 (25 mm/s, 15 mm)', src: 'AC75 Q5 / i-RAT Q15', v: { speed: 25, rr: 15 } },
+    { k: 'ac76', x: '(50 bpm)', b: 'AC76 / AC80 (12.5 mm/s)', src: 'AC76 Q7 / AC80 Q3 (RR 15 mm)', v: { speed: 12.5, rr: 15 } },
+    { k: 't69q13', x: '(45 bpm)', b: 't-RAT 2569 Q13 (15 mm/s)', src: 't-RAT 2569 Q13 (RR 20 mm)', v: { speed: 15, rr: 20 } },
+    { k: 't68q13', x: '(72 bpm)', b: 't-RAT 2568 Q13 (30 mm/s)', src: 't-RAT 2568 Q13 (RR 25 mm)', v: { speed: 30, rr: 25 } },
+    { k: 'ir14', x: '(167 bpm)', b: 'i-RAT Q14 (50 mm/s, 18 mm)', src: 'i-RAT Q14 (50 mm/s, RR 18 mm)', v: { speed: 50, rr: 18 } },
+    { k: 'ac81q2', x: '(200 bpm)', b: 'AC81 Q2 (50 mm/s, 15 mm)', src: 'AC81 Q2 / t-RAT 2569 Q12', v: { speed: 50, rr: 15 } },
+    { k: 't68q14', x: '(~132 bpm)', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 (22 QRS in 10 s)', v: { speed: 25, count: 22 } }
   ];
   var RATE_FIELDS = [['speed', 'Paper speed (mm/s, e.g. 25, 50)'], ['rr', 'RR small boxes (if regular)'], ['count', '10 s QRS count (if irregular)']];
   var RATE_TXT = {
@@ -2745,7 +2752,7 @@ window.TUTOR_SCRIPT = {
   /* ================= 3. SINUS RHYTHM & CONDUCTION BLOCKS (Peer - EKG p.1-2, AC75-81) ================= */
   var RHY = { name: 'rhythm', W: 900, H: 460, label: 'Checking normal sinus rhythm versus atrial fibrillation, junctional escape, and AV blocks',
     N: [
-      { id: 'q1', k: 'q', x: 24, y: 10, w: 380, h: 60, t: ['① Distinct P waves present?'], s: ['not a wavy fibrillating baseline'] },
+      { id: 'q1', k: 'q', x: 24, y: 10, w: 380, h: 60, t: ['① No P waves + irregularly irregular RR?'], s: ['wavy fibrillating baseline'] },
       { id: 'q2', k: 'q', x: 24, y: 108, w: 380, h: 60, t: ['② Sinus P (+ in II, − in aVR)?'], s: ['monomorphic within each lead'] },
       { id: 'q3', k: 'q', x: 24, y: 206, w: 380, h: 60, t: ['③ Every P → QRS in 1 : 1 ratio?'], s: ['no dropped beats or dissociation'] },
       { id: 'q4', k: 'q', x: 24, y: 304, w: 380, h: 60, t: ['④ PR 120–200 ms & HR 60–100?'], s: ['normal AV delay & sinus rate'] },
@@ -2756,8 +2763,8 @@ window.TUTOR_SCRIPT = {
       { id: 'avb1', k: 'leaf', x: 490, y: 304, w: 386, h: 60, t: ['1st-degree AVB / Sinus brady or tachy'], s: ['PR > 200 ms (1° AVB) · or HR < 60 / > 100'] }
     ],
     E: [
-      { f: 'q1', to: 'af', p: [[404, 40], [490, 40]], l: [447, 32, 'no'] },
-      { f: 'q1', to: 'q2', p: [[214, 70], [214, 108]], l: [236, 94, 'yes'] },
+      { f: 'q1', to: 'af', p: [[404, 40], [490, 40]], l: [447, 32, 'yes'] },
+      { f: 'q1', to: 'q2', p: [[214, 70], [214, 108]], l: [236, 94, 'no'] },
       { f: 'q2', to: 'junc', p: [[404, 138], [490, 138]], l: [447, 130, 'no'] },
       { f: 'q2', to: 'q3', p: [[214, 168], [214, 206]], l: [236, 192, 'yes'] },
       { f: 'q3', to: 'avb23', p: [[404, 236], [490, 236]], l: [447, 228, 'no'] },
@@ -2767,14 +2774,14 @@ window.TUTOR_SCRIPT = {
     ]
   };
   var RHY_CASES = [
-    { k: 'ac81', b: 'AC81 Q4 (NSR)', src: 'AC81 Q4 (13 QRS in 10 s, +P II, PR 4–5 boxes)', v: { stop: 0, why: 'P waves upright in II and inverted in aVR, 1:1 P–QRS, PR ~160–200 ms, HR ~75–78 bpm → <b>Normal sinus rhythm</b>.' } },
-    { k: 'afib', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 / AC77 Q7', v: { stop: 1, dx: 'Atrial fibrillation (AF)', why: 'No P waves, wavy baseline, irregularly irregular RR intervals, narrow QRS → <b>Atrial fibrillation</b> (rate ≈ 22 × 6 = 132 bpm).' } },
-    { k: 'junc', b: 'AC75 Q17 (SA failure)', src: 'AC75 Q17 (50 bpm, narrow QRS, abnormal P)', v: { stop: 2, dx: 'AV junctional escape (AV node pacemaker)', why: 'SA node fails → next fastest pacemaker is the <b>AV node</b> (~40–60 bpm) conducting down His–Purkinje → regular <b>narrow QRS</b>.' } },
-    { k: 'avb3', b: 'AC75 Q8 (3rd° AV block)', src: 'AC75 Q8 (Atria 70, Vent 40, no P–QRS link)', v: { stop: 3, dx: '3rd-degree (complete) AV block', why: 'Atrial rate 70 bpm and ventricular rate 40 bpm with <b>complete AV dissociation</b> → <b>3rd-degree AV block</b>.' } },
-    { k: 'avb1', b: 'PR 240 ms (1st° AVB)', src: 'AC77 / AC78 (PR interval 240 ms)', v: { stop: 4, dx: '1st-degree AV block', why: 'Every sinus P conducts 1:1 to a QRS, but PR = 240 ms (> 200 ms) → <b>1st-degree AV block</b>.' } }
+    { k: 'ac81', x: 'Normal sinus rhythm', b: 'AC81 Q4 (NSR)', src: 'AC81 Q4 (13 QRS in 10 s, +P II, PR 4–5 boxes)', v: { stop: 0, why: 'P waves upright in II and inverted in aVR, 1:1 P–QRS, PR ~160–200 ms, HR ~75–78 bpm → <b>Normal sinus rhythm</b>.' } },
+    { k: 'afib', x: 'Atrial fibrillation', b: 't-RAT 2568 Q14 (AFib)', src: 't-RAT 2568 Q14 / AC77 Q7', v: { stop: 1, dx: 'Atrial fibrillation (AF)', why: 'No P waves, wavy baseline, irregularly irregular RR intervals, narrow QRS → <b>Atrial fibrillation</b> (rate ≈ 22 × 6 = 132 bpm).' } },
+    { k: 'junc', x: 'AV junctional escape', b: 'AC75 Q17 (SA failure)', src: 'AC75 Q17 (50 bpm, narrow QRS, abnormal P)', v: { stop: 2, dx: 'AV junctional escape (AV node pacemaker)', why: 'SA node fails → next fastest pacemaker is the <b>AV node</b> (~40–60 bpm) conducting down His–Purkinje → regular <b>narrow QRS</b>.' } },
+    { k: 'avb3', x: '3rd-degree', b: 'AC75 Q8 (3rd° AV block)', src: 'AC75 Q8 (Atria 70, Vent 40, no P–QRS link)', v: { stop: 3, dx: '3rd-degree (complete) AV block', why: 'Atrial rate 70 bpm and ventricular rate 40 bpm with <b>complete AV dissociation</b> → <b>3rd-degree AV block</b>.' } },
+    { k: 'avb1', x: '1st-degree AV block', b: 'PR 240 ms (1st° AVB)', src: 'AC77 / AC78 (PR interval 240 ms)', v: { stop: 4, dx: '1st-degree AV block', why: 'Every sinus P conducts 1:1 to a QRS, but PR = 240 ms (> 200 ms) → <b>1st-degree AV block</b>.' } }
   ];
   var RHY_TXT = {
-    q1: { h: 'Look for P waves', b: ['Absent P waves + irregularly irregular RR + narrow QRS = atrial fibrillation.'], th: 'ไม่มี P wave + RR ไม่สม่ำเสมอ + QRS แคบ = AF' },
+    q1: { h: 'Fibrillating atria?', b: ['No P waves + irregularly irregular RR (narrow QRS) = atrial fibrillation.', 'A regular rhythm without clear P waves is not AF: keep going (a junctional escape hides or inverts the P).'], th: 'ไม่มี P wave + RR ไม่สม่ำเสมอ = AF · ถ้า RR สม่ำเสมอแต่ไม่เห็น P ยังไม่ใช่ AF ให้ไล่ข้อต่อไป' },
     q2: { h: 'Confirm sinus origin', b: ['SA node sits upper-right → atrial wave runs down-left: P upright in II, inverted in aVR, same shape within one lead.'], th: 'P ปกติต้องบวกใน II และลบใน aVR (ไม่ต้องบวกทุก lead!)' },
     q3: { h: 'Check 1:1 AV conduction', b: ['Dropped QRS after some P waves = 2nd-degree AV block.', 'No link between P and QRS (atria faster than ventricles) = 3rd-degree AV block.'] },
     q4: { h: 'Check PR and rate', b: ['PR 120–200 ms (3–5 small boxes); > 200 ms = 1st-degree AV block; < 120 ms = pre-excitation.', 'Sinus rate 60–100 bpm.'] },
@@ -2792,11 +2799,11 @@ window.TUTOR_SCRIPT = {
       var q = RHY_Q[i];
       if (v.stop === i + 1) {
         var lf = RHY_LEAF[v.stop];
-        P.push({ n: q, e: lf, val: 'no', why: RHY_TXT[q].h + ' — criterion fails here.' });
+        P.push({ n: q, e: lf, val: i === 0 ? 'yes' : 'no', why: RHY_TXT[q].h + (i === 0 ? ' — yes: no P waves and an irregularly irregular rhythm.' : ' — criterion fails here.') });
         P.push({ n: lf, why: v.why });
         return { steps: P, dx: v.dx || RHY_TXT[lf].h };
       }
-      P.push({ n: q, e: i < 3 ? RHY_Q[i + 1] : 'nsr', val: 'yes', why: RHY_TXT[q].h + ' — passed.' });
+      P.push({ n: q, e: i < 3 ? RHY_Q[i + 1] : 'nsr', val: i === 0 ? 'no' : 'yes', why: RHY_TXT[q].h + ' — passed.' });
     }
     P.push({ n: 'nsr', why: v.why });
     return { steps: P, dx: 'Normal sinus rhythm' };
@@ -2806,7 +2813,7 @@ window.TUTOR_SCRIPT = {
   var DEFS = {
     axis: { def: AXIS, cases: AXIS_CASES, fields: AXIS_FIELDS, path: axisPath, txt: AXIS_TXT, title: 'QRS axis: quadrant check', hint: 'Click any box to see why. Load an exam case or enter net QRS values, then press Next step.', idle: 'Lead I (0°) → aVF (+90°) → and Lead II (+60°) whenever Lead I is positive and aVF is negative.' },
     rate: { def: RATE, cases: RATE_CASES, fields: RATE_FIELDS, path: ratePath, txt: RATE_TXT, title: 'Heart rate & paper-speed calculator', hint: 'Click any box to see the rule. Load an exam tracing or type your own values, then press Next step.', idle: 'Regular? Check paper speed (25 mm/s vs other) → 1500 ÷ boxes × (speed ÷ 25). Irregular? Count QRS in 10 s × 6.' },
-    rhythm: { def: RHY, cases: RHY_CASES, fields: [], path: rhyPath, txt: RHY_TXT, title: 'Sinus rhythm vs AV blocks & AFib', hint: 'Click any box to inspect the criterion. Load a case, then press Next step.', idle: 'Walk down the 4 checks: P waves present → sinus polarity (+II, −aVR) → 1:1 P–QRS → PR 120–200 ms & HR 60–100.' }
+    rhythm: { def: RHY, cases: RHY_CASES, fields: [], path: rhyPath, txt: RHY_TXT, title: 'Sinus rhythm vs AV blocks & AFib', hint: 'Click any box to inspect the criterion. Load a case, then press Next step.', idle: 'Walk down the 4 checks: fibrillating atria? → sinus polarity (+II, −aVR) → 1:1 P–QRS → PR 120–200 ms & HR 60–100.' }
   };
   function state(name) {
     return ST[name] || (ST[name] = { name: name, caseK: null, v: null, res: null, step: 0, sel: null, form: false });

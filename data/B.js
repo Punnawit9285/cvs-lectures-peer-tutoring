@@ -34,8 +34,8 @@ CVS.add({
       t: 'c', id: 'B-C2',
       title: 'Excitation–contraction coupling &amp; diastolic relaxation',
       src: 'Biochemistry of CVS p.15–31',
-      html: CVS.fig('b-cicr', 'Membrane ion transporters and calcium flux during systole.', 'bio', 23) +
-            CVS.fig('b-relax', 'Routes lowering cytosolic calcium during diastole.', 'bio', 29)
+      html: CVS.ans(CVS.fig('b-cicr', 'Membrane ion transporters and calcium flux during systole.', 'bio', 23) +
+            CVS.fig('b-relax', 'Routes lowering cytosolic calcium during diastole.', 'bio', 29), 'Labelled calcium-handling diagrams (show the answers)')
     },
     {
       t: 'q', id: 'B2', core: true, keep: true, src: 'AC81',
@@ -84,7 +84,7 @@ CVS.add({
       title: 'Autonomic modulation via β₁–cAMP–PKA',
       src: 'Biochemistry of CVS p.32–41, 47',
       html: CVS.ans(CVS.fig('b-pka', 'Four phosphorylation targets of protein kinase A and their mechanical effects.', 'bio', 40), 'PKA target summary (shows answers)') +
-            CVS.fig('b-plb', 'Dissociation of the SR regulatory subunit after phosphorylation.', 'bio', 38)
+            CVS.ans(CVS.fig('b-plb', 'Dissociation of the SR regulatory subunit after phosphorylation.', 'bio', 38), 'Labelled SR regulator diagram (shows the answers)')
     },
     {
       t: 'q', id: 'B5', core: true, keep: true, src: 'AC81',
@@ -127,7 +127,7 @@ CVS.add({
       ex: 'Unphosphorylated PLB inhibits SERCA. PKA phosphorylation causes PLB to dissociate from SERCA → higher Ca²⁺ affinity and faster SR reuptake → accelerated relaxation (+lusitropy) and larger SR Ca²⁺ load for the next beat.'
     },
     {
-      t: 'q', id: 'B8', keep: true, src: 'AC75, AC77, AC79',
+      t: 'q', id: 'B8', keep: true, src: 'AC75',
       q: 'Dissociation of phosphorylated phospholamban from its target leads to which effect?',
       o: [
         'Decrease SERCA',
@@ -137,7 +137,7 @@ CVS.add({
         'Decreased heart rate'
       ],
       a: 1,
-      ex: 'Freeing SERCA from PLB speeds cytosolic Ca²⁺ clearance back into the SR, shortening relaxation time = positive lusitropic effect (also tested in AC77 Q5 & AC79 Q14).'
+      ex: 'Freeing SERCA from PLB speeds cytosolic Ca²⁺ clearance back into the SR, shortening relaxation time = positive lusitropic effect. Related items: AC77 asked which phosphorylated protein gives positive lusitropy (PLB); AC79 asked the effect of PLB phosphorylation (faster relaxation).'
     },
     {
       t: 'q', id: 'B9', keep: true, src: 'AC80',
@@ -184,8 +184,8 @@ CVS.add({
       t: 'c', id: 'B-C4',
       title: 'Cardiac glycosides &amp; botanical toxins',
       src: 'Biochemistry of CVS p.42–46',
-      html: CVS.fig('b-digoxin', 'Ion transport chain following pump inhibition in cardiomyocytes.', 'bio', 43) +
-            CVS.fig('b-plants', 'Natural botanical sources of sarcolemmal pump inhibitors.', 'bio', 45)
+      html: CVS.ans(CVS.fig('b-digoxin', 'Ion transport chain following pump inhibition in cardiomyocytes.', 'bio', 43) +
+            CVS.fig('b-plants', 'Natural botanical sources of sarcolemmal pump inhibitors.', 'bio', 45), 'Labelled pump-inhibitor diagram and source plants (show the answers)')
     },
     {
       t: 'q', id: 'B12', core: true, keep: true, src: 'AC81',
@@ -245,7 +245,7 @@ CVS.add({
       t: 'c', id: 'B-C5',
       title: 'Myocardial fuel shifts &amp; aerobic metabolism',
       src: 'Biochemistry of CVS p.48–50, 56–66',
-      html: CVS.fig('b-randle', 'Suppression of glycolysis during fasting aerobic metabolism.', 'bio', 60) +
+      html: CVS.ans(CVS.fig('b-randle', 'Suppression of glycolysis during fasting aerobic metabolism.', 'bio', 60), 'Labelled glycolysis-suppression diagram (shows the answers)') +
             CVS.ans(CVS.fig('b-fuels', 'Percentage of myocardial energy release (%OER) by metabolic state.', 'bio', 64), 'Fuel %OER table (shows answers)')
     },
     {

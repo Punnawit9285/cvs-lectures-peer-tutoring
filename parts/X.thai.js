@@ -16,19 +16,23 @@ Object.assign(window.THAI_CONCEPT, {
     "Static/heavy lifting → TPR ↑ → BP สูงมาก → หลีกเลี่ยงในคนความดันสูง"
   ],
   "X-C2": [
-    "<b>VO₂ = CO × a–v O₂ diff</b> → ออกกำลังเพิ่มทั้งสองตัว → O₂ uptake ↑",
-    "VO₂max = gold standard ของ fitness และทำนายอัตราตาย"
+    "VO₂ = CO × a–v O₂ difference → ออกกำลังเพิ่มทั้ง CO และการดึง O₂ ของเนื้อเยื่อ",
+    "VO₂max ใช้วัดความฟิตของหัวใจและปอดได้ดีที่สุด และค่าต่ำทำนายผลเสียระยะยาวได้ดีกว่าน้ำหนักหรือความดัน"
   ],
   "X-C3": [
-    "HR ↑ เชิงเส้น (vagal ↓ ก่อน แล้ว sympathetic ↑) · SV ↑ ช่วงแรกแล้ว plateau",
-    "หัวใจปลูกถ่าย: HR ขึ้นช้าด้วย catecholamine ในเลือด · CO ↑ ด้วย Frank–Starling"
+    "HR ขึ้นเป็นเส้นตรงตามความหนัก · SV ขึ้นช่วงแรกแล้วคงที่ราว 50% VO₂max",
+    "SV ↑ ผ่าน preload (muscle + respiratory pump, venoconstriction), contractility และ afterload ↓",
+    "หัวใจปลูกถ่ายไม่มีเส้นประสาท → HR พักสูง และขึ้นช้าขณะออกกำลัง"
   ],
   "X-C4": [
-    "MAP ↑ จาก CO (TPR ลด) · เลือดไปกล้ามเนื้อ ผิวหนัง หัวใจ ↑ · <b>splanchnic ไต ↓</b> · สมองคงที่",
-    "หยุดออกกำลังทันทีแล้วยืนนิ่ง → venous return ↓ → เป็นลม"
+    "MAP = CO × TPR → ออกกำลังแบบ dynamic: TPR ↓ แต่ MAP ยัง ↑",
+    "Sympathetic หดหลอดเลือดในช่องท้องและไต → ย้ายเลือดไปกล้ามเนื้อ · ผิวหนัง ↑ ระบายความร้อน · coronary ↑",
+    "หยุดออกกำลังทันทีแล้วยืนนิ่ง → muscle pump หาย → เป็นลม"
   ],
   "X-C5": [
-    "ฝึกนาน: HR พัก ↓, SV ↑, VO₂max ↑, capillary + mitochondria ↑ · athlete’s heart = eccentric hypertrophy"
+    "ฝึกนาน: HR พักลดลง · SV ↑ ทั้งตอนพักและออกกำลัง · BP ขณะพักและขณะออกกำลังลดลง",
+    "Athlete’s heart: โพรง LV ใหญ่ขึ้น สัดส่วนผนังต่อรัศมีคงเดิม (ต่างจาก hypertension ที่ผนังหนาโพรงเล็ก = concentric)",
+    "CO สูงสุดเพิ่มจาก SV สูงสุด (HRmax แทบไม่เปลี่ยน) · capillary, mitochondria, a–v O₂ difference ↑"
   ]
 });
 

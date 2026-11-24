@@ -21,6 +21,9 @@ S.forEach(s=>{let n={c:0,q:0,tf:0,open:0,core:0,blanks:0,figs:0},seenC=false;
    (it.html.match(/<(h[1-6]|th|caption|figcaption)\b[\s\S]*?<\/\1>/g)||[]).forEach(m=>{if(m.includes('class="cz"'))errs.push('blank inside heading/caption '+it.id)});
    const outside=plain(it.html.replace(/<span class="cz">([\s\S]*?)<\/span>/g,' ')).toLowerCase();
    (it.html.match(/<span class="cz">([\s\S]*?)<\/span>/g)||[]).forEach(m=>{const w=plain(m).toLowerCase();if(w.length>=4&&new RegExp('(^|[^a-z0-9])'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'([^a-z0-9]|$)').test(outside))warn.push(it.id+' blank "'+w+'" also appears unblanked')});
+   /* the Thai key points sit above the blanks on the student card, so they must not name a blank's answer */
+   const kpTxt=plain((ctx.THAI_CONCEPT[it.id]||[]).join(' ')).toLowerCase();
+   (it.html.match(/<span class="cz">([\s\S]*?)<\/span>/g)||[]).forEach(m=>{const w=plain(m).toLowerCase();if(w.length>=3&&kpTxt.includes(w))warn.push(it.id+' blank "'+w+'" is given away by the Thai key points')});
    if(!ctx.THAI_CONCEPT[it.id])errs.push('no THAI_CONCEPT '+it.id);
    if(!ctx.THAI_EXPLAIN[it.id])errs.push('no THAI_EXPLAIN '+it.id);else {const tx=ctx.THAI_EXPLAIN[it.id],chars=tx.join('').replace(/<[^>]+>/g,'').length;if(tx.length<3||tx.length>5)warn.push(it.id+' THAI_EXPLAIN has '+tx.length+' lines');if(chars>460)warn.push(it.id+' THAI_EXPLAIN is '+chars+' characters');}
    if(!ctx.TUTOR_NOTES[it.id])errs.push('no TUTOR_NOTES '+it.id);

@@ -115,3 +115,24 @@ ecg-hexaxial        ecg     39    0.00  0.35  1.00  1.00
 ecg-reversal        ecg     46    0.00  0.08  1.00  1.00
 ac81-ecg13          ac81    23    0.10  0.11  0.90  0.41  w=2400
 ac80-ecg            ac80    9     0.10  0.35  0.85  0.68  w=2400
+# Section B: Biochemistry of CVS (bio.pdf) — recropped to drop stray slide text, page numbers and the wedding photo
+b-ic1               bio     5     0.600 0.245 0.995 0.500  w=2400 m=0.598,0.455,0.645,0.505
+b-ic2               bio     5     0.605 0.515 0.965 0.835  w=2400
++ b-intercalated b-ic1 b-ic2
+b-sarcomere         bio     10    0.620 0.220 1.000 0.860  w=2400 m=0.94,0.79,1.0,0.86 m=0.618,0.52,0.697,0.862
+b-cicr              bio     23    0.000 0.245 1.000 0.860  w=2200 m=0.955,0.79,1.0,0.86
+b-plants            bio     45    0.000 0.200 1.000 0.950  w=2200 m=0.22,0.20,0.456,0.405 m=0.338,0.405,0.456,0.455 m=0.22,0.536,0.34,0.596 m=0.955,0.88,1.0,0.95
+b-randle            bio     60    0.100 0.130 0.860 0.860  w=2200
+# Section I: Imaging of CVS (imaging.pdf)
+i-pah               imaging 26    0.000 0.230 0.970 0.985  w=2000
+i-pvh               imaging 27    0.245 0.235 0.975 0.985  w=2000 m=0.24,0.23,0.40,0.385
+i-planes            imaging 49    0.080 0.630 0.945 0.965  w=2400
+i-ct3d              imaging 55    0.000 0.630 0.975 0.935  w=2400 m=0.0,0.875,0.125,0.94
+i-echo              imaging 57    0.040 0.300 0.985 0.985  w=2200 m=0.19,0.29,0.69,0.635 m=0.03,0.29,0.195,0.625 m=0.03,0.95,0.2,0.99
+i-coronary          imaging 68    0.000 0.200 1.000 0.995  w=2200
+# Section P: Physical examination of the vascular system (pevasc.pdf)
+p-neck-anat         pevasc  3     0.000 0.140 1.000 0.995  w=2400
+p-jvp-table         pevasc  4     0.000 0.140 1.000 0.995  w=2400 m=0.0,0.13,0.215,0.245
+p-jvp-measure       pevasc  7     0.220 0.270 1.000 0.990  w=2400 m=0.22,0.27,0.415,0.505
+i-cxr-views         imaging 8     0.215 0.240 0.995 0.758  w=2000
+p-arterial          pevasc  5     0.020 0.245 0.980 0.755  w=2400

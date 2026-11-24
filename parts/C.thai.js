@@ -12,16 +12,17 @@ window.THAI_SEC.C = {
 
 Object.assign(window.THAI_CONCEPT, {
   "C-C1": [
-    "Systole: <b>isovolumic contraction</b> → ejection · diastole: isovolumic relaxation → rapid filling → diastasis → atrial systole",
-    "HR เร็ว → <b>diastole สั้นลงมากกว่า systole</b> → เวลาเติมเลือดลดลง"
+    "7 phases เรียงตามเวลา: ช่วงที่ลิ้นทุกอันปิด → ejection เร็ว → ejection ช้า → ช่วงลิ้นปิดอีกครั้ง → rapid filling → diastasis → atrial systole",
+    "S1 = AV valves ปิด (ต้น systole) · HR เร็ว → ช่วงเติมเลือดสั้นลงมาก (0.66 → 0.13 s)"
   ],
   "C-C2": [
-    "S1 = mitral + tricuspid ปิด · S2 = aortic + pulmonary ปิด (+ dicrotic notch บนกราฟ aorta)",
-    "หายใจเข้า → venous return ขวา ↑ → P2 มาช้า → S2 split · ASD → split กว้างตลอด"
+    "S1 เกิดเมื่อความดัน ventricle แซงความดันห้องบน → ลิ้น AV ปิด · S2 เกิดเมื่อความดัน ventricle ต่ำกว่าหลอดเลือดแดงใหญ่ → ลิ้น semilunar ปิด",
+    "หายใจเข้า → venous return ฝั่งขวา ↑ → RV บีบนานขึ้น → S2 แยก (split) · ASD → split กว้างทั้งหายใจเข้าและออก"
   ],
   "C-C3": [
-    "Semilunar: ตีบ → <b>systolic ejection</b> · รั่ว → <b>diastolic blowing</b> · AV: ตีบ → <b>diastolic rumble</b> · รั่ว → <b>pansystolic</b>",
-    "ตำแหน่ง: aortic R2 · pulmonary L2 · mitral apex · tricuspid L5"
+    "ใช้ 2 คำถาม: เสียงเกิดช่วงไหน (systole หรือ diastole) + ดังสุดที่ไหน → ระบุลิ้นและรอยโรคได้",
+    "ลิ้นตีบ → เลือดไหลผ่านช่วงที่ลิ้นควรเปิด · ลิ้นรั่ว → เลือดไหลย้อนช่วงที่ลิ้นควรปิด",
+    "จุดฟัง: pulmonary left 2nd ICS · tricuspid left 5th ICS"
   ],
   "C-C4": [
     "PV loop ทวนเข็ม: mitral ปิด → aortic เปิด → aortic ปิด → mitral เปิด · ความกว้าง = SV",

@@ -288,7 +288,7 @@ Object.assign(window.THAI_EXPLAIN, {
 /* ---------- B · Biochemistry of CVS ---------- */
 Object.assign(window.THAI_EXPLAIN, {
   "B-C1": [
-    "<b>เซลล์หัวใจ</b> แตกแขนง ลายขวาง นิวเคลียสเดียวตรงกลาง · ไมโทคอนเดรีย ~80% ของมวลเซลล์ · T-tubule จับคู่ SR เป็น <b>dyad</b>",
+    "<b>เซลล์หัวใจ</b> แตกแขนง ลายขวาง นิวเคลียส 1–2 อันตรงกลาง · ไมโทคอนเดรียมาก (20–40% ของปริมาตรเซลล์) · T-tubule จับคู่ SR เป็น <b>dyad</b>",
     "<b>Intercalated disc</b> desmosome ยึดต้านแรงดึง · fascia adherens ส่งแรงผ่าน actin · gap junction (connexin-43) ส่งไอออน → <b>functional syncytium</b>",
     "<b>Thin filament</b> Ca²⁺ จับ TnC → ขยับ TnI &amp; tropomyosin → เปิดตำแหน่งจับหัว myosin บน F-actin",
     "<b>กับดัก</b> เป็น functional ไม่ใช่ structural syncytium · มี ephaptic coupling เสริมการนำสัญญาณ"

@@ -97,7 +97,7 @@ window.TUTOR_SCRIPT = {
         'R4': '12.5 mm/s is half standard speed, so 1500 ÷ 15 = 100 gets halved to 50 bpm.',
         'R6': 'Classic trap on i-RAT Q14: 18 small boxes gives ~83 at 25 mm/s, but at 50 mm/s you must double it to 168 bpm.',
         'R8': 'AC81 Q2 at 50 mm/s: 15 small boxes → 50 × 60 ÷ 15 = 200 bpm.',
-        'R10': 'Watch the 30 mm/s speed here: 25 small boxes would be 60 bpm at standard speed, scaled by 30/25 gives 72 bpm.',
+        'R10': 'The stem says 30 mm/s even though the footer prints 25: use the stem. 25 small boxes would be 60 bpm at standard speed, scaled by 30/25 gives 72 bpm.',
         'R-C3': 'When RR intervals jump around in atrial fibrillation, dividing one RR fails — count QRS complexes across the 10-second strip and multiply by 6.',
         'R11': 'This bottom strip is irregularly irregular with no P waves — count about 22 QRS complexes times 6 to get 132 bpm.'
       }
@@ -126,7 +126,7 @@ window.TUTOR_SCRIPT = {
         'A19': 'Lead I and aVL are up, while II, III and aVF are deeply down — clear left axis deviation, −30° to −90°.',
         'A20': 'Same pattern on i-RAT Q16: I and aVL positive, II/III/aVF negative → −30° to −90°.',
         'A-C4': 'For multi-parameter items, don’t rush: check paper speed for rate, check I/aVF/II for axis, and check whether QRS is under 3 small boxes.',
-        'A22': 'RR is ~11 small boxes (136 bpm, tachycardia) and I+/II−/aVF− (LAD) → tachycardia with left axis deviation.',
+        'A22': 'Count the complexes in the 10-second strip: about 19, so roughly 115 bpm, which is tachycardia; I and aVL up with II, III and aVF down gives left axis deviation.',
         'A24': 'Watch the 15 mm/s speed trap! 20 small boxes × 15/25 gives 45 bpm bradycardia, combined with I+/II−/aVF− left axis deviation.'
       }
     },
@@ -139,19 +139,19 @@ window.TUTOR_SCRIPT = {
         'Normal sinus rhythm requires 60–100 bpm, SA origin, 1:1 P→QRS, monomorphic P within each lead, and +P in II / −P in aVR.',
         'Distinguish AV blocks cleanly: 1st° (PR >200 ms, all conducted), 2nd° (dropped QRS), 3rd° (complete AV dissociation).',
         'When the SA node fails, the AV node escapes at ~40–60 bpm with a narrow QRS; AFib has no P waves, irregular RR, and narrow QRS.',
-        'Read full 12-lead ECGs systematically (ST/waves → intervals → rate → axis) to eliminate wrong choices quickly.'
+        'Read every 12-lead in the same order (standardization → rate → rhythm → axis → intervals → ST/T); in an MCQ, rule out the easy options first (ST, wave polarity, intervals, then rate and axis).'
       ],
       say: {
         'E-C1': 'Remember the landmark split: V1 and V2 are in the 4th intercostal space, while V4, V5 and V6 march laterally across the 5th space.',
         'E3': 'V4 is the anchor of the 5th intercostal space: midclavicular line.',
         'E5': 'Move one step lateral from V4 at the same 5th ICS level: V5 is on the anterior axillary line.',
         'E-C2': 'Check all five sinus criteria — and watch out for the two classic traps: P is NOT positive in all leads, and NOT identical across different leads.',
-        'E7': 'Only option 3 holds up: QRS complexes preceded by P waves. P is inverted in aVR, and normal rate starts at 60, not 50.',
+        'E7': 'Only option C holds up: QRS complexes preceded by P waves. P is inverted in aVR, and normal rate starts at 60, not 50.',
         'E9': 'P waves look different in different leads, so uniform P morphology in every lead is NOT required.',
         'E10': 'On AC81 Q4, check every choice: 13 QRS in 10 s is ~78 bpm, PR and ST are normal, Lead I is negative (RAD), and sinus P waves drive every QRS → sinus rhythm.',
         'E-C3': 'Walk through our rhythm flowchart to separate sinus rhythm, atrial fibrillation, junctional escape, and all three degrees of AV block.',
         'E11': 'Atria at 70 bpm and ventricles at 40 bpm with no P–QRS association is textbook 3rd-degree (complete) AV block.',
-        'E-C4': 'Put everything together on real 12-lead items by checking segment, waves, intervals, rate, and axis in a fixed order.',
+        'E-C4': 'Read every 12-lead in the same order: standardization, rate, rhythm, axis, intervals, then ST and T. In an MCQ, knock out the easy options first.',
         'E14': 'On AC80 Q1, Lead I is negative and aVF is positive → right axis deviation, while rate, PR, ST, and sinus P waves are all normal.',
         'E15': 'Check every row of the student’s table on t-RAT Q14: the tracing actually has a normal axis and narrow QRS, so those two rows are wrong.'
       }

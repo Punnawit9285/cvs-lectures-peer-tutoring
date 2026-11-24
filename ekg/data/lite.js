@@ -61,7 +61,7 @@ S_('C-C1', [
 ]);
 S_('C-C2', [
   '| Event | Main current | ECG |',
-  '| Atrial depolarization | atrial phase 0 | {{P wave}} |',
+  '| Atrial depolarization | phase 0 inward current | {{P wave}} |',
   '| Ventricular depolarization | {{fast Na<sup>+</sup>}} in | QRS complex |',
   '| Ventricular repolarization | {{K<sup>+</sup> efflux}} | T wave |',
   '| Atrial repolarization | K<sup>+</sup> out | {{hidden}} under the QRS |',
@@ -239,13 +239,14 @@ S_('E-C3', [
   '| 3rd-degree AV block | P and QRS {{dissociated}} (e.g. atria 70, vent 40) |',
   '| SA node failure | {{AV node}} escape (~40–60 bpm, QRS ≤ 110 ms) |',
   '| Atrial fibrillation | no P, irregularly irregular, {{narrow QRS}} |',
-  '! Pulse deficit in AFib is a bedside exam sign, not an ECG wave',
+  '! AC77 keys pulse deficit (apical rate > radial pulse) as the AF finding: a bedside sign, not a wave on the tracing',
   '---',
   '@flow:rhythm'
 ]);
 S_('E-C4', [
-  '> Reading order (PS82 trick): Segment → Wave (+/−) → Interval → {{Heart rate}} → {{QRS axis}}',
+  '> Read every 12-lead in one order: standardization → rate → rhythm → {{QRS axis}} → intervals → ST/T',
+  '- Ruling out MCQ options fast (PS82 trick): easiest first: segment → wave (+/−) → interval → {{heart rate}} → axis',
   '- Normal: HR 60–100 · sinus P (+II, −aVR) · PR {{120–200 ms}} · QRS ≤ 110 ms',
   '- ST on {{isoelectric}} line (±1 mm) · axis {{−30° to +90°}}',
-  '! “Which interpretation is wrong?” → verify every row; usually {{two}} rows fail'
+  '! “Which interpretation is wrong?” → verify every row against the tracing (t-RAT 2569 Q14: {{two}} rows fail)'
 ]);

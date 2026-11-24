@@ -47,104 +47,121 @@ window.THAI_SEC = {
     traps: [
       'Sinus rhythm ไม่จำเป็นต้องมี P เป็นบวกทุก lead (aVR เป็นลบ) และไม่ต้องหน้าตาเหมือนกันข้าม lead — แค่ monomorphic ภายใน lead เดียวกัน',
       'V1–V2 อยู่ 4th ICS · ส่วน V4–V6 อยู่แนวระดับ 5th ICS (MCL → AAL → MAL)',
-      'AFib มี narrow QRS บน EKG · ส่วน pulse deficit เป็นอาการตรวจร่างกาย (คลำชีพจร) ไม่ใช่สิ่งที่เห็นบนกราฟ EKG'
+      'AFib: เฉลย AC77 คือ pulse deficit (ชีพจรที่ข้อมือน้อยกว่าที่ฟังได้ที่ apex) แม้โจทย์ถาม “EKG finding” · บนกราฟเห็นไม่มี P, RR ไม่สม่ำเสมอ, QRS แคบ'
     ]
   }
 };
 
 window.THAI_CONCEPT = {
   'C-C1': [
-    'EKG วัดความต่างศักย์ (potential difference) บนผิวหนัง ไม่ใช่ membrane potential ในเซลล์เดียว',
-    'ผิวนอกเซลล์ที่ depolarize เป็น (−) ส่วนเซลล์พักเป็น (+) → คลื่น depol วิ่งเข้าหาขั้ว (+) ได้คลื่นบวก',
-    'Repolarization ให้เครื่องหมายตรงข้ามกับ depolarization เมื่อวิ่งในทิศเดียวกัน'
+    "EKG วัดความต่างระหว่างขั้วบนผิวหนังที่เกิดจาก dipole เคลื่อนที่ ไม่ใช่ membrane potential ในเซลล์เดียว",
+    "ผิวนอกเซลล์ที่พักเป็นบวก ส่วนเซลล์ที่ถูกกระตุ้นกลับขั้ว → ทิศของคลื่นขึ้นกับว่า depolarization วิ่งเข้าหาหรือหนีขั้ว (+)",
+    "Repolarization ให้เครื่องหมายตรงข้ามกับ depolarization เมื่อวิ่งในทิศเดียวกัน"
   ],
   'C-C2': [
     'P = atrial depol · QRS = ventricular depol (fast Na⁺ influx) · T = ventricular repol (K⁺ efflux)',
     'Atrial repolarization ถูก QRS ที่ใหญ่กว่าบดบัง · SA/AV node เล็กเกินกว่าจะเห็นเป็นคลื่นบน EKG'
   ],
   'C-C3': [
-    'Depolarization วิ่ง endocardium → epicardium · แต่ endocardium มี AP ยาวกว่า จึง repolarize ทีหลัง',
-    'Repolarization จึงวิ่งย้อน epicardium → endocardium → กลับทิศ × กลับเครื่องหมาย = T wave ทิศเดียวกับ QRS (concordant)'
+    "ลำดับกระตุ้น: Purkinje อยู่ชั้นใน → ผนังชั้นในถูกกระตุ้นก่อน แต่ action potential ของชั้นในอยู่นานกว่าชั้นนอก",
+    "ผลคือ repolarization วิ่งย้อนทิศกับ depolarization → กลับทิศ × กลับเครื่องหมาย → T ชี้ทางเดียวกับ QRS",
+    "T ที่ชี้ตรงข้ามกับ QRS → นึกถึงโรคของกล้ามเนื้อหัวใจ"
   ],
   'C-C4': [
-    'Phase 0 = QRS · Phase 2 (plateau) = ST segment · Phase 3 = T wave · Phase 4 (rest) = TP segment',
-    'Atrial phase 3 ซ่อนใน QRS · Absolute refractory period ครอบคลุม QRS → ST → ยอด T'
+    "แต่ละ phase ของ ventricular AP มีช่วงคู่กันบน EKG: phase 0 = QRS (Na⁺ เข้า) · plateau ที่ Ca²⁺ เข้าสมดุล K⁺ ออกให้เส้นราบ · phase 3 (K⁺ ออก) ให้คลื่น · phase 4 คือช่วงพักระหว่าง beat",
+    "Atrial repolarization เกิดพร้อม ventricular depolarization จึงไม่เห็นแยกเป็นคลื่น",
+    "ช่วงที่กระตุ้นซ้ำไม่ได้เลยกินตั้งแต่ QRS ไปจนราวยอดของคลื่น repolarization"
   ],
   'W-C1': [
-    'Wave = คลื่น · Segment = เส้นราบระหว่างคลื่น (PR, ST, TP) · Interval = คลื่น + เส้นราบ (PR, QT)',
-    'PR segment แทน AV nodal delay · ใช้ TP segment เป็นเส้น baseline (isoelectric line)'
+    "Wave = คลื่นที่เบี่ยงออกจากเส้นฐาน · interval = wave + segment",
+    "PR interval = จุดเริ่ม P ถึงจุดเริ่ม QRS (atria + ช่วงหน่วง) · QT = จุดเริ่ม QRS ถึงจุดจบของคลื่น repolarization",
+    "ประเมินเส้นฐานในช่วงที่ทั้งหัวใจพักพร้อมกัน"
   ],
   'W-C2': [
-    'PR ปกติ 120–200 ms (3–5 ช่องเล็ก): <120 = pre-excitation · >200 = 1st-degree AV block',
-    'QRS ≤ 100–110 ms · QTc 330–440 ms (หญิง ≤ 450 ms) · HR เพิ่ม → QT สั้นลง'
+    "ค่าปกติที่ต้องจำ: PR, QRS, QTc (หญิงสูงกว่าชายเล็กน้อย) · 1 ช่องเล็ก = 40 ms",
+    "PR ยาวเกิน 200 ms = 1st-degree AV block · PR สั้นเกินแปลว่ามีทางลัดข้าม AV node",
+    "QT ขึ้นกับ HR จึงแก้เป็น QTc = QT ÷ √RR · ความผิดปกติที่ AV node เปลี่ยนช่วงเวลาตั้งแต่ P ถึง QRS"
   ],
   'W-C3': [
-    'ปกติ: P บวกใน II / ลบใน aVR · T บวกใน II, V3–V6 / ลบใน aVR · ST เบี่ยงไม่เกิน ±1 mm · Q แคบ < 40 ms',
-    'แปลง RR เป็น HR ก่อนตัดสินเสมอ: HR = 60,000 ÷ RR (ms) → RR 800 ms = 75 bpm (ปกติ), 500 ms = 120 bpm'
+    "P และ T ปกติตั้งขึ้นใน lead II · aVR มองย้อนทิศหัวใจ คลื่นปกติจึงกลับหัวใน lead นี้",
+    "ST elevation 4 mm หรือ depression 2 mm ผิดปกติ · Q กว้างและลึก → old MI",
+    "แปลง RR เป็น HR ก่อนตัดสินเสมอ: HR = 60,000 ÷ RR (ms) · RR 800 ms = 75 bpm · 500 ms = 120 bpm"
   ],
   'W-C4': [
-    'ไฟฟ้าเกิดก่อนกลไกเสมอ: P → atrial contraction · QRS → S1, isovolumic contraction → aortic valve เปิด',
-    'หลังจบ T wave → S2 → isovolumic relaxation · ต้น TP → mitral เปิด → rapid filling (เลือดผ่าน mitral มากสุด)'
+    "คลื่นไฟฟ้ามาก่อนเหตุการณ์กลไกเสมอ (excitation–contraction coupling)",
+    "QRS → S1 + isovolumic contraction · ST–T อยู่ในช่วง ejection · ปลาย T → S2",
+    "เลือดผ่าน mitral valve มากสุดช่วงต้น diastole หลัง T wave ไม่ใช่ช่วง P wave"
   ],
   'W-C5': [
-    'Sympathetic เพิ่ม หรือให้ atropine (บล็อก vagus) → HR เพิ่ม → RR สั้นลง, PR สั้นลง, QT สั้นลง, แต่ QRS width ไม่เปลี่ยน',
-    'ดูผลยาที่ SA node ให้ดู RR interval · ST elevation คือกล้ามเนื้อบาดเจ็บ ไม่ใช่ผล ANS'
+    "Sympathetic หรือ atropine (บล็อก vagus) → SA และ AV node เร็วขึ้น → HR ↑, PR สั้นลง",
+    "His–Purkinje แทบไม่รับผลจากระบบประสาทอัตโนมัติ → ความกว้าง QRS คงเดิม",
+    "Vagus (ACh บน M₂) → SA, AV ช้าลง → RR และ PR ยาวขึ้น อาจเกิด block · ยาที่ออกฤทธิ์ที่ SA node ให้ดู RR"
   ],
   'L-C1': [
-    'Bipolar: Lead I (LA+, RA−, 0°) · Lead II (LL+, RA−, +60°) · Lead III (LL+, LA−, +120°) · สมการ II = I + III',
-    'RL เป็นสายดิน (ground) · นาฬิกาข้อมือซ้าย (+) แตะนิ้วขวา (−) = Lead I'
+    "Bipolar lead วัดความต่างระหว่างแขนขา 2 ข้าง: ขั้วบวกอยู่ทางซ้ายหรือล่างเสมอ · มุม 0°, +60°, +120°",
+    "ขาขวาไม่ได้เป็นขั้วของ lead ใด · สามเหลี่ยม Einthoven ให้ความสัมพันธ์ระหว่าง 3 lead",
+    "Smartwatch: ขั้วบวกที่ข้อมือซ้าย + ขั้วลบที่นิ้วมือขวา → จำลอง bipolar lead แนวนอน"
   ],
   'L-C2': [
-    'Augmented: aVL (−30°) · aVF (+90°) · aVR (−150°) รวมกับ I, II, III เป็นวง hexaxial ทุก 30°',
-    'คู่ตั้งฉาก 90°: I–aVF · II–aVL · III–aVR'
+    "Augmented lead: ขั้วบวกที่แขนหรือขาข้างหนึ่ง เทียบกับค่าเฉลี่ยของอีก 2 ข้าง (aVR แขนขวา · aVL แขนซ้าย · aVF เท้าซ้าย)",
+    "ซ้อน 3 bipolar กับ 3 augmented ในระนาบ frontal → แบ่งวงกลมห่างกันทุก 30°",
+    "ทุก bipolar มี augmented ที่ตั้งฉากคู่กัน เช่น I ตั้งฉากกับ aVF"
   ],
   'L-C3': [
-    'สลับคู่ไหน → Augmented lead ของแขน/ขาที่ “ไม่ถูกสลับ” จะยังคงปกติ (RA↔LA เหลือ aVF · RA↔LL เหลือ aVL · LA↔LL เหลือ aVR)',
-    'สลับ RA↔LA ทำให้ Lead I กลับหัว (−I) · สลับ LL↔RL แทบไม่เปลี่ยนเพราะ RL คือ ground'
+    "สลับสายแขนขาคู่ไหน → augmented lead ของรยางค์ที่ไม่ได้ถูกสลับยังเหมือนเดิม เพราะขั้วบวกและค่าเฉลี่ยของอีก 2 ข้างไม่เปลี่ยน",
+    "สลับแขนซ้าย–ขวาพบบ่อยที่สุด: II สลับกับ III และ augmented lead ของแขนสองข้างสลับกัน",
+    "ขาขวาเป็นสายอ้างอิงที่มีศักย์ใกล้ขาซ้าย"
   ],
   'R-C1': [
-    'มาตรฐาน 25 mm/s, 10 mm/mV → 1 ช่องเล็ก = 0.04 s, 1 ช่องใหญ่ = 0.2 s',
-    'Regular rhythm ที่ 25 mm/s: HR = 1500 ÷ ช่องเล็ก = 300 ÷ ช่องใหญ่ (ปกติ 60–100 bpm)'
+    "กระดาษมาตรฐาน 25 mm/s และ 10 mm/mV (ดูจากสี่เหลี่ยม calibration) · 1 ช่องใหญ่ = 5 ช่องเล็ก = 0.2 s",
+    "Rhythm สม่ำเสมอ: นับช่องระหว่าง R กับ R แล้วหารจำนวน mm ที่กระดาษวิ่งใน 1 นาที (25 × 60)",
+    "ช่องใหญ่ยิ่งมาก HR ยิ่งต่ำ: 2 ช่องใหญ่ = 150 · 4 = 75 · 5 = 60 bpm"
   ],
   'R-C2': [
-    'ความเร็วไม่ใช่ 25 mm/s → ใช้สูตรเดียวจบ: HR = (1500 ÷ ช่องเล็ก) × (speed ÷ 25) = (60 × speed) ÷ ช่องเล็ก',
-    '50 mm/s = 3000 ÷ ช่องเล็ก · 30 mm/s = 1800 ÷ ช่องเล็ก · 12.5 mm/s = 750 ÷ ช่องเล็ก'
+    "สูตร 1500 ใช้ได้เฉพาะ 25 mm/s · ความเร็วอื่นใช้สูตรเดียวจบ: HR = (60 × speed) ÷ ช่องเล็ก",
+    "กระดาษวิ่งช้า (12.5 mm/s) คลื่นถูกบีบ ดูเหมือนเต้นเร็ว · กระดาษวิ่งเร็วยืดระยะ RR ออก"
   ],
   'R-C3': [
-    'RR ไม่สม่ำเสมอ (เช่น AFib) ห้ามหารช่องเดียว → นับจำนวน QRS ใน rhythm strip 10 วิ (250 mm) × 6',
-    'AFib: ไม่มี P wave, baseline หยัก, RR irregularly irregular, QRS แคบ — รายงานเป็น ventricular rate'
+    "RR แต่ละช่วงไม่เท่ากัน → หาร RR ช่องเดียวได้อัตราต่างกันทุก beat จึงใช้ไม่ได้",
+    "AFib: ไม่มี P wave, baseline หยัก, QRS แคบ · atrium สั่นเร็วเกินกว่าจะนับได้"
   ],
   'A-C1': [
-    'Normal axis: −30° ถึง +90° · LAD: −30° ถึง −90° · RAD: +90° ถึง +180° · Extreme: −90° ถึง ±180°',
-    'Quadrant: I+, aVF+ = Normal · I−, aVF+ = RAD · I−, aVF− = Extreme · I+, aVF− ต้องเช็ก Lead II (− = LAD)'
+    "แบ่งแกนเป็น 4 โซน: normal, left, right และ extreme (northwest −90° ถึง ±180°)",
+    "Quadrant check: Lead I บอกซ้าย/ขวา · aVF บอกบน/ล่าง → I+ aVF+ = normal · I− aVF− = extreme",
+    "I+ กับ aVF− ยังสรุปว่าเบี่ยงซ้ายไม่ได้ทันที เพราะช่วง 0° ถึง −30° ยังปกติ → ต้องดูอีก lead"
   ],
   'A-C2': [
-    'มุมระหว่าง axis กับ lead: 0° = บวกสูงสุด · <90° = บวกมากกว่าลบ · 90° = biphasic · >90° = ลบมากกว่าบวก · 180° = ลบลึกสุด',
-    'Lead ที่ biphasic สำหรับ +30° = III · −30° = II · +60° = aVL'
+    "แต่ละ lead เห็นเงาของเวกเตอร์ QRS บนแกนของตัวเอง (∝ cos θ): มุม 0° บวกสูงสุด · 180° ลบลึกสุด",
+    "มุมแหลมกับมุมป้านให้คลื่นที่เด่นคนละฝั่ง · มุม 90° ให้ R ≈ S",
+    "Lead ที่ R ≈ S สำหรับแกน +30° คือ III · แกน −30° คือ II"
   ],
   'A-C3': [
-    'วิธีลัด: หา limb lead ที่ biphasic สุด → หมุน ±90° → ดู lead คู่ตั้งฉากว่าบวกหรือลบ',
-    'วิธีตรง: จับคู่ lead บวกที่ห่างกันมากสุด → axis อยู่ตรงจุดกึ่งกลาง (±15°) แล้วเช็กซ้ำกับ quadrant'
+    "วิธีลัด: หา lead ใน frontal plane ที่ R ≈ S มากที่สุด → แกนตั้งฉากกับ lead นั้น → ดู lead คู่ตั้งฉากว่าบวกหรือลบเพื่อเลือกฝั่ง",
+    "วิธีตรง: จดเครื่องหมาย + / − ของทุก lead ใน frontal plane แล้วหาคู่ lead บวกที่ห่างกันที่สุด",
+    "ตรวจซ้ำกับ Lead I และ aVF เสมอ กันหลงทิศ 180°"
   ],
   'A-C4': [
-    'โจทย์รวมหลายค่าให้ไล่ทีละขั้น: 1) เช็ก paper speed + HR · 2) เช็ก axis (I, aVF, II) · 3) เช็ก QRS width (< 3 ช่องเล็ก)',
-    'จับคู่เงื่อนไขให้ครบก่อนตัดช้อยส์ เช่น tachycardia + LAD หรือ bradycardia + LAD'
+    "ข้อสอบที่ถามหลายค่าในกราฟเดียว ให้แยกคิดทีละขั้น: rate → axis → ความกว้าง QRS",
+    "Rate: ดูการตั้งค่ากระดาษในโจทย์ก่อนใช้สูตร 1500 · axis: Lead I + aVF ก่อนแล้วค่อยดูเพิ่ม",
+    "จับคู่ทั้งสามค่าให้ครบก่อนเลือกตัวเลือก"
   ],
   'E-C1': [
-    '10 electrodes → 12 leads: 6 limb leads (frontal plane) + 6 precordial leads (horizontal plane)',
-    'V1 = 4th ICS ขวา · V2 = 4th ICS ซ้าย · V3 = กึ่งกลาง V2–V4 · V4 = 5th ICS MCL · V5 = 5th ICS AAL · V6 = 5th ICS MAL'
+    "10 electrodes → 12 leads: limb leads ดูหัวใจในระนาบ frontal · chest leads ดูอีกระนาบหนึ่ง",
+    "V1–V2 อยู่ 4th ICS ชิดขอบ sternum คนละข้าง · V3 อยู่กึ่งกลาง V2 กับ V4 · V4–V6 อยู่แนว 5th ICS เรียงจากหน้าอกไปรักแร้"
   ],
   'E-C2': [
-    '5 เกณฑ์ Normal Sinus Rhythm: HR 60–100 · กำเนิดจาก SA node · P นำหน้า QRS 1:1 · P รูปทรงเดียวใน lead เดียวกัน · P บวกใน II / ลบใน aVR',
-    'ห้ามสับสน: P ไม่ต้องบวกทุก lead และไม่ต้องรูปทรงเหมือนกันข้าม lead'
+    "Normal sinus rhythm ต้องผ่านครบ 5 ข้อ: rate, จุดกำเนิด, ทุก P ตามด้วย QRS, รูปทรง P ใน lead เดียวกัน, ทิศของ P ใน lead II และ lead ที่มองจากไหล่ขวา",
+    "กับดัก: P ไม่ต้องบวกทุก lead และไม่ต้องหน้าตาเหมือนกันข้าม lead"
   ],
   'E-C3': [
-    '1° AVB: PR > 200 ms นำผ่านทุกตัว · 2° AVB: บาง P ไม่มี QRS ตาม · 3° AVB: P กับ QRS แยกกันเต้น (เช่น atria 70, vent 40)',
-    'SA node ล้มเหลว → AV node คุมแทน (~40–60 bpm, QRS แคบ) · AFib → ไม่มี P, irregular, QRS แคบ'
+    "1° AVB: PR ยาวแต่ทุก P ยังนำไป QRS · 2° AVB: บาง beat หลุด · 3° AVB: atria กับ ventricles เต้นอิสระจากกัน (เช่น atria 70, ventricles 40)",
+    "SA node ล้มเหลว → pacemaker สำรองตัวถัดไป (~40–60 bpm) ยังนำไฟฟ้าผ่าน His–Purkinje",
+    "AFib: ไม่มี P, RR ไม่สม่ำเสมอ · เฉลย AC77 ใช้ pulse deficit เป็นลักษณะของ AF"
   ],
   'E-C4': [
-    'ทริก PS82 ตัดช้อยส์เร็ว: Segment (ST) → Wave (+/−) → Interval (PR, QRS) → คำนวณ HR → QRS axis',
-    'โจทย์ตาราง “ข้อใดแปลผลผิด” ให้เช็กทีละแถวเทียบกับกราฟ มักมี 2 แถวที่ผิดคู่กัน'
+    "อ่านทุก 12-lead ตามลำดับเดิมเสมอ: standardization → rate → rhythm → axis → intervals → ST/T",
+    "ทริก PS82 สำหรับตัดตัวเลือก: เริ่มจากสิ่งที่ดูง่ายสุด (ST, ทิศของคลื่น, intervals) แล้วค่อยคำนวณ",
+    "โจทย์ตาราง “ข้อใดแปลผลผิด” ให้เช็กทีละแถวเทียบกับกราฟจริง"
   ]
 };
 
@@ -221,10 +238,6 @@ window.THAI_Q = {
     'ST segment ปกติต้องเบี่ยงไม่เกิน ±1 mm → ST elevation 4 mm ผิดปกติชัดเจน (acute myocardial injury)',
     'PR 160 ms, QRS 100 ms, RR 800 ms (= 75 bpm) และ axis 30° ล้วนปกติ'
   ],
-  W11: [
-    'โจทย์เดียวกับ W10 แค่สลับลำดับตัวเลือก: ST segment elevation 4 mm เป็นข้อเดียวที่ผิดปกติ',
-    'จำ RR 800 ms = 60,000 / 800 = 75 bpm จะตัดช้อยส์ได้เร็วมาก'
-  ],
   W12: [
     'P wave คือ atrial depolarization → สิ่งที่เกิดตามมาทันทีคือ atrial contraction (atrial systole)',
     'Ventricular / isovolumic contraction เกิดหลัง QRS · isovolumic relaxation เกิดหลัง T wave'
@@ -259,7 +272,7 @@ window.THAI_Q = {
   ],
   L2: [
     'โจทย์ถาม positive และ negative ตามลำดับ → Lead II คือ Left leg (+) และ Right arm (−)',
-    'ระวังตัวเลือก 2 ที่สลับลำดับเป็น Right arm ก่อน Left leg'
+    'ระวังตัวเลือก B ที่สลับลำดับเป็น Right arm ก่อน Left leg'
   ],
   L3: [
     'Lead III วัดความต่างศักย์ระหว่างแขนซ้าย (LA −) กับขาซ้าย (LL +) ชี้มุม +120°',
@@ -355,11 +368,11 @@ window.THAI_Q = {
   ],
   A4: [
     'Pulmonary hypertension ทำให้ RV โต → Right axis deviation → Lead I negative และ Lead aVF positive',
-    'ตัวเลือก 3 (I −, aVF −) คือ extreme axis deviation'
+    'ตัวเลือก C (I −, aVF −) คือ extreme axis deviation'
   ],
   A5: [
     'Left axis deviation (−30° ถึง −90°) ชี้ขึ้นซ้าย → Lead I (และ aVL) บวก ส่วน Lead II, III, aVF ลบ',
-    'ตัวเลือก 1 (I +, II +) คือ normal axis · ตัวเลือก 3 (I −, aVF −) คือ extreme axis'
+    'ตัวเลือก A (I +, II +) คือ normal axis · ตัวเลือก C (I −, aVF −) คือ extreme axis'
   ],
   A6: [
     'Lead ที่ biphasic จะตั้งฉาก (±90°) กับแกนหัวใจ: +30° + 90° = +120° ซึ่งคือ Lead III'
@@ -411,10 +424,10 @@ window.THAI_Q = {
     'Lead I และ aVL เป็นบวก ส่วน II, III, aVF เป็นลบ → แกนชี้ขึ้นซ้ายอยู่ในช่วง −30° ถึง −90° (LAD)'
   ],
   A21: [
-    'Lead I, II, III, aVL, aVF เป็นบวกทั้งหมด มีเพียง aVR ที่เป็นลบ → แกนประมาณ +30° ถึง +60° (Normal axis)'
+    'Lead I, II, III, aVF เป็นบวก · aVL เล็กเกือบ biphasic · aVR ลบ → แกนประมาณ +60° (Normal axis)'
   ],
   A22: [
-    'RR ≈ 11 ช่องเล็ก ที่ 25 mm/s → 1500 ÷ 11 ≈ 136 bpm (Tachycardia)',
+    'ภาพเล็ก ให้นับ QRS ในแถบ lead II ล่างสุด (10 วินาที) ได้ราว 19 ตัว → 19 × 6 ≈ 115 bpm → เกิน 100 = Tachycardia',
     'Lead I+, aVL+ แต่ II−, III−, aVF− → Left axis deviation → ตอบ Tachycardia with left axis deviation'
   ],
   A23: [
@@ -469,8 +482,8 @@ window.THAI_Q = {
     'QRS แคบยืนยันว่าสัญญาณยังวิ่งลงผ่านระบบ His–Purkinje ปกติ (กำเนิดเหนือ ventricle)'
   ],
   E13: [
-    'ใน Atrial fibrillation สัญญาณยังลงผ่าน AV node และ His–Purkinje ตามปกติ → QRS complex จึงยังคงแคบ (Narrow QRS)',
-    'Pulse deficit เป็นอาการจากการตรวจร่างกาย (ฟัง apex มากกว่าคลำ radial) ไม่ใช่สิ่งที่เห็นบน EKG · จังหวะ AFib ไม่สม่ำเสมอ ไม่มี P และมักเร็ว'
+    'เฉลย AC75–79 คือ B (Pulse deficit): AF เต้นเร็วไม่สม่ำเสมอ บาง beat เติมเลือดไม่พอ → คลำชีพจรที่ข้อมือได้น้อยกว่าที่ฟังได้ที่ apex',
+    'บนกราฟ EKG ของ AF: ไม่มี P, RR ไม่สม่ำเสมอ, QRS แคบ (ข้อ D) → ถ้าโจทย์ถามเฉพาะกราฟจริง ๆ ข้อ D ก็มีเหตุผล'
   ],
   E14: [
     'เฉลย AC80 คือ C (Right axis deviation): Lead I เป็นลบ (S ลึก) และ aVF เป็นบวก → RAD ชัดเจน',

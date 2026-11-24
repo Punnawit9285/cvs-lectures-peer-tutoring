@@ -19,7 +19,7 @@ window.TUTOR_NOTES = {
   'C-C2': {
     b: [
       'อธิบายเรื่องมวลกล้ามเนื้อ: ผนัง atrium บางแค่ ~2 mm ส่วน LV หนา ~10–12 mm ดังนั้นแรงไฟฟ้า (dipole moment) ของ QRS จึงกลบ atrial repolarization (Ta wave) มิด',
-      'ถ้าคนไข้มี PR depression ใน acute pericarditis นั่นคือส่วนหนึ่งของ Ta wave ที่โผล่ให้เห็นในคลินิก (เล่าเสริมสั้นๆ ให้เห็นภาพ)'
+      'เล่าเสริม: ใน acute pericarditis อาจเห็น PR depression ซึ่งสะท้อนการบาดเจ็บของผนัง atrium (atrial current of injury) ช่วงที่ atrium กำลัง repolarize'
     ],
     d: [
       '  SA/AV nodes  -> too small (no wave; AV delay = PR segment)',
@@ -41,7 +41,7 @@ window.TUTOR_NOTES = {
   'C-C4': {
     b: [
       'เชื่อมโยงกับกลไก arrhythmia: ถ้ามีกระตุ้นแทรกช่วง relative refractory (ขาลงของ T wave, “R-on-T phenomenon”) อาจกระตุ้นเกิด VT/VF ได้',
-      'ยาหรือเกลือแร่ที่ยืด phase 2 เช่น hypocalcemia จะยืด ST segment และ QT interval (ออกบ่อยในพาร์ท cardiac AP ของ AC82 ด้วย)'
+      'ยาหรือเกลือแร่ที่ยืด phase 2 เช่น hypocalcemia จะยืด ST segment และ QT interval'
     ],
     d: [
       '  Ventricular AP:  0 (up)   2 (plateau)   3 (down)   4 (rest)',
@@ -151,7 +151,7 @@ window.TUTOR_NOTES = {
   'R-C2': {
     b: [
       'ทริกจาก PS82: ท่องสูตรเดียว HR = (60 × speed) ÷ RR_small_boxes — แทนค่าได้ทุกความเร็ว (12.5, 15, 25, 30, 50) ไม่ต้องกลัวคูณสลับหาร',
-      'เน้นตรวจสอบความเร็วกระดาษทุกครั้งที่โจทย์ให้เลขความเร็วมาใน stem (90% ของโจทย์ที่บอกความเร็วในข้อสอบ MDCU คือความเร็วที่ไม่ใช่ 25!)'
+      'อ่านความเร็วกระดาษจาก stem (และ footer) ทุกครั้งก่อนคำนวณ — ข้อสอบ AC และ TBL ใช้ 12.5, 15, 30, 50 mm/s เป็นกับดัก · ถ้า stem กับ footer ไม่ตรงกัน ให้ใช้ค่าใน stem'
     ],
     d: [
       '  HR = (60 * speed_mm_per_s) / RR_small_boxes',

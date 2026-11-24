@@ -12,8 +12,9 @@ window.THAI_SEC.K = {
 
 Object.assign(window.THAI_CONCEPT, {
   "K-C1": [
-    "P = atrial depol · QRS = ventricular depol · ST = plateau (อยู่ใน ARP) · T = repolarization",
-    "PR 120–200 ms (< 120 WPW, > 200 first-degree block) · QT สั้นลงเมื่อ HR เร็ว"
+    "QRS = ventricular depolarization (fast Na⁺) · ST = plateau phase 2 · T = ventricular repolarization phase 3",
+    "PR สั้นเกิน → WPW pattern · > 200 ms = first-degree AV block · QRS < 110 ms · QTc 330–440 ms",
+    "หลัง P → atrial contraction · RR → ใช้คำนวณ rate"
   ],
   "K-C2": [
     "I = RA→LA · II = RA→LL · <b>III = LA→LL</b> · มุม: I 0°, II 60°, III 120°, aVF 90°, aVL −30°, aVR −150°",
@@ -24,15 +25,17 @@ Object.assign(window.THAI_CONCEPT, {
     "Sinus: P บวกใน II ลบใน aVR ทุก P ตามด้วย QRS อัตรา 60–100"
   ],
   "K-C4": [
-    "Normal −30° ถึง +90° · I+ aVF+ normal · I− aVF+ <b>RAD</b> · I− aVF− extreme · I+ aVF− ดู II",
-    "Lead ขนานกับ axis → R สูงสุด · ตั้งฉาก → biphasic · มุม > 90° → ลบมากกว่าบวก"
+    "อ่าน axis ใน frontal plane ด้วย Lead I + aVF ก่อน: บวกทั้งคู่ = normal · I บวก aVF ลบ ต้องดูอีก lead",
+    "R สูงสุดใน lead ที่แนวเดียวกับ axis · biphasic ใน lead ที่ตั้งฉาก · มุม < 90° → บวกเป็นหลัก"
   ],
   "K-C5": [
-    "Q ปกติแคบ (< 40 ms) · Q กว้างลึก = infarction เก่า",
-    "ST ปกติ isoelectric (≤ 1 mm) · ยกมาก → MI · inferior (II, III, aVF) → RCA"
+    "Q ปกติแคบ (< 40 ms) เล็ก พบใน aVR และ V4–V6 · กล้ามเนื้อตายไม่สร้างแรงไฟฟ้าบวก → Q ผิดปกติ (> 40 ms)",
+    "ST ปกติอยู่บน isoelectric line · ST ยกหรือกดชัด → ต้องคิดถึงหัวใจขาดเลือด",
+    "ตำแหน่ง ST ยกบอกผนังและหลอดเลือด: V1–V2 septal · I, aVL lateral (LCx) · II, III, aVF → RCA"
   ],
   "K-C6": [
-    "Lead ที่ไม่เปลี่ยน = augmented lead ของแขน/ขาที่<b>ไม่ได้</b>ถูกสลับ: RA↔LA → aVF · RA↔LL → aVL · LA↔LL → aVR"
+    "Augmented lead แต่ละตัวมองจากแขนหรือขาข้างหนึ่งเทียบค่าเฉลี่ยของอีก 2 ข้าง → ถ้าสลับ 2 ข้างที่มันไม่ได้มอง lead นั้นไม่เปลี่ยน",
+    "สลับแขน (RA ↔ LA) → II สลับกับ III และ lead ของแขนสองข้างสลับกัน"
   ]
 });
 

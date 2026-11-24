@@ -6,7 +6,7 @@ CVS.add({
   items: [
     { t: 'c', id: 'W-C1', title: 'Waves, segments and intervals', src: 'Peer notes p.1–2 · t-RAT 2569 · t-RAT 2568',
       html: CVS.fig('peer-wave', 'Tutor sketch: P, Q, R, S and T waves with PR interval, QT interval and ST segment marked.', 'ekg', 1) },
-    { t: 'q', id: 'W1', src: 't-RAT 2568', core: true,
+    { t: 'q', id: 'W1', wide: true, src: 't-RAT 2568', core: true,
       q: 'A 12-lead ECG from a 40-year-old woman is shown below. Identify the ECG components labeled A and B, respectively.',
       fig: CVS.fig('t68-labels', 't-RAT 2568 Q8: arrows A (lead II) and B (lead V2).', 'ekg', 38),
       o: ['P wave, T wave', 'PR interval, TP segment', 'Q wave, ST segment', 'P wave, ST segment'],
@@ -62,12 +62,7 @@ CVS.add({
       q: 'What is abnormal EKG?',
       o: ['PR interval 160 msec', 'QRS 100 msec', 'ST segment elevated 4 mm', 'RR interval 800 msec', 'QRS axis 30 องศา <span class="muted">(30 degrees)</span>'],
       a: 2,
-      ex: 'Normal ST deviation is within ±1 mm; 4 mm ST elevation is clearly abnormal (acute myocardial injury). RR 800 ms = 75 bpm, PR 160 ms, QRS 100 ms, and axis +30° are all normal.' },
-    { t: 'q', id: 'W11', src: 'AC79',
-      q: 'Which of the following considered as an abnormal ECG finding',
-      o: ['RR interval 800 msec', 'PR interval 160 msec', 'ST segment elevation 4 mm', 'QRS interval 100 msec', 'QRS axis 30'],
-      a: 2,
-      ex: 'Same item as W10 in a different option order: ST elevation 4 mm is the only abnormal finding.' },
+      ex: 'Normal ST deviation is within ±1 mm; 4 mm ST elevation is clearly abnormal (acute myocardial injury). RR 800 ms = 75 bpm, PR 160 ms, QRS 100 ms, and axis +30° are all normal. (The AC75–79 compilation lists this AC79 item twice, as Q17 and Q24.)' },
 
     { t: 'c', id: 'W-C4', title: 'The ECG on the cardiac cycle', src: 't-RAT 2569 · t-RAT 2568 · AC75–77', html: '' },
     { t: 'q', id: 'W12', src: 'AC75, AC77', core: true,

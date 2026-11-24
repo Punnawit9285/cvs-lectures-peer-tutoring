@@ -12,16 +12,18 @@ window.THAI_SEC.M = {
 
 Object.assign(window.THAI_CONCEPT, {
   "M-C1": [
-    "Continuous (muscle, skin, lung, brain) · fenestrated (gut, endocrine, choroid plexus, glomerulus) · discontinuous (liver, spleen, marrow)",
-    "รั่วน้อยสุด = <b>brain</b> (BBB) · รั่วมากสุด = <b>liver sinusoid</b> · sphincter ปิด → filtration ↓"
+    "Arteriole + sphincter หน้า capillary คุมปริมาณเลือดเข้า bed (sympathetic) → sphincter ปิด → Pc ↓ → filtration ↓",
+    "Continuous (กล้ามเนื้อ ผิวหนัง ปอด) รั่วน้อย · fenestrated (gut, choroid plexus, glomerulus) · discontinuous (ม้าม ไขกระดูก) รั่วมากสุด โปรตีนผ่านได้"
   ],
   "M-C2": [
-    "Gas/lipophilic → <b>ผ่านเซลล์ (transcellular diffusion)</b> · น้ำ/สารละลายน้ำ → ผ่าน cleft/fenestra · protein → vesicle",
-    "Fick: gradient ↑ พื้นที่ ↑ → diffusion ↑ · ผนังหนา → ↓"
+    "ก๊าซและสารละลายในไขมัน (O₂, CO₂, NO, ยาสลบ) ผ่านเนื้อเซลล์ได้ทั้งเซลล์ · น้ำ กลูโคส ไอออน ผ่านช่องระหว่างเซลล์และ fenestra",
+    "Protein ใช้การขนส่งข้ามเซลล์ · ผ่านรู: โมเลกุลใหญ่ขึ้น → ซึมผ่านได้น้อยลง (น้ำ > NaCl > glucose > โปรตีน)",
+    "Fick: diffusion ↑ ตามพื้นที่ผิว · ↓ เมื่อผนังหนา"
   ],
   "M-C3": [
-    "<b>NFP = (Pc − Pi) − (πc − πi)</b> → ปลาย arteriole +9 filtration · ปลาย venule −8 absorption",
-    "90% ดูดกลับ · 10% ไปทาง lymph · venous pressure ↑ ทำให้ Pc ↑ มาก"
+    "NFP = (Pc − Pi) − (πc − πi) → ที่ปลาย arteriole แรงดันออกชนะ (+9) · ที่ปลาย venule แรงดูดกลับชนะ (−8)",
+    "ของเหลวที่กรองออกส่วนใหญ่ (~90%) ถูกดูดกลับที่ปลาย venule",
+    "Venous pressure ↑ ทำให้ Pc ↑ มากกว่าการเพิ่ม arterial pressure"
   ],
   "M-C4": [
     "Edema 4 กลไก: <b>Pc ↑</b> (HF) · <b>πc ↓</b> (albumin ต่ำ) · <b>permeability ↑</b> (อักเสบ, ผึ้งต่อย) · <b>lymph อุดตัน</b> (mastectomy → πi ↑)",

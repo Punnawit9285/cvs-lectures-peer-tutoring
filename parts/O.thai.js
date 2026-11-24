@@ -12,24 +12,27 @@ window.THAI_SEC.O = {
 
 Object.assign(window.THAI_CONCEPT, {
   "O-C1": [
-    "Pulmonary: ความดันต่ำ (25/10) resistance ต่ำ flow = CO ทั้งหมด · <b>hypoxia → หด</b> · ไวต่อ gravity",
-    "Bronchial a. (จาก aorta) เลี้ยงหลอดลมถึง terminal bronchiole"
+    "Pulmonary: ความดันต่ำ (25/10, mean ~15) resistance ต่ำ แต่รับ CO ทั้งหมด",
+    "O₂ ในถุงลมต่ำ → arteriole ปอดหด → ส่งเลือดไปถุงลมที่ระบายอากาศดี (ตรงข้ามกับ systemic)",
+    "ความดันต่ำ → ในท่ายืนเลือดไปฐานปอดมากกว่ายอดปอด · bronchial a. (จาก aorta) เลี้ยงหลอดลม"
   ],
   "O-C2": [
-    "LV coronary flow <b>ต่ำสุด early systole</b> · <b>สูงสุด early diastole</b>",
-    "คุมด้วย <b>metabolism</b> (adenosine, NO, H⁺) เป็นหลัก · β-blocker ลดงาน → flow ↓"
+    "60–80 mL/min/100 g · ขึ้นกับ aortic pressure",
+    "Systole: ผนัง LV บีบหลอดเลือดตัวเอง → flow ช่วงต้น systole น้อย · ช่วงที่กล้ามเนื้อคลายและ aortic pressure ยังสูง → flow มากสุด",
+    "งาน ↑ → ใช้ O₂ ↑ → สารขยายหลอดเลือด (NO, H⁺) · sympathetic หดโดยตรงแต่ผลรวมขยาย · β1 blocker → งาน ↓ → flow ↓"
   ],
   "O-C3": [
-    "CBF ~700 mL/min · autoregulation 60–160 mmHg · <b>CO₂ สำคัญสุด</b> (สูง → ขยาย, ต่ำ → หด)",
-    "เส้นประสาทมีผลน้อย · ICP สูง → Cushing"
+    "CBF ~700 mL/min คงที่ด้วย autoregulation · PaCO₂ เป็นตัวคุมที่สำคัญสุด: hyperventilation → PaCO₂ ↓ → หด → ICP ↓",
+    "ปัจจัยเฉพาะที่: CO₂ ก่อน แล้ว O₂, H⁺ ใน CSF, K⁺ · สมองส่วนที่ทำงานได้เลือดเพิ่ม · เส้นประสาทมีผลน้อย"
   ],
   "O-C4": [
-    "ผิวหนัง: <b>sympathetic</b> คุมเป็นหลัก (อุณหภูมิ) · หนาว → arteriole + AV shunt หด",
-    "กล้ามเนื้อ: พัก → sympathetic · ออกกำลัง → metabolite ขยายได้ 15–20 เท่า"
+    "ผิวหนังคุมด้วยระบบประสาทจาก hypothalamus เพื่ออุณหภูมิ ไม่ใช่ metabolism · หนาว → arteriole และทางลัดหด → เก็บความร้อน",
+    "หนาวนาน (0–15 °C) → หลอดเลือดกลับขยายเป็นพัก ๆ ปกป้องนิ้ว · กล้ามเนื้อ: ขณะพักคุมด้วยเส้นประสาท ออกกำลัง flow ↑ 15–20 เท่า"
   ],
   "O-C5": [
-    "ตับ 25% CO (¾ จาก portal vein) · ลำไส้ functional hyperemia หลังกิน",
-    "ไต 20–25% CO เพื่อกรอง · <b>autoregulation ดีสุด</b> (myogenic + TGF) · shock → sympathetic ลด RBF"
+    "ลำไส้: sympathetic เป็นหลัก คุมความดันได้น้อย · หลังกินอาหาร flow ↑ (adenosine)",
+    "ตับ: 25% ของ CO ส่วนใหญ่ (¾) มาจากหลอดเลือดดำความดันต่ำ (~10 mmHg)",
+    "ไต: 20–25% ของ CO เพื่อกรอง ไม่ใช่เพื่อ metabolism · คุม flow ให้คงที่ได้ดีที่ 75–170 mmHg (myogenic + macula densa) · shock → sympathetic ชนะ"
   ]
 });
 

@@ -12,24 +12,29 @@ window.THAI_SEC.R = {
 
 Object.assign(window.THAI_CONCEPT, {
   "R-C1": [
-    "Sympathetic → I<sub>f</sub> ↑, I<sub>Ca</sub> ↑ → HR, conduction, contractility ↑ · vagus → I<sub>K-ACh</sub> ↑ → HR ↓",
-    "Vagus ขวา → SA node · ซ้าย → AV node · intrinsic: Frank–Starling และ Anrep"
+    "Medulla: NTS รับข้อมูล → cardio-inhibitory (dorsal motor n. ของ X), cardio-accelerator, vasomotor centre",
+    "Sympathetic → I<sub>f</sub> ↑ I<sub>Ca</sub> ↑ → HR, การนำไฟฟ้า, แรงบีบ ↑ · vagus → K⁺ ออกมากขึ้น, I<sub>Ca</sub> ↓, I<sub>f</sub> ↓ → hyperpolarize → HR ↓",
+    "Vagus ขวา → pacemaker หลัก · ซ้าย → AV node · กลไกในตัวหัวใจ: heterometric และ homeometric (Anrep)"
   ],
   "R-C2": [
-    "Carotid sinus (CN IX) + aortic arch (CN X) → NTS → BP ↑: vagus ↑ sympathetic ↓ · BP ↓: กลับกัน",
-    "เร็วที่สุด แต่ reset ได้ถ้าความดันเปลี่ยนนานหลายวัน"
+    "Stretch receptor ที่ carotid sinus และ aortic arch → medulla → BP ↑: vagus ↑ sympathetic ↓ → HR, แรงบีบ, TPR ↓",
+    "BP ตก (เสียเลือด ท้องเสีย ลุกยืน) → กลับด้าน → HR ↑ และหลอดเลือดหด",
+    "ตอบสนองเร็วที่สุด (วินาที) แต่ปรับจุดตั้งใหม่ได้ถ้าความดันเปลี่ยนนานหลายวัน"
   ],
   "R-C3": [
-    "Chemoreceptor (O₂ ↓ CO₂ ↑ H⁺ ↑) → vasoconstriction + หายใจ ↑ · <b>CNS ischemic</b> → BP สูงมาก",
-    "Cushing triad: BP สูง PP กว้าง + bradycardia + หายใจผิดจังหวะ"
+    "Chemoreceptor (carotid/aortic bodies) รับรู้ O₂ ↓ CO₂ ↑ H⁺ ↑ → กระตุ้น sympathetic และการหายใจ",
+    "เลือดไปสมองลด → CO₂ คั่งที่ vasomotor centre → sympathetic สูงมาก → BP ↑↑ · ICP สูง → triad: BP สูง PP กว้าง + HR ช้า + หายใจผิดจังหวะ",
+    "Bainbridge: atrium ถูกยืด → HR เปลี่ยน · respiratory sinus arrhythmia: HR เปลี่ยนตามการหายใจ"
   ],
   "R-C4": [
-    "RAAS: renin → Ang I → <b>ACE</b> → Ang II → หลอดเลือดหด + aldosterone + ADH + กระหายน้ำ",
-    "ระยะยาว: ไตขับเกลือ/น้ำตามความดัน (pressure natriuresis) · CKD → GFR ↓ → BP สูง"
+    "วินาที: baroreceptor, chemoreceptor, CNS ischemic · นาที–ชั่วโมง: RAAS vasoconstriction, capillary fluid shift · วัน: ไตคุมปริมาตร (pressure natriuresis)",
+    "Renin (JG cells) → Ang I → (เอนไซม์ที่ปอด) → Ang II → หลอดเลือดหด + hormone เก็บเกลือ + ADH + กระหายน้ำ",
+    "ADH: V1 → หลอดเลือดหด · อีก receptor หนึ่ง → ดูดน้ำกลับ · ไตเสื่อม → เก็บเกลือ → BP ↑"
   ],
   "R-C5": [
-    "<b>Autoregulation</b> (myogenic) · <b>metabolic</b> (CO₂, H⁺, K⁺, lactate, adenosine) · <b>endothelium</b> (NO, PGI₂ vs endothelin)",
-    "Histamine ขยาย (บาดเจ็บ) · serotonin หด · อุดตันนาน → collateral"
+    "ความดันเปลี่ยนแต่ flow คงที่ (myogenic: ยืด → หด) · metabolism ↑ → CO₂, H⁺, K⁺, lactate ↑ → arteriole ขยาย (active hyperemia)",
+    "Shear stress → endothelium หลั่งสารขยาย (+ prostacyclin) และสารหด · reactive hyperemia หลังเลือดถูกกั้น",
+    "ขาดเลือดเรื้อรังหลายสัปดาห์ → angiogenesis สร้างทางเลี่ยง"
   ]
 });
 

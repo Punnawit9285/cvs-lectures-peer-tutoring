@@ -29,7 +29,7 @@ CVS.add({
     },
     {
       t: 'open', id: 'P2', core: true, src: 'AC81',
-      q: 'In patients with increased RA pressure, which physical examination finding can be used to determine the said condition?',
+      q: 'In patients with increased RA pressure, which examination can be used to determine the said condition?',
       ans: 'Increased jugular venous distension (JVD: JVP > 3–4 cm above the sternal angle at 30–45°, CVP > 8–10 cmH₂O).',
       ex: 'Elevated right atrial pressure transmits directly upward into the right internal jugular vein, producing visible jugular venous distension.',
       flag: 'AC81 recall: Only the keyed choice A ("Increased jugular distension") was recalled in the AC81 MCQ sheet, so this item is presented as a recall question.'

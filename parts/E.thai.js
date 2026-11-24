@@ -12,24 +12,28 @@ window.THAI_SEC.E = {
 
 Object.assign(window.THAI_CONCEPT, {
   "E-C1": [
-    "Phase 4 K⁺ ออกผ่าน I<sub>K1</sub> (−90) → phase 0 fast Na⁺ เข้า → phase 1 I<sub>to</sub> → <b>phase 2 L-type Ca²⁺ เข้า = K⁺ ออก</b> → phase 3 K⁺ ออก",
-    "ศัพท์: chrono = rate · <b>dromo = conduction</b> · bathmo = excitability · ino = แรงบีบ · lusi = คลายตัว"
+    "เซลล์ 3 กลุ่ม: pacemaker (SA, AV) · conducting (His, branches, Purkinje) · contractile (atria, ventricles)",
+    "Fast AP: −90 mV → upstroke เร็ว → notch → ช่วงราบยาว → กลับสู่ขั้วเดิม (ดูตารางว่าแต่ละ phase ใช้ ion channel ไหน)",
+    "ศัพท์: chrono = rate · bathmo = excitability · ino = แรงบีบ · lusi = คลายตัว"
   ],
   "E-C2": [
-    "Pacemaker: phase 4 <b>funny current (Na⁺)</b> ไต่ขึ้นช้า ๆ → phase 0 Ca²⁺ ที่ −40 mV → phase 3 K⁺",
-    "β1 → I<sub>f</sub> ↑ → phase 4 ชันขึ้น → HR ↑ · SA node ยิงเร็วสุด จึงคุมจังหวะ"
+    "Pacemaker ไม่มี RMP คงที่: phase 4 ไต่ขึ้นช้า ๆ จาก −55 mV จนถึง threshold → upstroke ช้าเพราะ fast Na⁺ channel ถูก inactivate ที่ RMP นี้",
+    "Intrinsic rate: SA 70–80 > AV 40–60 > Purkinje 20–40 → ตัวที่ยิงก่อนจะ reset ตัวอื่น",
+    "β1 → cAMP ↑ → HR ↑ · vagus → phase 4 ลาดลง → HR ↓"
   ],
   "E-C3": [
-    "Purkinje เร็วสุด (2–4 m/s) · <b>AV node ช้าสุด</b> (0.01–0.05) → ให้ ventricle มีเวลาเติมเลือด",
-    "ARP ยาวเกือบเท่าการบีบตัว → หัวใจไม่เกิด tetanus"
+    "ความเร็วนำไฟฟ้าขึ้นกับความชันของ upstroke: เซลล์ที่ใช้ Na⁺ นำเร็ว · เซลล์ที่ใช้ Ca²⁺ นำช้า",
+    "การหน่วงระหว่าง atria กับ ventricles ทำให้ atria บีบเลือดลง ventricle ครบก่อน ventricle บีบ",
+    "ARP กินเวลาเกือบตลอดการบีบตัว → หัวใจบีบค้างต่อเนื่องแบบกล้ามเนื้อลายไม่ได้"
   ],
   "E-C4": [
-    "RMP ขึ้นกับ <b>extracellular K⁺</b> · hyperK → RMP less negative, excitability ↑, conduction ↓ · hypoK → hyperpolarized",
-    "HypoCa → plateau ยาว (QT ยาว), contractility ↓, excitability ↑ · hyperCa → กลับกัน"
+    "ขณะพัก K⁺ channel เปิดเป็นหลัก → RMP ≈ E<sub>K</sub> → ระดับ K⁺ ในเลือดเปลี่ยน RMP ทันที",
+    "HyperK รุนแรง → RMP ใกล้ threshold → Na⁺ channel reset ไม่ได้ → หัวใจหยุดเต้น · hypoK → RMP ลบมากขึ้น",
+    "Ca²⁺ คุมความยาว phase 2 และ threshold: hypoCa → excitability ↑ · hyperCa → excitability ↓"
   ],
   "E-C5": [
-    "Ca²⁺ เข้า (L-type) → <b>RyR</b> ปล่อย Ca²⁺ จาก SR (CICR) → บีบ · SERCA2 เก็บ Ca²⁺ กลับ → คลาย",
-    "<b>Digoxin</b> ยับยั้ง Na⁺/K⁺-ATPase → Na⁺ ในเซลล์ ↑ → NCX ขับ Ca²⁺ ออกน้อยลง → Ca²⁺ ↑ → บีบแรงขึ้น"
+    "AP → Ca²⁺ เข้าทาง L-type (T-tubule) → กระตุ้น SR ให้ปล่อย Ca²⁺ ก้อนใหญ่ → บีบตัว · คลายตัวเมื่อ Ca²⁺ ถูกเก็บกลับ SR และขับออกนอกเซลล์",
+    "Contractility = แรงบีบที่ความยาวเดิม · เพิ่มด้วย sympathetic/β1, catecholamine, HR เร็ว, thyroxine · ลดด้วย vagus, β-blocker, CCB, hyperK, acidosis, hypoxia"
   ],
   "E-C6": [
     "Preload = EDV/EDP (ดีสุดคือ LVEDP > LAP > PCWP > CVP) · afterload = แรงต้านตอนบีบ",

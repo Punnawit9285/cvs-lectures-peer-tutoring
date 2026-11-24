@@ -12,28 +12,29 @@ window.THAI_SEC.H = {
 
 Object.assign(window.THAI_CONCEPT, {
   "H-C1": [
-    "Endocardium (endothelium) → <b>subendocardial layer (Purkinje)</b> → myocardium (contractile, myoendocrine ทำ ANP, nodal) → epicardium (<b>mesothelium</b>)",
-    "<b>Cardiac skeleton</b> = dense CT (collagen + elastic) → ยึดลิ้น + เป็นฉนวนไฟฟ้าระหว่าง atria กับ ventricles"
+    "ผนังหัวใจ 3 ชั้น: <b>endocardium</b> (endothelium + ชั้นใต้ที่มีใยนำไฟฟ้า) → <b>myocardium</b> (เซลล์บีบตัว, เซลล์สร้าง ANP, nodal) → <b>epicardium</b> (เซลล์แบนบุผิว + ไขมัน + coronary vessels)",
+    "<b>Cardiac skeleton</b> = dense CT → เป็นฐานยึดลิ้นหัวใจ และแยก atria ออกจาก ventricles · ลิ้นและ chordae เป็น dense fibrous CT ส่วน papillary m. เป็นกล้ามเนื้อหัวใจ"
   ],
   "H-C2": [
-    "<b>Elastic artery</b> media เต็มไปด้วย fenestrated elastic lamellae (VVG ติดดำ) · <b>muscular artery</b> media เป็น SMC 6–40 ชั้น IEL/EEL ชัด",
-    "SMC ใน media เป็นคนสร้าง ECM (ไม่มี fibroblast ใน media)"
+    "<b>Elastic artery</b> (aorta, pulmonary) → media มีแผ่น elastin ซ้อนกันหลายชั้น (VVG ติดดำ) → ยืดรับแรงดันแล้วดีดกลับ",
+    "<b>Muscular artery</b> (femoral, axillary) → คุมการกระจายเลือดไปแต่ละอวัยวะ · ใน media ไม่มี fibroblast · adventitia มี vasa vasorum + nervi vasorum"
   ],
   "H-C3": [
-    "<b>Arteriole</b> = resistance vessel (SMC 1–2 ชั้น) → ยาลดความดันออกฤทธิ์ที่นี่มากสุด",
-    "<b>AV anastomosis</b> → thermoregulation · <b>portal system</b>: ตับ, anterior pituitary (venous) · ไต (arterial)"
+    "<b>Arteriole</b>: SMC วงกลม 1–2 ชั้น ไม่มี EEL ไม่มี vasa vasorum → ความดันตกมากที่สุด → ยาขยายหลอดเลือดลดความดันออกฤทธิ์ที่นี่เป็นหลัก",
+    "ทางลัดจาก arteriole ไป venule ที่ปลายนิ้ว จมูก ริมฝีปาก → เลี่ยง capillary ผิว → ใช้คุมอุณหภูมิ",
+    "<b>Portal system</b> = capillary bed 2 ชุดต่อกัน: แบบ venous เช่นที่ตับ · แบบ arterial ที่ไต"
   ],
   "H-C4": [
-    "Continuous (muscle, lung, CNS) · fenestrated (endocrine, gut, kidney) · sinusoidal (liver, spleen, bone marrow; BM ไม่ครบ)",
-    "<b>Pericyte</b> หุ้ม capillary + postcapillary venule และใช้ BM ร่วมกับ endothelium · capillary ไม่มี smooth muscle"
+    "3 ชนิด: <b>continuous</b> (tight junction, vesicles มาก) · <b>fenestrated</b> (มีรู ± diaphragm) · <b>sinusoidal</b> (ช่องกว้าง) → ดูผนังแล้วเดาอวัยวะ",
+    "มีเซลล์หุ้มรอบ capillary ที่ใช้ BM ร่วมกับ endothelium → ช่วยพยุงและคุม flow"
   ],
   "H-C5": [
-    "Vein: media บาง adventitia หนา · <b>large vein</b> adventitia หนาสุด + longitudinal SMC",
-    "<b>Valve</b> = รอยพับของ intima บุด้วย endothelium ทั้ง 2 ด้าน · dural sinus/coronary sinus ไม่มี SMC"
+    "หลักแยกในสไลด์: artery → media หนา · vein → adventitia หนา",
+    "Venule → vein ขนาดกลาง → vein ใหญ่ (venae cavae): media บาง adventitia หนากว่า · coronary sinus ไม่มี SMC เลย"
   ],
   "H-C6": [
-    "Lymphatic capillary: <b>blind-ended</b>, endothelium ชั้นเดียว ไม่มี BM, SMC, pericyte, valve · มี anchoring filaments",
-    "ดูในสไลด์: ขอบไม่เรียบ ผนังบางมาก น้ำเหลืองสีชมพูจาง ไม่มี RBC"
+    "Lymphatic capillary ผนังบางรั่ว ไม่มี BM, SMC, pericyte → น้ำและโปรตีนเข้าได้ง่าย",
+    "ดูในสไลด์: ขอบไม่เรียบ ผนังบางมาก น้ำเหลืองสีชมพูจาง · collecting vessel → ท่อใหญ่ → มุมรวม left IJV กับ subclavian v."
   ]
 });
 
