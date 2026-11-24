@@ -484,6 +484,118 @@ Object.assign(window.THAI_Q, {
   "R22": ["อุดตันเรื้อรัง → angiogenesis → <b>collateral circulation</b>", "Reactive hyperemia คือหลังอุดตันสั้น ๆ"]
 });
 
+/* ---------- B · Biochemistry of CVS ---------- */
+window.THAI_SEC.B = {
+  big: "กล้ามเนื้อหัวใจทำงานเป็น <b>functional syncytium</b> ผ่าน intercalated disc → หดตัวด้วย <b>CICR</b> (DHPR2 → RyR2) และคลายด้วย <b>SERCA/NCX</b> → β₁–cAMP–PKA เพิ่มทั้งแรงและคลายเร็ว · digoxin กด Na⁺/K⁺ pump → เลือกใช้เชื้อเพลิงตามภาวะ (Randle effect) และใช้ <b>CK-MB</b> ที่ Km ต่อ ADP ต่ำ",
+  traps: [
+    "Intercalated disc ทำให้เกิด <b>functional syncytium</b> (ไม่ใช่ structural syncytium)",
+    "กล้ามเนื้อหัวใจต้องพึ่ง <b>extracellular Ca²⁺</b> ผ่าน DHPR2 เพื่อจุด CICR (ต่างจาก skeletal ที่เชื่อมเชิงกล)",
+    "<b>Catecholamine</b> เพิ่มทั้ง +inotropy (DHPR2, RyR2) และ +lusitropy (PLB, TnI) · ส่วน <b>digoxin</b> เพิ่มแค่ +inotropy + ลด HR (vagal)",
+    "<b>IP₃R</b> มาจากทาง α₁–Gq–PLC ไม่ใช่ cAMP–PKA (AC81 Q1)",
+    "ในหัวใจ <b>CK-MM มากที่สุด</b> (~70–85%) ไม่ใช่ CK-MB · แต่ CK-MB เด่นเพราะ <b>Km ต่อ ADP ต่ำกว่า</b>"
+  ]
+};
+
+Object.assign(window.THAI_CONCEPT, {
+  "B-C1": [
+    "แยกจุดเด่นของ cardiomyocyte ออกจาก skeletal muscle: เซลล์แตกแขนง นิวเคลียสกลางเซลล์ ไมโทคอนเดรียสูงมาก และจับคู่ T-tubule แบบ 1:1",
+    "จำหน้าที่ของรอยต่อทั้ง 3 ชนิดใน intercalated disc: ยึดต้านแรงดึง, ส่งต่อแรงหดตัว, และส่งกระแสไฟฟ้าเชื่อมเซลล์"
+  ],
+  "B-C2": [
+    "ไล่วงจร Ca²⁺ สองขา: ขาเข้าจุดระเบิดเพียง ~10% จากนอกเซลล์ เพื่อปลดปล่อย ~90% จากแหล่งเก็บภายใน",
+    "ขาคลายตัวต้องลด Ca²⁺ ในไซโทซอลกลับสู่ระดับพัก โดยแยกสัดส่วนตัวหลักที่ปั๊มกลับเข้า SR กับตัวแลกเปลี่ยนที่ขับออกนอกเซลล์"
+  ],
+  "B-C3": [
+    "ตัวกระตุ้น sympathetic ผ่าน Gs–cAMP เร่งเอนไซม์เดียวแต่ไปเติมหมู่ฟอสเฟตถึง 4 จุดพร้อมกัน → ทั้งบีบแรงขึ้นและคลายเร็วขึ้น",
+    "แยกเส้นทาง α₁ (Gq) และ M₂ (Gi) ออกจากเส้นทาง β₁ (Gs) ให้ชัด"
+  ],
+  "B-C4": [
+    "ไล่ห่วงโซ่ผลของยาที่ยับยั้งปั๊มโซเดียม-โพแทสเซียม: ไอออนใดคั่ง → ตัวแลกเปลี่ยนใดทำงานลดลง → แคลเซียมสะสมอย่างไร",
+    "จำผลคู่ที่ต่างจาก catecholamine: บีบแรงขึ้นแต่หัวใจเต้นช้าลงจากฤทธิ์ต่อ vagus และจำพืชมีพิษกลุ่มเดียวกัน"
+  ],
+  "B-C5": [
+    "หัวใจสำรอง ATP ได้ไม่กี่สิบจังหวะ จึงต้องใช้ออกซิเจนตลอดและสลับเชื้อเพลิงตามสิ่งที่สูงในเลือดแต่ละช่วง",
+    "เมื่อเผาผลาญไขมัน/คีโตนสูง สารตั้งต้นและอัตราส่วนพลังงานที่พุ่งขึ้นจะย้อนกลับไปเบรกเอนไซม์ glycolysis"
+  ],
+  "B-C6": [
+    "ระบบกระสวยฟอสเฟตช่วยส่งพลังงานจากไมโทคอนเดรียมายังจุดหดตัวทันที โดยแยกชนิด isozyme ที่มากที่สุดกับชนิดที่มีความจำเพาะต่อหัวใจ",
+    "เหตุผลเชิงจลนพลศาสตร์ (Km) อธิบายได้ว่าทำไม isozyme ของหัวใจถึงเหมาะกับระดับ ADP ที่คงที่และต่ำ"
+  ]
+});
+
+Object.assign(window.THAI_Q, {
+  "B1": [
+    "เฉลย AC79 ตอบ <b>A</b> (มี sarcolemmal Ca²⁺-ATPase ช่วยขับ Ca²⁺ ออกส่วนน้อยตอนคลายตัว แม้ตัวหลักจะเป็น SERCA เข้า SR และ NCX)",
+    "ตัดช้อยส์ผิดชัดเจน: C ผิด (AP ไม่ได้เปิด SR โดยตรง ต้องผ่าน CICR) · D ผิด (เป็น <b>functional</b> ไม่ใช่ structural syncytium) · E ผิด (Ca²⁺ นอกเซลล์เข้าทาง DHPR2 ไม่ใช่ RyR)"
+  ],
+  "B2": [
+    "Dihydropyridine จับที่ <b>L-type (slow) Ca²⁺ channel (DHPR2)</b> → ลด Ca²⁺ influx ใน <b>Phase 2 (plateau)</b>",
+    "หมายเหตุคลินิก: amlodipine ออกฤทธิ์เด่นที่หลอดเลือด (อาจทำ reflex ↑HR) ส่วน CCB ที่ลด HR จริงคือ non-DHP (verapamil/diltiazem) แต่ข้อนี้โจทย์ชี้ตรงมาที่ Phase 2 L-type Ca²⁺ channel"
+  ],
+  "B3": [
+    "<b>Troponin C (TnC)</b> เป็นโปรตีนหลักที่จับ Ca²⁺ → ดึง TnI และ tropomyosin หลบ → เปิดตำแหน่งให้หัว myosin จับ F-actin",
+    "Calmodulin แค่ช่วยเสริมผ่าน MLCK ส่วน SERCA ปั๊ม Ca²⁺ กลับตอนคลาย และ calsequestrin เก็บ Ca²⁺ ใน SR"
+  ],
+  "B4": [
+    "กล้ามเนื้อหัวใจต้องอาศัย <b>Ca²⁺ influx จากนอกเซลล์ผ่าน Ca²⁺ channel (DHPR2)</b> เพื่อเกิด CICR → เพิ่ม Ca²⁺ channel จึงเพิ่มแรงบีบ",
+    "CCB ลดการหดตัว · Na⁺/K⁺-ATPase ไม่ได้เพิ่ม trigger Ca²⁺ โดยตรง"
+  ],
+  "B5": [
+    "cAMP–PKA เติม P ที่ 4 ตัวคือ <b>DHPR2, RyR2, Phospholamban (PLB), Troponin I (TnI)</b>",
+    "เฉลย AC81 ตอบ <b>C. Calcium release channel</b> โดยตีความว่าเป็น <b>IP₃R</b> ที่ถูกกระตุ้นผ่านทาง α₁–Gq–PLC ไม่ใช่ cAMP–PKA (เพราะ D กับ E ระบุ DHPR2 และ RyR2 ไปแล้ว)"
+  ],
+  "B6": [
+    "<b>Catecholamine</b> (epinephrine/NE) กระตุ้น β₁–cAMP–PKA → เพิ่มทั้ง <b>+inotropy</b> (DHPR2, RyR2) และ <b>+lusitropy</b> (PLB, TnI)",
+    "Cardiac glycoside เพิ่มแค่ +inotropy (ไม่เพิ่ม lusitropy) · ACh ต้าน +inotropy · DHP/ryanodine ลดการหดตัว"
+  ],
+  "B7": [
+    "PLB ตอนยังไม่เติม P จะเกาะกด SERCA → เมื่อ PKA เติม P ให้ PLB จะ<b>หลุดออกจาก SERCA</b> → SERCA ทำงานเร็วขึ้น ปั๊ม Ca²⁺ กลับ SR มากขึ้น",
+    "ผลที่ได้: คลายตัวเร็วขึ้น (+lusitropy) และมี Ca²⁺ สะสมใน SR มากขึ้นสำหรับจังหวะถัดไป"
+  ],
+  "B8": [
+    "Phosphorylated PLB หลุดจาก SERCA → SERCA เก็บ Ca²⁺ กลับ SR เร็วขึ้น → กล้ามเนื้อหัวใจคลายตัวเร็วขึ้น = <b>increase lusitropic effect</b>"
+  ],
+  "B9": [
+    "PLB-P หลุดจาก SERCA → <b>เพิ่ม activity ของ SERCA</b> (ลด Km / เพิ่มความไวต่อ Ca²⁺) → คลายตัวสั้นลง จึงรองรับ HR ที่สูงขึ้นได้",
+    "ช้อยส์ C หลอกคำว่า binds (ความจริงคือ <b>dissociates</b>) · ช้อยส์ E หลอกว่า increased Km (ความจริงคือ <b>decreased Km</b>)"
+  ],
+  "B10": [
+    "หัวใจที่ปลูกถ่ายไม่มีเส้นประสาทมาเลี้ยง (ไม่มี vagal tone → atropine ไม่ได้ผล) แต่ยังมี <b>β-adrenergic receptor</b> บนเซลล์หัวใจอยู่",
+    "ให้ <b>β-adrenergic agonist</b> เข้ากระแสเลือดจึงกระตุ้น SA node เพิ่ม HR ได้โดยตรง"
+  ],
+  "B11": [
+    "Phase 0 ของ AV node เกิดจาก <b>L-type Ca²⁺ channel</b> → sympathetic กระตุ้น β₁–cAMP–PKA เพิ่ม Ca²⁺ influx → นำไฟฟ้าผ่าน AV node เร็วขึ้น (+dromotropy)"
+  ],
+  "B12": [
+    "Digoxin ยับยั้ง Na⁺/K⁺-ATPase → ขับ Na⁺ ออกไม่ได้ → <b>เพิ่ม intracellular Na⁺</b> → NCX ทำงานลดลง → Ca²⁺ ค้างและเข้าเก็บใน SR มากขึ้น → บีบแรงขึ้น"
+  ],
+  "B13": [
+    "ลำดับตรงเป๊ะ: ยับยั้ง Na⁺/K⁺-ATPase → <b>↑intracellular Na⁺ → ลดการทำงานของ Na⁺-Ca²⁺ exchanger (NCX)</b> → ลดการขับ Ca²⁺ ออก → ↑[Ca²⁺]ᵢ"
+  ],
+  "B14": [
+    "<b>Lily of the Valley</b> (<i>Convallaria majalis</i>) มีสาร convallarin กลุ่ม cardiac glycoside → ยับยั้ง <b>Na⁺/K⁺-ATPase pump</b> โดยตรง เช่นเดียวกับ Foxglove, ตีนเป็ดน้ำ และยี่โถ"
+  ],
+  "B15": [
+    "<b>Digoxin</b> มีสองฤทธิ์คู่กัน: <b>+inotropy</b> (ยับยั้ง Na⁺/K⁺ pump → ↑SR Ca²⁺) และ <b>−chronotropy</b> (กระตุ้น vagal tone ที่ brainstem → ลด HR)",
+    "Epinephrine เพิ่มทั้งแรงและ HR (+chronotropy) · ACh ลดแรงและลด HR"
+  ],
+  "B16": [
+    "อดอาหาร 14 ชม. → หัวใจเผาผลาญ fatty acid เป็นหลัก (62% OER) → <b>↑[Acetyl-CoA]/[CoA]</b>, ↑[NADH]/[NAD⁺], ↑[ATP]/[ADP], ↑[Citrate]",
+    "ตัวเหล่านี้ยับยั้ง PDH, PFK-1, PFK-2 และ citrate synthase → เกิด <b>glucose-sparing (Randle) effect</b> · ช้อยส์ A, B กลับเศษส่วนผิดทิศ"
+  ],
+  "B17": [
+    "หัวใจขาดเลือด (ischemia) = ขาด O₂ → ETC และ β-oxidation หยุด → บังคับใช้ anaerobic glycolysis → สะสม <b>lactic acid</b>"
+  ],
+  "B18": [
+    "เฉลย AC79 ตอบ <b>D. Lactic acid</b> เพราะขณะออกกำลังกายกล้ามเนื้อลายปล่อย lactate สูงขึ้นในเลือด และหัวใจมี <b>LD-1</b> (Km ต่อ lactate ต่ำ) เปลี่ยนเป็น pyruvate เข้า TCA ได้ดีมาก (61% OER ตอนออกกำลังกายหนัก)",
+    "ข้อควรระวัง: ถ้าอดอาหารเฉยๆ โดยไม่ออกกำลังกาย จะใช้ fatty acid เด่น (62% OER)"
+  ],
+  "B19": [
+    "<b>CK-MB (CK-2) มี Km ต่อ ADP ต่ำกว่า CK-MM</b> → จับ ADP ได้ไวและสร้าง ATP จาก CrP ได้ดีแม้ขณะ [ADP] ต่ำและคงที่ในหัวใจ",
+    "ช้อยส์ A เป็นกับดักคลาสสิก: ในหัวใจ <b>CK-MM มีสัดส่วนมากที่สุด</b> (~70–85%) ไม่ใช่ CK-MB (~15–30%, สูงสุดใน LV 41%)"
+  ]
+});
+
 /* ---------- K · Basic ECG ---------- */
 window.THAI_SEC.K = {
   big: "อ่าน ECG ตามลำดับของสไลด์: <b>standardization → rate → rhythm → wave/interval → axis → Q/ST</b> · ข้อสอบชอบถาม<b>คำนวณ HR</b>, <b>หา axis จาก lead I + aVF</b>, <b>ตำแหน่ง V-leads</b> และ <b>lead ไหนไม่เปลี่ยนเมื่อสลับสาย</b>",
@@ -598,6 +710,81 @@ Object.assign(window.THAI_Q, {
   "O14": ["ไตคุมเองด้วย <b>autoregulation</b> (myogenic + tubuloglomerular feedback)"]
 });
 
+/* ---------- I · Imaging of CVS ---------- */
+window.THAI_SEC.I = {
+  big: "อ่านภาพ CVS ทีละระดับ: <b>PA/Lateral CXR</b> ดูขนาด (CTR &lt; 50%), ขอบห้องหัวใจ, ลิ้น (PAMT 6-7-8-9) และหลอดเลือดปอด (PAH vs PVH) → <b>MDCT T3–T9</b> ไล่เส้นเลือดและ 4 ห้อง → เลือก <b>Echo / CT / MRI / Angiography (DSA)</b> ให้ตรงโจทย์คลินิก",
+  traps: [
+    "<b>AP supine</b> ทำให้เงาหัวใจดูโตหลอก (magnification) · ใช้ <b>PA upright</b> วัด CTR (&lt; 50% ในผู้ใหญ่)",
+    "ใน <b>PA view</b> ไม่เห็นขอบ RV (หน้าสุด) และ LA (หลังสุด) → ทั้งคู่ดูใน <b>lateral view</b>",
+    "ตำแหน่งลิ้นหัวใจ <b>P-A-M-T = T6-7-8-9</b> สลับ 3rd/4th <b>SCJ ↔ ICS</b> → Tricuspid อยู่ที่ <b>4th ICS หลัง sternum</b>",
+    "ภาพ CT ซ้ายของภาพ = <b>ขวาของคนไข้</b> → ที่ T8 ห้องซ้ายสุดของภาพคือ <b>RA</b> · หลังสุดติดหลอดอาหารคือ <b>LA</b>",
+    "<b>Bedside + real-time + ไม่มีรังสี = Echocardiography</b> · ดู <b>scar = MRI</b> · ดู <b>coronary 3D = CT</b>"
+  ]
+};
+
+Object.assign(window.THAI_CONCEPT, {
+  "I-C1": [
+    "แยกทิศลำรังสีของท่ายืนมาตรฐานกับท่านอนข้างเตียงให้ได้ว่าท่าไหนทำให้เงาหัวใจขยายเกินจริง",
+    "จำสูตรอัตราส่วนความกว้างหัวใจต่อทรวงอกและเกณฑ์ปกติในผู้ใหญ่เทียบกับเด็กเล็ก"
+  ],
+  "I-C2": [
+    "ไล่ขอบเงาหัวใจด้านขวาและซ้ายจากบนลงล่างในภาพหน้าตรง แล้วเทียบกับขอบหน้า-หลังในภาพด้านข้าง",
+    "จับจุดหลอกว่าห้องหัวใจ 2 ห้องใดอยู่หน้าสุดและหลังสุดจนไม่สร้างขอบในภาพหน้าตรงปกติ"
+  ],
+  "I-C3": [
+    "จำสูตรลำดับลิ้นหัวใจคู่กับระดับกระดูกสันหลังอกและรอยต่อซี่โครงสลับช่องซี่โครง",
+    "แยกภาพหลอดเลือดปอดสองแบบ: ความดันหลอดเลือดแดงสูง (กลางโต-ปลายเรียว) กับหลอดเลือดดำสูง (เส้นบนขยาย)"
+  ],
+  "I-C4": [
+    "ไล่ภาพตัดขวางจากบนลงล่าง 3 ระดับที่ออกสอบบ่อยสุด: ระดับ 5 เส้นเลือด, ระดับหลอดเลือดแดงปอดหลัก, และระดับห้องหัวใจล่าง",
+    "ยึดกติกาด้านซ้าย-ขวาของภาพรังสี และใช้เส้นแบ่งกลาง sternum–spine ช่วยชี้ตำแหน่งหลอดเลือดหลัก"
+  ],
+  "I-C5": [
+    "จำจุดเด่นและข้อจำกัดของเครื่องมือ 3 ชนิด (อัลตราซาวด์, CT, MRI) รวมถึงระนาบภาพที่ใช้คำนวณปริมาตรหัวใจ",
+    "จับคู่โจทย์คลินิก (ข้างเตียง, หลอดเลือดหัวใจ 3 มิติ, แผลเป็นกล้ามเนื้อหัวใจ) กับเครื่องมือที่เหมาะสมที่สุด"
+  ],
+  "I-C6": [
+    "เข้าใจหลักการใส่สายสวนหลอดเลือดที่ทำได้ทั้งวินิจฉัยและรักษาในคราวเดียว รวมถึงหลักการลบภาพพื้นหลังของ DSA",
+    "ไล่แขนงหลักของหลอดเลือดหัวใจซ้าย-ขวา และแขนงหลักทั้ง 3 ของส่วนโค้งเอออร์ตา"
+  ]
+});
+
+Object.assign(window.THAI_Q, {
+  "I1": [
+    "<b>Right atrium (D)</b> สร้างขอบล่างด้านขวาของเงาหัวใจใน PA upright view จึงเห็นได้ชัด",
+    "ตัดช้อยส์: RV อยู่หน้าสุด, LA อยู่หลังสุด (เห็นขอบใน lateral view) · ลิ้นหัวใจปกติมองไม่เห็นใน plain film ยกเว้นมีหินปูนหรือเป็นลิ้นเทียม"
+  ],
+  "I2": [
+    "เส้น A คือขอบตรงด้านบนฝั่งขวาของ mediastinum = <b>Superior vena cava (SVC)</b>",
+    "ไล่ขอบขวาลงมา: SVC → RA → IVC · ฝั่งซ้าย: left subclavian a. → aortic arch → pulmonary trunk → LAA → LV"
+  ],
+  "I3": [
+    "ขอบซ้ายจากบนลงล่าง: C = left subclavian a. → D = aortic arch → <b>E = pulmonary trunk</b> (ส่วน A = SVC, B = RA)"
+  ],
+  "I4": [
+    "ใช้สูตร <b>P-A-M-T (T6-7-8-9) สลับ SCJ / ICS</b>: P = 3rd SCJ · A = 3rd ICS · M = 4th SCJ · <b>T (Tricuspid) = 4th ICS หลัง sternum</b>"
+  ],
+  "I5": [
+    "ระดับ T3 (five-vessel level) ไล่จากขวาไปซ้ายของคนไข้: A = R brachiocephalic v., B = brachiocephalic trunk, C = L brachiocephalic v., D = LCCA, <b>E = left subclavian artery</b> (อยู่ซ้ายและหลังสุดใน 3 แขนง arch)"
+  ],
+  "I6": [
+    "ที่ระดับ T5 ลากเส้นกึ่งกลางจาก sternum ไป spine: เส้นเลือดใหญ่ตรงกลางคือ <b>B = ascending aorta</b> (ข้างขวา A = SVC, ซ้ายหน้า C = pulmonary trunk, ข้างกระดูกสันหลัง D = descending aorta)"
+  ],
+  "I7": [
+    "CT ระดับ T5: <b>D = SVC</b> (อยู่ด้านขวาติด ascending aorta และสว่างจาก contrast), C = ascending aorta, A = pulmonary trunk, B = descending aorta"
+  ],
+  "I8": [
+    "ภาพตัดขวางระดับ T8 (ซ้ายของภาพ = ขวาของคนไข้): <b>A = right atrium</b>, B = RV (หน้าสุดติด sternum), C = LV (ผนังหนาซ้าย), D = LA (หลังสุด), E = esophagus หน้า T8"
+  ],
+  "I9": [
+    "โจทย์ให้ 2 keyword: <b>bedside</b> (เข็นไปข้างเตียงได้) + <b>real-time</b> (เห็นการบีบตัวและลิ้นเคลื่อนไหวสด) → มีแค่ <b>Echocardiography</b>",
+    "Plain film ภาพนิ่ง · CT/MRI ต้องพาไปเข้าเครื่อง (และ CT มีรังสี)"
+  ],
+  "I10": [
+    "จุดเด่นเฉพาะของ echocardiography คือแสดงภาพเคลื่อนไหวแบบ <b>real-time</b> เพื่อประเมินการบีบตัวของกล้ามเนื้อและลิ้นหัวใจ"
+  ]
+});
+
 /* ---------- X · Exercise ---------- */
 window.THAI_SEC.X = {
   big: "ใช้ <b>Fick: VO₂ = CO × a–v O₂ difference</b> เป็นแกน: ออกกำลังกาย → CO ↑ (HR + SV) และดึง O₂ มากขึ้น · BP ขึ้นจาก CO ส่วน TPR ลด · เลือดย้ายจาก<b>ช่องท้อง/ไต</b>ไป<b>กล้ามเนื้อ</b> · ฝึกนาน → HR พักลด SV เพิ่ม VO₂max เพิ่ม",
@@ -646,4 +833,77 @@ Object.assign(window.THAI_Q, {
   "X11": ["นักกีฬา SV ใหญ่ → <b>HR พักลด</b> (sinus bradycardia)", "VO₂ และ a–v O₂ diff ตอนพักไม่เปลี่ยนมาก"],
   "X12": ["ฝึกนาน: <b>capillary density ↑</b> และ <b>resting HR ↓</b> (key ให้ 2 ข้อ)", "CO max เพิ่ม · a–v O₂ diff เพิ่ม · mitochondria ใหญ่ขึ้น"],
   "X13": ["ฝึกนาน → COmax และ O₂ extraction ↑ → <b>VO₂max ↑</b>"]
+});
+
+/* ---------- P · Physical Examination of the Cardiovascular System ---------- */
+window.THAI_SEC.P = {
+  big: "แยก <b>JVP vs Carotid</b> ที่คอให้ขาด (ใช้ <b>RIJV</b> ท่า 30–45° วัดเหนือ sternal angle + 5 = CVP) → อ่านคลื่น <b>a-c-x-v-y</b> คู่รอบหัวใจ → คลำชีพจรแดง 6 ลักษณะ + ฟัง carotid bruit ด้วย bell และฟังลิ้นหัวใจตามตำแหน่ง + จังหวะเทียบ carotid pulse",
+  traps: [
+    "วัด JVP ต้องใช้ <b>Right IJV</b> เพราะวิ่งตรงเข้า RA ไม่มีลิ้น (ซ้ายอาจถูก arch กด · EJV มีลิ้นและหดตัวง่าย)",
+    "<b>JVP คลำไม่ได้</b>, มี <b>2 ยอด</b>, ลดลงตอนหายใจเข้า (ถ้าสูงขึ้น = Kussmaul sign) · <b>Carotid คลำได้</b>, ยอดเดียว, ไม่เปลี่ยนตามท่า/หายใจ",
+    "<b>CVP = JVP + 5 cmH₂O</b> · &gt; 8–10 = hypervolemia/RHF · &lt; 5 = hypovolemia",
+    "<b>a wave = atrial systole</b> (หายไปใน AF) · เสียงก่อน carotid pulse = <b>S1 (AV valve ปิด)</b>",
+    "<b>Diaphragm</b> ฟังเสียงสูง (S1, S2) · <b>Bell</b> ฟังเสียงต่ำ (S3, S4, carotid bruit) · PMI ปกติ = 5th ICS <b>MCL</b> (ไม่ใช่ mid-axillary)"
+  ]
+};
+
+Object.assign(window.THAI_CONCEPT, {
+  "P-C1": [
+    "เข้าใจเหตุผลเชิงกายวิภาคว่าทำไมหลอดเลือดดำข้างขวาชั้นลึกจึงสะท้อนความดันห้องบนขวาได้ตรงที่สุด",
+    "แยกชีพจรหลอดเลือดดำกับหลอดเลือดแดงที่คอด้วย 4 เกณฑ์ข้างเตียง: การคลำ, จำนวนยอด, การหายใจ, และท่าทาง/การกดท้อง"
+  ],
+  "P-C2": [
+    "จัดมุมเตียงให้เหมาะสม หาจุดอ้างอิงที่หน้าอก และบวกระยะคงที่เพื่อแปลงความสูงที่วัดได้เป็นความดันห้องบนขวา",
+    "ใช้เกณฑ์ค่าสูง-ต่ำแยกภาวะน้ำเกิน/ความดันห้องขวาสูงออกจากภาวะขาดสารน้ำ"
+  ],
+  "P-C3": [
+    "ผูกคลื่นบวก 3 ยอดและคลื่นลบ 2 ช่วงของ JVP เข้ากับการบีบ-คลายของหัวใจและการเปิด-ปิดของลิ้น tricuspid",
+    "จับจังหวะของชีพจร carotid เทียบกับเสียงหัวใจ S1 และ S2 เพื่อระบุ systolic vs diastolic"
+  ],
+  "P-C4": [
+    "ตรวจชีพจรหลอดเลือดแดงให้ครบ 6 ลักษณะ พร้อมข้อควรระวังเฉพาะที่คอและรูปคลื่นชีพจรที่บ่งชี้โรคลิ้นเอออร์ติก",
+    "เชื่อมโยงการเลือกด้านหูฟัง ตำแหน่ง PMI และตำแหน่งฟัง murmur คู่กับจังหวะชีพจรเพื่อระบุโรคลิ้นหัวใจ"
+  ]
+});
+
+Object.assign(window.THAI_Q, {
+  "P1": [
+    "<b>Right internal jugular vein (RIJV)</b> วิ่งตรงลง right brachiocephalic v. → SVC → RA โดยไม่มีลิ้น จึงสะท้อน RA pressure ได้แม่นที่สุด",
+    "Left IJV พาดผ่านหน้า aortic arch อาจถูกกด · EJV มีลิ้นและหดตัวตาม sympathetic · SVC อยู่ในอกมองไม่เห็น"
+  ],
+  "P2": [
+    "RA pressure ที่สูงขึ้นส่งความดันย้อนขึ้น RIJV โดยตรง → ตรวจพบ <b>increased jugular distension (JVD)</b> ที่ท่า 30–45° (JVP &gt; 3–4 cm เหนือ sternal angle)"
+  ],
+  "P3": [
+    "<b>Cyanosis และ edema</b> เกิดจากสาเหตุนอกหัวใจได้ (เช่น ปอด, ไต, ตับ, venous insufficiency) จึงตอบ A",
+    "ตัดช้อยส์หลอก: JVD และ hepatojugular reflux เป็นอาการของ <b>right-sided HF</b> · orthopnea เป็นอาการของ <b>left-sided HF</b> · murmur ไม่ได้แปลว่ารุนแรงเสมอไป (มี innocent murmur)"
+  ],
+  "P4": [
+    "<b>Pulsus paradoxus</b> (SBP ตก &gt; 10 mmHg ตอนหายใจเข้า) เป็นอาการคลาสสิกของ cardiac tamponade คู่กับ Beck’s triad (BP ต่ำ, JVP สูง, เสียงหัวใจเบา)"
+  ],
+  "P5": [
+    "<b>a wave</b> ของ JVP เกิดจาก <b>atrial systole (การบีบตัวของ RA)</b> ดันเลือดย้อนขึ้นคอเล็กน้อย (หายไปใน atrial fibrillation)",
+    "c = ลิ้น TV นูนตอน isovolumic contraction · x = atrial relaxation · v = atrial filling · y = TV เปิด"
+  ],
+  "P6": [
+    "คลำ carotid pulse ได้ช่วง ventricular systole (ระหว่าง S1 กับ S2) → เสียงที่ได้ยิน<b>ก่อน carotid pulse</b> คือ <b>S1</b> ซึ่งเกิดจาก <b>AV valves close</b>"
+  ],
+  "P7": [
+    "คิด 2 ขั้น: เกิดพร้อม carotid pulse = <b>systolic murmur</b> + ตำแหน่ง <b>left 2nd ICS</b> = pulmonic area → <b>Pulmonary stenosis</b>",
+    "PR เป็น diastolic ที่เดียวกัน · AS เป็น systolic ที่ right 2nd ICS · MS/MR ฟังชัดที่ apex"
+  ],
+  "P8": [
+    "<b>Left 5th ICS parasternal border</b> = tricuspid area + <b>diastolic murmur</b> → <b>Tricuspid stenosis</b>",
+    "ระวังสับสน: ถ้าเป็น diastolic ที่ left 5th ICS <b>midclavicular line (apex)</b> จะเป็น mitral stenosis"
+  ],
+  "P9": [
+    "PMI เลื่อนออกด้านข้าง (lateral ต่อ MCL) บอกว่ามี LV โต/หนา (LVH) → ใน essential hypertension เกิดจากแรงต้านหลอดเลือดสูง = <b>increased afterload</b> (pressure overload)"
+  ],
+  "P10": [
+    "ด้าน <b>diaphragm</b> ใช้ฟังเสียงความถี่สูง (high pitch เช่น S1, S2, AR/MR) ส่วน bell ใช้ฟังเสียงความถี่ต่ำ (S3, S4, carotid bruit)",
+    "ช้อยส์ E หลอกคำว่า mid-axillary (ที่ถูกคือ <b>midclavicular line</b>) · ช้อยส์ D cyanosis ไม่ได้เกิดจากหัวใจอย่างเดียว"
+  ],
+  "P11": [
+    "<b>Pansystolic murmur ที่ PMI (apex / mitral area)</b> เป็นลักษณะจำเพาะของ <b>Mitral regurgitation</b> (มักร้าวไป axilla)"
+  ]
 });

@@ -19,18 +19,18 @@ h1 { font: 600 2.6em/1.1 var(--f-display); margin: 4px 0 10px; letter-spacing: .
 .note { font-size: .92em; color: var(--ink2); margin-top: 12px; }
 
 /* cover */
-.cover { padding-top: 24mm; }
-.cover h1 { font-size: 3.4em; }
-.cover .coverline { margin: 10px 0 26px; padding: 18px 0 20px; }
-.cover .counts { gap: 16mm; }
-.cover .counts b { font-size: 4.6em; }
-.cover .counts span { font-size: .95em; }
-.cover .qrs { gap: 9mm; }
-.cover .qrlink img { width: 36mm; height: 36mm; }
-.cover .qrlink span { font-size: .85em; }
-table.toc { width: 100%; border-collapse: collapse; font-size: 1em; }
-table.toc th { text-align: left; font: 600 .78em var(--f-mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink2); border-bottom: 1.5px solid var(--ink); padding: 5px 6px; }
-table.toc td { border-bottom: 1px solid var(--rule); padding: 6px; white-space: nowrap; }
+.cover { padding-top: 6mm; }
+.cover h1 { font-size: 2.85em; }
+.cover .coverline { margin: 6px 0 12px; padding: 10px 0 12px; }
+.cover .counts { gap: 14mm; }
+.cover .counts b { font-size: 4.1em; }
+.cover .counts span { font-size: .92em; }
+.cover .qrs { gap: 8mm; }
+.cover .qrlink img { width: 31mm; height: 31mm; }
+.cover .qrlink span { font-size: .82em; }
+table.toc { width: 100%; border-collapse: collapse; font-size: .94em; }
+table.toc th { text-align: left; font: 600 .76em var(--f-mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink2); border-bottom: 1.5px solid var(--ink); padding: 4px 5px; }
+table.toc td { border-bottom: 1px solid var(--rule); padding: 4px 5px; white-space: nowrap; }
 table.toc td:first-child { white-space: normal; }
 .tid { font: 600 .95em var(--f-mono); color: var(--art); margin-right: 8px; }
 

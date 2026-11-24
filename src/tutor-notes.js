@@ -329,6 +329,70 @@ Object.assign(window.TUTOR_NOTES, {
   ] }
 });
 
+/* ---------- B · Biochemistry of CVS (Tutor notes beyond the slide) ---------- */
+Object.assign(window.TUTOR_NOTES, {
+  "B-C1": {
+    b: [
+      "Connexin-43 ทำงานผิดปกติหรือลดลงในหัวใจขาดเลือด → นำไฟฟ้าช้าเป็นหย่อม → เสี่ยง re-entry arrhythmia",
+      "Desmosome กลายพันธุ์ (เช่น plakophilin-2, desmoplakin) → arrhythmogenic right ventricular cardiomyopathy (ARVC) เซลล์หัวใจตายแล้วถูกแทนที่ด้วยไขมันและพังผืด",
+      "Troponin I และ T ชนิดหัวใจ (cTnI, cTnT) จำเพาะต่อกล้ามเนื้อหัวใจสูงมาก จึงเป็น gold-standard biomarker วินิจฉัย acute MI (ต่างจาก TnC ที่หน้าตาเหมือนใน skeletal muscle)"
+    ]
+  },
+  "B-C2": {
+    b: [
+      "จำความต่างหลักระหว่างกล้ามเนื้อ 2 ชนิด: skeletal ใช้ <b>mechanical coupling</b> (DHPR1 ดันเปิด RyR1 โดยตรง ไม่ต้องมี Ca²⁺ นอกเซลล์) · cardiac ใช้ <b>CICR</b> (Ca²⁺ นอกเซลล์ 10% จุดระเบิด RyR2 ปล่อยอีก 90%)",
+      "Ryanodine receptor mutation (RYR2) ทำให้ Ca²⁺ รั่วตอนเครียด/ออกกำลัง → catecholaminergic polymorphic VT (CPVT)",
+      "Dihydropyridine (amlodipine, nifedipine) เด่นที่หลอดเลือดส่วนปลาย (อาจเกิด reflex tachycardia) · Non-DHP (verapamil, diltiazem) ออกฤทธิ์เด่นที่ SA/AV node และกล้ามเนื้อหัวใจ"
+    ],
+    d: [
+      "Systole (CICR):  AP (Phase 2) -> DHPR2 (+10% Ca2+) -> RyR2 (+90% SR Ca2+) -> TnC -> contraction",
+      "Diastole:        SERCA (~80-90% -> SR)  +  NCX (~10-20%, 3 Na+ in : 1 Ca2+ out)  +  PMCA (minor)"
+    ]
+  },
+  "B-C3": {
+    b: [
+      "ทำไม sympathetic ต้องเพิ่มทั้งแรง (+inotropy) และความเร็วคลายตัว (+lusitropy) พร้อมกัน? เพราะเมื่อ HR สูงขึ้น เวลา diastole สั้นลงมาก ถ้าคลายตัวไม่เร็วขึ้น เลือดจะเติมห้องหัวใจไม่ทัน",
+      "Milrinone (PDE-3 inhibitor) ยับยั้งการสลาย cAMP → เลียนแบบปลายทางของ β₁–cAMP–PKA → เพิ่มทั้ง inotropy และ lusitropy (inodilator)",
+      "หัวใจที่ปลูกถ่าย (denervated heart) ไม่มี vagal tone → resting HR สูง (~90–100 bpm) และไม่ตอบต่อ atropine แต่ยังมี β₁ receptor ตอบต่อ epinephrine/isoproterenol เต็มที่"
+    ],
+    d: [
+      "Beta1-Gs -> AC -> cAMP -> PKA --+--> DHPR2 & RyR2  => +Inotropy",
+      "                                +--> PLB (off SERCA) & TnI => +Lusitropy (+ SR load)"
+    ]
+  },
+  "B-C4": {
+    b: [
+      "Digoxin therapeutic window แคบมาก · ภาวะ <b>hypokalemia</b> ทำให้พิษ digoxin แรงขึ้น เพราะ K⁺ แย่งจับตำแหน่งเดียวกับ digoxin บน Na⁺/K⁺-ATPase",
+      "อาการพิษ digoxin คลาสสิก: คลื่นไส้ อาเจียน เห็นภาพสีเหลือง-เขียว (xanthopsia) และหัวใจเต้นผิดจังหวะ (เช่น atrial tachycardia with AV block, bidirectional VT) · ยาต้านพิษ = digoxin-specific Fab (Digibind)",
+      "รำเพย (Yellow oleander / <i>Thevetia</i>), ยี่โถ (Oleander), ตีนเป็ดน้ำ (<i>Cerbera odollam</i> — suicide tree) และคางคกอ้อย (bufadienolide) ล้วนออกฤทธิ์ยับยั้ง Na⁺/K⁺-ATPase เหมือน digoxin"
+    ],
+    d: [
+      "Digoxin --| Na+/K+-ATPase -> [Na+]i UP -> NCX slows -> [Ca2+]i & SR Ca2+ UP -> +Inotropy",
+      "Central brainstem -> Vagal tone UP -> SA/AV slowing -> -Chronotropy (AF/flutter rate control)"
+    ]
+  },
+  "B-C5": {
+    b: [
+      "ในทางคลินิก ยา trimetazidine และ ranolazine ช่วยยับยั้ง fatty acid β-oxidation เพื่อบังคับให้หัวใจขาดเลือดหันมาใช้ glucose แทน (เพราะ glucose ให้ ATP ต่อ O₂ 1 โมลสูงกว่า fatty acid ~10–12%)",
+      "เมื่อเกิด myocardial infarction เอนไซม์ LD-1 (H₄) จะรั่วจากหัวใจเข้ากระแสเลือด ทำให้สัดส่วน LD-1 > LD-2 (flipped LDH pattern — ปกติในเลือด LD-2 > LD-1)",
+      "ช่วยจำ Randle effect: ไขมันเผาจนได้ <b>Acetyl-CoA, NADH, ATP, Citrate</b> ล้น → ส่งสัญญาณบอกเซลล์ว่าพลังงานพอแล้ว เบรก glycolysis (PDH, PFK-1, PFK-2) เก็บ glucose ไว้ให้สมอง"
+    ],
+    d: [
+      "High FA / Ketone oxidation -> Acetyl-CoA UP, NADH UP, ATP UP, Citrate UP",
+      "   |-- inhibits PDH (Acetyl-CoA, NADH, ATP)",
+      "   |-- inhibits PFK-1 (Citrate, ATP) & PFK-2 / Citrate synthase (Citrate)",
+      "   +-> Glucose spared (Randle cycle)"
+    ]
+  },
+  "B-C6": {
+    b: [
+      "ความเข้าใจผิดที่เจอบ่อยมาก: นักศึกษามักคิดว่าหัวใจมี CK-MB มากที่สุด แต่ความจริงหัวใจมี <b>CK-MM 70–85%</b> และ <b>CK-MB 15–30%</b> (LV สูงถึง 41%) — ที่ใช้ CK-MB ตรวจหัวใจเพราะกล้ามเนื้อลายมี CK-MB น้อยมาก (< 1–3%)",
+      "CK-MB ใน acute MI ขึ้นภายใน 4–6 ชม., พีคที่ ~24 ชม., กลับปกติใน 48–72 ชม. → จึงมีประโยชน์ตรวจหา <b>re-infarction</b> (เพราะ troponin ค้างสูงได้นาน 7–14 วัน)",
+      "Adenylate kinase (2 ADP → ATP + AMP) นอกจากกู้ ATP ฉุกเฉินแล้ว AMP ที่เกิดขึ้นยังเป็นสัญญาณพลังงานต่ำไปกระตุ้น AMPK, PFK-1 และ glycogen phosphorylase b โดยตรง"
+    ]
+  }
+});
+
 /* ---------- K · Basic ECG ---------- */
 Object.assign(window.TUTOR_NOTES, {
   "K-C1": { b: [
@@ -403,6 +467,64 @@ Object.assign(window.TUTOR_NOTES, {
   ] }
 });
 
+/* ---------- I · Imaging of CVS (Tutor notes beyond the slide) ---------- */
+Object.assign(window.TUTOR_NOTES, {
+  "I-C1": {
+    b: [
+      "หลักฟิสิกส์ง่ายๆ: หัวใจอยู่ค่อนไปทางด้านหน้าของทรวงอก ในท่า <b>PA</b> หัวใจชิดแผ่นฟิล์มจึงเงาใกล้เคียงขนาดจริง · ในท่า <b>AP</b> หัวใจห่างแผ่นฟิล์ม รังสีบานออกทำให้เงาหัวใจโตหลอก (เหมือนยื่นมือใกล้ไฟฉาย เงาบนผนังจะใหญ่ขึ้น)",
+      "หายใจเข้าไม่เต็มที่ (poor inspiration — เห็นซี่โครงหลัง < 9–10 คู่) ทำให้กะบังลมยกสูงและเงาหัวใจดูโตหลอกเช่นกัน",
+      "เด็กแรกเกิดยังมีเงาต่อม thymus ใหญ่ (sail sign) ร่วมกับหัวใจสัดส่วนใหญ่กว่าผู้ใหญ่ จึงยอมให้ CTR < 65% (< 1 ปี) และ < 60% (1–2 ปี)"
+    ]
+  },
+  "I-C2": {
+    b: [
+      "วิธีจำขอบซ้าย PA จากบนลงล่าง: <b>A-P-L-L</b> (Aortic knob → Pulmonary trunk → LAA → LV) โดยเหนือ arch มีเงา left subclavian a. ขึ้นไปหาคอ",
+      "เวลา <b>LA โต</b> (เช่น mitral stenosis) จะเห็น 4 สัญญาณคลาสสิกบน PA: ขอบซ้อน (double density sign), มุม carina ถ่าง (> 90°), ขอบซ้ายตรงขึ้น/มี 4 โค้ง (bulging LAA = third Mogul), และกดหลอดอาหารไปหลังใน lateral",
+      "RV โต (RVH) → ปิดช่องว่างหลัง sternum (loss of retrosternal airspace) ใน lateral view และดันยอดหัวใจกระดกขึ้น (boot-shaped heart ใน Tetralogy of Fallot)"
+    ],
+    d: [
+      "PA borders:  Right = SVC -> RA -> IVC   |   Left = L.subclavian -> Arch -> PA -> LAA -> LV",
+      "Lateral:     Anterior = RV (front) -> PA -> Asc.Ao   |   Posterior = LA (back) -> LV -> IVC"
+    ]
+  },
+  "I-C3": {
+    b: [
+      "ช่วยจำตำแหน่งลิ้นหัวใจบน CXR: <b>P-A-M-T</b> = <b>T6-7-8-9</b> + สลับ <b>3rd SCJ → 3rd ICS → 4th SCJ → 4th ICS</b> (หมายเหตุ: นี่คือตำแหน่งกายวิภาคบน X-ray ไม่ใช่จุดวาง stethoscope ฟังเสียง!)",
+      "แยก PAH กับ PVH ใน 2 วินาที: <b>PAH</b> = ขั้วปอดโตพองแต่ปลายปอดโล่ง/เรียว (pruning) · <b>PVH</b> = หลอดเลือดกลีบบนปอดชัดเด่นขึ้น (cephalization หรือ antler sign) ตามด้วย Kerley B lines และ pulmonary edema ถ้าแรงดันยิ่งสูง",
+      "Vascular pedicle width (VPW) กว้างขึ้นเมื่อผู้ป่วยมี volume overload หรือนอนราบ"
+    ],
+    d: [
+      "Anatomic valve projection (CXR):  P (T6, 3rd SCJ) -> A (T7, 3rd ICS) -> M (T8, 4th SCJ) -> T (T9, 4th ICS)"
+    ]
+  },
+  "I-C4": {
+    b: [
+      "ทริกอ่าน CT อกไม่หลง: <b>มองจากปลายเท้าคนไข้ขึ้นไปหาหัว</b> ดังนั้นซ้ายของภาพ = ขวาของคนไข้เสมอ",
+      "ระดับ <b>T3 (five-vessel level)</b>: หลอดเลือดดำ (R & L brachiocephalic v.) อยู่<b>ด้านหน้า</b>หลอดเลือดแดงเสมอ · แขนง arch 3 เส้นเรียงจากหน้าขวาไปหลังซ้าย: Brachiocephalic trunk → LCCA → <b>Left subclavian a.</b> (ซ้ายหลังสุด)",
+      "ระดับ <b>T8 (4 ห้องหัวใจ)</b>: <b>RV</b> อยู่หน้าสุดติด sternum (ถ้าถูกแทงอกหน้าโดน RV บ่อยสุด!) · <b>LA</b> อยู่หลังสุดติด <b>esophagus</b> (จึงทำ TEE ผ่านหลอดอาหารได้ภาพ LA และลิ้นหัวใจชัดมาก และ LA โตกดหลอดอาหารทำให้กลืนลำบากได้)"
+    ],
+    d: [
+      "T3 (front->back, R->L): R.BCV, L.BCV (ant) | BCT -> LCCA -> L.Subclavian (most postero-left)",
+      "T5 midline (sternum->spine): Asc.Ao (center) | SVC (right) | Main PA (ant-left) | Desc.Ao (left of T5)",
+      "T8 chambers:  [RA left of image]  [RV anterior]  [LV thick left]  [LA posterior -> Esophagus -> T8]"
+    ]
+  },
+  "I-C5": {
+    b: [
+      "Echo ใช้คลื่นเสียงความถี่สูงจึงไม่มีรังสี ทำข้างเตียง (POCUS/bedside) ได้ทันทีในห้องฉุกเฉินเพื่อหา regional wall motion abnormality, tamponade, หรือลิ้นรั่วเฉียบพลัน",
+      "Cardiac CT (CCTA) มี negative predictive value สูงมาก ใช้ rule out coronary artery disease ในผู้ป่วยความเสี่ยงต่ำ-ปานกลางได้ดี · ต้องคุม HR ให้ช้า (~60 bpm) เพื่อให้ภาพนิ่ง",
+      "Cardiac MRI ใช้ gadolinium (Late Gadolinium Enhancement, LGE) เห็นรอยแผลเป็น (scar) จาก MI เป็นสีขาวชัดเจน ช่วยประเมินว่ากล้ามเนื้อหัวใจยังรอด (viable) หรือตายแล้ว"
+    ]
+  },
+  "I-C6": {
+    b: [
+      "ปัจจุบันนิยมแทงสายสวนทาง <b>radial artery</b> มากกว่า femoral artery เพราะเลือดออกแทรกซ้อนน้อยกว่าและคนไข้ลุกเดินได้เร็วกว่า",
+      "หลัก DSA (`B − A`): ถ่ายภาพเปล่าก่อนฉีดสารทึบรังสีเป็น mask (A) → ฉีดสารทึบรังสีถ่ายภาพ (B) → คอมพิวเตอร์ลบภาพ A ออกจาก B → กระดูกและเงาเนื้อเยื่อหายเกลี้ยง เหลือเฉพาะหลอดเลือดที่มี contrast",
+      "Coronary angiography เป็น gold standard วินิจฉัย coronary stenosis และทำ primary PCI (balloon angioplasty + stent) ช่วยชีวิตผู้ป่วย STEMI ได้ในคราวเดียวกัน"
+    ]
+  }
+});
+
 /* ---------- X · Exercise ---------- */
 Object.assign(window.TUTOR_NOTES, {
   "X-C1": { b: [
@@ -435,4 +557,50 @@ Object.assign(window.TUTOR_NOTES, {
     "Cardiac rehabilitation หลัง MI: aerobic ลด RPP ที่ submaximal → angina น้อยลง",
     "Blood volume ↑ (plasma มากกว่า RBC) → Hct อาจลดเล็กน้อย (sports anemia ไม่ใช่โรค)"
   ] }
+});
+
+/* ---------- P · Physical Examination of the Cardiovascular System (Tutor notes beyond the slide) ---------- */
+Object.assign(window.TUTOR_NOTES, {
+  "P-C1": {
+    b: [
+      "ส่องไฟฉายเฉียงด้านข้าง (tangential light) ที่คอระหว่าง sternal และ clavicular head ของ SCM จะเห็นคลื่น JVP ชัดขึ้นมาก เพราะ JVP เป็นแค่การกระเพื่อมของผิวหนังที่คลำไม่ได้",
+      "<b>Kussmaul sign</b> = JVP กลับ<b>สูงขึ้น</b>เวลาหายใจเข้า (ตรงข้ามปกติที่ต้องลดลง) พบใน constrictive pericarditis และ RV infarction เพราะหัวใจขวารับเลือดที่ไหลกลับมากขึ้นไม่ได้",
+      "<b>Hepatojugular (abdominojugular) reflux</b>: กดบริเวณ RUQ/กลางท้องค้าง 10–15 วินาที → ถ้า JVP สูงขึ้น ≥ 3 cm และ<b>ค้างอยู่ตลอดเวลาที่กด</b> แปลว่าหัวใจขวารับ preload เพิ่มไม่ไหว"
+    ]
+  },
+  "P-C2": {
+    b: [
+      "ทำไมต้องบวก <b>5 cm</b> เสมอ? เพราะ sternal angle (angle of Louis, ระดับซี่โครงที่ 2) อยู่สูงกว่าศูนย์กลางของ right atrium ราว 5 cm ไม่ว่าคนไข้จะนอนราบ เอน 45° หรือนั่งตรง",
+      "ถ้าคนไข้ CVP สูงมาก (เช่น RHF รุนแรง) ที่ท่า 45° อาจมองไม่เห็นยอด JVP เพราะยอดพุ่งไปหลังติ่งหูแล้ว → ให้ปรับเตียงตั้งชันขึ้นเป็น 60–90° แล้วบันทึกมุมที่ใช้ · กลับกันถ้า hypovolemia ให้ปรับเตียงแบนลง (< 30°)",
+      "<b>Beck’s triad</b> ของ cardiac tamponade: BP ต่ำ (hypotension) + JVP โป่งสูง + เสียงหัวใจเบาอู้อี้ (muffled heart sounds) ร่วมกับ <b>pulsus paradoxus</b> (SBP ตก > 10 mmHg ตอนหายใจเข้า)"
+    ],
+    d: [
+      "CVP (cmH2O) = vertical height of RIJV above sternal angle (cm) + 5 cm",
+      "   < 5 cmH2O : hypovolemia  |  5-8 : normal  |  > 8-10 : hypervolemia / high RA pressure"
+    ]
+  },
+  "P-C3": {
+    b: [
+      "คลื่นผิดปกติที่ออกสอบคลินิกบ่อย: <b>Absent a wave</b> = atrial fibrillation · <b>Cannon a wave</b> = AV dissociation (complete heart block, VT — RA บีบชนลิ้น TV ที่ปิดอยู่) · <b>Giant v wave</b> = tricuspid regurgitation",
+      "<b>x descent</b> เด่น/ชันใน cardiac tamponade (y descent หายเพราะเลือดเข้า RV ช่วง diastole ไม่ได้) · ส่วน constrictive pericarditis มี y descent ลึกเร็ว (Fredreich sign)",
+      "ทริกจับจังหวะ murmur: เอานิ้วแตะชีพจร carotid ขณะฟังหัวใจ → เสียงที่ดัง<b>พร้อมนิ้วกระตุก</b> = systolic murmur · เสียงที่ดัง<b>ระหว่างชีพจร</b> = diastolic murmur"
+    ],
+    d: [
+      "ECG:     P       QRS            T",
+      "Sounds:          S1             S2",
+      "JVP:       a       c    \\x/       v    \\y/",
+      "Carotid:          [=== systolic pulse ===]"
+    ]
+  },
+  "P-C4": {
+    b: [
+      "ห้ามคลำ carotid พร้อมกัน 2 ข้าง (เสี่ยงลดเลือดไปสมอง) และหลีกเลี่ยงการกดตรง carotid bifurcation (<b>carotid sinus</b> baroreceptor → อาจกระตุ้น vagal reflex ทำ bradycardia/syncope)",
+      "Radio-femoral delay (ชีพจรขาช้ากว่าและเบากว่าแขน) = <b>coarctation of the aorta</b> · Radio-radial delay/asymmetry = aortic dissection หรือ subclavian stenosis",
+      "จำตำแหน่งฟังลิ้นหัวใจ 4 จุด (ต่างจากตำแหน่งกายวิภาคบน X-ray!): <b>A</b>ortic = R 2nd ICS · <b>P</b>ulmonic = L 2nd ICS · <b>T</b>ricuspid = L 4th–5th ICS parasternal · <b>M</b>itral = L 5th ICS MCL (apex)"
+    ],
+    d: [
+      "Auscultation areas:  R 2nd ICS = Aortic  |  L 2nd ICS = Pulmonic",
+      "                     L 5th parasternal = Tricuspid  |  L 5th MCL (PMI) = Mitral"
+    ]
+  }
 });

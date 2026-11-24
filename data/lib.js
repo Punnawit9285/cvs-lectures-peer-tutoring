@@ -9,7 +9,7 @@ window.CVS = {
     anat: 'Pericardium, heart &amp; great vessels handout',
     histo: 'Histology of CVS handout',
     histosheet: 'Histology of CVS lab sheet',
-    elec: 'Physical &amp; electrical properties / cardiac cycle handout',
+    elec: 'Electrical &amp; cardiac cycle handout',
     cd1: 'Circulatory dynamics 1 handout',
     cd2: 'Circulatory dynamics 2 handout',
     micro: 'Microcirculation handout',
@@ -35,6 +35,7 @@ window.CVS = {
     var alt = String(cap).replace(/<[^>]+>/g, '').replace(/"/g, '&quot;');
     return '<figure class="scan' + (cls ? ' ' + cls : '') + '"><div class="paperimg"><img src="img/' + name + '.jpg" width="' + d[0] + '" height="' + d[1] + '" alt="' + alt + '" loading="lazy" decoding="async"></div><figcaption>' + cap + ' <span class="src">' + (this.SRC[pdf] || pdf) + ', p.' + page + '</span></figcaption></figure>';
   },
+  ans: function (fig, label) { return '<details class="figans"><summary>' + (label || 'The slide (shows the answers)') + '</summary>' + fig + '</details>'; },
   /* Options are written with the answer first; shuffle them once, the same way everywhere (seeded by the item ID).
      Options such as "None ..." or "All ..." stay last. Set keep: true to leave an item's order alone. */
   shuffle: function (it) {

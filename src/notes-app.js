@@ -2,8 +2,8 @@
   var S = CVS.sections, LET = 'ABCDEFGH';
   var $ = function (id) { return document.getElementById(id); };
   var LS = {
-    get: function (k, d) { try { var v = localStorage.getItem('rstutor:' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
-    set: function (k, v) { try { localStorage.setItem('rstutor:' + k, JSON.stringify(v)); } catch (e) { } }
+    get: function (k, d) { try { var v = localStorage.getItem('cvstutor:' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem('cvstutor:' + k, JSON.stringify(v)); } catch (e) { } }
   };
   var byId = {}, secOf = {};
   S.forEach(function (s, si) { s.items.forEach(function (it) { byId[it.id] = it; secOf[it.id] = si; }); });
@@ -308,13 +308,13 @@
 
   /* ---------- follow the student deck (same browser, another tab or window) ---------- */
   var follow = LS.get('follow', true);
-  function readDeckPos() { try { var v = localStorage.getItem('rsdeck:pos'); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+  function readDeckPos() { try { var v = localStorage.getItem('cvslec:pos'); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
   function followTo(id) {
     if (!follow || !id || (view === 'present' && seq[idx] && seq[idx].id === id)) return;
     if (view === 'browse') { var el = document.querySelector('#blist [data-id="' + id + '"]'); if (el) { el.scrollIntoView({ block: 'start' }); return; } }
     if (jumpTo(id)) { try { window.scrollTo(0, 0); } catch (e) { } }
   }
-  window.addEventListener('storage', function (e) { if (e.key === 'rsdeck:pos' && e.newValue) { try { followTo(JSON.parse(e.newValue)); } catch (err) { } } });
+  window.addEventListener('storage', function (e) { if (e.key === 'cvslec:pos' && e.newValue) { try { followTo(JSON.parse(e.newValue)); } catch (err) { } } });
   try { var bc = new BroadcastChannel('cvs-lec-82'); bc.onmessage = function (e) { if (e.data && e.data.pos) followTo(e.data.pos); }; } catch (e) { }
   $('follow').checked = follow;
   $('follow').addEventListener('change', function () { follow = this.checked; LS.set('follow', follow); if (follow) followTo(readDeckPos()); });

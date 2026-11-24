@@ -223,4 +223,144 @@
         ['ves', '', 'Mainly a respiratory reflex; its pressure effect matters when BP is very low.']] }
     }
   });
+
+  /* ---------- B-C3 · Autonomic & drug targets on cardiac Ca2+ handling ---------- */
+  add('b_pka', {
+    title: 'Cardiac Ca²⁺ handling: autonomic & drug targets', src: 'Biochemistry p.37–44',
+    hint: 'Click a box, or pick a clinical/exam pathway and press Next step.',
+    idle: 'Compare β₁–cAMP–PKA (both +inotropy and +lusitropy) against cardiac glycosides (+inotropy & vagal −chronotropy), M₂–Gi, CCBs, and α₁–Gq–IP₃R.',
+    def: { name: 'b_pka', W: 940, H: 360, label: 'Autonomic and drug targets on cardiomyocyte calcium handling',
+      N: [
+        { id: 'q1', k: 'st', x: 260, y: 10, w: 420, h: 56, t: ['Signal / Drug Target'], s: ['β₁–Gs vs Na⁺/K⁺ pump vs M₂–Gi vs DHPR2 vs α₁–Gq'] },
+        { id: 'beta', k: 'q', x: 14, y: 112, w: 224, h: 60, t: ['β₁ / β₂ (Gs) → cAMP → PKA'], s: ['Epinephrine / NE'] },
+        { id: 'dig', k: 'q', x: 260, y: 112, w: 214, h: 60, t: ['Inhibit Na⁺/K⁺-ATPase'], s: ['Digoxin / Foxglove / Lily'] },
+        { id: 'm2', k: 'leaf', x: 496, y: 112, w: 190, h: 60, t: ['M₂ (Gi) → ↓cAMP'], s: ['ACh / Adenosine → ↓force'] },
+        { id: 'ccb', k: 'leaf', x: 708, y: 112, w: 216, h: 60, t: ['Block DHPR2 (L-type)'], s: ['Phase 2 ↓Ca²⁺ influx (DHP)'] },
+        { id: 'ino', k: 'leaf', x: 14, y: 236, w: 204, h: 74, t: ['DHPR2 & RyR2 -P'], s: ['↑Ca²⁺ influx & SR release', '→ +Inotropy'] },
+        { id: 'lus', k: 'leaf', x: 234, y: 236, w: 218, h: 74, t: ['PLB & TnI -P'], s: ['SERCA freed + ↓TnC affinity', '→ +Lusitropy (+ ↑SR load)'] },
+        { id: 'ncx', k: 'leaf', x: 470, y: 236, w: 218, h: 74, t: ['↑[Na⁺]ᵢ → ↓NCX efflux'], s: ['↑SR Ca²⁺ → +Inotropy', '(+ vagal −Chronotropy)'] },
+        { id: 'a1', k: 'leaf', x: 708, y: 236, w: 216, h: 74, t: ['α₁ (Gq) → PLC → IP₃R'], s: ['NOT cAMP–PKA pathway', '(AC81 Q1 key)'] }
+      ],
+      E: [
+        { f: 'q1', to: 'beta', dir: 'v' }, { f: 'q1', to: 'dig', dir: 'v' },
+        { f: 'q1', to: 'm2', dir: 'v' }, { f: 'q1', to: 'ccb', dir: 'v' },
+        { f: 'beta', to: 'ino', dir: 'v' }, { f: 'beta', to: 'lus', dir: 'v' },
+        { f: 'dig', to: 'ncx', dir: 'v' }, { f: 'q1', to: 'a1', dir: 'v', dash: 1 }
+      ] },
+    txt: {
+      q1: { h: 'Choose the receptor or transporter target', b: ['Separates β₁–cAMP–PKA (+inotropy AND +lusitropy) from cardiac glycosides (+inotropy & −chronotropy), M₂ (−inotropy), CCBs (phase 2), and α₁–IP₃R.'] },
+      beta: { h: 'β₁ / β₂ (Gs) → Adenylyl cyclase → cAMP → PKA', b: ['The only pathway that boosts BOTH contraction force and relaxation speed together.'] },
+      dig: { h: 'Na⁺/K⁺-ATPase inhibition', b: ['Selective target of digoxin, Foxglove (digitalis), Lily of the Valley (convallarin), Cerbera, and Oleander.'] },
+      m2: { h: 'M₂ (Gi) → ↓cAMP', b: ['ACh and adenosine antagonize sympathetic β₁–cAMP signaling, reducing contractility.'] },
+      ccb: { h: 'L-type Ca²⁺ channel (DHPR2) block', b: ['Decreases phase 2 Ca²⁺ influx → smaller CICR trigger (AC81 Q2).'] },
+      ino: { h: 'Positive inotropy (DHPR2 & RyR2)', b: ['More trigger Ca²⁺ enters via DHPR2 and more SR Ca²⁺ releases via RyR2 → stronger contraction.'] },
+      lus: { h: 'Positive lusitropy (PLB & TnI)', b: ['PLB-P dissociates from SERCA (faster SR reuptake + higher SR Ca²⁺ load); TnI-P lowers TnC affinity for Ca²⁺.'] },
+      ncx: { h: '↑[Na⁺]ᵢ → ↓NCX → ↑SR Ca²⁺', b: ['Reduced Na⁺ gradient slows Ca²⁺ extrusion via NCX → higher SR Ca²⁺ (+inotropy); central vagal tone slows HR (−chronotropy).'] },
+      a1: { h: 'α₁–Gq–PLC–IP₃R (NOT cAMP–PKA)', b: ['Releases Ca²⁺ via IP₃R independently of cAMP–PKA (AC81 Q1 recall).'] }
+    },
+    R: {
+      epi: { b: 'Catecholamine (+ino & +lusi)', src: 'B6 · AC81 Q3 · AC78 Q9', dx: ['β₁–Gs', 'PKA', 'DHPR2/RyR2 (+ino) + PLB/TnI (+lusi)'], s: [
+        ['q1', 'beta', 'Catecholamine binds β₁–Gs → activates adenylyl cyclase → ↑cAMP → PKA.'],
+        ['beta', 'ino', 'PKA phosphorylates DHPR2 & RyR2 → ↑Ca²⁺ influx & SR release (+inotropy).', ['lus']],
+        ['lus', '', 'PKA also phosphorylates PLB (frees SERCA) & TnI → faster relaxation = <b>both +inotropy and +lusitropy</b>.']] },
+      dig: { b: 'Digoxin / Lily of the Valley', src: 'B12–B15 · AC77 · AC80 · AC81', dx: ['Na⁺/K⁺-ATPase ↓', '↑[Na⁺]ᵢ', '↓NCX', '+inotropy & −chronotropy'], s: [
+        ['q1', 'dig', 'Cardiac glycoside (digoxin, convallarin in Lily of the Valley) selectively inhibits Na⁺/K⁺-ATPase.'],
+        ['dig', 'ncx', 'Intracellular [Na⁺] rises → weakens the Na⁺ gradient driving NCX.'],
+        ['ncx', '', 'Less Ca²⁺ extruded → ↑SR Ca²⁺ load = <b>+inotropy</b> (+ brainstem vagal tone = <b>−chronotropy</b>).']] },
+      ccb: { b: 'Amlodipine (DHP CCB)', src: 'B2 · AC81 Q2', dx: ['DHPR2 block', 'Phase 2 ↓Ca²⁺ influx'], s: [
+        ['q1', 'ccb', 'Dihydropyridine analog binds the slow L-type Ca²⁺ channel (DHPR2).'],
+        ['ccb', '', '<b>Phase 2: decrease Ca²⁺ influx via slow calcium channel</b>.']] },
+      ip3: { b: 'NOT affected by cAMP–PKA', src: 'B5 · AC81 Q1', dx: ['α₁–Gq–PLC', 'IP₃R (NOT PKA)'], s: [
+        ['q1', 'a1', 'cAMP–PKA hits DHPR2, RyR2, PLB, and TnI — NOT the α₁–Gq–IP₃R calcium release channel.'],
+        ['a1', '', 'AC81 Q1 keys <b>Calcium release channel (IP₃R)</b> as outside cAMP–PKA.']] }
+    }
+  });
+
+  /* ---------- I-C5 · Cardiovascular imaging modality selection ---------- */
+  add('i_modal', {
+    title: 'Choosing the right cardiovascular imaging modality', src: 'Imaging p.5–68',
+    hint: 'Click a box, or pick a clinical scenario and press Next step.',
+    idle: 'Match the clinical keyword to the modality: bedside + real-time → Echo · 3D coronary → CT · MI scar / volumes → MRI · stenting / DSA → Angiography.',
+    def: { name: 'i_modal', W: 940, H: 310, label: 'Cardiovascular imaging modality decision map',
+      N: [
+        { id: 'q1', k: 'st', x: 250, y: 10, w: 440, h: 54, t: ['Clinical Question / Keyword'], s: ['Initial screen · bedside live · 3D coronary · MI scar · intervention'] },
+        { id: 'cxr', k: 'leaf', x: 10, y: 112, w: 172, h: 82, t: ['Plain CXR (PA)'], s: ['Initial screen', 'CTR <50%, borders', 'PAH vs PVH'] },
+        { id: 'echo', k: 'leaf', x: 196, y: 112, w: 176, h: 82, t: ['Echocardiography'], s: ['Bedside & real-time', 'Wall/valve motion', 'No radiation'] },
+        { id: 'ct', k: 'leaf', x: 386, y: 112, w: 170, h: 82, t: ['Cardiac CT'], s: ['3D coronary tree', 'Aorta & calcium', 'Radiation + contrast'] },
+        { id: 'mri', k: 'leaf', x: 570, y: 112, w: 172, h: 82, t: ['Cardiac MRI'], s: ['Gold-std EF & scar', 'Function/structure', 'No radiation'] },
+        { id: 'angio', k: 'leaf', x: 756, y: 112, w: 174, h: 82, t: ['Angiography / DSA'], s: ['Femoral/radial cath', 'DSA = B − A', 'Same-session stent'] },
+        { id: 'norad', k: 'q', x: 160, y: 234, w: 620, h: 56, t: ['Zero-ionizing-radiation pair: Echocardiography + Cardiac MRI'], s: ['Short-axis plane measures ventricular mass, EDV, ESV, SV and EF'] }
+      ],
+      E: [
+        { f: 'q1', to: 'cxr', dir: 'v' }, { f: 'q1', to: 'echo', dir: 'v' },
+        { f: 'q1', to: 'ct', dir: 'v' }, { f: 'q1', to: 'mri', dir: 'v' },
+        { f: 'q1', to: 'angio', dir: 'v' },
+        { f: 'echo', to: 'norad', dir: 'v', dash: 1 }, { f: 'mri', to: 'norad', dir: 'v', dash: 1 }
+      ] },
+    txt: {
+      q1: { h: 'Match clinical keywords to the right modality', b: ['Bedside + real-time → Echo; initial screen/CTR → PA CXR; 3D coronary → CT; MI scar/volumes → MRI; diagnosis + stent → Angiography.'] },
+      cxr: { h: 'Plain chest radiograph (PA upright)', b: ['First-line cardiopulmonary screen; evaluates CTR (<50% adult), PA/lateral contours, valves (PAMT), and PAH vs PVH.'] },
+      echo: { h: 'Echocardiography', b: ['Portable bedside, real-time contraction/valve motion, pericardial effusion, zero radiation (AC81 Q1, AC80 Q5).'] },
+      ct: { h: 'Cardiac CT / MDCT', b: ['3 standard planes + 3D coronary artery reconstruction, calcium score, plaque/thrombus; uses X-ray + contrast.'] },
+      mri: { h: 'Cardiac MRI', b: ['Zero ionizing radiation; gold standard for ventricular function/volumes and myocardial infarction scar; slow and non-portable.'] },
+      angio: { h: 'Angiography & DSA', b: ['Femoral/radial catheter under fluoroscopy; DSA (B − A) removes bone; enables same-session angioplasty/stenting.'] },
+      norad: { h: 'Zero radiation + short-axis rule', b: ['Echo and MRI avoid ionizing radiation; short-axis cross-section quantifies EDV, ESV, SV, EF, and ventricular mass.'] }
+    },
+    R: {
+      bedside: { b: 'Chest pain: bedside, real-time', src: 'I9 · I10 · AC81 Q1 · AC80 Q5', dx: ['Bedside + real-time', 'Echocardiography (no radiation)'], s: [
+        ['q1', 'echo', 'Stem requires BOTH bedside portability and real-time dynamic imaging.'],
+        ['echo', 'norad', '<b>Echocardiography</b> evaluates wall motion, valves, and effusion live at the bedside.'],
+        ['norad', '', 'Zero ionizing radiation — unlike CT or fluoroscopy.']] },
+      coronary: { b: 'Non-invasive 3D coronary tree', src: 'Imaging p.54–55', dx: ['3D coronary CTA', 'Cardiac CT'], s: [
+        ['q1', 'ct', 'Need 3D coronary artery reconstruction, calcium score, and aortic sizing.'],
+        ['ct', '', '<b>Cardiac CT</b> gives crisp coronary anatomy (uses ionizing radiation + IV contrast).']] },
+      scar: { b: 'Myocardial scar & gold-std EF', src: 'Imaging p.59', dx: ['MI scar + volumes', 'Cardiac MRI (no radiation)'], s: [
+        ['q1', 'mri', 'Need to depict infarction scar and gold-standard ventricular volumes.'],
+        ['mri', 'norad', '<b>Cardiac MRI</b> shows myocardial scar with zero ionizing radiation.'],
+        ['norad', '', 'Short-axis cine slices give gold-standard EDV, ESV, SV, and EF.']] },
+      stent: { b: 'Diagnosis + same-session stent', src: 'Imaging p.62–68', dx: ['Catheter access', 'Angiography / DSA + PCI'], s: [
+        ['q1', 'angio', 'Femoral or radial catheterization under fluoroscopy with iodinated contrast.'],
+        ['angio', '', '<b>Coronary angiography</b> performs angioplasty, stenting, or thrombectomy in the same session.']] }
+    }
+  });
+
+  /* ---------- P-C1 · Neck pulsation: JVP vs Carotid & CVP ---------- */
+  add('p_neck', {
+    title: 'Neck pulsation: JVP vs Carotid & volume status', src: 'Examination of Blood Vessels p.3–8',
+    hint: 'Click a box, or pick a clinical finding and press Next step.',
+    idle: 'First separate venous (JVP: non-palpable, collapsible, biphasic, falls on inspiration) from carotid pulse, then turn RIJV height above sternal angle + 5 cm into CVP.',
+    def: { name: 'p_neck', W: 940, H: 330, label: 'Differentiating JVP from carotid pulse and estimating CVP',
+      N: [
+        { id: 'q1', k: 'st', x: 250, y: 10, w: 440, h: 54, t: ['Neck Pulsation: Palpable & Single Upstroke?'], s: ['Check light root-of-neck pressure · inspiration · posture · RUQ press'] },
+        { id: 'cca', k: 'leaf', x: 20, y: 112, w: 300, h: 74, t: ['Common Carotid Artery'], s: ['Palpable · brisk · monophasic', 'Unchanged by breathing, posture, or RUQ'] },
+        { id: 'jvp', k: 'q', x: 420, y: 112, w: 500, h: 74, t: ['Right Internal Jugular Vein (at 30–45°)'], s: ['Non-palpable · collapsible · biphasic · falls on inspiration', 'CVP (cmH₂O) = vertical height above sternal angle + 5 cm'] },
+        { id: 'hypo', k: 'leaf', x: 310, y: 236, w: 190, h: 72, t: ['Hypovolemia'], s: ['CVP < 5 cmH₂O', '(flat veins supine)'] },
+        { id: 'norm', k: 'leaf', x: 520, y: 236, w: 190, h: 72, t: ['Normal CVP'], s: ['5–8 cmH₂O', '(JVP ≤ 3–4 cm)'] },
+        { id: 'hyper', k: 'leaf', x: 730, y: 236, w: 190, h: 72, t: ['↑RA Pressure / JVD'], s: ['CVP > 8–10 cmH₂O', '(RHF, tamponade)'] }
+      ],
+      E: [
+        { f: 'q1', to: 'cca', dir: 'v' }, { f: 'q1', to: 'jvp', dir: 'v' },
+        { f: 'jvp', to: 'hypo', dir: 'v' }, { f: 'jvp', to: 'norm', dir: 'v' }, { f: 'jvp', to: 'hyper', dir: 'v' }
+      ] },
+    txt: {
+      q1: { h: 'Separate venous from arterial pulsation first', b: ['JVP is visible but NOT palpable, has 2 peaks/cycle (a, v), obliterates with light pressure at neck root, falls on inspiration, and rises supine or with RUQ compression.'] },
+      cca: { h: 'Common carotid artery', b: ['Palpable, single brisk upstroke during systole (between S1 and S2); never palpate both sides at once or press the carotid sinus.'] },
+      jvp: { h: 'Right internal jugular vein (RIJV) at 30–45°', b: ['Straight, valveless path via right brachiocephalic v. and SVC to RA (AC81 Q2).', 'CVP (cmH₂O) = JVP height above sternal angle + 5 cm.'] },
+      hypo: { h: 'Hypovolemia (CVP < 5 cmH₂O)', b: ['Neck veins remain flat even when reclined low / supine.'] },
+      norm: { h: 'Normal CVP (5–8 cmH₂O)', b: ['JVP ≤ 3–4 cm above sternal angle at 30–45°; drops normally on inspiration.'] },
+      hyper: { h: 'Elevated RA pressure / JVD (CVP > 8–10 cmH₂O)', b: ['Seen in right heart failure, fluid overload, tricuspid disease, cardiac tamponade, and constrictive pericarditis (AC81 Q3).'] }
+    },
+    R: {
+      rijv: { b: 'High RA pressure (RIJV → JVD)', src: 'P1 · P2 · AC81 Q2–Q3', dx: ['RIJV (valveless)', 'JVP + 5 > 8–10', 'Jugular distension'], s: [
+        ['q1', 'jvp', 'Non-palpable, biphasic venous pulsation inspected in the <b>right internal jugular vein</b> at 30–45°.'],
+        ['jvp', 'hyper', 'Vertical height > 3–4 cm above sternal angle → CVP = JVP + 5 > 8–10 cmH₂O.'],
+        ['hyper', '', '<b>Increased jugular venous distension</b> directly reflects elevated RA pressure.']] },
+      carotid: { b: 'Carotid pulse & S1 timing', src: 'P6 · P7 · AC80 Q3 · AC81 Q1', dx: ['Carotid (systolic)', 'Sound just before = S1'], s: [
+        ['q1', 'cca', 'Palpable, brisk, single upstroke unaffected by inspiration or posture = carotid artery.'],
+        ['cca', '', 'Carotid upstroke coincides with ventricular systole (between S1 and S2) → sound right before it is <b>S1 (AV valves close)</b>.']] },
+      hypo: { b: 'Low volume status (hypovolemia)', src: 'PE p.7', dx: ['RIJV flat', 'CVP < 5 cmH₂O'], s: [
+        ['q1', 'jvp', 'Inspect RIJV at 30–45° and lower the head of bed.'],
+        ['jvp', 'hypo', 'JVP flat / CVP < 5 cmH₂O → <b>Hypovolemia</b>.']] }
+    }
+  });
 })();

@@ -87,8 +87,9 @@
     var s = S[si], c = counts(s), ts = THAI_SEC[s.id] || {};
     var toc = s.items.filter(function (it) { return it.t === 'c'; }).map(function (it) { return '<li><span class="tid">' + it.id + '</span>' + it.title + '</li>'; }).join('');
     var trapsHtml = ts.traps && ts.traps.length ? '<div class="traps-box"><div class="tp-head">จุดหลอกข้อสอบที่พบบ่อย (Exam Traps)</div><ul>' + ts.traps.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul></div>' : '';
+    var ekgNote = s.id === 'K' ? '<p class="lede" style="margin-top:-6px"><a class="decklink" href="ekg/" target="_blank" rel="noopener">Open dedicated EKG Lab &amp; Practice Deck (i-RAT / t-RAT / AC75–81) &#8599;</a></p>' : '';
     return '<article class="card secard"><div class="eyebrow"><span class="chip kind">' + s.kind + '</span><span class="id">Section ' + s.id + '</span><span class="chip">' + (si + 1) + ' of ' + S.length + '</span></div>' +
-      '<h2>' + s.title + '</h2><p class="lede">' + (ts.big || s.blurb) + '</p>' +
+      '<h2>' + s.title + '</h2><p class="lede">' + (ts.big || s.blurb) + '</p>' + ekgNote +
       '<div class="stats"><span><b>' + c.c + '</b>concept cards</span><span><b>' + c.q + '</b>questions</span><span><b>' + c.core + '</b>core, for the video</span></div>' +
       trapsHtml +
       '<h3 class="minih">Concept cards in this section</h3><ol class="toc">' + toc + '</ol></article>';
@@ -107,7 +108,7 @@
       '<div class="qrs"><a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" width="112" height="112" alt="QR code for punnawit9285.github.io/cvs-lectures-peer-tutoring"><span>punnawit9285.github.io/cvs-lectures-peer-tutoring</span></a>' +
       '<a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/student.pdf" download><small class="qrcap">Scan to download the handout (PDF)</small><img src="img/qr-pdf.svg" width="112" height="112" alt="QR code for the student handout PDF"><span>cvs-lectures-peer-tutoring/student.pdf</span></a></div></div>' +
       '<div class="stations">' + st + '</div>' +
-      '<p class="legend"><span class="chip core">core</span> done in the video</p></article>';
+      '<p class="legend"><span class="chip core">core</span> done in the video &nbsp;&#183;&nbsp; <a href="ekg/" target="_blank" rel="noopener">Dedicated EKG Lab &amp; Practice Deck &#8599;</a></p></article>';
   }
 
   /* ---------- cloze blanks on concept cards ---------- */

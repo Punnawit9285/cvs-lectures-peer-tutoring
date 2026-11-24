@@ -285,6 +285,46 @@ Object.assign(window.THAI_EXPLAIN, {
   ]
 });
 
+/* ---------- B · Biochemistry of CVS ---------- */
+Object.assign(window.THAI_EXPLAIN, {
+  "B-C1": [
+    "<b>เซลล์หัวใจ</b> แตกแขนง ลายขวาง นิวเคลียสเดียวตรงกลาง · ไมโทคอนเดรีย ~80% ของมวลเซลล์ · T-tubule จับคู่ SR เป็น <b>dyad</b>",
+    "<b>Intercalated disc</b> desmosome ยึดต้านแรงดึง · fascia adherens ส่งแรงผ่าน actin · gap junction (connexin-43) ส่งไอออน → <b>functional syncytium</b>",
+    "<b>Thin filament</b> Ca²⁺ จับ TnC → ขยับ TnI &amp; tropomyosin → เปิดตำแหน่งจับหัว myosin บน F-actin",
+    "<b>กับดัก</b> เป็น functional ไม่ใช่ structural syncytium · มี ephaptic coupling เสริมการนำสัญญาณ"
+  ],
+  "B-C2": [
+    "<b>CICR</b> Phase 2 เปิด DHPR2 (L-type) → Ca²⁺ นอกเซลล์เข้า ~10% → เปิด RyR2 บน SR ปล่อยอีก ~90%",
+    "<b>ควบคุม SR</b> calsequestrin อิสระใน SR ยับยั้ง RyR2 กัน Ca²⁺ ล้นไซโทซอล",
+    "<b>คลายตัว</b> SERCA ปั๊มกลับ SR ~80–90% · NCX (3 Na⁺ เข้า : 1 Ca²⁺ ออก) ~10–20% · PMCA ส่วนน้อย",
+    "<b>ต่างจาก skeletal</b> หัวใจต้องมี extracellular Ca²⁺ เข้าผ่าน DHPR2 เสมอ → DHP/CCB ลด Ca²⁺ ใน phase 2"
+  ],
+  "B-C3": [
+    "<b>β₁–Gs–cAMP–PKA</b> เติม P ที่ 4 เป้าหมายพร้อมกัน → หัวใจเต้นแรงขึ้นและเร็วขึ้น",
+    "<b>+Inotropy</b> PKA เติม P ที่ DHPR2 (↑Ca²⁺ เข้า) + RyR2 (↑Ca²⁺ ออกจาก SR)",
+    "<b>+Lusitropy</b> PKA เติม P ที่ PLB → หลุดจาก SERCA (ปั๊มกลับ SR เร็ว + SR load สูงขึ้น) และ TnI → Ca²⁺ หลุดจาก TnC เร็วขึ้น",
+    "<b>เส้นทางอื่น</b> α₁–Gq–PLC–IP₃R (ไม่ผ่าน PKA) · M₂–Gi (ACh/adenosine) ลด cAMP → ต้าน +inotropy"
+  ],
+  "B-C4": [
+    "<b>กลไกหลัก</b> Cardiac glycoside (digoxin, ouabain) ยับยั้ง Na⁺/K⁺-ATPase → ↑[Na⁺]ᵢ → แรงขับ NCX ลดลง → ขับ Ca²⁺ ออกน้อยลง",
+    "<b>+Inotropy</b> Ca²⁺ เก็บใน SR มากขึ้น → ปล่อยมากขึ้นในจังหวะถัดไป → บีบแรงขึ้น (เพิ่ม LVEF)",
+    "<b>−Chronotropy</b> กระตุ้น vagal tone ที่ก้านสมอง → ลด HR (ใช้ใน AF/flutter) · แต่ไม่เพิ่ม lusitropy",
+    "<b>พืชมีพิษ</b> Foxglove (digitalis), Lily of the Valley (convallarin), ตีนเป็ดน้ำ (cerberin), ยี่โถ (oleandrin)"
+  ],
+  "B-C5": [
+    "<b>พลังงาน</b> ATP ~10 mM (~50 ครั้ง) → 60–70% myosin ATPase, 10–25% ปั๊มไอออน → พึ่ง aerobic ตลอด",
+    "<b>เชื้อเพลิง (%OER)</b> กินข้าว = glucose 68% · อดข้ามคืน = fatty acid 62% · อดนาน = ketone · ออกกำลังหนัก = lactate 61%",
+    "<b>Randle effect</b> ↑FA/ketone → ↑[Acetyl-CoA]/[CoA], ↑NADH, ↑ATP, ↑Citrate → ยับยั้ง PDH, PFK-1/2, citrate synthase",
+    "<b>LD-1 (H₄)</b> Km ต่อ lactate ต่ำ → เปลี่ยน lactate เป็น pyruvate · ขาดเลือด → anaerobic สะสม lactate"
+  ],
+  "B-C6": [
+    "<b>CrP shuttle</b> CK ในไมโทคอนเดรียเก็บ CrP → CK ในไซโทซอลโอนหมู่ P ให้ ADP ตรง cross-bridge ทันที",
+    "<b>Isozymes</b> CK-1 (BB สมอง) · CK-2 (CK-MB หัวใจ 15–30%, สูงสุดใน LV 41%) · CK-3 (CK-MM กล้ามเนื้อลาย &amp; สัดส่วนใหญ่ในหัวใจ 70–85%)",
+    "<b>จุดเด่น CK-MB</b> Km ต่อ ADP ต่ำกว่า CK-MM → สร้าง ATP ได้ดีแม้ [ADP] ต่ำและคงที่",
+    "<b>Adenylate kinase</b> ตอน ATP พร่อง/ADP สูง: 2 ADP → ATP + AMP (AMP กระตุ้น glycogen phosphorylase b)"
+  ]
+});
+
 /* ---------- K · Basic ECG ---------- */
 Object.assign(window.THAI_EXPLAIN, {
   "K-C1": [
@@ -359,6 +399,46 @@ Object.assign(window.THAI_EXPLAIN, {
   ]
 });
 
+/* ---------- I · Imaging of CVS ---------- */
+Object.assign(window.THAI_EXPLAIN, {
+  "I-C1": [
+    "<b>PA upright</b> หน้าอกชิดแผ่นรับภาพ รังสีเข้าหลังออกหน้า → เงาหัวใจขยายน้อยสุด · <b>Left lateral</b> ข้างซ้ายชิดแผ่นรับภาพ",
+    "<b>AP supine/portable</b> หัวใจอยู่ห่างแผ่นรับภาพ → เงาหัวใจดูโตเกินจริง วัดขนาดไม่แม่น",
+    "<b>สูตร CTR</b> กว้างสุดของหัวใจ ÷ กว้างสุดภายในซี่โครง",
+    "<b>เกณฑ์ปกติ</b> ผู้ใหญ่ &lt; 50% (50–55% ก้ำกึ่ง, &gt; 55% โต) · เด็ก &lt; 1 ปี &lt; 65% · 1–2 ปี &lt; 60%"
+  ],
+  "I-C2": [
+    "<b>PA ขอบขวา</b> บน→ล่าง: SVC → Right atrium → IVC",
+    "<b>PA ขอบซ้าย</b> บน→ล่าง: left subclavian a. → aortic arch → pulmonary trunk → LAA → LV",
+    "<b>Lateral</b> ขอบหน้า = RV (หน้าสุด) → pulmonary trunk → ascending aorta · ขอบหลัง = LA (หลังสุด) → LV → IVC",
+    "<b>กับดัก</b> RV และ LA ปกติไม่สร้างขอบใน PA · LA โตจะเห็น double density, carina ถ่าง, หรือ LAA นูน"
+  ],
+  "I-C3": [
+    "<b>ลิ้นหัวใจ P-A-M-T (T6–T9)</b> Pulmonic T6 (3rd SCJ) · Aortic T7 (3rd ICS) · Mitral T8 (4th SCJ) · Tricuspid T9 (4th ICS หลัง sternum)",
+    "<b>Plain film</b> ลิ้นปกติโปร่งรังสี เห็นเฉพาะตอนมีหินปูนหรือใส่ลิ้นเทียม",
+    "<b>PAH</b> หลอดเลือดแดงปอดส่วนกลางโต + เส้นปลายเรียวหาย (peripheral pruning)",
+    "<b>PVH</b> ความดัน LA สูง → หลอดเลือดดำปอดกลีบบนขยายเด่น (cephalization)"
+  ],
+  "I-C4": [
+    "<b>T3 (5 เส้นเลือด)</b> R &amp; L brachiocephalic v. + brachiocephalic trunk → LCCA → left subclavian a. (ซ้ายหลังสุด)",
+    "<b>T4 &amp; T5</b> T4 = aortic arch + SVC + azygos · T5 = SVC (ขวา), ascending aorta (กลาง), main/L/R PA, descending aorta (ซ้ายกระดูกสันหลัง)",
+    "<b>T7 &amp; T8–T9</b> T7 = aortic valve 3 แฉกตรงกลาง · T8–T9 = RA (ซ้ายภาพ), RV (หน้าสุด), LV (ผนังหนาซ้าย), LA (หลังสุดหน้า esophagus)",
+    "<b>กติกา CT</b> ซ้ายของภาพ = ขวาของคนไข้เสมอ"
+  ],
+  "I-C5": [
+    "<b>4 ระนาบหัวใจ</b> HLA (4-chamber ≈ axial) · VLA (≈ sagittal) · Short-axis (วัด EDV, ESV, SV, EF, mass) · 3-chamber (LVOT)",
+    "<b>Echo</b> ทำข้างเตียง + real-time ดูการบีบตัว ลิ้น และน้ำในเยื่อหุ้มหัวใจ · ไม่มีรังสี",
+    "<b>Cardiac CT</b> ดูหลอดเลือด coronary 3 มิติ, แคลเซียม, และขนาด aorta · มีรังสี + contrast",
+    "<b>Cardiac MRI</b> ไม่มีรังสี · gold standard วัด volume/function และดู scar หลัง MI · ช้าและเข็นไปข้างเตียงไม่ได้"
+  ],
+  "I-C6": [
+    "<b>Angiography</b> ใส่สายสวนทาง femoral หรือ radial a. ใต้ fluoroscopy + ฉีดสารทึบรังสี",
+    "<b>รักษาพร้อมตรวจ</b> ทำ angioplasty, stent, ดูดลิ่มเลือด หรือ embolization ได้ทันที",
+    "<b>DSA</b> ภาพหลังฉีด (B) − ภาพก่อนฉีด (A) → ลบเงากระดูกและเนื้อเยื่อทึบออก เห็นหลอดเลือดชัด",
+    "<b>Coronary &amp; Aortogram</b> LM → LAD + LCx · RCA → PDA · Aortogram แสดง arch + 3 แขนงใหญ่"
+  ]
+});
+
 /* ---------- X · Exercise ---------- */
 Object.assign(window.THAI_EXPLAIN, {
   "X-C1": [
@@ -390,5 +470,33 @@ Object.assign(window.THAI_EXPLAIN, {
     "<b>เทียบ</b>: ความดันสูง → concentric (ผนังหนา ห้องเล็ก) · หัวใจนักกีฬากลับคืนได้เมื่อหยุดฝึก",
     "<b>CO max</b> ↑ จาก SVmax เพราะ HRmax แทบไม่เปลี่ยน",
     "<b>กล้ามเนื้อ</b>: capillary, mitochondria, blood volume ↑ → a–v O₂ diff ↑ → VO₂max ↑ · BP ลดลง"
+  ]
+});
+
+/* ---------- P · Physical Examination of the Cardiovascular System ---------- */
+Object.assign(window.THAI_EXPLAIN, {
+  "P-C1": [
+    "<b>RIJV ดีที่สุด</b> ต่อตรงลง right brachiocephalic v. → SVC → RA ไม่มีลิ้น · LJV พาดหน้า arch อาจถูกกด · EJV มีลิ้นและหดตัวตาม sympathetic",
+    "<b>JVP</b> คลำไม่ได้ ยุบเมื่อกดโคนคอเบาๆ · มี 2 ยอด (biphasic) · ลดลงตอนหายใจเข้า",
+    "<b>การเปลี่ยนแปลง JVP</b> นอนราบ, Valsalva, หรือกด RUQ (hepatojugular reflux) → ระดับสูงขึ้น",
+    "<b>Carotid</b> คลำได้ เต้นแรง ยอดเดียว · ไม่เปลี่ยนตามการหายใจ ท่าทาง หรือการกดท้อง"
+  ],
+  "P-C2": [
+    "<b>ท่าตรวจ</b> นอนเอน 30–45° (บันทึกองศา) หันหน้าซ้ายเล็กน้อย หาจุดสั่นสูงสุดของ RIJV ระหว่างสองหัว SCM",
+    "<b>จุดอ้างอิง</b> วัดความสูงแนวดิ่ง (cm) เหนือ sternal angle (สูงกว่ากลาง RA ~5 cm เสมอ)",
+    "<b>สูตร CVP</b> CVP (cmH₂O) = JVP + 5 cm · ปกติ JVP ≤ 3–4 cm (CVP 5–8)",
+    "<b>แปลผล</b> CVP &gt; 8–10 = hypervolemia / ↑RA pressure (RHF, tamponade) · &lt; 5 = hypovolemia · tamponade พบ pulsus paradoxus"
+  ],
+  "P-C3": [
+    "<b>a wave</b> RA บีบตัว (atrial systole) ก่อน S1 เล็กน้อย → หายไปใน atrial fibrillation",
+    "<b>c wave &amp; x descent</b> c = ลิ้น TV นูนเข้า RA ช่วง isovolumic contraction (หลัง S1) · x = RA คลายตัว + ดึงฐานลิ้นลงช่วง systole",
+    "<b>v wave &amp; y descent</b> v = เลือดไหลเข้า RA ขณะลิ้น TV ปิด (ยอดแถว S2) · y = ลิ้น TV เปิด เลือดเทลง RV ช่วงต้น diastole",
+    "<b>เทียบเสียงหัวใจ</b> S1 (AV ปิด) → carotid pulse (systole) → S2 (semilunar ปิด)"
+  ],
+  "P-C4": [
+    "<b>คลำ 6 อย่าง</b> rate · rhythm · volume · contour · symmetry · delay (radio-radial / radio-femoral)",
+    "<b>ข้อควรระวังคอ</b> ห้ามคลำ carotid พร้อมกัน 2 ข้าง · เลี่ยงกด carotid sinus · ฟัง carotid bruit ด้วยด้าน <b>bell</b>",
+    "<b>Contour คลาสสิก</b> Collapsing (water-hammer) = AR · Pulsus parvus et tardus (เบาและยอดช้า) = AS",
+    "<b>เชื่อมตรวจหัวใจ</b> Diaphragm ฟังเสียงสูง · PMI เลื่อนซ้าย = LVH (↑afterload) · L 2nd ICS systolic = PS · L 5th parasternal diastolic = TS · apex pansystolic = MR"
   ]
 });

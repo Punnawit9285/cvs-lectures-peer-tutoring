@@ -9,7 +9,8 @@ JSON.parse(rd('data/sections.json')).forEach(f => eval(rd('data/' + f + '.js')))
 eval(rd('src/thai-data.js'));
 eval(rd('src/thai-explain.js'));
 eval(rd('src/flows.js'));
-eval(rd('src/flows-anatomy.js'));  /* the anatomy maps */  /* FLOWS.printHtml: static copy of the interactive flowcharts */
+eval(rd('src/flows-charts.js'));
+eval(rd('src/flows-anatomy.js'));  /* the anatomy maps & decision charts: FLOWS.printHtml */
 const THAI_Q = window.THAI_Q, THAI_CONCEPT = window.THAI_CONCEPT;  /* shared with both decks: src/thai-data.js */
 const S = CVS.sections, LET = 'ABCDEFGH';
 const pages = process.argv[2] && fs.existsSync(process.argv[2]) ? JSON.parse(rd(process.argv[2])) : {};
@@ -46,7 +47,7 @@ function blankify(h, id) {
   return out + h.slice(i);
 }
 /* interactive flowchart → its chart alone; the extra lecture figure kept in a <details> stays out of the PDF */
-const forPrint = h => String(h).replace(/<div class="flowx" data-flow="(\w+)"><\/div>/g, (m, n) => FLOWS.printHtml(n)).replace(/<details class="figmore">[\s\S]*?<\/details>/g, '');
+const forPrint = h => String(h).replace(/<div class="flowx" data-flow="(\w+)"><\/div>/g, (m, n) => FLOWS.printHtml(n)).replace(/<details class="(?:figmore|figans)">[\s\S]*?<\/details>/g, '');
 let nB = 0;
 
 /* ---------- cover ---------- */
@@ -60,7 +61,7 @@ S.forEach(s => {
   const qn = s.items.filter(isQ).length, cn = s.items.filter(it => it.t === 'c').length;
   h += '<tr><td><span class="tid">' + s.id + '</span>' + s.title + '</td><td>p. ' + pg('s-' + s.id) + '</td><td>' + cn + ' · ' + qn + '</td><td>p. ' + pg('a-' + s.id) + '</td><td>p. ' + pg('b-' + s.id) + '</td><td>p. ' + pg('x-' + s.id) + '</td></tr>';
 });
-h += '</tbody></table><p class="legend"><span class="chip core">core</span> done in the video</p></section>';
+h += '</tbody></table><p class="legend"><span class="chip core">core</span> done in the video &nbsp;·&nbsp; Dedicated EKG Lab &amp; Practice Deck: <a href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/">punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/</a></p></section>';
 
 function qBlock(it) {
   let b = '<div class="pq' + (it.wide ? ' wide' : '') + '"><div class="pqh"><b>' + it.id + '</b>' + (it.src ? '<span class="src">' + it.src + '</span>' : '') + (it.core ? '<span class="chip core">core</span>' : '') + (it.t === 'tf' ? '<span class="src">True / False</span>' : '') + (it.group ? '<span class="src">' + it.group + '</span>' : '') + '</div>';
