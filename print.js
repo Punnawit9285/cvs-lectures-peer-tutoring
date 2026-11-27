@@ -54,14 +54,14 @@ let nB = 0;
 let h = '<section class="cover"><div class="eyebrow"><span class="chip kind">Peer support 82</span><span class="chip">CVS I · 3050116</span><span class="chip">Student handout</span></div>' +
   '<h1>CVS I: The Cardiovascular System Lectures</h1>' +
   '<div class="coverline"><div class="counts"><div><b>' + nC + '</b><span>concepts</span></div><div><b>' + nQ + '</b><span>questions</span></div></div>' +
-  '<div class="qrs"><a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" alt="QR code for punnawit9285.github.io/cvs-lectures-peer-tutoring"><span>punnawit9285.github.io/cvs-lectures-peer-tutoring</span></a>' +
-  '<a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/student.pdf"><small class="qrcap">Scan to download this handout (PDF)</small><img src="img/qr-pdf.svg" alt="QR code for the student handout PDF"><span>cvs-lectures-peer-tutoring/student.pdf</span></a></div></div>' +
+  '<div class="qrs"><a class="qrlink" href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" alt="QR code for kaopunnawit.github.io/cvs-lectures-peer-tutoring"><span>kaopunnawit.github.io/cvs-lectures-peer-tutoring</span></a>' +
+  '<a class="qrlink" href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/student.pdf"><small class="qrcap">Scan to download this handout (PDF)</small><img src="img/qr-pdf.svg" alt="QR code for the student handout PDF"><span>cvs-lectures-peer-tutoring/student.pdf</span></a></div></div>' +
   '<h3 class="minih">Contents</h3><table class="toc"><thead><tr><th>Section</th><th>Starts</th><th>Concepts · questions</th><th>Quiz answers</th><th>Blank answers</th><th>Thai concept explanations</th></tr></thead><tbody>';
 S.forEach(s => {
   const qn = s.items.filter(isQ).length, cn = s.items.filter(it => it.t === 'c').length;
   h += '<tr><td><span class="tid">' + s.id + '</span>' + s.title + '</td><td>p. ' + pg('s-' + s.id) + '</td><td>' + cn + ' · ' + qn + '</td><td>p. ' + pg('a-' + s.id) + '</td><td>p. ' + pg('b-' + s.id) + '</td><td>p. ' + pg('x-' + s.id) + '</td></tr>';
 });
-h += '</tbody></table><p class="legend"><span class="chip core">core</span> done in the video &nbsp;·&nbsp; Dedicated EKG Lab &amp; Practice Deck: <a href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/">punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/</a></p></section>';
+h += '</tbody></table><p class="legend"><span class="chip core">core</span> done in the video &nbsp;·&nbsp; Dedicated EKG Lab &amp; Practice Deck: <a href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/">kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/</a></p></section>';
 
 function qBlock(it) {
   let b = '<div class="pq' + (it.wide ? ' wide' : '') + '"><div class="pqh"><b>' + it.id + '</b>' + (it.src ? '<span class="src">' + it.src + '</span>' : '') + (it.core ? '<span class="chip core">core</span>' : '') + (it.t === 'tf' ? '<span class="src">True / False</span>' : '') + (it.group ? '<span class="src">' + it.group + '</span>' : '') + '</div>';

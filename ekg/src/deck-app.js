@@ -100,8 +100,8 @@
     return '<article class="card secard"><div class="eyebrow"><span class="chip kind">Peer support 82</span><span class="chip">CVS I &#183; Dedicated EKG deck</span><span class="chip">AC75&#8211;81 + ECG TBL</span></div>' +
       '<h2>CVS I: Basic EKG, Axis, Rate &amp; Rhythm</h2>' +
       '<div class="coverline"><div class="counts"><div><b>' + nc + '</b><span>concepts</span></div><div><b>' + tot + '</b><span>questions</span></div></div>' +
-      '<div class="qrs"><a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" width="112" height="112" alt="QR code for punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg"><span>cvs-lectures-peer-tutoring/ekg</span></a>' +
-      '<a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/student.pdf" download><small class="qrcap">Scan to download the handout (PDF)</small><img src="img/qr-pdf.svg" width="112" height="112" alt="QR code for the student handout PDF"><span>ekg/student.pdf</span></a></div></div>' +
+      '<div class="qrs"><a class="qrlink" href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" width="112" height="112" alt="QR code for kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg"><span>cvs-lectures-peer-tutoring/ekg</span></a>' +
+      '<a class="qrlink" href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/student.pdf" download><small class="qrcap">Scan to download the handout (PDF)</small><img src="img/qr-pdf.svg" width="112" height="112" alt="QR code for the student handout PDF"><span>ekg/student.pdf</span></a></div></div>' +
       '<div class="stations">' + st + '</div>' +
       '<p class="legend"><span class="chip core">core</span> done in the video</p></article>';
   }

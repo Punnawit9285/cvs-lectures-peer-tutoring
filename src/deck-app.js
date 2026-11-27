@@ -105,8 +105,8 @@
     return '<article class="card secard"><div class="eyebrow"><span class="chip kind">Peer support 82</span><span class="chip">CVS I &#183; 3050116</span><span class="chip">13 lectures + 1 lab</span></div>' +
       '<h2>CVS I: The Cardiovascular System Lectures</h2>' +
       '<div class="coverline"><div class="counts"><div><b>' + nc + '</b><span>concepts</span></div><div><b>' + tot + '</b><span>questions</span></div></div>' +
-      '<div class="qrs"><a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" width="112" height="112" alt="QR code for punnawit9285.github.io/cvs-lectures-peer-tutoring"><span>punnawit9285.github.io/cvs-lectures-peer-tutoring</span></a>' +
-      '<a class="qrlink" href="https://punnawit9285.github.io/cvs-lectures-peer-tutoring/student.pdf" download><small class="qrcap">Scan to download the handout (PDF)</small><img src="img/qr-pdf.svg" width="112" height="112" alt="QR code for the student handout PDF"><span>cvs-lectures-peer-tutoring/student.pdf</span></a></div></div>' +
+      '<div class="qrs"><a class="qrlink" href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/"><small class="qrcap">Scan to open the interactive deck</small><img src="img/qr-site.svg" width="112" height="112" alt="QR code for kaopunnawit.github.io/cvs-lectures-peer-tutoring"><span>kaopunnawit.github.io/cvs-lectures-peer-tutoring</span></a>' +
+      '<a class="qrlink" href="https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/student.pdf" download><small class="qrcap">Scan to download the handout (PDF)</small><img src="img/qr-pdf.svg" width="112" height="112" alt="QR code for the student handout PDF"><span>cvs-lectures-peer-tutoring/student.pdf</span></a></div></div>' +
       '<div class="stations">' + st + '</div>' +
       '<p class="legend"><span class="chip core">core</span> done in the video &nbsp;&#183;&nbsp; <a href="ekg/" target="_blank" rel="noopener">Dedicated EKG Lab &amp; Practice Deck &#8599;</a></p></article>';
   }

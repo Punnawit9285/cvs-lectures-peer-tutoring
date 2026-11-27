@@ -6,9 +6,9 @@ Question-first peer-tutoring decks and an A4 student handout for **Cardiovascula
 
 | | Main lectures deck | Dedicated EKG deck |
 |---|---|---|
-| **Student deck** (shown in the video) | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/ |
-| **Tutor deck** (second screen: answers, Thai notes, SAY script) | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/tutor.html | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/tutor.html |
-| **Student handout PDF** | [student.pdf](https://punnawit9285.github.io/cvs-lectures-peer-tutoring/student.pdf?v=61354116) (136 pages) | [ekg/student.pdf](https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/student.pdf?v=78cdfefd) (55 pages) |
+| **Student deck** (shown in the video) | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/ |
+| **Tutor deck** (second screen: answers, Thai notes, SAY script) | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/tutor.html | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/tutor.html |
+| **Student handout PDF** | [student.pdf](https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/student.pdf?v=c9998beb) (136 pages) | [ekg/student.pdf](https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/student.pdf?v=2399b70e) (55 pages) |
 
 Open the student and tutor decks in the same browser and tick **Follow student** in the tutor deck: it jumps to whatever card the student deck shows. The two decks use separate storage keys, so their progress never mixes.
 

@@ -2,15 +2,15 @@
 
 Question-first peer-tutoring deck for **CVS I: Basic EKG, Leads, Rate, QRS Axis, Sinus Rhythm & 12-Lead Interpretation**, built from *Peer – Physiology Of The Heart* (tutor EKG notes, ECG TBL t-RAT 2569 / 2568, i-RAT 266-66) and the EKG items of **AC75–AC81** (with official AC75–79, AC80, and PS82/AC81 answer keys).
 
-Lives in `ekg/` so it deploys cleanly alongside the main CVS lectures deck in `Punnawit9285/cvs-lectures-peer-tutoring` without interfering with root files.
+Lives in `ekg/` so it deploys cleanly alongside the main CVS lectures deck in `KAOPUNnawit/cvs-lectures-peer-tutoring` without interfering with root files.
 
 ## Open it
 
 | | Link |
 |---|---|
-| **Student deck** (shown in the video) | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/student.html |
-| **Tutor deck** (second screen: answers, Thai notes, SAY script) | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/tutor.html |
-| **Student handout PDF** (A4 portrait, numbered blanks + back key) | https://punnawit9285.github.io/cvs-lectures-peer-tutoring/ekg/student.pdf?v=78cdfefd |
+| **Student deck** (shown in the video) | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/student.html |
+| **Tutor deck** (second screen: answers, Thai notes, SAY script) | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/tutor.html |
+| **Student handout PDF** (A4 portrait, numbered blanks + back key) | https://kaopunnawit.github.io/cvs-lectures-peer-tutoring/ekg/student.pdf?v=2399b70e |
 
 Open the student and tutor decks in the same browser and tick *Follow student* in the tutor deck: it jumps to whatever card the student deck shows (isolated storage/BroadcastChannel prefix `ekgdeck:` / `cvs-ekg-peer-82`).
 
